@@ -1,1 +1,438 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="595f7419-8ac7-45b1-9a84-5bafe2502640" name="Cas d'utilisations" linkedPackageId="02e5137b-bc46-493a-8a7d-a6132bfcc7dc" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="1d180cf5-28b4-453e-ac96-9fed64d9b6a3">
+      <profileInstance Id="62a89256-12dd-451f-ad39-176b188d0b3b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="cf324f5e-cd6a-4e00-8599-b8128f25528a">
+      <profileInstance Id="617b4837-0566-4812-8636-e2f6d3214a6d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="3d7bfc47-bcdb-4d34-9411-14f55f44a7a0" name="Client" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f2747596-d3b5-4e48-b5be-110d380bd4f7" />
+        <targetEnds>
+          <association Id="523cec4d-ba29-4616-9b82-c950a83e8a34" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Créer une commande" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cc285d25-3177-4e53-b9eb-aa9b3a55a8f7" LastKnownName="Créer une commande" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cd90b5cb-a419-4ade-8d56-d4b9b1e99ecc" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5588b6a1-c6cc-459d-8bbd-17f31182d44e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fab6a69e-8111-4a2b-9ed4-0d7c59930e23" name="Créer une commande" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e3d7574c-4bea-4728-8868-379de6afb6c8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="944fcf1e-0c9a-42fd-8c67-e977513c912a" />
+          </association>
+          <association Id="cef0d331-3d29-493e-9ac7-6f3c12c9e96a" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Modifier ses informations" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c2d3a500-0a5f-4ea9-9a95-63667cc02772" LastKnownName="Modifier ses informations" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="101031e7-fc04-4745-ab37-679e44eacf73" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="889fec10-b2e5-4fb9-97ff-04e6ade14c5f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1a08125b-e104-4289-8d36-81efc774acc7" name="Modifier ses informations" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="710142f4-c549-4981-92c2-68f7090acc68" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ded730d0-11f0-4f58-b42c-9d52b1c6ec5a" />
+          </association>
+          <association Id="59bda5b6-0d66-4737-a505-f0e97f7f8a70" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Voir l'historique des commandes" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2b661541-a612-4261-8413-d0ae55e75937" LastKnownName="Voir l'historique des commandes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="64413d8e-c4af-4871-b231-6a5a0d84ece7" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7565f271-9dd0-4fb0-9a8a-8584b515bd85" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="df17365f-694e-4e3c-be8b-6c9d0e08ca04" name="Voir l'historique des commandes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="248f3191-5737-4b3c-bba1-96500a4f5819" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="95e9994b-006d-4cbd-8bbe-6594f716f4c3" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="8d2e445d-6810-43cc-9227-518ca0d0376d" name="Libraire" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="64a833be-af35-43aa-8580-8e18c122d67b" />
+        <targetEnds>
+          <association Id="0643b45c-052e-48b5-9a54-80b0d80ac6b1" isDerived="false" sourceEndRoleName="Libraire" targetEndRoleName="Gérer l'état des commandes" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="024741ef-88bf-420b-a093-f83a9d0609df" LastKnownName="Gérer l'état des commandes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="727c930e-1f88-4557-9b8a-2bf42f618e14" name="Libraire" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="43a735fe-c51c-4c87-ade3-eae90042482e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2977e60b-0a9a-4f3a-9682-7edf9ec1209d" name="Gérer l'état des commandes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c5c42684-11f1-4a34-83e9-418108870460" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a9543fd6-65cc-4edc-822e-77191796d291" />
+          </association>
+          <association Id="9ab3593b-3789-4d24-8bcc-4fc7ba4db0dd" isDerived="false" sourceEndRoleName="Libraire" targetEndRoleName="Gestion des catégories" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1269958b-2fea-41c1-b4aa-73f04140432f" LastKnownName="Gestion des catégories" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1081d9cf-4d92-4176-b73d-079411cfb2b6" name="Libraire" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e4deabc7-5e63-45bd-a7cf-3a64a2c1c42a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1ec3bcab-c035-40d4-8fce-b0c037250e0b" name="Gestion des catégories" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="69c6af72-bdfe-43cf-9864-317e31e3e8b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c3b0572-8a88-4ad4-b347-c4dc81279749" />
+          </association>
+          <association Id="f4fc878e-a669-4786-a093-8044364d6a1a" isDerived="false" sourceEndRoleName="Libraire" targetEndRoleName="Gestion des livres" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9aaa2a8b-9587-4074-8b7a-06a205943825" LastKnownName="Gestion des livres" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="748e4678-25d9-4b51-8ced-715961ca6275" name="Libraire" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="52e05f4f-32c8-491d-814d-4999a9737d59" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3afd619e-b15f-4e30-9a49-2141febe650a" name="Gestion des livres" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b6ce7c16-3c6f-4c6b-bc70-2a2545d353e8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5f3802b4-80a2-4bb0-b651-5f4b91e3a219" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="7e6bb8f9-e385-4f8a-abc0-0e2b9eeb9b1b" name="Visiteur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="afc575ab-bbce-4ac1-9b1b-5d49cdc147e7" />
+        <targetEnds>
+          <association Id="8a18f98a-a5eb-403b-8b72-6230c3c5a4dc" isDerived="false" sourceEndRoleName="Visiteur" targetEndRoleName="Consulter le catalogue" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9205a632-1399-4f8a-a951-b5d51efdbf95" LastKnownName="Consulter le catalogue" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="216051f3-f726-4e67-b2e2-0b273c8e01df" name="Visiteur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="574335d6-9ad2-4bae-a215-490785a68a10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb5b5807-8550-445b-8c99-4f8a8e126069" name="Consulter le catalogue" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="263abde3-6a60-4f5b-be6e-133997bf3be4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="53955fd7-7650-4fa9-bcac-395a4e9a3c24" />
+          </association>
+          <association Id="c38d1cba-c8bb-4aa0-bb4d-3cdf2fb0f9b7" isDerived="false" sourceEndRoleName="Visiteur" targetEndRoleName="Effectuer des recherches" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4333710f-7a15-4d19-98ce-606a615db201" LastKnownName="Effectuer des recherches" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d93137c-bd33-4798-8a81-d5ba2af6c61d" name="Visiteur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3ad9d4ce-0ef5-4227-9af7-fd1d76429dea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="93b6615e-8264-42df-9843-4a27013a61b2" name="Effectuer des recherches" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cd5b50ae-342c-438e-90a4-a075c0e6dea4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7983ed21-692c-49a9-aee3-c0259321ca1b" />
+          </association>
+          <association Id="82fe633d-a41b-433c-b135-69efd188146f" isDerived="false" sourceEndRoleName="Visiteur" targetEndRoleName="S'inscrire" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="719bcf0c-005a-433e-b9ea-a8e36e1e7266" LastKnownName="S'inscrire" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d50899ae-2624-4d1a-b9a7-350cd90ed968" name="Visiteur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="46d75391-6b15-45f7-8ccc-181f08fe00b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4cffdf27-20a8-40d6-81d8-c41c6857166f" name="S'inscrire" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b172c10c-b6a7-4a61-8602-7df24af83a9d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4d839a3c-0c47-4343-a514-88b5403f0cd9" />
+          </association>
+          <association Id="12488a15-be8a-42c1-bb45-e6999464c670" isDerived="false" sourceEndRoleName="Visiteur" targetEndRoleName="S'identifier" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0e49ab94-c05c-4fcf-a2dc-e0462000277b" LastKnownName="S'identifier" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e569f2bd-2f07-4b03-a1a0-08debb57485a" name="Visiteur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="81857e91-6ef4-4dbb-b028-30b381cf0a3e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1b1ee960-fd26-41cb-9b1a-528c231278c0" name="S'identifier" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="646fa8e0-2cd9-493b-b9ea-bcae5588c312" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dd6f2bae-e368-4885-803b-565fcdf285b4" />
+          </association>
+          <association Id="b842e01d-3782-48c5-9313-37cfbbf3eb13" isDerived="false" sourceEndRoleName="Visiteur" targetEndRoleName="Gérer le panier" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="35ca8865-0c6c-4d5a-b408-252d87c131a5" LastKnownName="Gérer le panier" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="10e9c85e-950c-4766-bbd0-2cd0c40f5781" name="Visiteur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="766f7b6a-bfee-4181-8eec-e128bbe129cb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e2f4cab0-f2a2-4735-97b6-0a49a4275099" name="Gérer le panier" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b01cd6b6-d925-4a58-98b6-67f0ac716739" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b71ae5ff-0f63-41c6-b5f4-37a9c84e12bc" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" name="booXstore" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f8d6baf4-0dcf-485c-965f-282b2a563819" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="9205a632-1399-4f8a-a951-b5d51efdbf95" name="Consulter le catalogue" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d225e6d9-d1c4-4384-b240-1630b54f7c35" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="4333710f-7a15-4d19-98ce-606a615db201" name="Effectuer des recherches" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="97425cfa-3638-4359-abf1-c5c5cfeaba63" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0e49ab94-c05c-4fcf-a2dc-e0462000277b" name="S'identifier" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="35049e89-0873-4fa3-924a-dbc57dbf341a" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="719bcf0c-005a-433e-b9ea-a8e36e1e7266" name="S'inscrire" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c9bf38e1-c705-42a4-b99b-e5328d58e2b7" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="35ca8865-0c6c-4d5a-b408-252d87c131a5" name="Gérer le panier" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="89a41a9b-19cb-4334-b7f0-212774749b50" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="cc285d25-3177-4e53-b9eb-aa9b3a55a8f7" name="Créer une commande" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="13f6e42b-6535-4add-b8f8-b004a13c9c47" />
+        <additions>
+          <include Id="846b9ca3-bfd9-49b5-b452-761038b90584">
+            <useCaseMoniker Id="0e49ab94-c05c-4fcf-a2dc-e0462000277b" LastKnownName="S'identifier" />
+            <elementDefinition Id="5bd1d6eb-6000-45d7-bc6d-321f455486f1" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c2d3a500-0a5f-4ea9-9a95-63667cc02772" name="Modifier ses informations" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="973bd266-c626-4f0e-aa08-8b0c950acf50" />
+        <additions>
+          <include Id="5da064f9-43cb-4a11-8498-fae1d6a99054">
+            <useCaseMoniker Id="0e49ab94-c05c-4fcf-a2dc-e0462000277b" LastKnownName="S'identifier" />
+            <elementDefinition Id="5c623124-d269-4199-939c-4ddb4b9349d4" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2b661541-a612-4261-8413-d0ae55e75937" name="Voir l'historique des commandes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a14b712f-2202-455e-a854-739b200e6aa4" />
+        <additions>
+          <include Id="47f70156-16c8-4d3c-a76b-ccbfd7b2dfc4">
+            <useCaseMoniker Id="0e49ab94-c05c-4fcf-a2dc-e0462000277b" LastKnownName="S'identifier" />
+            <elementDefinition Id="e9fd611b-b5e3-4347-a719-fa8df7a01de3" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f5d5249b-c656-44c1-8a67-b1aa304a980c" name="Modifier la quantité" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="18f1dd59-0535-46c7-8245-9a078aa90c3b" />
+        <extendedCases>
+          <extend Id="8e072e6b-e822-4819-8f5a-add8c6eefd9a">
+            <useCaseMoniker Id="35ca8865-0c6c-4d5a-b408-252d87c131a5" LastKnownName="Gérer le panier" />
+            <elementDefinition Id="672b8fec-29bb-4984-b904-dd251ae267fe" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="574b40e6-aa15-44ed-b662-b927fe8b7ab8" name="Ajouter des articles" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="88c3ac7c-e6d1-4213-b9e3-eb1aa5437da3" />
+        <extendedCases>
+          <extend Id="a4d4922b-c7a4-474d-97e1-1d9443edd296">
+            <useCaseMoniker Id="35ca8865-0c6c-4d5a-b408-252d87c131a5" LastKnownName="Gérer le panier" />
+            <elementDefinition Id="eb3dce79-35ab-4a93-8de9-483f294ab0fe" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="ab0519d8-13d1-4c96-a1ac-99d54af77b44" name="Suppression d'articles" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e6920c8f-6806-43e8-81f1-432471f0a980" />
+        <extendedCases>
+          <extend Id="76a9031d-5286-4404-9318-e2db14e05d2a">
+            <useCaseMoniker Id="35ca8865-0c6c-4d5a-b408-252d87c131a5" LastKnownName="Gérer le panier" />
+            <elementDefinition Id="6cb099c5-ba96-432e-be75-906e69fe54b4" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="024741ef-88bf-420b-a093-f83a9d0609df" name="Gérer l'état des commandes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="86ad2736-3523-4bda-ac3d-a460618c6c23" />
+        <additions>
+          <include Id="11c38f00-4139-4271-8177-2883fa4d603c">
+            <useCaseMoniker Id="25b8ee59-cdcb-4249-995c-fe1f44fef46d" LastKnownName="Changement de l'état" />
+            <elementDefinition Id="1eac1589-98e6-4779-81da-e2da25a8a96e" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f0d87300-d490-4585-aa37-90faa5281a91" name="Gestion des Stocks" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cee27bae-464a-4084-879b-d7f591a537bc" />
+        <additions>
+          <include Id="02ff5a47-154a-4cfe-ac12-3a025bda1c51">
+            <useCaseMoniker Id="4a673b2c-ab62-48c1-af65-814508fa73df" LastKnownName="Changement du stock pour un livre" />
+            <elementDefinition Id="27346718-eb7f-4636-b976-a14c2f44a4c6" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1269958b-2fea-41c1-b4aa-73f04140432f" name="Gestion des catégories" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d30fd7b2-cec4-42a5-99aa-926e76add052" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9aaa2a8b-9587-4074-8b7a-06a205943825" name="Gestion des livres" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="df0307b1-5e15-481c-90a6-f0df8d9772b1" />
+        <additions>
+          <include Id="abd9dec7-e395-4052-8c88-532751b99b99">
+            <useCaseMoniker Id="f0d87300-d490-4585-aa37-90faa5281a91" LastKnownName="Gestion des Stocks" />
+            <elementDefinition Id="e564a82b-78ed-4802-b40e-c378c9c0e712" />
+          </include>
+          <include Id="ac3d8281-416d-4941-9f3d-f3ef141bc1ce">
+            <useCaseMoniker Id="25d7d74d-24de-4908-962e-c1a27a85efa3" LastKnownName="Ajout/Suppression Livre" />
+            <elementDefinition Id="31f190ee-a89b-421a-99a9-84330a748a4c" />
+          </include>
+          <include Id="dd2a0226-902a-423c-95aa-36204a7a0a4f">
+            <useCaseMoniker Id="607be102-c8ad-4167-9fe1-53894e641176" LastKnownName="Editions infos Livre" />
+            <elementDefinition Id="bb18e21f-b3fa-44b0-9688-1540eaf34249" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="25b8ee59-cdcb-4249-995c-fe1f44fef46d" name="Changement de l'état" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4e33c5c1-02b0-4a3e-8d87-20ac9eda0c33" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="4a673b2c-ab62-48c1-af65-814508fa73df" name="Changement du stock pour un livre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="04bfaed5-6fef-4ce8-a5a4-709b26a5a85e" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="25d7d74d-24de-4908-962e-c1a27a85efa3" name="Ajout/Suppression Livre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bb25cd3c-efa5-4bd5-bfc2-1d0251c71e0d" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="607be102-c8ad-4167-9fe1-53894e641176" name="Editions infos Livre" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="004b1bb3-47b9-4372-a910-593752b380f6" />
+        <subjects>
+          <subsystemMoniker Id="b05afed4-b0d4-4958-a6fe-6c9de9ff6195" LastKnownName="booXstore" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="02e5137b-bc46-493a-8a7d-a6132bfcc7dc" name="booXstore">
+    <elementDefinition Id="7bde64ea-2196-4d2c-b6ee-3666584ca189" />
+  </package>
+</useCaseModelRoot>
