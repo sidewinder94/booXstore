@@ -16,3 +16,17 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 booXstore/nbproject/
+
+#Source Files#
+~*.docx
+azarrouk_CER_*.docx
+Thumbs.db
+
+# LateX Files #
+*.toc
+*.log
+*.aux
+*.synctex.gz
+*.out
+*.bak
+*.pyg
