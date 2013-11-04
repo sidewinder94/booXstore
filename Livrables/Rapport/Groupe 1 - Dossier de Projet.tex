@@ -1,64 +1,43 @@
-\documentclass{eXia_report}
-
-\title{Dossier de Projet}
-\author{Cyril LE ROY \\ Antoine-Ali ZARROUK \\ Benjamin ROBERT \\ Julien NORMAND \\ Jordan NOURRY}
-\date{\today}
+\documentclass{exia_report}
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+	\begin{center}
+
+		\hfill \\[5cm]
+		{ \huge \bfseries Rapport de Projet }
+
+		\vfill
+		\begin{minipage}{0.4\textwidth}
+			\begin{center}
+				\large
+				Cyril LE ROY \\
+				Antoine-Ali ZARROUK \\
+				Benjamin ROBERT \\
+				Julien NORMAND \\
+				Jordan NOURRY
+			\end{center}
+		\end{minipage}
+
+		{ \vfill \large \today }
+
+	\end{center}
+\end{titlepage}
+
 \clearpage
 \tableofcontents
-\clearpage
-
-% ------------------------------------------------------------------------------
-%
-% Présentation
-%
-% ------------------------------------------------------------------------------
 
 \clearpage
-\part{Présentation}
-\section{}
-
-% ------------------------------------------------------------------------------
-%
-% Gestion de projet
-%
-% ------------------------------------------------------------------------------
+\input{Présentation}
 
 \clearpage
-\part{Gestion de projet}
-\section{}
-
-% ------------------------------------------------------------------------------
-%
-% Développement
-%
-% ------------------------------------------------------------------------------
+\input{Gestion_de_projet}
 
 \clearpage
-\part{Développement}
-\section{}
-
-% ------------------------------------------------------------------------------
-%
-% Conclusion et perspective
-%
-% ------------------------------------------------------------------------------
+\input{Développement}
 
 \clearpage
-\part{Conclusion et perspective}
-\section{}
-
-% ------------------------------------------------------------------------------
-%
-% Annexe
-%
-% ------------------------------------------------------------------------------
-
-\clearpage
-\appendix
-\part{Annexe}
+\input{Conclusion}
 
 \end{document}
