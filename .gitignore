@@ -4,3 +4,5 @@
 *.jar
 *.war
 *.ear
+/booXstore/nbproject/private/
+/booXstore/booXstore-ejb/nbproject/private/
