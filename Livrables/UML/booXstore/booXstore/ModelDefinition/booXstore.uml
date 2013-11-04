@@ -846,6 +846,2208 @@
         </subjects>
       </useCase>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="3d80a83a-17c8-4d45-a5e4-3559481aeaa3"
+        name="Création de compte"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="93ecd28e-9b05-43b6-a66d-2fbf300c9e30"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="29e1b575-f950-4889-858b-890b702e6185"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5e513bf9-09f5-4cc0-9bda-327535dadf03"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="103cd62c-d082-478b-a8c5-d75e0d5954f7"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="de34a2b3-2553-4a8b-9c33-28b74898ab19"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="e5b8fab6-9ab0-4af1-863a-ee1bbe078472"
+                LastKnownName="OperandOccurrenceSpecification65"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="c739b879-d39c-49e1-97e1-41fabf17cc8d"
+                LastKnownName="OperandOccurrenceSpecification66"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="01d2b315-7540-4c9b-810f-7da3b7371e0f"
+                LastKnownName="OperandOccurrenceSpecification69"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="559b172a-e610-485b-a6e2-088d380903ec"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a38b3d53-6960-4fb2-931e-1a2adfde5123"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="3b348242-789a-41db-b7de-f29db63b0bae"
+                LastKnownName="OperandOccurrenceSpecification70"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="6a050bcd-ffb3-4a33-800d-1e7def4b4453"
+                LastKnownName="OperandOccurrenceSpecification81"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="dd5e32e8-1514-4fa1-9585-29ccb0da8f07"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0207c1f7-f88b-4a11-abbf-e48a9bcb92da"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="1d8fdbdf-c539-4f3a-a161-fa9354836fb3"
+                LastKnownName="OperandOccurrenceSpecification82"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="0b2232eb-76be-4fba-b2d0-e98058014f8c"
+                LastKnownName="OperandOccurrenceSpecification89"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7f680505-7600-4f72-b1d4-b68b80f48e80"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e71db2f3-4508-403d-82b8-fb37631f619f"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="99fb8199-6c98-43e5-8325-074df8ca85ec"
+                LastKnownName="OperandOccurrenceSpecification90"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="550231ea-3878-49e0-a8e3-88ac186431c7"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="30748002-d969-4b11-aa84-d176805f00cf"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5e513bf9-09f5-4cc0-9bda-327535dadf03"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1e35dd69-ea3a-4de8-aec4-f7f46db5531b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3d3793f1-74a5-415d-8842-217b12f60c7a"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="103cd62c-d082-478b-a8c5-d75e0d5954f7"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="a68a372c-8a7b-4cd0-a59c-188ca085b36f"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="128a189d-8c53-4661-a07c-c38c557c20ab"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="3803cc72-bdc0-412b-9433-8a0cbced5694"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b5f076d9-8dce-4b7b-bcde-c88197cc32bf"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="c8ba05ff-bdfe-4770-b941-65c558dfb6fe"
+                LastKnownName="OperandOccurrenceSpecification67"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2cad4612-a257-4a69-a93f-e8be373a7a72"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="fea704e0-f74e-4ac6-8c75-d6bd21a7d7e3"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="5a9d4418-ce55-4dff-be06-16193ac4aa48"
+                LastKnownName="OperandOccurrenceSpecification68"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="1f72d89e-ea93-4ab5-a9f2-1b3e4949d12c"
+                LastKnownName="OperandOccurrenceSpecification71"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="45516c09-4396-46a2-b997-f2d729628a7d"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="4eab3a40-648a-4393-90e8-c9173b1f872b"
+                LastKnownName="OperandOccurrenceSpecification72"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="70eff1bc-c43f-4433-a122-05bab0c2c2c1"
+                LastKnownName="OperandOccurrenceSpecification83"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0c1333c9-8e2b-4b9c-a745-54e65f4dce2a"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="1c342d6b-f6c6-4e30-84fc-1b3acc783800"
+                LastKnownName="OperandOccurrenceSpecification84"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="05b89c7b-befa-403e-b53a-6fac5f89cc1b"
+                LastKnownName="OperandOccurrenceSpecification91"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="229c8213-bb6a-46ed-a596-1bdf23c67a40"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="62907c34-fe0c-40d7-8141-835791c759e2"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="16250c57-691b-4368-adfa-f353f9ae6c22"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="f414f617-42df-43b4-92d3-e7d50f5c5a94"
+                LastKnownName="OperandOccurrenceSpecification92"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1b08867f-6455-423a-80be-3033841fbdd9"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="3803cc72-bdc0-412b-9433-8a0cbced5694"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="14699167-6562-446d-8e91-1571486956cb"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="de34a2b3-2553-4a8b-9c33-28b74898ab19"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b5f076d9-8dce-4b7b-bcde-c88197cc32bf"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <combinedFragment
+            Id="365390c8-cc5e-4a5d-ac07-c8447f17848e"
+            name="CombinedFragment2"
+            interactionOperator="Alt">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="9bcc6ab4-4a6d-49aa-a0cd-ebbc86a9ecfe"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                    LastKnownName="Interface"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                    LastKnownName="Composants Métiers (EJB)"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                    LastKnownName="Utilisateur"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                    LastKnownName="Base de données"
+                    LastKnownLocation="booXstore.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="2c9f3727-ca92-4001-9041-3d568172450f" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="e5b8fab6-9ab0-4af1-863a-ee1bbe078472"
+                    LastKnownName="OperandOccurrenceSpecification65"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="c739b879-d39c-49e1-97e1-41fabf17cc8d"
+                    LastKnownName="OperandOccurrenceSpecification66"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="c8ba05ff-bdfe-4770-b941-65c558dfb6fe"
+                    LastKnownName="OperandOccurrenceSpecification67"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="5a9d4418-ce55-4dff-be06-16193ac4aa48"
+                    LastKnownName="OperandOccurrenceSpecification68"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="c0bec3e5-84b9-467e-b4a6-df3358c71719"
+                    LastKnownName="OperandOccurrenceSpecification73"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="1fe3d69c-dbf7-4751-8e7e-7625607618cf"
+                    LastKnownName="OperandOccurrenceSpecification74"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="8f741627-ef74-4845-958f-83dea8d62577"
+                    LastKnownName="OperandOccurrenceSpecification77"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="55a82364-17e4-4082-b326-f5193096fbdd"
+                    LastKnownName="OperandOccurrenceSpecification78"
+                    LastKnownLocation="booXstore.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+              <interactionOperand
+                Id="cf5dafa5-cb0f-433f-8576-0b963afb2c13"
+                name="InteractionOperand2">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                    LastKnownName="Interface"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                    LastKnownName="Composants Métiers (EJB)"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                    LastKnownName="Utilisateur"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                    LastKnownName="Base de données"
+                    LastKnownLocation="booXstore.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="86f62f85-4fd6-42b4-a61e-7c30a3f4a944"
+                    guardText="Informations manquantes / MDP non correspondant" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="01d2b315-7540-4c9b-810f-7da3b7371e0f"
+                    LastKnownName="OperandOccurrenceSpecification69"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="3b348242-789a-41db-b7de-f29db63b0bae"
+                    LastKnownName="OperandOccurrenceSpecification70"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="1f72d89e-ea93-4ab5-a9f2-1b3e4949d12c"
+                    LastKnownName="OperandOccurrenceSpecification71"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="4eab3a40-648a-4393-90e8-c9173b1f872b"
+                    LastKnownName="OperandOccurrenceSpecification72"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="7de590b9-0d6b-470b-a535-d29ca2854123"
+                    LastKnownName="OperandOccurrenceSpecification75"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="0cea8585-9d36-44eb-bc84-cf51a6ff2c75"
+                    LastKnownName="OperandOccurrenceSpecification76"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="c9d0acd5-06cb-4493-a236-fdcd3020b9c5"
+                    LastKnownName="OperandOccurrenceSpecification79"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="5947c7fe-f566-4e2c-8e1b-eea19d32831a"
+                    LastKnownName="OperandOccurrenceSpecification80"
+                    LastKnownLocation="booXstore.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+              <interactionOperand
+                Id="0842b02c-fe58-4b8e-a4d8-045b209f9eba"
+                name="InteractionOperand3">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                    LastKnownName="Interface"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                    LastKnownName="Composants Métiers (EJB)"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                    LastKnownName="Utilisateur"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                    LastKnownName="Base de données"
+                    LastKnownLocation="booXstore.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="9e4af80c-8fe6-4629-b2fc-39a0b8df46c6"
+                    guardText="Login Existant" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="6a050bcd-ffb3-4a33-800d-1e7def4b4453"
+                    LastKnownName="OperandOccurrenceSpecification81"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="1d8fdbdf-c539-4f3a-a161-fa9354836fb3"
+                    LastKnownName="OperandOccurrenceSpecification82"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="70eff1bc-c43f-4433-a122-05bab0c2c2c1"
+                    LastKnownName="OperandOccurrenceSpecification83"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="1c342d6b-f6c6-4e30-84fc-1b3acc783800"
+                    LastKnownName="OperandOccurrenceSpecification84"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="4544999e-887e-4be7-a7a0-2df930658c1d"
+                    LastKnownName="OperandOccurrenceSpecification85"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="28a97c4e-faad-4269-84a7-de0acea26dd1"
+                    LastKnownName="OperandOccurrenceSpecification86"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="067adc09-577a-4bde-98b5-23bae5bb4775"
+                    LastKnownName="OperandOccurrenceSpecification87"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="2993b35e-fb21-439e-8ba1-0a7efaea259b"
+                    LastKnownName="OperandOccurrenceSpecification88"
+                    LastKnownLocation="booXstore.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+              <interactionOperand
+                Id="3be5dbbe-8450-47e2-9fbc-2cf4434eac47"
+                name="InteractionOperand4">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                    LastKnownName="Interface"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                    LastKnownName="Composants Métiers (EJB)"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                    LastKnownName="Utilisateur"
+                    LastKnownLocation="booXstore.uml" />
+                  <lifelineMoniker
+                    Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                    LastKnownName="Base de données"
+                    LastKnownLocation="booXstore.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="056f4f83-7b66-47f3-b852-e1281cceef60" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="0b2232eb-76be-4fba-b2d0-e98058014f8c"
+                    LastKnownName="OperandOccurrenceSpecification89"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="99fb8199-6c98-43e5-8325-074df8ca85ec"
+                    LastKnownName="OperandOccurrenceSpecification90"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="05b89c7b-befa-403e-b53a-6fac5f89cc1b"
+                    LastKnownName="OperandOccurrenceSpecification91"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="f414f617-42df-43b4-92d3-e7d50f5c5a94"
+                    LastKnownName="OperandOccurrenceSpecification92"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="62d18d4d-709b-4d9d-83bd-be79196aa9ad"
+                    LastKnownName="OperandOccurrenceSpecification93"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="0778aea7-411a-4a83-9e0c-c37965fd9b42"
+                    LastKnownName="OperandOccurrenceSpecification94"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="4b8fc480-e529-459b-916d-149e24fc00a7"
+                    LastKnownName="OperandOccurrenceSpecification95"
+                    LastKnownLocation="booXstore.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="17a702a8-d611-4772-9182-88dd40cf8c9c"
+                    LastKnownName="OperandOccurrenceSpecification96"
+                    LastKnownLocation="booXstore.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="c8ba05ff-bdfe-4770-b941-65c558dfb6fe"
+            name="OperandOccurrenceSpecification67">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="e5b8fab6-9ab0-4af1-863a-ee1bbe078472"
+            name="OperandOccurrenceSpecification65">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c0bec3e5-84b9-467e-b4a6-df3358c71719"
+            name="OperandOccurrenceSpecification73">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="8f741627-ef74-4845-958f-83dea8d62577"
+            name="OperandOccurrenceSpecification77">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="c26650d6-df75-4bbd-a504-f4b0094754cf"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="cdd72ef5-8bbd-4506-bef3-bbe31967930d"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0ed07111-ba49-4c36-94f0-c480910be6e9"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="7fd0b21e-7bcb-48b9-af41-e350e26e77a0"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0124c8d2-6189-4ccf-807e-5e51d81ce2e2"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="0ed07111-ba49-4c36-94f0-c480910be6e9"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b2a44a23-008a-4309-9ca0-ce0a9ce09540"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7fd0b21e-7bcb-48b9-af41-e350e26e77a0"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2cad4612-a257-4a69-a93f-e8be373a7a72"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0124c8d2-6189-4ccf-807e-5e51d81ce2e2"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fea704e0-f74e-4ac6-8c75-d6bd21a7d7e3"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="cdd72ef5-8bbd-4506-bef3-bbe31967930d"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="cfdf1c44-abcc-473d-a902-fcd8edfc420e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5a9d4418-ce55-4dff-be06-16193ac4aa48"
+            name="OperandOccurrenceSpecification68">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="55a82364-17e4-4082-b326-f5193096fbdd"
+            name="OperandOccurrenceSpecification78">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1fe3d69c-dbf7-4751-8e7e-7625607618cf"
+            name="OperandOccurrenceSpecification74">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c739b879-d39c-49e1-97e1-41fabf17cc8d"
+            name="OperandOccurrenceSpecification66">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="01d2b315-7540-4c9b-810f-7da3b7371e0f"
+            name="OperandOccurrenceSpecification69">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c9d0acd5-06cb-4493-a236-fdcd3020b9c5"
+            name="OperandOccurrenceSpecification79">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="7de590b9-0d6b-470b-a535-d29ca2854123"
+            name="OperandOccurrenceSpecification75">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1f72d89e-ea93-4ab5-a9f2-1b3e4949d12c"
+            name="OperandOccurrenceSpecification71">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="23b74e67-81d6-450f-b41d-fc4ff34c1140"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="a38b3d53-6960-4fb2-931e-1a2adfde5123"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="559b172a-e610-485b-a6e2-088d380903ec"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b0c274d1-c112-48ac-a327-8b5cc53c2b6e"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="86833e66-9692-4236-b9a6-08f5e0065245"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="559b172a-e610-485b-a6e2-088d380903ec"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5f286930-5ddd-43b7-affc-65640256fe78"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="45516c09-4396-46a2-b997-f2d729628a7d"
+            name="MessageOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b0c274d1-c112-48ac-a327-8b5cc53c2b6e"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="be324cd0-9656-4226-8773-b19a810f779d"
+            name="BehaviorExecutionSpecification8">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="0db0a1f2-a702-415b-a056-8e3ac13873c7"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="44f37620-8ec2-43a0-a665-ee34373c0f1e"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b7cd1e43-5967-4813-9705-028fa35482d1"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="44f37620-8ec2-43a0-a665-ee34373c0f1e"
+            name="ExecutionOccurrenceSpecification15">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fcd4334c-0737-4e70-9da6-ec00192ed07f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b7cd1e43-5967-4813-9705-028fa35482d1"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="86833e66-9692-4236-b9a6-08f5e0065245"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="a38b3d53-6960-4fb2-931e-1a2adfde5123"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="28f59d66-f7bd-460e-9e4a-d6a44c4baa97"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="0db0a1f2-a702-415b-a056-8e3ac13873c7"
+            name="ExecutionOccurrenceSpecification16">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="4df22c42-2148-4699-a049-93c6d13748fa"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5947c7fe-f566-4e2c-8e1b-eea19d32831a"
+            name="OperandOccurrenceSpecification80">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="3b348242-789a-41db-b7de-f29db63b0bae"
+            name="OperandOccurrenceSpecification70">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="0cea8585-9d36-44eb-bc84-cf51a6ff2c75"
+            name="OperandOccurrenceSpecification76">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="4eab3a40-648a-4393-90e8-c9173b1f872b"
+            name="OperandOccurrenceSpecification72">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="4544999e-887e-4be7-a7a0-2df930658c1d"
+            name="OperandOccurrenceSpecification85">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="70eff1bc-c43f-4433-a122-05bab0c2c2c1"
+            name="OperandOccurrenceSpecification83">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="6a050bcd-ffb3-4a33-800d-1e7def4b4453"
+            name="OperandOccurrenceSpecification81">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="067adc09-577a-4bde-98b5-23bae5bb4775"
+            name="OperandOccurrenceSpecification87">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="b189c909-eb03-4aa1-89f9-64b164bd11ac"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="0207c1f7-f88b-4a11-abbf-e48a9bcb92da"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="dd5e32e8-1514-4fa1-9585-29ccb0da8f07"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="28dd97fa-9e74-4494-8cd3-d90368b2fbd7"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="511f5e00-80e4-49d6-8409-250cfbacaebc"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="dd5e32e8-1514-4fa1-9585-29ccb0da8f07"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a5a790b2-ee39-4f32-bf60-a85de98325b3"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="28dd97fa-9e74-4494-8cd3-d90368b2fbd7"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0c1333c9-8e2b-4b9c-a745-54e65f4dce2a"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="55da8cb0-6048-4f07-b775-c50faca85345"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="5e77ff26-5444-4ea8-ab80-2f291c97550d"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="48e24e7f-38e8-4675-bc36-8744734767b5"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ed60306f-ef8e-4ce8-8880-ee43c4abb9cb"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="48e24e7f-38e8-4675-bc36-8744734767b5"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e6f07fd4-e2e3-4ca4-bc4f-3dfc37787d57"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="511f5e00-80e4-49d6-8409-250cfbacaebc"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ed60306f-ef8e-4ce8-8880-ee43c4abb9cb"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="0207c1f7-f88b-4a11-abbf-e48a9bcb92da"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="349b881d-84ff-4a90-b692-73f1e01dd13e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="5e77ff26-5444-4ea8-ab80-2f291c97550d"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6a3e8ba6-28be-4da1-b30f-43bb46a70c4a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1c342d6b-f6c6-4e30-84fc-1b3acc783800"
+            name="OperandOccurrenceSpecification84">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="28a97c4e-faad-4269-84a7-de0acea26dd1"
+            name="OperandOccurrenceSpecification86">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1d8fdbdf-c539-4f3a-a161-fa9354836fb3"
+            name="OperandOccurrenceSpecification82">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="2993b35e-fb21-439e-8ba1-0a7efaea259b"
+            name="OperandOccurrenceSpecification88">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="62d18d4d-709b-4d9d-83bd-be79196aa9ad"
+            name="OperandOccurrenceSpecification93">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="0b2232eb-76be-4fba-b2d0-e98058014f8c"
+            name="OperandOccurrenceSpecification89">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="4b8fc480-e529-459b-916d-149e24fc00a7"
+            name="OperandOccurrenceSpecification95">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="05b89c7b-befa-403e-b53a-6fac5f89cc1b"
+            name="OperandOccurrenceSpecification91">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="35cb6a59-35c1-4a5b-adce-22dab8b3c231"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="e4f83fe1-3876-47b2-a4bb-17eb68c26c3e"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="9359d318-b490-40f8-9b20-0670aac46ec2"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="17cbf97c-c13e-4183-889c-eb2618dc9559"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="eec7790d-22a0-4743-a191-66ca6c0321d8"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="9359d318-b490-40f8-9b20-0670aac46ec2"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="39545ef7-7bd4-43c7-9be7-2e57220610a8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="229c8213-bb6a-46ed-a596-1bdf23c67a40"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="17cbf97c-c13e-4183-889c-eb2618dc9559"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="eec7790d-22a0-4743-a191-66ca6c0321d8"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="62907c34-fe0c-40d7-8141-835791c759e2"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="e4f83fe1-3876-47b2-a4bb-17eb68c26c3e"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f025f94c-10b7-40e8-9cea-fd6d59ba9156"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="81b31580-dff5-440e-9aef-1618df8bce3c"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="e71db2f3-4508-403d-82b8-fb37631f619f"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="7f680505-7600-4f72-b1d4-b68b80f48e80"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="7ab11d50-bea8-44b4-84ca-ab82b47d2689"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8c925ae3-9ce5-4298-9bac-672d18f47ed2"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="7f680505-7600-4f72-b1d4-b68b80f48e80"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8b1e48b5-5934-4c39-b0a9-24934abd2551"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="16250c57-691b-4368-adfa-f353f9ae6c22"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7ab11d50-bea8-44b4-84ca-ab82b47d2689"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="24e239d9-1930-4f16-ad44-f9b1102cad69"
+            name="BehaviorExecutionSpecification11">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="932c6ba1-833e-4082-b768-7ae70da195ef"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="booXstore.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5df48687-bc9b-4778-abb2-b8caaba4c33f"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="booXstore.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2eecffc7-23d5-453f-a385-42b1744b32c0"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="booXstore.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5df48687-bc9b-4778-abb2-b8caaba4c33f"
+            name="ExecutionOccurrenceSpecification21">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="115bb5ce-ca63-4c31-9998-0bdf9b6f00c0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2eecffc7-23d5-453f-a385-42b1744b32c0"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8c925ae3-9ce5-4298-9bac-672d18f47ed2"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="e71db2f3-4508-403d-82b8-fb37631f619f"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ff9f871a-9bf4-449c-959a-e796ba459153"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="932c6ba1-833e-4082-b768-7ae70da195ef"
+            name="ExecutionOccurrenceSpecification22">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="29f4dfc0-96d0-44db-bc2f-d816405a296b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="17a702a8-d611-4772-9182-88dd40cf8c9c"
+            name="OperandOccurrenceSpecification96">
+            <covered>
+              <lifelineMoniker
+                Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+                LastKnownName="Base de données"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="99fb8199-6c98-43e5-8325-074df8ca85ec"
+            name="OperandOccurrenceSpecification90">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="0778aea7-411a-4a83-9e0c-c37965fd9b42"
+            name="OperandOccurrenceSpecification94">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="f414f617-42df-43b4-92d3-e7d50f5c5a94"
+            name="OperandOccurrenceSpecification92">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="550231ea-3878-49e0-a8e3-88ac186431c7"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1b08867f-6455-423a-80be-3033841fbdd9"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="128a189d-8c53-4661-a07c-c38c557c20ab"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="33405c22-e65a-4fc8-ad77-ad1d55437b68"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+                LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e245699f-e00c-4cfb-bf4f-22171a4bd3ca"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="0029b919-f872-4174-8599-676fcdaafbe1"
+                LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="30748002-d969-4b11-aa84-d176805f00cf"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="29e1b575-f950-4889-858b-890b702e6185"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="83c710dc-1428-4dfb-967d-1935cea0f695"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="booXstore.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+                LastKnownName="Interface"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="0029b919-f872-4174-8599-676fcdaafbe1"
+            name="Utilisateur"
+            isActor="false"
+            lifelineDisplayName="Utilisateur">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3d3793f1-74a5-415d-8842-217b12f60c7a"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="c0bec3e5-84b9-467e-b4a6-df3358c71719"
+                LastKnownName="OperandOccurrenceSpecification73"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="1fe3d69c-dbf7-4751-8e7e-7625607618cf"
+                LastKnownName="OperandOccurrenceSpecification74"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="7de590b9-0d6b-470b-a535-d29ca2854123"
+                LastKnownName="OperandOccurrenceSpecification75"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="44f37620-8ec2-43a0-a665-ee34373c0f1e"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0db0a1f2-a702-415b-a056-8e3ac13873c7"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="0cea8585-9d36-44eb-bc84-cf51a6ff2c75"
+                LastKnownName="OperandOccurrenceSpecification76"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="4544999e-887e-4be7-a7a0-2df930658c1d"
+                LastKnownName="OperandOccurrenceSpecification85"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="48e24e7f-38e8-4675-bc36-8744734767b5"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5e77ff26-5444-4ea8-ab80-2f291c97550d"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="28a97c4e-faad-4269-84a7-de0acea26dd1"
+                LastKnownName="OperandOccurrenceSpecification86"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="62d18d4d-709b-4d9d-83bd-be79196aa9ad"
+                LastKnownName="OperandOccurrenceSpecification93"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5df48687-bc9b-4778-abb2-b8caaba4c33f"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="932c6ba1-833e-4082-b768-7ae70da195ef"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="0778aea7-411a-4a83-9e0c-c37965fd9b42"
+                LastKnownName="OperandOccurrenceSpecification94"
+                LastKnownLocation="booXstore.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e245699f-e00c-4cfb-bf4f-22171a4bd3ca"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="booXstore.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d0608146-cccb-43c4-87a9-5e1659100f6e"
+            name="Interface"
+            isActor="false"
+            lifelineDisplayName="Interface">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="5e513bf9-09f5-4cc0-9bda-327535dadf03"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="29e1b575-f950-4889-858b-890b702e6185"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="booXstore.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="ae156f56-9eaf-4ce6-8424-568c7d1aa7cd"
+            name="Composants Métiers (EJB)"
+            isActor="false"
+            lifelineDisplayName="Composants Métiers (EJB)">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="3803cc72-bdc0-412b-9433-8a0cbced5694"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="128a189d-8c53-4661-a07c-c38c557c20ab"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="booXstore.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="7c9dd913-6647-4bbe-a23e-6f565ca39cde"
+            name="Base de données"
+            isActor="false"
+            lifelineDisplayName="Base de données">
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="8f741627-ef74-4845-958f-83dea8d62577"
+                LastKnownName="OperandOccurrenceSpecification77"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0ed07111-ba49-4c36-94f0-c480910be6e9"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="cdd72ef5-8bbd-4506-bef3-bbe31967930d"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="55a82364-17e4-4082-b326-f5193096fbdd"
+                LastKnownName="OperandOccurrenceSpecification78"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="c9d0acd5-06cb-4493-a236-fdcd3020b9c5"
+                LastKnownName="OperandOccurrenceSpecification79"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="5947c7fe-f566-4e2c-8e1b-eea19d32831a"
+                LastKnownName="OperandOccurrenceSpecification80"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="067adc09-577a-4bde-98b5-23bae5bb4775"
+                LastKnownName="OperandOccurrenceSpecification87"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="2993b35e-fb21-439e-8ba1-0a7efaea259b"
+                LastKnownName="OperandOccurrenceSpecification88"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="4b8fc480-e529-459b-916d-149e24fc00a7"
+                LastKnownName="OperandOccurrenceSpecification95"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="9359d318-b490-40f8-9b20-0670aac46ec2"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="booXstore.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e4f83fe1-3876-47b2-a4bb-17eb68c26c3e"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="booXstore.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="17a702a8-d611-4772-9182-88dd40cf8c9c"
+                LastKnownName="OperandOccurrenceSpecification96"
+                LastKnownLocation="booXstore.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="0f9be21e-5805-4c37-89d9-dc87b15483da"
+            name="Création de compte"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3d3793f1-74a5-415d-8842-217b12f60c7a"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="103cd62c-d082-478b-a8c5-d75e0d5954f7"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="fcba8140-3639-44ec-8f73-afb11a448563"
+            name="Soumission informations"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="de34a2b3-2553-4a8b-9c33-28b74898ab19"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b5f076d9-8dce-4b7b-bcde-c88197cc32bf"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="14693286-e438-4470-80a0-de2626fb23fb"
+            name="Vérification login existant"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2cad4612-a257-4a69-a93f-e8be373a7a72"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7fd0b21e-7bcb-48b9-af41-e350e26e77a0"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="d87a3036-0b66-4207-ba50-12eff6e01893"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0124c8d2-6189-4ccf-807e-5e51d81ce2e2"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fea704e0-f74e-4ac6-8c75-d6bd21a7d7e3"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b4ad8ede-a258-4abc-ba72-99e5953ef3d6"
+            name="message erreur descriptif"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="45516c09-4396-46a2-b997-f2d729628a7d"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b0c274d1-c112-48ac-a327-8b5cc53c2b6e"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="193673e9-b80c-4bfe-9114-2390c0e2b279"
+            name="Affichage Message d'erreur"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="86833e66-9692-4236-b9a6-08f5e0065245"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b7cd1e43-5967-4813-9705-028fa35482d1"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="6c1165a0-152e-4c7e-bb52-8d874faecf53"
+            name="Message Login Existant"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0c1333c9-8e2b-4b9c-a745-54e65f4dce2a"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="28dd97fa-9e74-4494-8cd3-d90368b2fbd7"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="29b84057-d654-4b7e-b416-75775102f9ee"
+            name="Affichage Message Erreur Login"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="511f5e00-80e4-49d6-8409-250cfbacaebc"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ed60306f-ef8e-4ce8-8880-ee43c4abb9cb"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="92c78e45-a363-4aac-982a-72e2cc3df858"
+            name="Création utilisateur Base de données"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="229c8213-bb6a-46ed-a596-1bdf23c67a40"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="17cbf97c-c13e-4183-889c-eb2618dc9559"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b388b4e0-0ec0-4961-9da3-f94abd4766e9"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="eec7790d-22a0-4743-a191-66ca6c0321d8"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="62907c34-fe0c-40d7-8141-835791c759e2"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="712fdc4e-12b7-4177-981b-808faa27d03c"
+            name="Message Réussite"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="16250c57-691b-4368-adfa-f353f9ae6c22"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7ab11d50-bea8-44b4-84ca-ab82b47d2689"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="46a9771d-b9ef-41b3-a087-064097c395b3"
+            name="Affichage message réussite"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8c925ae3-9ce5-4298-9bac-672d18f47ed2"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2eecffc7-23d5-453f-a385-42b1744b32c0"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="3bd25b59-d205-47fe-a3fd-0f2b7e0ba815"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1b08867f-6455-423a-80be-3033841fbdd9"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="550231ea-3878-49e0-a8e3-88ac186431c7"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="cf88b791-b4a0-4d32-8071-d419403002ec"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="30748002-d969-4b11-aa84-d176805f00cf"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="booXstore.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e245699f-e00c-4cfb-bf4f-22171a4bd3ca"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="booXstore.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1e35dd69-ea3a-4de8-aec4-f7f46db5531b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="83c710dc-1428-4dfb-967d-1935cea0f695"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="14699167-6562-446d-8e91-1571486956cb"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="33405c22-e65a-4fc8-ad77-ad1d55437b68"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5f286930-5ddd-43b7-affc-65640256fe78"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="28f59d66-f7bd-460e-9e4a-d6a44c4baa97"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fcd4334c-0737-4e70-9da6-ec00192ed07f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4df22c42-2148-4699-a049-93c6d13748fa"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b2a44a23-008a-4309-9ca0-ce0a9ce09540"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="cfdf1c44-abcc-473d-a902-fcd8edfc420e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a5a790b2-ee39-4f32-bf60-a85de98325b3"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="349b881d-84ff-4a90-b692-73f1e01dd13e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e6f07fd4-e2e3-4ca4-bc4f-3dfc37787d57"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6a3e8ba6-28be-4da1-b30f-43bb46a70c4a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="39545ef7-7bd4-43c7-9be7-2e57220610a8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f025f94c-10b7-40e8-9cea-fd6d59ba9156"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8b1e48b5-5934-4c39-b0a9-24934abd2551"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ff9f871a-9bf4-449c-959a-e796ba459153"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="115bb5ce-ca63-4c31-9998-0bdf9b6f00c0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="29f4dfc0-96d0-44db-bc2f-d816405a296b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
