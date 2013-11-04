@@ -30,3 +30,6 @@ Thumbs.db
 *.out
 *.bak
 *.pyg
+/booXstore/booXstore-ejb/target/
+/booXstore-war/target/
+/booXstore/booXstore-ear/target/
