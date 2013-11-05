@@ -22,6 +22,13 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="Diagramme d%27activité commande.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Diagramme d%27activité commande.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Diagramme d'activité commande.activitydiagram</DependentUpon>
+    </Content>
     <Content Include="Diagramme de Séquence commande.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -35,13 +42,6 @@
     <Content Include="ToDo\Diagramme composants.componentdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>ToDo\Diagramme composants.componentdiagram</DependentUpon>
-    </Content>
-    <Content Include="ToDo\Diagramme d%27activité commande.activitydiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ToDo\Diagramme d%27activité commande.activitydiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>ToDo\Diagramme d'activité commande.activitydiagram</DependentUpon>
     </Content>
     <Content Include="ToDo\Diagramme de Classe.classdiagram">
       <SubType>Content</SubType>
