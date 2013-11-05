@@ -1,0 +1,234 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="985" height="716" viewBox="0 0 985 716"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">
+
+<desc>Généré par Mocodo 1.6.1 le Tue, 05 Nov 2013 10:04:19</desc>
+
+<rect x="0" y="0" width="985" height="716" fill="none" stroke="none" stroke-width="0"/>
+
+<!-- Association Rédige -->
+<line x1="726" y1="286" x2="840" y2="286" stroke="#726f83" stroke-width="1"/>
+<text x="785" y="302.9" fill="#726f83" font-family="Verdana" font-size="12">1,N</text>
+<line x1="938" y1="286" x2="840" y2="286" stroke="#726f83" stroke-width="1"/>
+<text x="874" y="302.9" fill="#726f83" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-Rédige">
+	<path d="M 855 260 a 14 14 90 0 1 14 14 V 286 h -58 V 274 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 869 286 v 12 a 14 14 90 0 1 -14 14 H 825 a 14 14 90 0 1 -14 -14 V 286 H 58" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="811" y="260" width="58" height="52" fill="None" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="811" y1="286" x2="869" y2="286" stroke="#85956b" stroke-width="1"/>
+	<text x="818" y="278.6" fill="#27360c" font-family="Trebuchet MS" font-size="14">Rédige</text>
+</g>
+
+<!-- Association Appartenir -->
+<line x1="508" y1="672" x2="508" y2="515" stroke="#726f83" stroke-width="1"/>
+<text x="513.0" y="629.9" fill="#726f83" font-family="Verdana" font-size="12">1,1</text>
+<line x1="508" y1="286" x2="508" y2="515" stroke="#726f83" stroke-width="1"/>
+<text x="513.0" y="409.9" fill="#726f83" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-Appartenir">
+	<path d="M 536 489 a 14 14 90 0 1 14 14 V 515 h -84 V 503 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 550 515 v 12 a 14 14 90 0 1 -14 14 H 480 a 14 14 90 0 1 -14 -14 V 515 H 84" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="466" y="489" width="84" height="52" fill="None" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="466" y1="515" x2="550" y2="515" stroke="#85956b" stroke-width="1"/>
+	<text x="473" y="507.6" fill="#27360c" font-family="Trebuchet MS" font-size="14">Appartenir</text>
+</g>
+
+<!-- Association Ecrit -->
+<line x1="508" y1="286" x2="619" y2="286" stroke="#726f83" stroke-width="1"/>
+<text x="562" y="302.9" fill="#726f83" font-family="Verdana" font-size="12">1,1</text>
+<line x1="726" y1="286" x2="619" y2="286" stroke="#726f83" stroke-width="1"/>
+<text x="646" y="302.9" fill="#726f83" font-family="Verdana" font-size="12">1,N</text>
+<g id="association-Ecrit">
+	<path d="M 627 260 a 14 14 90 0 1 14 14 V 286 h -44 V 274 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 641 286 v 12 a 14 14 90 0 1 -14 14 H 611 a 14 14 90 0 1 -14 -14 V 286 H 44" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="597" y="260" width="44" height="52" fill="None" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="597" y1="286" x2="641" y2="286" stroke="#85956b" stroke-width="1"/>
+	<text x="604" y="278.6" fill="#27360c" font-family="Trebuchet MS" font-size="14">Ecrit</text>
+</g>
+
+<!-- Association Demande -->
+<line x1="141" y1="515" x2="38" y2="515" stroke="#726f83" stroke-width="1"/>
+<text x="77" y="531.9" fill="#726f83" font-family="Verdana" font-size="12">1,1</text>
+<line x1="38" y1="286" x2="38" y2="515" stroke="#726f83" stroke-width="1"/>
+<text x="43.0" y="337.9" fill="#726f83" font-family="Verdana" font-size="12">1,N</text>
+<g id="association-Demande">
+	<path d="M 61 489 a 14 14 90 0 1 14 14 V 515 h -74 V 503 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 75 515 v 12 a 14 14 90 0 1 -14 14 H 15 a 14 14 90 0 1 -14 -14 V 515 H 74" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="1" y="489" width="74" height="52" fill="None" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="1" y1="515" x2="75" y2="515" stroke="#85956b" stroke-width="1"/>
+	<text x="8" y="507.6" fill="#27360c" font-family="Trebuchet MS" font-size="14">Demande</text>
+</g>
+
+<!-- Association Commande -->
+<line x1="263" y1="286" x2="385" y2="286" stroke="#726f83" stroke-width="1"/>
+<text x="316" y="302.9" fill="#726f83" font-family="Verdana" font-size="12">1,N</text>
+<line x1="508" y1="286" x2="385" y2="286" stroke="#726f83" stroke-width="1"/>
+<text x="433" y="302.9" fill="#726f83" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-Commande">
+	<path d="M 414 260 a 14 14 90 0 1 14 14 V 286 h -86 V 274 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 428 286 v 12 a 14 14 90 0 1 -14 14 H 356 a 14 14 90 0 1 -14 -14 V 286 H 86" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="342" y="260" width="86" height="52" fill="None" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="342" y1="286" x2="428" y2="286" stroke="#85956b" stroke-width="1"/>
+	<text x="349" y="278.6" fill="#27360c" font-family="Trebuchet MS" font-size="14">Commande</text>
+</g>
+
+<!-- Association Publié -->
+<line x1="508" y1="44" x2="508" y2="129" stroke="#726f83" stroke-width="1"/>
+<text x="513.0" y="95.9" fill="#726f83" font-family="Verdana" font-size="12">1,N</text>
+<line x1="508" y1="286" x2="508" y2="129" stroke="#726f83" stroke-width="1"/>
+<text x="513.0" y="171.9" fill="#726f83" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-Publié">
+	<path d="M 521 103 a 14 14 90 0 1 14 14 V 129 h -54 V 117 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 535 129 v 12 a 14 14 90 0 1 -14 14 H 495 a 14 14 90 0 1 -14 -14 V 129 H 54" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="481" y="103" width="54" height="52" fill="None" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="481" y1="129" x2="535" y2="129" stroke="#85956b" stroke-width="1"/>
+	<text x="488" y="121.6" fill="#27360c" font-family="Trebuchet MS" font-size="14">Publié</text>
+</g>
+
+<!-- Association Commandé -->
+<line x1="263" y1="286" x2="141" y2="286" stroke="#726f83" stroke-width="1"/>
+<text x="189" y="302.9" fill="#726f83" font-family="Verdana" font-size="12">1,N</text>
+<line x1="38" y1="286" x2="141" y2="286" stroke="#726f83" stroke-width="1"/>
+<text x="72" y="302.9" fill="#726f83" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-Commandé">
+	<path d="M 170 260 a 14 14 90 0 1 14 14 V 286 h -86 V 274 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 184 286 v 12 a 14 14 90 0 1 -14 14 H 112 a 14 14 90 0 1 -14 -14 V 286 H 86" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="98" y="260" width="86" height="52" fill="None" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="98" y1="286" x2="184" y2="286" stroke="#85956b" stroke-width="1"/>
+	<text x="105" y="278.6" fill="#27360c" font-family="Trebuchet MS" font-size="14">Commandé</text>
+</g>
+
+<!-- Entity CATEGORY -->
+<g id="entity-CATEGORY">
+	<g id="frame-CATEGORY">
+		<rect x="468" y="637" width="80" height="26" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="468" y="663" width="80" height="44" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="468" y="637" width="80" height="70" fill="None" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="468" y1="663" x2="548" y2="663" stroke="#578dff" stroke-width="1"/>
+	</g>
+	<text x="473" y="655.6" fill="#131114" font-family="Trebuchet MS" font-size="14">CATEGORY</text>
+	<text x="473" y="681.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id</text>
+	<line x1="473" y1="684.0" x2="485" y2="684.0" stroke="#3e3c42" stroke-width="1"/>
+	<text x="473" y="699.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Name</text>
+</g>
+
+<!-- Entity PUBLISHER -->
+<g id="entity-PUBLISHER">
+	<g id="frame-PUBLISHER">
+		<rect x="468" y="9" width="80" height="26" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="468" y="35" width="80" height="44" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="468" y="9" width="80" height="70" fill="None" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="468" y1="35" x2="548" y2="35" stroke="#578dff" stroke-width="1"/>
+	</g>
+	<text x="473" y="27.6" fill="#131114" font-family="Trebuchet MS" font-size="14">PUBLISHER</text>
+	<text x="473" y="53.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id</text>
+	<line x1="473" y1="56.0" x2="485" y2="56.0" stroke="#3e3c42" stroke-width="1"/>
+	<text x="473" y="71.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Name</text>
+</g>
+
+<!-- Entity AUTHOR -->
+<g id="entity-AUTHOR">
+	<g id="frame-AUTHOR">
+		<rect x="900" y="242" width="76" height="26" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="900" y="268" width="76" height="62" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="900" y="242" width="76" height="88" fill="None" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="900" y1="268" x2="976" y2="268" stroke="#578dff" stroke-width="1"/>
+	</g>
+	<text x="911" y="260.6" fill="#131114" font-family="Trebuchet MS" font-size="14">AUTHOR</text>
+	<text x="905" y="286.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id</text>
+	<line x1="905" y1="289.0" x2="917" y2="289.0" stroke="#3e3c42" stroke-width="1"/>
+	<text x="905" y="304.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">FirstName</text>
+	<text x="905" y="322.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">LastName</text>
+</g>
+
+<!-- Entity BOOK_AUTHOR -->
+<g id="entity-BOOK_AUTHOR">
+	<g id="frame-BOOK_AUTHOR">
+		<rect x="672" y="242" width="108" height="26" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="672" y="268" width="108" height="62" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="672" y="242" width="108" height="88" fill="None" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="672" y1="268" x2="780" y2="268" stroke="#578dff" stroke-width="1"/>
+	</g>
+	<text x="677" y="260.6" fill="#131114" font-family="Trebuchet MS" font-size="14">BOOK_AUTHOR</text>
+	<text x="677" y="286.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id</text>
+	<line x1="677" y1="289.0" x2="689" y2="289.0" stroke="#3e3c42" stroke-width="1"/>
+	<text x="677" y="304.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id_Author</text>
+	<text x="677" y="322.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id_Book</text>
+</g>
+
+<!-- Entity BOOK -->
+<g id="entity-BOOK">
+	<g id="frame-BOOK">
+		<rect x="459" y="179" width="98" height="26" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="459" y="205" width="98" height="188" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="459" y="179" width="98" height="214" fill="None" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="459" y1="205" x2="557" y2="205" stroke="#578dff" stroke-width="1"/>
+	</g>
+	<text x="490" y="197.6" fill="#131114" font-family="Trebuchet MS" font-size="14">BOOK</text>
+	<text x="464" y="223.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id</text>
+	<line x1="464" y1="226.0" x2="476" y2="226.0" stroke="#3e3c42" stroke-width="1"/>
+	<text x="464" y="241.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Title</text>
+	<text x="464" y="259.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id_Category</text>
+	<text x="464" y="277.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Supply</text>
+	<text x="464" y="295.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Threshold</text>
+	<text x="464" y="313.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Summary</text>
+	<text x="464" y="331.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Release_Date</text>
+	<text x="464" y="349.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Price</text>
+	<text x="464" y="367.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id_Publisher</text>
+	<text x="464" y="385.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">ImageLink</text>
+</g>
+
+<!-- Entity USER -->
+<g id="entity-USER">
+	<g id="frame-USER">
+		<rect x="103" y="417" width="76" height="26" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="103" y="443" width="76" height="170" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="103" y="417" width="76" height="196" fill="None" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="103" y1="443" x2="179" y2="443" stroke="#578dff" stroke-width="1"/>
+	</g>
+	<text x="125" y="435.6" fill="#131114" font-family="Trebuchet MS" font-size="14">USER</text>
+	<text x="108" y="461.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id</text>
+	<line x1="108" y1="464.0" x2="120" y2="464.0" stroke="#3e3c42" stroke-width="1"/>
+	<text x="108" y="479.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">FirstName</text>
+	<text x="108" y="497.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">LastName</text>
+	<text x="108" y="515.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Mail</text>
+	<text x="108" y="533.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Address</text>
+	<text x="108" y="551.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">ZIP</text>
+	<text x="108" y="569.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">City</text>
+	<text x="108" y="587.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Login</text>
+	<text x="108" y="605.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Password</text>
+</g>
+
+<!-- Entity BOOK_ORDER -->
+<g id="entity-BOOK_ORDER">
+	<g id="frame-BOOK_ORDER">
+		<rect x="215" y="233" width="96" height="26" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="215" y="259" width="96" height="80" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="215" y="233" width="96" height="106" fill="None" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="215" y1="259" x2="311" y2="259" stroke="#578dff" stroke-width="1"/>
+	</g>
+	<text x="220" y="251.6" fill="#131114" font-family="Trebuchet MS" font-size="14">BOOK_ORDER</text>
+	<text x="220" y="277.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id</text>
+	<line x1="220" y1="280.0" x2="232" y2="280.0" stroke="#3e3c42" stroke-width="1"/>
+	<text x="220" y="295.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id_Book</text>
+	<text x="220" y="313.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Quantity</text>
+	<text x="220" y="331.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id_Order</text>
+</g>
+
+<!-- Entity ORDER -->
+<g id="entity-ORDER">
+	<g id="frame-ORDER">
+		<rect x="9" y="251" width="58" height="26" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="9" y="277" width="58" height="44" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="9" y="251" width="58" height="70" fill="None" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="9" y1="277" x2="67" y2="277" stroke="#578dff" stroke-width="1"/>
+	</g>
+	<text x="16" y="269.6" fill="#131114" font-family="Trebuchet MS" font-size="14">ORDER</text>
+	<text x="14" y="295.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id</text>
+	<line x1="14" y1="298.0" x2="26" y2="298.0" stroke="#3e3c42" stroke-width="1"/>
+	<text x="14" y="313.6" fill="#3e3c42" font-family="Trebuchet MS" font-size="14">Id_User</text>
+</g>
+</svg>
