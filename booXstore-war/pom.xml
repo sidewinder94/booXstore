@@ -89,11 +89,6 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-	 <dependency>
-	  <groupId>${project.groupId}</groupId>
-	  <artifactId>booXstore-ejb</artifactId>
-	  <version>${project.version}</version>
-	 </dependency>
 	</dependencies>
 
 	<build>
