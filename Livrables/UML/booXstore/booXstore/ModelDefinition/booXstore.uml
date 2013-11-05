@@ -3,6 +3,16 @@
   dslVersion="1.0.0.0"
   Id="7bde64ea-2196-4d2c-b6ee-3666584ca189"
   name="booXstore" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="a74c7d54-8030-4573-91c0-32d767ffa8ab">
+      <body>Si données bancaires correctes</body>
+    </comment>
+    <comment
+      Id="c307dcab-11e7-416c-98f8-9f7d7d5e5e87">
+      <body>Si connecté</body>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -3207,22 +3217,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="3165e508-1b6c-48ca-8656-344b9ebaeec3"
-            name="MessageOccurrenceSpecification8">
-            <covered>
-              <lifelineMoniker
-                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
-                LastKnownName="Vue"
-                LastKnownLocation="booXstore.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="556efa9a-fdd2-4b4f-bcb8-71b6ce2c18f3"
             name="MessageOccurrenceSpecification7">
             <covered>
               <lifelineMoniker
                 Id="a2bcccfc-b74a-465b-a05f-472642088dd1"
                 LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3165e508-1b6c-48ca-8656-344b9ebaeec3"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
+                LastKnownName="Vue"
                 LastKnownLocation="booXstore.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3467,22 +3477,22 @@
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
-            Id="6a10a75a-29be-490a-9c01-3d3446874ea2"
-            name="OperandOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
-                LastKnownName="Vue"
-                LastKnownLocation="booXstore.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="7da8db43-c8bb-4f79-a8bb-f7c8794dc229"
             name="OperandOccurrenceSpecification9">
             <covered>
               <lifelineMoniker
                 Id="b511ffe5-c186-4dc6-b678-ee2936987f3f"
                 LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="6a10a75a-29be-490a-9c01-3d3446874ea2"
+            name="OperandOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
+                LastKnownName="Vue"
                 LastKnownLocation="booXstore.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3615,22 +3625,22 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="a342f83e-9dc0-4080-b25f-29623152c6b6"
-            name="OperandOccurrenceSpecification15">
-            <covered>
-              <lifelineMoniker
-                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
-                LastKnownName="Vue"
-                LastKnownLocation="booXstore.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="536edcec-e6fa-440b-9870-4b26a8fd33b2"
             name="OperandOccurrenceSpecification13">
             <covered>
               <lifelineMoniker
                 Id="b511ffe5-c186-4dc6-b678-ee2936987f3f"
                 LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a342f83e-9dc0-4080-b25f-29623152c6b6"
+            name="OperandOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
+                LastKnownName="Vue"
                 LastKnownLocation="booXstore.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3779,22 +3789,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="d0365f94-c509-4728-82bf-e0ce8463f81f"
-            name="MessageOccurrenceSpecification22">
-            <covered>
-              <lifelineMoniker
-                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
-                LastKnownName="Vue"
-                LastKnownLocation="booXstore.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="bc1e43f7-5da2-4452-b350-052bcfb75e21"
             name="MessageOccurrenceSpecification21">
             <covered>
               <lifelineMoniker
                 Id="b511ffe5-c186-4dc6-b678-ee2936987f3f"
                 LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d0365f94-c509-4728-82bf-e0ce8463f81f"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
+                LastKnownName="Vue"
                 LastKnownLocation="booXstore.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3997,22 +4007,22 @@
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
-            Id="004bbd07-9828-47bb-bc89-ca50e41d8730"
-            name="OperandOccurrenceSpecification25">
-            <covered>
-              <lifelineMoniker
-                Id="b511ffe5-c186-4dc6-b678-ee2936987f3f"
-                LastKnownName="Utilisateur"
-                LastKnownLocation="booXstore.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="a8418ba0-1ab5-4f88-a78e-91a6166bc01e"
             name="OperandOccurrenceSpecification27">
             <covered>
               <lifelineMoniker
                 Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
                 LastKnownName="Vue"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="004bbd07-9828-47bb-bc89-ca50e41d8730"
+            name="OperandOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="b511ffe5-c186-4dc6-b678-ee2936987f3f"
+                LastKnownName="Utilisateur"
                 LastKnownLocation="booXstore.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -4121,22 +4131,22 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="fe3e5c9b-95d8-4626-8326-e46affc45382"
-            name="OperandOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
-                LastKnownName="Vue"
-                LastKnownLocation="booXstore.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="dced7e41-b82b-4034-9edc-eb4fd31ccf32"
             name="OperandOccurrenceSpecification29">
             <covered>
               <lifelineMoniker
                 Id="b511ffe5-c186-4dc6-b678-ee2936987f3f"
                 LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="fe3e5c9b-95d8-4626-8326-e46affc45382"
+            name="OperandOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
+                LastKnownName="Vue"
                 LastKnownLocation="booXstore.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -4289,22 +4299,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="33227826-22c2-469b-8bcd-146b0f0637ee"
-            name="MessageOccurrenceSpecification40">
-            <covered>
-              <lifelineMoniker
-                Id="c4037e5e-08b4-4725-9c60-45bae6b9dec1"
-                LastKnownName="Base de données"
-                LastKnownLocation="booXstore.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="91b192b7-fd33-482b-bd9e-ba93d3f6be7c"
             name="MessageOccurrenceSpecification39">
             <covered>
               <lifelineMoniker
                 Id="a2bcccfc-b74a-465b-a05f-472642088dd1"
                 LastKnownName="Composants Métiers (EJB)"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="33227826-22c2-469b-8bcd-146b0f0637ee"
+            name="MessageOccurrenceSpecification40">
+            <covered>
+              <lifelineMoniker
+                Id="c4037e5e-08b4-4725-9c60-45bae6b9dec1"
+                LastKnownName="Base de données"
                 LastKnownLocation="booXstore.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4385,22 +4395,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="c49fd023-4b3d-4e5f-900f-8b2700634786"
-            name="MessageOccurrenceSpecification23">
-            <covered>
-              <lifelineMoniker
-                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
-                LastKnownName="Vue"
-                LastKnownLocation="booXstore.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="cec9d063-79a8-451a-8883-0874e76155d5"
             name="MessageOccurrenceSpecification24">
             <covered>
               <lifelineMoniker
                 Id="b511ffe5-c186-4dc6-b678-ee2936987f3f"
                 LastKnownName="Utilisateur"
+                LastKnownLocation="booXstore.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c49fd023-4b3d-4e5f-900f-8b2700634786"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="8efe830a-43cc-4dc5-89d7-4a49cc4a41a7"
+                LastKnownName="Vue"
                 LastKnownLocation="booXstore.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5001,6 +5011,175 @@
       <executionEvent
         Id="3fb22ae3-5378-4542-9292-43bc24c3fee2"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="b7290f46-d702-4ae6-bc62-93ab252be285"
+        name="Diagramme d'activité commande"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="acce8356-c16c-4729-aab1-19fda125ab0c"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="46cc6215-3cfa-4232-9449-75af0a60597c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="afde85aa-0451-4d86-b138-9af5f4fb6bd1"
+                  LastKnownName="Valider Panier"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="2cd514a9-d694-4a3b-8845-788d3cf127d6"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="afde85aa-0451-4d86-b138-9af5f4fb6bd1"
+            name="Valider Panier"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="99c1ced3-de18-4ca4-8725-9bb572379a52"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="531e3298-7ce2-4c8c-8b8f-1fc3a5f60774"
+                  LastKnownName="Lancer commande"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="4b5e491c-e76a-4de6-b6ab-6e09170be332"
+            name="Remplir données bancaires"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4b8b0bda-bfeb-4f7d-8cc9-3555a8e869ac"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="dd6cb038-907a-4e45-87c4-1b3825ad2838"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="dd6cb038-907a-4e45-87c4-1b3825ad2838"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="08698c06-0efb-4297-b135-2da697093630"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cd0a956e-aca0-4891-b2f1-298bf09136fe"
+                  LastKnownName="Commande enregistrée"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="3dd25dd2-62fa-44b9-b7bb-059c7951c1bb"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4b5e491c-e76a-4de6-b6ab-6e09170be332"
+                  LastKnownName="Remplir données bancaires"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="cd0a956e-aca0-4891-b2f1-298bf09136fe"
+            name="Commande enregistrée"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c7f3d0ec-bf1c-4963-8945-5cdf4f7dfe98"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="2cd514a9-d694-4a3b-8845-788d3cf127d6"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="b4775752-f37e-485f-93fe-cae9d55e06ee"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="57d923f9-4cad-4a32-9266-f2a4b312e29e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="22fc60a0-11a6-4b45-a793-21471663671d"
+                  LastKnownName="Procédure de connexion"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="d14870d5-0686-46e4-9378-843ab6790954"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="3b3e32a8-5cae-438d-bef4-75b360b7b227"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="531e3298-7ce2-4c8c-8b8f-1fc3a5f60774"
+            name="Lancer commande"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1429530b-773d-46d4-baa5-d1a7b446eef5"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="b4775752-f37e-485f-93fe-cae9d55e06ee"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="22fc60a0-11a6-4b45-a793-21471663671d"
+            name="Procédure de connexion"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="53f761ec-e67d-495c-be5a-d7e1a4f9ae6f"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="3b3e32a8-5cae-438d-bef4-75b360b7b227"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode
+            Id="3b3e32a8-5cae-438d-bef4-75b360b7b227"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3d2e46c1-ce4f-4ab1-abd5-a730950ff473"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4b5e491c-e76a-4de6-b6ab-6e09170be332"
+                  LastKnownName="Remplir données bancaires"
+                  LastKnownLocation="booXstore.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -1,1 +1,131 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm13="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="8b334cd0-9ba0-45ac-9401-04f07f100f49" name="Diagramme d'activité commande" linkedPackageId="89a01144-d969-47d7-88bc-412ef003f45e" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="938caa00-7af6-400b-b7dd-c395940d623a">
+      <elementDefinition Id="a74c7d54-8030-4573-91c0-32d767ffa8ab" />
+      <body>Si données bancaires correctes</body>
+    </comment>
+    <comment Id="8f06d42e-53e7-4881-ae83-5941ccb0281d">
+      <elementDefinition Id="c307dcab-11e7-416c-98f8-9f7d7d5e5e87" />
+      <body>Si connecté</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="33d5874e-b8f7-4202-88a0-072e85be6c4d">
+      <profileInstance Id="1d7141e2-435e-4331-91a8-a9cf53e5705e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="eacc9e1f-1cb8-4b09-ada8-f8cc827ad898">
+      <profileInstance Id="b75b6ca0-f185-4dbe-9ee1-c71d1c653a2f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="9898389f-96cd-4e2f-879f-c76dface9b26" name="Diagramme d'activité commande" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="b7290f46-d702-4ae6-bc62-93ab252be285" />
+        <nodes>
+          <initialNode Id="aa6866d8-96d9-425d-92e7-5a7a808db851" name="Initial1" isLeaf="false">
+            <elementDefinition Id="acce8356-c16c-4729-aab1-19fda125ab0c" />
+            <flowNodeTargets>
+              <controlFlow Id="95878be3-5bde-4b45-8c8c-bcc155e0f4e5" isLeaf="false">
+                <opaqueActionMoniker Id="7fcbc72e-e4f0-4175-b584-91b21eacc12c" LastKnownName="Valider Panier" />
+                <elementDefinition Id="46cc6215-3cfa-4232-9449-75af0a60597c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="dc2f4f26-b817-48f2-bb36-45f19a366915" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="2cd514a9-d694-4a3b-8845-788d3cf127d6" />
+          </activityFinalNode>
+          <opaqueAction Id="7fcbc72e-e4f0-4175-b584-91b21eacc12c" name="Valider Panier" isLeaf="false">
+            <elementDefinition Id="afde85aa-0451-4d86-b138-9af5f4fb6bd1" />
+            <flowNodeTargets>
+              <controlFlow Id="1cbd6924-ae16-4b8b-b383-04c12f3de46c" isLeaf="false">
+                <opaqueActionMoniker Id="82b77abc-16bf-4121-be96-21073d5b59c1" LastKnownName="Lancer commande" />
+                <elementDefinition Id="99c1ced3-de18-4ca4-8725-9bb572379a52" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1bc7e813-f051-4410-a7d3-a35ec1f3fb12" name="Remplir données bancaires" isLeaf="false">
+            <elementDefinition Id="4b5e491c-e76a-4de6-b6ab-6e09170be332" />
+            <flowNodeTargets>
+              <controlFlow Id="b4151eef-a639-42f1-876a-f28f935cd17c" isLeaf="false">
+                <decisionNodeMoniker Id="87f6be89-b432-4b94-a9e3-61ac9b7073b3" LastKnownName="Decision1" />
+                <elementDefinition Id="4b8b0bda-bfeb-4f7d-8cc9-3555a8e869ac" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="87f6be89-b432-4b94-a9e3-61ac9b7073b3" name="Decision1" isLeaf="false">
+            <elementDefinition Id="dd6cb038-907a-4e45-87c4-1b3825ad2838" />
+            <flowNodeTargets>
+              <controlFlow Id="f636acc7-5433-4a39-acf7-5977ce62ed2e" isLeaf="false">
+                <opaqueActionMoniker Id="0078f774-ac7c-4f64-9e32-fc2e02910635" LastKnownName="Commande enregistrée" />
+                <elementDefinition Id="08698c06-0efb-4297-b135-2da697093630" />
+              </controlFlow>
+              <controlFlow Id="1a449b31-2f13-4b69-a8ff-817b57d3fb05" isLeaf="false">
+                <opaqueActionMoniker Id="1bc7e813-f051-4410-a7d3-a35ec1f3fb12" LastKnownName="Remplir données bancaires" />
+                <elementDefinition Id="3dd25dd2-62fa-44b9-b7bb-059c7951c1bb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="0078f774-ac7c-4f64-9e32-fc2e02910635" name="Commande enregistrée" isLeaf="false">
+            <elementDefinition Id="cd0a956e-aca0-4891-b2f1-298bf09136fe" />
+            <flowNodeTargets>
+              <controlFlow Id="a5dd6fcb-68af-49d9-be88-272856edf0ec" isLeaf="false">
+                <activityFinalNodeMoniker Id="dc2f4f26-b817-48f2-bb36-45f19a366915" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="c7f3d0ec-bf1c-4963-8945-5cdf4f7dfe98" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="9c9e629a-4531-4cf9-899c-7f9387a883fc" name="Decision2" isLeaf="false">
+            <elementDefinition Id="b4775752-f37e-485f-93fe-cae9d55e06ee" />
+            <flowNodeTargets>
+              <controlFlow Id="e0428628-79e9-4be6-8b8f-ce0f4f6ffa2e" isLeaf="false">
+                <opaqueActionMoniker Id="c1d2a691-cfff-4c30-83df-d2f1b61eb32b" LastKnownName="Procédure de connexion" />
+                <elementDefinition Id="57d923f9-4cad-4a32-9266-f2a4b312e29e" />
+              </controlFlow>
+              <controlFlow Id="8f30c0dd-8f21-48e5-a898-49979dda79eb" isLeaf="false">
+                <mergeNodeMoniker Id="9c901935-a146-45ba-a3f6-1f624d233047" LastKnownName="Merge1" />
+                <elementDefinition Id="d14870d5-0686-46e4-9378-843ab6790954" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="82b77abc-16bf-4121-be96-21073d5b59c1" name="Lancer commande" isLeaf="false">
+            <elementDefinition Id="531e3298-7ce2-4c8c-8b8f-1fc3a5f60774" />
+            <flowNodeTargets>
+              <controlFlow Id="22732e43-0a2e-4c51-94de-5fb1c367e429" isLeaf="false">
+                <decisionNodeMoniker Id="9c9e629a-4531-4cf9-899c-7f9387a883fc" LastKnownName="Decision2" />
+                <elementDefinition Id="1429530b-773d-46d4-baa5-d1a7b446eef5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c1d2a691-cfff-4c30-83df-d2f1b61eb32b" name="Procédure de connexion" isLeaf="false">
+            <elementDefinition Id="22fc60a0-11a6-4b45-a793-21471663671d" />
+            <flowNodeTargets>
+              <controlFlow Id="17653153-cd24-47fe-805e-88bb36de6a54" isLeaf="false">
+                <mergeNodeMoniker Id="9c901935-a146-45ba-a3f6-1f624d233047" LastKnownName="Merge1" />
+                <elementDefinition Id="53f761ec-e67d-495c-be5a-d7e1a4f9ae6f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="9c901935-a146-45ba-a3f6-1f624d233047" name="Merge1" isLeaf="false">
+            <elementDefinition Id="3b3e32a8-5cae-438d-bef4-75b360b7b227" />
+            <flowNodeTargets>
+              <controlFlow Id="c67d30ef-557b-4b45-9ca8-785d3de8e838" isLeaf="false">
+                <opaqueActionMoniker Id="1bc7e813-f051-4410-a7d3-a35ec1f3fb12" LastKnownName="Remplir données bancaires" />
+                <elementDefinition Id="3d2e46c1-ce4f-4ab1-abd5-a730950ff473" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="89a01144-d969-47d7-88bc-412ef003f45e" name="booXstore">
+    <elementDefinition Id="7bde64ea-2196-4d2c-b6ee-3666584ca189" />
+  </package>
+</activityRootModel>
