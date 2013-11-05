@@ -1,0 +1,22 @@
+
+
+
+PUBLISHER: Id, Name
+
+Publié, 1N PUBLISHER, 11 BOOK
+
+ORDER: Id, Id_User
+Commandé, 1N BOOK_ORDER, 11 ORDER
+BOOK_ORDER: Id, Id_Book, Quantity, Id_Order
+Commande, 1N BOOK_ORDER, 11 BOOK
+BOOK: Id, Title, Id_Category, Supply, Threshold, Summary, Release_Date, Price, Id_Publisher, ImageLink
+Ecrit, 11 BOOK, 1N BOOK_AUTHOR
+BOOK_AUTHOR: Id, Id_Author, Id_Book
+Rédige, 1N BOOK_AUTHOR, 11 AUTHOR
+AUTHOR: Id, FirstName, LastName
+
+Demande, 11 USER, 1N ORDER
+USER: Id, FirstName, LastName, Mail, Address, ZIP, City, Login, Password
+Appartenir, 11 CATEGORY, 11 BOOK
+
+CATEGORY: Id, Name
