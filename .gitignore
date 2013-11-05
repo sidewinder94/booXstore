@@ -33,3 +33,4 @@ Thumbs.db
 /booXstore/booXstore-ejb/target/
 /booXstore-war/target/
 /booXstore/booXstore-ear/target/
+booXstore-war/src/main/webapp/VAADIN/gwt-unitCache/
