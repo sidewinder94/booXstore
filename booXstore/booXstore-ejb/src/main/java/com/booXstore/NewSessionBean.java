@@ -15,7 +15,8 @@ import javax.ejb.LocalBean;
 @LocalBean
 public class NewSessionBean {
 
-    public void businessMethod() {
+    public String businessMethod() {
+        return "Test Suceeded";
     }
 
     // Add business logic below. (Right-click in editor and choose

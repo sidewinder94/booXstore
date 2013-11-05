@@ -52,6 +52,11 @@
 			<artifactId>vaadin-client-compiled</artifactId>
 			<version>${vaadin.version}</version>
 		</dependency>
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>vaadin-cdi</artifactId>
+                    <version>1.0.0.alpha1</version>
+                </dependency>
 		<!--
 		  Needed when using the widgetset optimizer (custom ConnectorBundleLoaderFactory).
 		  
@@ -89,6 +94,17 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+	 <dependency>
+	  <groupId>${project.groupId}</groupId>
+	  <artifactId>booXstore-ejb</artifactId>
+	  <version>${project.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>javax</groupId>
+	  <artifactId>javaee-api</artifactId>
+	  <version>7.0</version>
+	  <type>jar</type>
+	 </dependency>
 	</dependencies>
 
 	<build>

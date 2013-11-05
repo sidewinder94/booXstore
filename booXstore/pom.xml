@@ -9,6 +9,7 @@
   <modules>
     <module>booXstore-ear</module>
     <module>booXstore-ejb</module>
+    <module>../booXstore-war</module>
   </modules>
     <properties>
         <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
