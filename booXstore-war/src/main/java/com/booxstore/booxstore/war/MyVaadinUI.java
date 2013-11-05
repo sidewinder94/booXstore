@@ -12,6 +12,8 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Link;
+import com.vaadin.ui.NativeSelect;
+import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.Runo;
@@ -36,6 +38,7 @@ public class MyVaadinUI extends UI
         
         content.addComponent(getTopBar());
         content.addComponent(getTitleArea());
+        content.addComponent(getSearchBar());
 
     }
 
@@ -73,6 +76,14 @@ public class MyVaadinUI extends UI
     private HorizontalLayout getSearchBar () {
         
         HorizontalLayout searchBar = new HorizontalLayout();
+        TextField search = new TextField("Search something");
+        Button searchButton = new Button("Go");
+        NativeSelect category  = new NativeSelect("Category");
+        
+        searchBar.addComponent(search);
+        searchBar.addComponent(searchButton);
+        searchBar.addComponent(category);
+        
         return searchBar;
         
     }
