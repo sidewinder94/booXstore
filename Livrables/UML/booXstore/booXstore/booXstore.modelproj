@@ -22,6 +22,34 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="ToDo\Diagramme composants.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ToDo\Diagramme composants.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ToDo\Diagramme composants.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="ToDo\Diagramme d%27activité commande.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ToDo\Diagramme d%27activité commande.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ToDo\Diagramme d'activité commande.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="ToDo\Diagramme de Classe.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ToDo\Diagramme de Classe.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ToDo\Diagramme de Classe.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ToDo\Diagramme de Séquence commande.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ToDo\Diagramme de Séquence commande.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ToDo\Diagramme de Séquence commande.sequencediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="Cas d%27utilisations.usecasediagram">
       <SubType>Content</SubType>
@@ -37,36 +65,9 @@
       <SubType>Content</SubType>
       <DependentUpon>Création de compte.sequencediagram</DependentUpon>
     </Content>
-    <Content Include="Diagramme composants.componentdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Diagramme composants.componentdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Diagramme composants.componentdiagram</DependentUpon>
-    </Content>
-    <Content Include="Diagramme d'activité commande.activitydiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Diagramme d'activité commande.activitydiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Diagramme d'activité commande.activitydiagram</DependentUpon>
-    </Content>
-    <Content Include="Diagramme de Classe.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Diagramme de Classe.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Diagramme de Classe.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="Diagramme de Séquence commande.sequencediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Diagramme de Séquence commande.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Diagramme de Séquence commande.sequencediagram</DependentUpon>
-    </Content>
     <Content Include="ModelDefinition\booXstore.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="ToDo" />
   </ItemGroup>
 </Project>
