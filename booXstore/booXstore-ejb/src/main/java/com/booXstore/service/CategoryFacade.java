@@ -11,7 +11,7 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author Antoine-Ali
+ * @author Cyril
  */
 @Stateless
 public class CategoryFacade extends AbstractFacade<Category> implements CategoryFacadeLocal {

@@ -11,7 +11,7 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author Antoine-Ali
+ * @author Cyril
  */
 @Stateless
 public class SellerFacade extends AbstractFacade<Seller> implements SellerFacadeLocal {

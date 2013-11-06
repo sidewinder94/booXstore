@@ -19,16 +19,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Antoine-Ali
+ * @author Cyril
  */
 @Entity
-@Table(name = "book_order")
+@Table(name = "book_orders")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "BookOrder.findAll", query = "SELECT b FROM BookOrder b"),
-    @NamedQuery(name = "BookOrder.findById", query = "SELECT b FROM BookOrder b WHERE b.id = :id"),
-    @NamedQuery(name = "BookOrder.findByQuantity", query = "SELECT b FROM BookOrder b WHERE b.quantity = :quantity")})
-public class BookOrder implements Serializable {
+    @NamedQuery(name = "BookOrders.findAll", query = "SELECT b FROM BookOrders b"),
+    @NamedQuery(name = "BookOrders.findById", query = "SELECT b FROM BookOrders b WHERE b.id = :id"),
+    @NamedQuery(name = "BookOrders.findByQuantity", query = "SELECT b FROM BookOrders b WHERE b.quantity = :quantity")})
+public class BookOrders implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -37,17 +37,17 @@ public class BookOrder implements Serializable {
     private Integer id;
     @Column(name = "Quantity")
     private Integer quantity;
-    @JoinColumn(name = "Id_Order", referencedColumnName = "Id")
+    @JoinColumn(name = "Id_Orders", referencedColumnName = "Id")
     @ManyToOne
-    private Book idOrder;
+    private Orders idOrders;
     @JoinColumn(name = "Id_Book", referencedColumnName = "Id")
     @ManyToOne
     private Book idBook;
 
-    public BookOrder() {
+    public BookOrders() {
     }
 
-    public BookOrder(Integer id) {
+    public BookOrders(Integer id) {
         this.id = id;
     }
 
@@ -67,12 +67,12 @@ public class BookOrder implements Serializable {
         this.quantity = quantity;
     }
 
-    public Book getIdOrder() {
-        return idOrder;
+    public Orders getIdOrders() {
+        return idOrders;
     }
 
-    public void setIdOrder(Book idOrder) {
-        this.idOrder = idOrder;
+    public void setIdOrders(Orders idOrders) {
+        this.idOrders = idOrders;
     }
 
     public Book getIdBook() {
@@ -93,10 +93,10 @@ public class BookOrder implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof BookOrder)) {
+        if (!(object instanceof BookOrders)) {
             return false;
         }
-        BookOrder other = (BookOrder) object;
+        BookOrders other = (BookOrders) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -105,7 +105,7 @@ public class BookOrder implements Serializable {
 
     @Override
     public String toString() {
-        return "com.booXstore.domain.BookOrder[ id=" + id + " ]";
+        return "com.booXstore.domain.BookOrders[ id=" + id + " ]";
     }
     
 }

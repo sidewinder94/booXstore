@@ -5,7 +5,7 @@
 package com.booXstore.domain;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Antoine-Ali
+ * @author Cyril
  */
 @Entity
 @Table(name = "user")
@@ -70,7 +70,7 @@ public class User implements Serializable {
     @Column(name = "Password")
     private String password;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-    private Collection<Orders> ordersCollection;
+    private List<Orders> ordersList;
 
     public User() {
     }
@@ -147,18 +147,17 @@ public class User implements Serializable {
         return password;
     }
 
-    //TODO : Hachage
     public void setPassword(String password) {
         this.password = password;
     }
 
     @XmlTransient
-    public Collection<Orders> getOrdersCollection() {
-        return ordersCollection;
+    public List<Orders> getOrdersList() {
+        return ordersList;
     }
 
-    public void setOrdersCollection(Collection<Orders> ordersCollection) {
-        this.ordersCollection = ordersCollection;
+    public void setOrdersList(List<Orders> ordersList) {
+        this.ordersList = ordersList;
     }
 
     @Override
