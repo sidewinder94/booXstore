@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Antoine-Ali
+ * @author Cyril
  */
 @Entity
 @Table(name = "author")
@@ -46,13 +46,13 @@ public class Author implements Serializable {
     @Column(name = "LastName")
     private String lastName;
     
-    @ManyToMany
-    @JoinTable(
-            name = "book_author",
-            joinColumns = 
-                @JoinColumn(name = "Id_Author"),
-            inverseJoinColumns = 
-                @JoinColumn(name = "Id_Book"))
+   @ManyToMany
+   @JoinTable(
+           name = "book_author",
+           joinColumns = 
+               @JoinColumn(name = "Id_Author"),
+           inverseJoinColumns = 
+               @JoinColumn(name = "Id_Book"))
     private List<Book> books;
 
     public List<Book> getBooks() {

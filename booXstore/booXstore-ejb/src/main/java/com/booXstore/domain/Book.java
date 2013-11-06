@@ -5,7 +5,6 @@
 package com.booXstore.domain;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
@@ -27,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Antoine-Ali
+ * @author Cyril
  */
 @Entity
 @Table(name = "book")
@@ -69,11 +68,8 @@ public class Book implements Serializable {
     private Integer price;
     @Column(name = "Id_Publisher")
     private Integer idPublisher;
-    @OneToMany(mappedBy = "idOrder")
-    private Collection<BookOrder> bookOrderCollection;
     @OneToMany(mappedBy = "idBook")
-    private Collection<BookOrder> bookOrderCollection1;
-    
+    private List<BookOrders> bookOrdersList;
     @ManyToMany(mappedBy = "books")
     private List<Author> authors;
 
@@ -165,21 +161,12 @@ public class Book implements Serializable {
     }
 
     @XmlTransient
-    public Collection<BookOrder> getBookOrderCollection() {
-        return bookOrderCollection;
+    public List<BookOrders> getBookOrdersList() {
+        return bookOrdersList;
     }
 
-    public void setBookOrderCollection(Collection<BookOrder> bookOrderCollection) {
-        this.bookOrderCollection = bookOrderCollection;
-    }
-
-    @XmlTransient
-    public Collection<BookOrder> getBookOrderCollection1() {
-        return bookOrderCollection1;
-    }
-
-    public void setBookOrderCollection1(Collection<BookOrder> bookOrderCollection1) {
-        this.bookOrderCollection1 = bookOrderCollection1;
+    public void setBookOrdersList(List<BookOrders> bookOrdersList) {
+        this.bookOrdersList = bookOrdersList;
     }
 
     @Override

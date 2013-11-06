@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Antoine-Ali
+ * @author Cyril
  */
 @Entity
 @Table(name = "seller")
@@ -79,7 +79,6 @@ public class Seller implements Serializable {
         return password;
     }
 
-    //TODO : Hachage
     public void setPassword(String password) {
         this.password = password;
     }

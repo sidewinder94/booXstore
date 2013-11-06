@@ -5,6 +5,7 @@
 package com.booXstore.domain;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,13 +14,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Antoine-Ali
+ * @author Cyril
  */
 @Entity
 @Table(name = "orders")
@@ -34,6 +37,8 @@ public class Orders implements Serializable {
     @NotNull
     @Column(name = "Id")
     private Integer id;
+    @OneToMany(mappedBy = "idOrders")
+    private List<BookOrders> bookOrdersList;
     @JoinColumn(name = "Id_User", referencedColumnName = "Id")
     @ManyToOne(optional = false)
     private User idUser;
@@ -51,6 +56,15 @@ public class Orders implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    @XmlTransient
+    public List<BookOrders> getBookOrdersList() {
+        return bookOrdersList;
+    }
+
+    public void setBookOrdersList(List<BookOrders> bookOrdersList) {
+        this.bookOrdersList = bookOrdersList;
     }
 
     public User getIdUser() {
