@@ -79,6 +79,7 @@ public class Seller implements Serializable {
         return password;
     }
 
+    //TODO : Hachage
     public void setPassword(String password) {
         this.password = password;
     }
