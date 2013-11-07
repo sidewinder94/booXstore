@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>booXtore - Mon compte</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" media="screen" href="includes/main.css">
+
+	</head>
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">booXtore</a>
+				</div>
+				<div class="collapse navbar-collapse">
+
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<input type="search" class="form-control" placeholder="Recherche">
+						</div>
+						<button class="btn btn-success">Recherche</button>
+					</form>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#"><i class="fa fa-user"></i> Mon compte</a></li>
+						<li><a href="#"><i class="fa fa-shopping-cart"></i> Panier</a></li>
+					</ul>
+
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+
+		<div id="wrap">
+
+			<div class="">
+				<div style="margin-top:50px"> </div>
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#vertical" data-toggle="tab">Gestion des livres</a></li>
+					<li><a href="#horizontal" data-toggle="tab">Gestion des catégories</a></li>
+					<li><a href="#horizontal" data-toggle="tab">Gestion des commandes</a></li>
+					<li><a href="#horizontal" data-toggle="tab">Gestion du stock</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="vertical">
+						<div class="page-header"><h2>&nbsp; &nbsp; Gestion des livres</h2></div>
+
+						<div class="col-md-2">
+							<div class="list-group">
+										<li class="list-group-item">
+											<a href="#" class="list-group-item active">
+											<span class="badge">42</span>Catégories Client</a>
+										</li>
+
+										<a href="#" class="list-group-item">
+										<span class="badge">20</span>Action</a>
+
+										<a href="#" class="list-group-item">
+										<span class="badge">22</span>Humour</a>
+
+										<a href="#" class="list-group-item">
+										<span class="badge">...</span>...</a>
+
+										<li class="list-group-item">
+											<a href="#" class="list-group-item">
+											<span class="badge">12</span>Catégories Libraire</a>
+										</li>
+
+										<a href="#" class="list-group-item">
+										<span class="badge">2</span>Réapprovisionnement</a>
+
+										<a href="#" class="list-group-item">
+										<span class="badge">12</span>Non classé</a>
+								</div>
+						</div>
+						<div class="col-md-10">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nom</th>
+											<th>Auteurs</th>
+											<th>Éditeurs</th>
+											<th>Quantité</th>
+											<th>Prix</th>
+											<th>Catégorie</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><img class="thumbnail" src="http://lorempixel.com/50/50" alt="lorem pixel"></td>
+											<td><input class="form-control" type="text" value="Nom"/></td>
+											<td><input class="form-control" type="text" value="Auteur"/></td>
+											<td><input class="form-control" type="text" value="Éditeurs"/></td>
+											<td><input class="form-control" type="text" value="10"/></td>
+											<td><input class="form-control" type="text" value="1€"/></td>
+											<td><select class="form-control"><option>Science-Fiction</option><option>Fantasy</option></select></td>
+											<td>
+												<button class="btn btn-success"><i class="fa fa-check"></i></button>
+												<button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td><img class="thumbnail" src="http://lorempixel.com/50/50" alt="lorem pixel"></td>
+											<td><input class="form-control" type="text" value="Nom"/></td>
+											<td><input class="form-control" type="text" value="Auteur"/></td>
+											<td><input class="form-control" type="text" value="Éditeurs"/></td>
+											<td><input class="form-control" type="text" value="10"/></td>
+											<td><input class="form-control" type="text" value="1€"/></td>
+											<td><select class="form-control"><option>Science-Fiction</option><option>Fantasy</option></select></td>
+											<td>
+												<button class="btn btn-success"><i class="fa fa-check"></i></button>
+												<button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+											</td>
+										</tr>
+										<tr>
+											<td><img class="thumbnail" src="http://lorempixel.com/50/50" alt="lorem pixel"></td>
+											<td><input class="form-control" type="text" value="Nom"/></td>
+											<td><input class="form-control" type="text" value="Auteur"/></td>
+											<td><input class="form-control" type="text" value="Éditeurs"/></td>
+											<td><input class="form-control" type="text" value="10"/></td>
+											<td><input class="form-control" type="text" value="1€"/></td>
+											<td><select class="form-control"><option>Science-Fiction</option><option>Fantasy</option></select></td>
+											<td>
+												<button class="btn btn-success"><i class="fa fa-check"></i></button>
+												<button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="tab-pane fade" id="horizontal">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="includes/main.js"></script>
+
+	</body>
+</html>
