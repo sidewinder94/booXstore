@@ -124,7 +124,7 @@
 												<th>Titre</th>
 												<th>Auteur(s)</th>
 												<th>Editeur</th>
-												<th>Quantité</th>
+												<th>Stock</th>
 												<th>Prix</th>
 												<th>Etat</th>
 												<th>Catégorie</th>
@@ -134,7 +134,33 @@
 
 										<tbody>
 											<tr>
-											<td>1</td>
+												<td>0</td>
+												<td>Nouvelle image</td>
+												<td><input type="text"  value="Nouveau Titre" /></td>
+												<td><input type="text"  value="Nouvel Auteur" /></td>
+												<td><input type="text"  value="Nouvel Editeur" /></td>
+												<td><input type="text"  value="Nouveau Stock " /></td>
+												<td><input type="text"  value="Nouveau Prix" /></td>
+												<td>
+													<select>
+														<option>Nouveauté</option>
+														<option>En stock</option>
+														<option>A venir</option>
+														<option>En réapprovisionnement</option>
+													</select>
+												</td>
+												<td>
+													<select>
+														<option>Action</option>
+														<option>Humour</option>
+														<option>...</option>
+														<option>Non classé</option>
+													</select>
+												</td>
+												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+											</tr>
+											<tr>
+												<td>1</td>
 												<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
 												<td><input type="text"  value="AnanasAnanasAnanasAnanasAnanasAnanasAnanasAnanasAnanasAnanas" /></td>
 												<td><input type="text"  value="Dieudonné" /></td>
@@ -199,8 +225,6 @@
 						<div class="col-md-12">
 							<div class="page-header"><h2>Modification catégorie</h2></div>
 
-							<button type="button" class="btn btn-success">Ajouter une catégorie</button>
-
 							<div class="table-responsive">
 									<table class="table">
 										<thead>
@@ -213,19 +237,25 @@
 
 										<tbody>
 											<tr>
-												<td>Action</td>
+												<td><input type="text" class="form-control" value="Nouvelle catégorie ..."/></td>
 												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
 												<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
 											</tr>
 
 											<tr>
-												<td>Humour</td>
+												<td><input type="text" class="form-control" value="Action"/></td>
 												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
 												<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
 											</tr>
 
 											<tr>
-												<td>...</td>
+												<td><input type="text" class="form-control" value="Humour"/></td>
+												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+												<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+											</tr>
+
+											<tr>
+												<td><input type="text" class="form-control" value="..."/></td>
 												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
 												<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
 											</tr>
