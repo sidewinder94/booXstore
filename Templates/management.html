@@ -44,8 +44,11 @@
 		</div>
 		</div>
 
-		<div id="wrap">
 
+
+		<div id="wrap">
+			
+			
 			<div class="container">
 
 				<ul class="nav nav-tabs">
@@ -58,9 +61,9 @@
 				<div class="tab-content">
 
 					<div class="tab-pane fade in active" id="book">
-						<div id="wrap">
-							<div class="col-md-3">
-								<div class="list-group">
+							
+								<div class="col-md-3" style="margin-top: 42px;">
+							<div class="list-group" >
 									<li class="list-group-item">
 									<a href="#" class="list-group-item active">
 									<span class="badge">42</span>
@@ -102,11 +105,10 @@
 									
 								</div>
 							</div>
-
 							<div class="col-md-9">
-								<ul class="nav nav-tabs">
-									<li class="active"><a href="#book_edit" data-toggle="tab">Modification Livres</a></li>
-								</ul>
+								
+									<div class="page-header"><h2>Modification livre(s)</h2></div>
+								
 
 								<div class="tab-pane fade in active" id="book_edit">
 									<div class="table-responsive">
@@ -115,11 +117,11 @@
 												<tr>
 													<th>ID</th>
 													<th>Couverture</th>
-													<th>Titre</th>
-													<th>Auteur(s)</th>
-													<th>Editeur</th>
-													<th>Quantité</th>
-													<th>Prix</th>
+													<th><div class="col-md-5">Titre</div></th>
+													<th><div class="col-md-3">Auteur(s)</div></th>
+													<th><div class="col-md-3">Editeur</div></th>
+													<th><div class="col-md-2">Quantité</div></th>
+													<th><div class="col-md-2">Prix</div></th>
 													<th>Etat</th>
 													<th>Catégorie</th>
 													<th>Valider</th>
@@ -131,11 +133,11 @@
 												<tr>
 												<td>1</td>
 													<td><img src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-													<td>Ananas</td>
-													<td>Dieudonné</td>
-													<td>La Plume</td>
-													<td>20</td>
-													<td>10</td>
+													<td><input type="text"  value="AnanasAnanasAnanasAnanasAnanasAnanasAnanasAnanasAnanasAnanas" /></td>
+													<td><input type="text"  value="Dieudonné" /></td>
+													<td><input type="text"  value="La Plume" /></td>
+													<td><input type="text"  value="20" /></td>
+													<td><input type="text"  value="10" /></td>
 													<td>
 														<select>
 															<option>Nouveauté</option>
@@ -152,8 +154,8 @@
 															<option>Non classé</option>
 														</select>
 													</td>
-													<td><i class="fa fa-check"></i></td>
-													<td><i class="fa fa-trash-o"></i></td>
+													<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+													<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
 												</tr>
 												<tr>
 													<td>2</td>
