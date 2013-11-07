@@ -30,6 +30,11 @@ Thumbs.db
 *.out
 *.bak
 *.pyg
+
+# Sublime Text Files #
+*.sublime-project
+*.sublime-workspace
+
 /booXstore/booXstore-ejb/target/
 /booXstore-war/target/
 /booXstore/booXstore-ear/target/
