@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>booXtore - Accueil</title>
+		<title> booXtore - Fiche produit </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" media="screen" href="css/main.css">
 
@@ -27,67 +27,83 @@
 					<a class="navbar-brand" href="#">booXtore</a>
 				</div>
 				<div class="collapse navbar-collapse">
+
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<input type="search" class="form-control" placeholder="Recherche">
+						</div>
+						<button class="btn btn-success">Recherche</button>
+					</form>
+
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Connexion</a></li>
-						<li><a href="#">Créer un compte</a></li>
+						<li><a href="#"><i class="fa fa-user"></i> Mon compte</a></li>
 						<li><a href="#"><i class="fa fa-shopping-cart"></i> Panier</a></li>
 					</ul>
+
 				</div><!--/.nav-collapse -->
 			</div>
 		</div>
 
 		<div id="wrap">
 			<div id="main" class="container clear-top">
+
 				<ol class="breadcrumb">
 					<li><a href="#">Catalogue</a></li>
 					<li><a href="#">Histoire</a></li>
 					<li class="active">L'Ananas suprême</li>
 				</ol>
-				<div class="row">
-					<div class="col-md-4"><img src="img/ananas.jpg" alt="imma an ananas, biatch"/></div>
-					<div class="col-md-8"><h1>Le livre de l'ananas suprême</h1></div>
-					<p>
-						Synopsis : Ananas chéri
-									Je ne t'oublierai jamais
-									Tu as tant souffert
-									Et pour tout ce que tu as enduré
-									Nous demandons réparation
-									Qu'il te soit donné
-									Un pays au soleil et des millions de dollars
-									Pour les millions d'ananas déportés dans leurs jus
-									Pour les millions d'ananas privé de leurs familles
-									Chantons à jamais<br/>
-									Pour tout ananas acheté, un pyjama est gracieusement offert.
-					</p>
-					<p>
-						Éditeur : Production La Plume
-					</p>
-					<p>
-						Auteur(s) : Dieudonné Mbala Mbala
-					</p>
-					<p>
-						Prix : Gratuit pour les beaux-frères et belles-soeurs de déportés
-					</p>
-					<p>
-						Produits restant / Stock : 10
-					</p>
-					<p>
-						État du stock : Nouveauté / En réapprovisionnement
-					</p>
-					<button type="button" class="btn btn-default"><i class="fa fa-shopping-cart"></i>  Ajouter au panier</button>
-				</div>
-			</div>
-		</div>
 
-		<div id="footer">
-			<div class="container">
-				<p class="muted credit">
-					<ul class="footer_menu">
-						<li><a href="#">&Agrave; propos</a></li>
-						<li><a href="#">Conditions d'utilisation</a></li>
-						<li><a href="#">Politique de sécurité</a></li>
-					</ul>
-				</p>
+				<div class="row">
+
+					<div class="col-md-4">
+						<img style="margin-top:40px" class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/>
+					</div>
+
+					<div class="col-md-8">
+
+						<div class="page-header">
+							<h2> Le livre de l'ananas suprême </h2>
+						</div>
+
+						<p>
+							Ananas chéri, je ne t'oublierai jamais. Tu as tant
+							souffert, et pour tout ce que tu as enduré nous
+							demandons réparation. Qu'il te soit donné un pays au
+							soleil et des millions de dollars. Pour les
+							millions d'ananas déportés dans leurs jus. Pour les
+							millions d'ananas privés de leurs familles. Chantons
+							à jamais. Pour tout ananas acheté, un pyjama est
+							gracieusement offert.
+						</p>
+
+						<hr/>
+
+						<table class="table">
+							<tr class="success">
+								<td></td>
+								<td> Ce livre est une nouveauté ! </td>
+							</tr>
+							<tr>
+								<td><strong> Auteur(s) </strong></td>
+								<td> Dieudonné Mbala Mbala </td>
+							</tr>
+							<tr>
+								<td><strong> Éditeurs </strong></td>
+								<td> Production La Plume </td>
+							</tr>
+							<tr>
+								<td><strong> Prix </strong></td>
+								<td> 10€ - Gratuit pour les beaux-frères et belles-soeurs de déportés </td>
+							</tr>
+							<tr>
+								<td><strong> En stock </strong></td>
+								<td> 5 </td>
+							</tr>
+						</table>
+
+						<button type="button" class="btn btn-success"><i class="fa fa-shopping-cart"></i> Ajouter au panier </button>
+					</div>
+				</div>
 			</div>
 		</div>
 
