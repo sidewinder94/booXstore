@@ -4,7 +4,7 @@
  */
 package com.booXstore.service;
 
-import com.booXstore.domain.Orders;
+import com.booXstore.domain.BookOrder;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,7 +14,7 @@ import javax.persistence.PersistenceContext;
  * @author Cyril
  */
 @Stateless
-public class OrdersFacade extends AbstractFacade<Orders> implements OrdersFacadeLocal {
+public class BookOrderFacade extends AbstractFacade<BookOrder> implements BookOrderFacadeLocal {
     @PersistenceContext(unitName = "store-ejbPU")
     private EntityManager em;
 
@@ -23,8 +23,8 @@ public class OrdersFacade extends AbstractFacade<Orders> implements OrdersFacade
         return em;
     }
 
-    public OrdersFacade() {
-        super(Orders.class);
+    public BookOrderFacade() {
+        super(BookOrder.class);
     }
     
 }

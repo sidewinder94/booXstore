@@ -70,7 +70,7 @@ public class User implements Serializable {
     @Column(name = "Password")
     private String password;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-    private List<Orders> ordersList;
+    private List<Order> ordersList;
 
     public User() {
     }
@@ -152,11 +152,11 @@ public class User implements Serializable {
     }
 
     @XmlTransient
-    public List<Orders> getOrdersList() {
+    public List<Order> getOrderList() {
         return ordersList;
     }
 
-    public void setOrdersList(List<Orders> ordersList) {
+    public void setOrderList(List<Order> ordersList) {
         this.ordersList = ordersList;
     }
 
