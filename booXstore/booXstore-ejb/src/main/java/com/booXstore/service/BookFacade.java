@@ -5,9 +5,11 @@
 package com.booXstore.service;
 
 import com.booXstore.domain.Book;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -26,5 +28,18 @@ public class BookFacade extends AbstractFacade<Book> implements BookFacadeLocal 
     public BookFacade() {
         super(Book.class);
     }
+
+    @Override
+    public List<Book> getBestSellers() {
+        
+        TypedQuery<Book> query = em.createNamedQuery("findBestSellers", 
+                                                     Book.class);
+        query.setMaxResults(10);
+        query.setFirstResult(0);
+        return query.getResultList();
+        
+    }
+    
+
     
 }

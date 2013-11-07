@@ -5,6 +5,7 @@
 package com.booXstore.service;
 
 import com.booXstore.domain.Book;
+import java.util.HashMap;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -28,5 +29,7 @@ public interface BookFacadeLocal {
     List<Book> findRange(int[] range);
 
     int count();
+
+    List<Book> getBestSellers();
     
 }
