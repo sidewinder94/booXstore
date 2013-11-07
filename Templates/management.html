@@ -113,8 +113,6 @@
 
 								<div class="page-header"><h2>Modification livre(s)</h2></div>
 
-								<button type="button" class="btn btn-success">Ajouter un livre</button>
-
 								<div class="table-responsive">
 									<table class="table">
 										<thead>
@@ -133,7 +131,7 @@
 										</thead>
 
 										<tbody>
-											<tr>
+											<tr class="success">
 												<td>0</td>
 												<td>Nouvelle image</td>
 												<td><input type="text"  value="Nouveau Titre" /></td>
@@ -157,12 +155,12 @@
 														<option>Non classé</option>
 													</select>
 												</td>
-												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+												<td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
 											</tr>
 											<tr>
 												<td>1</td>
 												<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-												<td><input type="text"  value="AnanasAnanasAnanasAnanasAnanasAnanasAnanasAnanasAnanasAnanas" /></td>
+												<td><input type="text"  value="Ananas" /></td>
 												<td><input type="text"  value="Dieudonné" /></td>
 												<td><input type="text"  value="La Plume" /></td>
 												<td><input type="text"  value="20" /></td>
@@ -352,8 +350,9 @@
 										<th>Catégorie</th>
 										<th>Stock restant</th>
 										<th>Seuil réapprovisionnement actuel</th>
-										<th>Définir le seuil</th>
-										<th>Appliquer seuil par défaut (5)</th>
+										<th>Seuil par défaut (5)</th>
+										<th>Définir un seuil</th>
+										<th>Appliquer</th>
 									</tr>
 								</thead>
 
@@ -362,8 +361,9 @@
 										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
 										<td>Ananas</td>
 										<td>Histoire</td>
-										<td>5</td>
 										<td>20</td>
+										<td>5</td>
+										<td><button type="button" class="btn btn-default">Appliquer</button></td>
 										<td><input type="text" class="form-control"/></td>
 										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
 									</tr>
@@ -372,18 +372,20 @@
 										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
 										<td>Plop</td>
 										<td>Humour</td>
-										<td>5</td>
 										<td>10</td>
+										<td>5</td>
+										<td><button type="button" class="btn btn-default">Appliquer</button></td>
 										<td><input type="text" class="form-control"/></td>
 										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
 									</tr>
 
-									<tr>
+									<tr class="danger">
 										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
 										<td>Obiwan</td>
 										<td>Science Fiction</td>
-										<td>5</td>
 										<td>3</td>
+										<td>5</td>
+										<td><button type="button" class="btn btn-default">Appliquer</button></td>
 										<td><input type="text" class="form-control"/></td>
 										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
 									</tr>
