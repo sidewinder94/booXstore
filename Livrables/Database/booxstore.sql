@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `book` (
   `Threshold` int(11) DEFAULT NULL,
   `Summary` longtext,
   `Release_Date` datetime DEFAULT NULL,
-  `Price` int(11) DEFAULT NULL,
+  `Price` float(11) DEFAULT NULL,
   `Id_Publisher` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
