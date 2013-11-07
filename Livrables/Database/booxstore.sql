@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `book` (
   `Threshold` int(11) DEFAULT NULL,
   `Summary` longtext,
   `Release_Date` datetime DEFAULT NULL,
-  `Price` int(11) DEFAULT NULL,
+  `Price` float DEFAULT NULL,
   `Id_Publisher` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -112,6 +112,8 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
   `Id` int(11) NOT NULL,
   `Id_User` int(11) NOT NULL,
+  `Date` datetime NOT NULL,
+  `Total` float NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `FK_ORDERS_ToUser` (`Id_User`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

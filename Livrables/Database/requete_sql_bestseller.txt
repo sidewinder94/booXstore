@@ -1,0 +1,1 @@
+SELECT book.Id FROM book INNER JOIN book_order ON book.id = book_order.id_Book GROUP BY id_Book ORDER BY SUM(Quantity) DESC

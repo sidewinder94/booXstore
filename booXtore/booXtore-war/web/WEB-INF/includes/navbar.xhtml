@@ -1,0 +1,34 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                            <h:link class="navbar-brand" outcome="index" value="booXtore"/>
+			</div>
+			<div class="collapse navbar-collapse">
+
+				<h:form class="navbar-form navbar-right">
+					<div class="form-group">
+                                            <p:inputText type="search" styleClass="form-control" placeholder="Recherche"/>
+					</div>
+                                    <h:commandButton class="btn btn-success" value="Recherche"/>
+				</h:form>
+
+				<ul class="nav navbar-nav navbar-right">
+                                    <li><h:link outcome="account"><i class="fa fa-user"></i> Mon Compte</h:link></li>
+                                    <li><h:link outcome="cart"><i class="fa fa-shopping-cart"></i> Panier</h:link></li>
+				</ul>
+
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+</ui:composition>
