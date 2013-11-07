@@ -57,6 +57,7 @@
 					<li><a href="#catalog" data-toggle="tab">Gestion Catégories</a></li>
 					<li><a href="#tracking_order" data-toggle="tab">Gestion Suivi Commande</a></li>
 					<li><a href="#stock" data-toggle="tab">Gestion Stock</a></li>
+					<li><a href="#critic" data-toggle="tab">Gestion Stock Critique</a></li>
 				</ul>
 
 				<div class="tab-content">
@@ -195,23 +196,7 @@
 
 					<div class="tab-pane fade" id="catalog">
 
-						<div class="col-md-2" style="margin-top: 42px;">
-							<div class="list-group" >
-									<a href="#" class="list-group-item  active">
-									Action
-									</a>
-
-									<a href="#" class="list-group-item">
-									Humour
-									</a>
-
-									<a href="#" class="list-group-item">
-									...
-									</a>
-							</div>
-						</div>
-
-						<div class="col-md-10">
+						<div class="col-md-12">
 							<div class="page-header"><h2>Modification catégorie</h2></div>
 
 							<button type="button" class="btn btn-success">Ajouter une catégorie</button>
@@ -325,7 +310,83 @@
 
 					</div>
 
+
 					<div class="tab-pane fade" id="stock">
+
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>Couverture</th>
+										<th>Livre</th>
+										<th>Catégorie</th>
+										<th>Stock restant</th>
+										<th>Définir le seuil</th>
+										<th>Appliquer seuil par défaut (5)</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
+										<td>Ananas</td>
+										<td>Histoire</td>
+										<td>20</td>
+										<td><input type="text" class="form-control"/></td>
+										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+									</tr>
+
+									<tr>
+										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
+										<td>Plop</td>
+										<td>Humour</td>
+										<td>10</td>
+										<td><input type="text" class="form-control"/></td>
+										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+									</tr>
+
+									<tr>
+										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
+										<td>Obiwan</td>
+										<td>Science Fiction</td>
+										<td>3</td>
+										<td><input type="text" class="form-control"/></td>
+										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="critic">
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>Couverture</th>
+										<th>Livre</th>
+										<th>Catégorie</th>
+										<th>Stock restant</th>
+										<th>Définir le seuil</th>
+										<th>Appliquer seuil par défaut (5)</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
+										<td>Obiwan</td>
+										<td>Science Fiction</td>
+										<td>3</td>
+										<td><input type="text" class="form-control"/></td>
+										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+
 					</div>
 
 				</div>
