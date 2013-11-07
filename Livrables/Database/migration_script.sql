@@ -57,22 +57,22 @@ CREATE TABLE IF NOT EXISTS `booXstore`.`BOOK_AUTHOR` (
     ON UPDATE NO ACTION);
 
 -- ----------------------------------------------------------------------------
--- Table booXstore.BOOK_ORDER
+-- Table booXstore.BOOK_ORDERS
 -- ----------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS `booXstore`.`BOOK_ORDER` (
+CREATE TABLE IF NOT EXISTS `booXstore`.`BOOK_ORDERS` (
   `Id` INT NOT NULL,
   `Id_Book` INT NULL,
   `Quantity` INT NULL,
-  `Id_Order` INT NULL,
+  `Id_Orders` INT NULL,
   PRIMARY KEY (`Id`),
-  CONSTRAINT `FK_BOOK_ORDER_ToBOOK`
+  CONSTRAINT `FK_BOOK_ORDERS_ToBOOK`
     FOREIGN KEY (`Id_Book`)
     REFERENCES `booXstore`.`BOOK` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FK_BOOK_ORDER_ToOrder`
-    FOREIGN KEY (`Id_Order`)
-    REFERENCES `booXstore`.`BOOK` (`Id`)
+  CONSTRAINT `FK_BOOK_ORDERS_ToOrders`
+    FOREIGN KEY (`Id_Orders`)
+    REFERENCES `booXstore`.`ORDERS`  (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
@@ -85,13 +85,13 @@ CREATE TABLE IF NOT EXISTS `booXstore`.`CATEGORY` (
   PRIMARY KEY (`Id`));
 
 -- ----------------------------------------------------------------------------
--- Table booXstore.ORDER
+-- Table booXstore.ORDERS
 -- ----------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS `booXstore`.`ORDER` (
+CREATE TABLE IF NOT EXISTS `booXstore`.`ORDERS` (
   `Id` INT NOT NULL,
   `Id_User` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  CONSTRAINT `FK_ORDER_ToUser`
+  CONSTRAINT `FK_ORDERS_ToUser`
     FOREIGN KEY (`Id_User`)
     REFERENCES `booXstore`.`USER` (`Id`)
     ON DELETE NO ACTION
