@@ -112,6 +112,8 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
   `Id` int(11) NOT NULL,
   `Id_User` int(11) NOT NULL,
+  `Date` datetime NOT NULL,
+  `Total` int(11) NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `FK_ORDERS_ToUser` (`Id_User`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
