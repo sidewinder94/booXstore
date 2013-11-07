@@ -48,7 +48,7 @@
 
 			<div class="container">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#settings" data-toggle="tab">Paramêtres du compte</a></li>
+					<li class="active"><a href="#settings" data-toggle="tab">Paramètres du compte</a></li>
 					<li><a href="#credentials" data-toggle="tab">Informations personnelles</a></li>
 					<li><a href="#history" data-toggle="tab">Historique des commandes</a></li>
 				</ul>
@@ -89,13 +89,23 @@
 					<div class="tab-pane fade" id="credentials">
 						<div class="page-header"><h2>Informations personnelles</h2></div>
 						<form role="form">
-							<div class="form-group">
-								<label for="name">Nom</label>
-								<input type="text" class="form-control" id="name">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="adress">Adresse</label>
+									<input type="text" class="form-control" id="adress">
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="adress">Adresse</label>
-								<input type="text" class="form-control" id="adress">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="postalCode">Code postal</label>
+									<input type="text" class="form-control" id="postalCode">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="city">Ville</label>
+									<input type="text" class="form-control" id="city">
+								</div>
 							</div>
 							<button type="submit" class="btn btn-success">Modifier les informations personnelles</button>
 						</form>
