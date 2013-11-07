@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>booXtore - Panier</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" media="screen" href="includes/main.css"/>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">booXtore</a>
+				</div>
+				<div class="collapse navbar-collapse">
+
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<input type="search" class="form-control" placeholder="Recherche">
+						</div>
+						<button class="btn btn-success">Recherche</button>
+					</form>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><i class="fa fa-user"></i> Mon compte</a></li>
+						<li class="active"><a href="#"><i class="fa fa-shopping-cart"></i> Panier</a></li>
+					</ul>
+
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+
+		<div id="wrap">
+			<div class="container">
+				<div class="page-header"><h2>Paiement</h2></div>
+				<form role="form">
+					<div class="form-group">
+						<label for="cardNumber">Numéro de carte de crédit</label>
+						<input id="cardNumber" type="text" class="form-control"/>
+					</div>
+					<button type="submit" class="btn btn-success">Commander</button>
+				</form>
+
+			</div>
+		</div>
+
+		<script src="includes/main.js"></script>
+
+	</body>
+</html>
