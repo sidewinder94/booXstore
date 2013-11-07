@@ -5,9 +5,9 @@
 package com.booXtore;
 
 
-import com.booXstore.domain.Book;
-import com.booXstore.service.BookFacadeLocal;
-import com.booXstore.service.CartSessionBean;
+import com.booXtore.domain.Books;
+import com.booXtore.service.BooksFacadeLocal;
+import com.booXtore.service.CartSessionBean;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -26,10 +26,10 @@ public class CartBean implements Serializable {
     private CartSessionBean cSB;
     
     @EJB
-    private BookFacadeLocal bFL;
+    private BooksFacadeLocal bFL;
 
     
-    private HashMap<Book, Integer> cart;
+    private HashMap<Books, Integer> cart;
 
     /**
      * Creates a new instance of CartBean
@@ -38,7 +38,7 @@ public class CartBean implements Serializable {
         
     }
 
-    public HashMap<Book, Integer> getCart() {
+    public HashMap<Books, Integer> getCart() {
         return cart;
     }
     
