@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `book` (
   `Threshold` int(11) DEFAULT NULL,
   `Summary` longtext,
   `Release_Date` datetime DEFAULT NULL,
-  `Price` int(11) DEFAULT NULL,
+  `Price` float DEFAULT NULL,
   `Id_Publisher` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -75,18 +75,18 @@ CREATE TABLE IF NOT EXISTS `book_author` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `book_order`
+-- Structure de la table `book_orders`
 --
 
-DROP TABLE IF EXISTS `book_order`;
-CREATE TABLE IF NOT EXISTS `book_order` (
+DROP TABLE IF EXISTS `book_orders`;
+CREATE TABLE IF NOT EXISTS `book_orders` (
   `Id` int(11) NOT NULL,
   `Id_Book` int(11) DEFAULT NULL,
   `Quantity` int(11) DEFAULT NULL,
-  `Id_Order` int(11) DEFAULT NULL,
+  `Id_Orders` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`),
-  KEY `FK_BOOK_ORDER_ToBOOK` (`Id_Book`),
-  KEY `FK_BOOK_ORDER_ToOrder` (`Id_Order`)
+  KEY `FK_BOOK_ORDERS_ToBOOK` (`Id_Book`),
+  KEY `FK_BOOK_ORDERS_ToOrders` (`Id_Orders`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -105,17 +105,17 @@ CREATE TABLE IF NOT EXISTS `category` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `order`
+-- Structure de la table `orders`
 --
 
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE IF NOT EXISTS `order` (
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE IF NOT EXISTS `orders` (
   `Id` int(11) NOT NULL,
   `Id_User` int(11) NOT NULL,
   `Date` datetime NOT NULL,
-  `Total` int(11) NOT NULL,
+  `Total` float NOT NULL,
   PRIMARY KEY (`Id`),
-  KEY `FK_ORDER_ToUser` (`Id_User`)
+  KEY `FK_ORDERS_ToUser` (`Id_User`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -177,17 +177,17 @@ ALTER TABLE `book_author`
   ADD CONSTRAINT `FK_BOOK_AUTHOR_ToBOOK` FOREIGN KEY (`Id_Book`) REFERENCES `book` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `book_order`
+-- Contraintes pour la table `book_orders`
 --
-ALTER TABLE `book_order`
-  ADD CONSTRAINT `FK_BOOK_ORDER_ToBOOK` FOREIGN KEY (`Id_Book`) REFERENCES `book` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `FK_BOOK_ORDER_ToOrder` FOREIGN KEY (`Id_Order`) REFERENCES `order` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `book_orders`
+  ADD CONSTRAINT `FK_BOOK_ORDERS_ToBOOK` FOREIGN KEY (`Id_Book`) REFERENCES `book` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `FK_BOOK_ORDERS_ToOrders` FOREIGN KEY (`Id_Orders`) REFERENCES `orders` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `order`
+-- Contraintes pour la table `orders`
 --
-ALTER TABLE `order`
-  ADD CONSTRAINT `FK_ORDER_ToUser` FOREIGN KEY (`Id_User`) REFERENCES `user` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `orders`
+  ADD CONSTRAINT `FK_ORDERS_ToUser` FOREIGN KEY (`Id_User`) REFERENCES `user` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
