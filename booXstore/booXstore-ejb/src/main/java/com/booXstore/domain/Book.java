@@ -69,7 +69,7 @@ public class Book implements Serializable {
     @Column(name = "Id_Publisher")
     private Integer idPublisher;
     @OneToMany(mappedBy = "idBook")
-    private List<BookOrders> bookOrdersList;
+    private List<BookOrder> bookOrderList;
     @ManyToMany(mappedBy = "books")
     private List<Author> authors;
 
@@ -161,12 +161,12 @@ public class Book implements Serializable {
     }
 
     @XmlTransient
-    public List<BookOrders> getBookOrdersList() {
-        return bookOrdersList;
+    public List<BookOrder> getBookOrderList() {
+        return bookOrderList;
     }
 
-    public void setBookOrdersList(List<BookOrders> bookOrdersList) {
-        this.bookOrdersList = bookOrdersList;
+    public void setBookOrderList(List<BookOrder> bookOrderList) {
+        this.bookOrderList = bookOrderList;
     }
 
     @Override

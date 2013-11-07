@@ -5,7 +5,6 @@
 package com.booXstore.domain;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,39 +13,41 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Cyril
  */
 @Entity
-@Table(name = "orders")
+@Table(name = "book_orders")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Orders.findAll", query = "SELECT o FROM Orders o"),
-    @NamedQuery(name = "Orders.findById", query = "SELECT o FROM Orders o WHERE o.id = :id")})
-public class Orders implements Serializable {
+    @NamedQuery(name = "BookOrder.findAll", query = "SELECT b FROM BookOrder b"),
+    @NamedQuery(name = "BookOrder.findById", query = "SELECT b FROM BookOrder b WHERE b.id = :id"),
+    @NamedQuery(name = "BookOrder.findByQuantity", query = "SELECT b FROM BookOrder b WHERE b.quantity = :quantity")})
+public class BookOrder implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
     @NotNull
     @Column(name = "Id")
     private Integer id;
-    @OneToMany(mappedBy = "idOrders")
-    private List<BookOrders> bookOrdersList;
-    @JoinColumn(name = "Id_User", referencedColumnName = "Id")
-    @ManyToOne(optional = false)
-    private User idUser;
+    @Column(name = "Quantity")
+    private Integer quantity;
+    @JoinColumn(name = "Id_Order", referencedColumnName = "Id")
+    @ManyToOne
+    private Order idOrder;
+    @JoinColumn(name = "Id_Book", referencedColumnName = "Id")
+    @ManyToOne
+    private Book idBook;
 
-    public Orders() {
+    public BookOrder() {
     }
 
-    public Orders(Integer id) {
+    public BookOrder(Integer id) {
         this.id = id;
     }
 
@@ -58,21 +59,28 @@ public class Orders implements Serializable {
         this.id = id;
     }
 
-    @XmlTransient
-    public List<BookOrders> getBookOrdersList() {
-        return bookOrdersList;
+    public Integer getQuantity() {
+        return quantity;
     }
 
-    public void setBookOrdersList(List<BookOrders> bookOrdersList) {
-        this.bookOrdersList = bookOrdersList;
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
-    public User getIdUser() {
-        return idUser;
+    public Order getIdOrder() {
+        return idOrder;
     }
 
-    public void setIdUser(User idUser) {
-        this.idUser = idUser;
+    public void setIdOrder(Order idOrder) {
+        this.idOrder = idOrder;
+    }
+
+    public Book getIdBook() {
+        return idBook;
+    }
+
+    public void setIdBook(Book idBook) {
+        this.idBook = idBook;
     }
 
     @Override
@@ -85,10 +93,10 @@ public class Orders implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Orders)) {
+        if (!(object instanceof BookOrder)) {
             return false;
         }
-        Orders other = (Orders) object;
+        BookOrder other = (BookOrder) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -97,7 +105,7 @@ public class Orders implements Serializable {
 
     @Override
     public String toString() {
-        return "com.booXstore.domain.Orders[ id=" + id + " ]";
+        return "com.booXstore.domain.BookOrder[ id=" + id + " ]";
     }
     
 }
