@@ -20,85 +20,44 @@
     </h:head>
     <h:body>
         <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
-        
+
         <div id="wrap">
 
             <div id="main" class="container clear-top">
-                    <div class="jumbotron">
-                            <h1>Boo<span class="red">X</span>tore</h1>
-                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, omnis, voluptate distinctio accusamus quos suscipit atque eveniet reiciendis animi quidem ex hic ducimus consectetur. Nobis, quod eius doloribus eveniet odit.</p>
-                            <p><a href="#" class="btn btln-lg btn-success" role="button">Catalogue</a></p>
-                    </div>
+                <div class="jumbotron">
+                    <h1>Boo<span class="red">X</span>tore</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, omnis, voluptate distinctio accusamus quos suscipit atque eveniet reiciendis animi quidem ex hic ducimus consectetur. Nobis, quod eius doloribus eveniet odit.</p>
+                    <p><a href="#" class="btn btln-lg btn-success" role="button">Catalogue</a></p>
+                </div>
 
-                    <div class="page-header">
-                            <h2>Nos meilleures ventes</h2>
-                    </div>
+                <div class="page-header">
+                    <h2>Nos meilleures ventes</h2>
+                </div>
 
+                <!-- Génération des meilleures ventes -->
+                <c:forEach var="counter" begin="0" end="2">
+                    <c:choose>
+                        <c:when test="${counter != 2}">
+                            <c:set var="maxItems" scope="view" value="2"/>
+                        </c:when>
+                        <c:otherwise>
+                            <c:set var="maxItems" scope="view" value="0"/>
+                        </c:otherwise>
+                    </c:choose>
                     <div class="row">
+                        <c:forEach var="counter2" begin="0" end="${maxItems}">
                             <div class="col-md-4">
-                                    <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
-                                    <h3>Item name</h3>
-                                    <p class="muted">13€</p>
+                                <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
+                                <h3>Item name</h3>
+                                <p class="muted">13€</p>
                             </div>
-
-                            <div class="col-md-4">
-                                    <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
-                                    <h3>Item name</h3>
-                                    <p class="muted">13€</p>
-                            </div>
-
-                            <div class="col-md-4">
-                                    <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
-                                    <h3>Item name</h3>
-                                    <p class="muted">13€</p>
-                            </div>
+                        </c:forEach>
                     </div>
-
-                    <div class="row">
-                            <div class="col-md-4">
-                                    <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
-                                    <h3>Item name</h3>
-                                    <p class="muted">13€</p>
-                            </div>
-
-                            <div class="col-md-4">
-                                    <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
-                                    <h3>Item name</h3>
-                                    <p class="muted">13€</p>
-                            </div>
-
-                            <div class="col-md-4">
-                                    <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
-                                    <h3>Item name</h3>
-                                    <p class="muted">13€</p>
-                            </div>
-                    </div>
-
-                    <div class="row">
-                            <div class="col-md-4">
-                                    <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
-                                    <h3>Item name</h3>
-                                    <p class="muted">13€</p>
-                            </div>
-
-                            <div class="col-md-4">
-                                    <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
-                                    <h3>Item name</h3>
-                                    <p class="muted">13€</p>
-                            </div>
- 
-                            <div class="col-md-4">
-                                    <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
-                                    <h3>Item name</h3>
-                                    <p class="muted">13€</p>
-                            </div>
-                    </div>
-
+                </c:forEach>
+                <!-- Fin du bloc de génération -->
+                
             </div>
-
-    </div>
-        
-        
+        </div>
     </h:body>
     <h:outputScript library="js" name="main.js"/>
 </html>
