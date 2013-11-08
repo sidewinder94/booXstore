@@ -9,7 +9,8 @@ and open the template in the editor.
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:pass="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
         <f:facet name="first">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,6 +24,37 @@ and open the template in the editor.
         <![endif]-->
     </h:head>
     <body>
-        <div>TODO write content</div>
+        <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
+        <div class="global_singin">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h:form class="form-signin">
+                            <h2 class="form-signin-heading">Connectez-vous</h2>
+                            <h:inputText class="form-control" pass:placeholder="Nom d'utilisateur" required="true" />
+                            <h:inputSecret class="form-control" pass:placeholder="Mot de passe" required="required" />
+                            <h:commandButton class="btn btn-lg btn-primary btn-block" type="submit" value="Se connecter"/>
+                        </h:form>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h:form class="form-signin">
+                            <h2 class="form-signin-heading">Inscrivez-vous</h2>
+                            <h:inputText class="form-control" pass:placeholder="Nom" required="required" />
+                            <h:inputText class="form-control" pass:placeholder="Prénom" required="required" />
+                            <h:inputText class="form-control" pass:placeholder="Mail" required="required" />
+                            <h:inputText class="form-control" pass:placeholder="Adresse postale" required="required" />
+                            <h:inputText class="form-control" pass:placeholder="Nom d'utilisateur" required="required" />
+                            <h:inputSecret class="form-control" pass:placeholder="Mot de passe" required="required" />
+                            <h:commandButton  class="btn btn-lg btn-primary btn-block" type="submit" value="S'inscrire"/>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h:outputScript library="js" name="main.js"/>
+        
     </body>
 </html>
