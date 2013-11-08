@@ -5,7 +5,7 @@
 	  xmlns:ui="http://java.sun.com/jsf/facelets"
 	  xmlns:p="http://primefaces.org/ui"
 	  xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
-	  xmlns:pass="http://xmlns.jcp.org/jsf/pathrough">
+	  xmlns:pass="http://xmlns.jcp.org/jsf/passthrough">
 
 	<h:head>
 
@@ -29,9 +29,9 @@
 
 				<!-- Tabs -->
 				<ul class="nav nav-tabs">
-					<li class="active"><h:link outcome="#settings" pass:data-toggle="tab">Paramètres du compte</h:link></li>
-					<li><h:link outcome="#credentials" pass:data-toggle="tab">Informations personnelles</h:link></li>
-					<li><h:link outcome="#history" pass:data-toggle="tab">Historique des commandes</h:link></li>
+					<li class="active"><a href="#settings" data-toggle="tab">Paramètres du compte</a></li>
+					<li><a href="#credentials" data-toggle="tab">Informations personnelles</a></li>
+					<li><a href="#history" data-toggle="tab">Historique des commandes</a></li>
 				</ul>
 
 				<!-- Contenu des tabs -->
@@ -42,7 +42,7 @@
 							<h2>Changer d'adresse mail</h2>
 						</div>
 
-						<p><strong>Adresse actuelle :</strong></p>
+						<p><strong>Adresse actuelle</strong></p>
 						<p><!-- Adresse mail --></p>
 
 						<h:form role="form">
@@ -50,9 +50,7 @@
 								<label for="email">Nouvelle adresse mail</label>
 								<h:inputText type="email" class="form-control" id="email"/>
 							</div>
-							<h:commandButton type="submit" class="btn btn-success">
-								Changer d'adresse mail
-							</h:commandButton>
+							<h:commandButton type="submit" class="btn btn-success" value="Changer d'adresse mail"/>
 						</h:form>
 
 						<div class="page-header">
@@ -62,17 +60,17 @@
 						<h:form role="form">
 							<div class="form-group">
 								<label for="oldPass">Ancien mot de passe</label>
-								<h:inputText type="password" class="form-control" id="oldPass"/>
+								<h:inputSecret type="password" class="form-control" id="oldPass"/>
 							</div>
 							<div class="form-group">
 								<label for="newPass">Nouveau mot de passe</label>
-								<h:inputText type="password" class="form-control" id="newPass"/>
+								<h:inputSecret type="password" class="form-control" id="newPass"/>
 							</div>
 							<div class="form-group">
 								<label for="newPassConfirm">Confirmation du mot de passe</label>
-								<h:inputText type="password" class="form-control" id="newPassConfirm"/>
+								<h:inputSecret type="password" class="form-control" id="newPassConfirm"/>
 							</div>
-							<h:commandButton type="submit" class="btn btn-success">Changer de mot de passe</h:commandButton>
+							<h:commandButton type="submit" class="btn btn-success" value="Changer de mot de passe"/>
 						</h:form>
 
 					</div>
@@ -102,7 +100,7 @@
 									<h:inputText type="text" class="form-control" id="city"/>
 								</div>
 							</div>
-							<h:commandButton type="submit" class="btn btn-success">Modifier les informations personnelles</h:commandButton>
+							<h:commandButton type="submit" class="btn btn-success" value="Sauvegarder"/>
 						</h:form>
 
 					</div>
