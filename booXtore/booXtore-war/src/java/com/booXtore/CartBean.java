@@ -61,7 +61,12 @@ public class CartBean implements Serializable {
         }
         else
         {
-            return String.valueOf(cSB.getContent().size());
+            String plural = "";
+            if(cSB.getContent().size()>1)
+            {
+                plural = "s";
+            }
+            return String.valueOf(cSB.getContent().size()) + "Article" + plural;
         }
     }
 }
