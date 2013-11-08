@@ -1,5 +1,5 @@
-INSERT IGNORE INTO `userS`(`ID`, `FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES (0, "Toto", "Coppée", "toto.coppee@yahoo.fr", "La Basse Lande", 44522, "Pouillé-les-Côteaux", "TCoppee", "azerty");
-INSERT IGNORE INTO `userS`(`ID`, `FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES (1, "Tintin", "Dupont", "titin.dupont@gmail.com", "8 Chemin des Chabris", 03450, "Vicq", "Dupont", "123456789");
+INSERT IGNORE INTO `users`(`ID`, `FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES (0, "Toto", "Coppée", "toto.coppee@yahoo.fr", "La Basse Lande", 44522, "Pouillé-les-Côteaux", "TCoppee", "azerty");
+INSERT IGNORE INTO `users`(`ID`, `FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES (1, "Tintin", "Dupont", "titin.dupont@gmail.com", "8 Chemin des Chabris", 03450, "Vicq", "Dupont", "123456789");
 INSERT IGNORE INTO `sellers`(`ID`, `LOGIN`, `PASSWORD`) VALUES (0, "Google", "play");
 INSERT IGNORE INTO `publishers`(`ID`, `NAME`) VALUES (0, "Hachette livres");
 INSERT IGNORE INTO `publishers`(`ID`, `NAME`) VALUES (1, "Folio junior");
@@ -21,4 +21,3 @@ INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (3, 0);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (4, 0);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (5, 0);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (6, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (9, 0);
