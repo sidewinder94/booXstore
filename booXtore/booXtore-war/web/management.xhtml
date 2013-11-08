@@ -42,15 +42,19 @@
                                 
                                 <h:form>
                                     
-                                        <h:commandLink value="Catégories Client" action="filterClientAll" class="list-group-item active">
-                                            <span class="badge">40</span>
-                                        </h:commandLink>
+                                    <h:commandLink value="Catégories Client" action="filterClientAll" class="list-group-item active">
+                                        <span class="badge">40</span>
+                                    </h:commandLink>
                                     
-                                    <li class="list-group-item">
-                                        <h:commandLink value="..." action="filterReplenishment" class="list-group-item">
-                                            <span class="badge">X</span>
-                                        </h:commandLink>
-                                    </li>
+                                    
+                                    <c:forEach items="#{searchProviderBean.categories}" var="Category" >
+                                        <li class="list-group-item">
+                                            <h:commandLink value="#{Category.name}" action="filterOneCat" class="list-group-item">
+                                                <span class="badge">X</span>
+                                            </h:commandLink>
+                                        </li>
+                                    </c:forEach>
+                                    
                                     
                                     <h:commandLink value="Catégories Libraire" action="filterAdminAll" class="list-group-item">
                                         <span class="badge">10</span>
@@ -123,12 +127,12 @@
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-                                            <td><input type="text"  value="Ananas" /></td>
-                                            <td><input type="text"  value="Dieudonné" /></td>
-                                            <td><input type="text"  value="La Plume" /></td>
-                                            <td><input type="text"  value="20" /></td>
-                                            <td><input type="text"  value="10" /></td>
+                                            <td><img class="thumbnail" src="" alt=""/></td>
+                                            <td><input type="text"  value="" /></td>
+                                            <td><input type="text"  value="" /></td>
+                                            <td><input type="text"  value="" /></td>
+                                            <td><input type="text"  value="" /></td>
+                                            <td><input type="text"  value="" /></td>
                                             <td>
                                                 <select>
                                                     <option>Nouveauté</option>
@@ -139,9 +143,9 @@
                                             </td>
                                             <td>
                                                 <select>
-                                                    <option>Action</option>
-                                                    <option>Humour</option>
-                                                    <option>...</option>
+                                                    <option></option>
+                                                    <option></option>
+                                                    <option></option>
                                                     <option>Non classé</option>
                                                 </select>
                                             </td>
@@ -149,30 +153,6 @@
                                                 <button type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
                                                 <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
-                                            <td>Table cell</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -204,19 +184,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td><input type="text" class="form-control" value="Action"/></td>
-                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                            <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td><input type="text" class="form-control" value="Humour"/></td>
-                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                            <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td><input type="text" class="form-control" value="..."/></td>
+                                            <td><input type="text" class="form-control" value=""/></td>
                                             <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
                                             <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
                                         </tr>
@@ -246,44 +214,10 @@
 
                                 <tbody>
                                     <tr>
-                                        <td>Herbert Le Marine</td>
-                                        <td>2 Novembre 2013</td>
-                                        <td>42 €</td>
-                                        <td>Validée</td>
-                                        <td>
-                                            <select>
-                                                <option>Validée</option>
-                                                <option>En préparation</option>
-                                                <option>Annulée</option>
-                                                <option>Envoyée</option>
-                                            </select>
-                                        </td>
-                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                        <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Anoss</td>
-                                        <td>1 Novembre 2013</td>
-                                        <td>22 €</td>
-                                        <td>En préparation</td>
-                                        <td>
-                                            <select>
-                                                <option>Validée</option>
-                                                <option>En préparation</option>
-                                                <option>Annulée</option>
-                                                <option>Envoyée</option>
-                                            </select>
-                                        </td>
-                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                        <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Pomf</td>
-                                        <td>29 Octobre 2013</td>
-                                        <td>28 €</td>
-                                        <td>Annulée</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td>
                                             <select>
                                                 <option>Validée</option>
@@ -321,33 +255,11 @@
 
                                 <tbody>
                                     <tr>
-                                        <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-                                        <td>Ananas</td>
-                                        <td>Histoire</td>
-                                        <td>20</td>
-                                        <td>5</td>
-                                        <td><button type="button" class="btn btn-default">Appliquer</button></td>
-                                        <td><input type="text" class="form-control"/></td>
-                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-                                        <td>Plop</td>
-                                        <td>Humour</td>
-                                        <td>10</td>
-                                        <td>5</td>
-                                        <td><button type="button" class="btn btn-default">Appliquer</button></td>
-                                        <td><input type="text" class="form-control"/></td>
-                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                    </tr>
-
-                                    <tr class="danger">
-                                        <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-                                        <td>Obiwan</td>
-                                        <td>Science Fiction</td>
-                                        <td>3</td>
-                                        <td>5</td>
+                                        <td><img class="thumbnail" src="" alt=""/></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td><button type="button" class="btn btn-default">Appliquer</button></td>
                                         <td><input type="text" class="form-control"/></td>
                                         <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
@@ -374,11 +286,11 @@
 
                                 <tbody>
                                     <tr>
-                                        <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-                                        <td>Obiwan</td>
-                                        <td>Science Fiction</td>
-                                        <td>5</td>
-                                        <td>3</td>
+                                        <td><img class="thumbnail" src="" alt=""/></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td><input type="text" class="form-control"/></td>
                                         <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
                                     </tr>

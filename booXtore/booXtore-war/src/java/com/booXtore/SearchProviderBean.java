@@ -7,6 +7,7 @@ package com.booXtore;
 import com.booXtore.domain.Categories;
 import com.booXtore.service.BooksFacadeLocal;
 import com.booXtore.service.CategoriesFacadeLocal;
+import java.awt.event.ActionEvent;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -30,8 +31,9 @@ public class SearchProviderBean {
     @EJB
     private CategoriesFacadeLocal cFL;
     
-    private Map<String, String[]> searchParams;
+    private Map<String, String> searchParams;
 
+    private String search;
     
     private Categories searchCategory;
 
@@ -42,12 +44,16 @@ public class SearchProviderBean {
     public SearchProviderBean() {
         searchParams = FacesContext.getCurrentInstance().
                 getExternalContext().
-                getRequestParameterValuesMap();
+                getRequestParameterMap();
+        search = searchParams.get("search");
     }
     
     public List<Categories> getCategories()
     {
-        return cFL.findAll();
+        List<Categories> result = cFL.findAll();
+        
+        System.out.println(result);
+        return result;
     }
     
     public Categories getSearchCategory() {
@@ -57,5 +63,20 @@ public class SearchProviderBean {
     public void setSearchCategory(Categories searchCategory) {
         this.searchCategory = searchCategory;
     }
+    
+    public String launchSearch()
+    {
+        return "/catalog.xhtml?search="+ search;
+        
+    }
+
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
+    }
+    
     
 }
