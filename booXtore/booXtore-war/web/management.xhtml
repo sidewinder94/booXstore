@@ -18,18 +18,20 @@
     </h:head>
     <h:body>
         <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
+        
 
         <div id="wrap">
+
 
             <div class="">
                 <div style="margin-top:50px"> </div>
                 
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#book" data-toggle="tab">Gestion Livres</a></li>
-                    <li><a href="#catalog" data-toggle="tab">Gestion Catégories</a></li>
-                    <li><a href="#tracking_order" data-toggle="tab">Gestion Suivi Commande</a></li>
-                    <li><a href="#stock" data-toggle="tab">Gestion Stock</a></li>
-                    <li><a href="#critic" data-toggle="tab">Gestion Stock Critique</a></li>
+                    <li class="active"><h:link value="Gestion Livres" outcome="book" pass:data-toggle="tab"/></li>
+                    <li><h:link value="Gestion Catégories" outcome="catalog"  pass:data-toggle="tab"/></li>
+                    <li><h:link value="Gestion Suivi Commande" outcome="tracking_order"  pass:data-toggle="tab"/></li>
+                    <li><h:link value="Gestion Stock" outcome="stock"  pass:data-toggle="tab"/></li>
+                    <li><h:link value="Gestion Stock Critique" outcome="critic"  pass:data-toggle="tab"/></li>
                 </ul>
 
                 <div class="tab-content">
@@ -42,7 +44,7 @@
                             
                             <ul class="list-group" >
                                 <li class="list-group-item">
-                                    <h:link value="CatÃ©gories Client" outcome="" class="list-group-item">
+                                    <h:link value="Catégories Client" outcome="" class="list-group-item">
                                         <span class="badge">42</span>
                                     </h:link>
                                 </li>
@@ -60,16 +62,16 @@
                                 </h:link>
 
                                 <li class="list-group-item">
-                                    <h:link value="CatÃ©gories Libraire" outcome="" class="list-group-item">
+                                    <h:link value="Catégories Libraire" outcome="" class="list-group-item">
                                         <span class="badge">14</span>
                                     </h:link>
                                 </li>
 
-                                <h:link value="RÃ©approvisionnement" outcome=""  class="list-group-item">
+                                <h:link value="Réapprovisionnement" outcome=""  class="list-group-item">
                                     <span class="badge">2</span>
                                 </h:link>
 
-                                <h:link value="Non classÃ©" outcome=""  class="list-group-item">
+                                <h:link value="Non classé" outcome=""  class="list-group-item">
                                     <span class="badge">2</span>
                                 </h:link>
                             </ul>
@@ -92,7 +94,7 @@
                                             <th>Stock</th>
                                             <th>Prix</th>
                                             <th>Etat</th>
-                                            <th>CatÃ©gorie</th>
+                                            <th>Catégorie</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -108,10 +110,10 @@
                                             <td><input type="text"  value="Nouveau Prix" /></td>
                                             <td>
                                                 <select>
-                                                    <option>NouveautÃ©</option>
+                                                    <option>Nouveauté</option>
                                                     <option>En stock</option>
                                                     <option>A venir</option>
-                                                    <option>En rÃ©approvisionnement</option>
+                                                    <option>En réapprovisionnement</option>
                                                 </select>
                                             </td>
                                             <td>
@@ -119,7 +121,7 @@
                                                     <option>Action</option>
                                                     <option>Humour</option>
                                                     <option>...</option>
-                                                    <option>Non classÃ©</option>
+                                                    <option>Non classé</option>
                                                 </select>
                                             </td>
                                             <td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
@@ -128,16 +130,16 @@
                                             <td>1</td>
                                             <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
                                             <td><input type="text"  value="Ananas" /></td>
-                                            <td><input type="text"  value="DieudonnÃ©" /></td>
+                                            <td><input type="text"  value="Dieudonné" /></td>
                                             <td><input type="text"  value="La Plume" /></td>
                                             <td><input type="text"  value="20" /></td>
                                             <td><input type="text"  value="10" /></td>
                                             <td>
                                                 <select>
-                                                    <option>NouveautÃ©</option>
+                                                    <option>Nouveauté</option>
                                                     <option>En stock</option>
                                                     <option>A venir</option>
-                                                    <option>En rÃ©approvisionnement</option>
+                                                    <option>En réapprovisionnement</option>
                                                 </select>
                                             </td>
                                             <td>
@@ -145,7 +147,7 @@
                                                     <option>Action</option>
                                                     <option>Humour</option>
                                                     <option>...</option>
-                                                    <option>Non classÃ©</option>
+                                                    <option>Non classé</option>
                                                 </select>
                                             </td>
                                             <td>
@@ -188,7 +190,7 @@
                     <div class="tab-pane fade" id="catalog">
 
                         <div class="col-md-12">
-                            <div class="page-header"><h2>Modification catÃ©gorie</h2></div>
+                            <div class="page-header"><h2>Modification catégorie</h2></div>
 
                             <div class="table-responsive">
                                 <table class="table">
@@ -202,7 +204,7 @@
 
                                     <tbody>
                                         <tr>
-                                            <td><input type="text" class="form-control" value="Nouvelle catÃ©gorie ..."/></td>
+                                            <td><input type="text" class="form-control" value="Nouvelle catégorie ..."/></td>
                                             <td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
                                         </tr>
 
@@ -251,14 +253,14 @@
                                     <tr>
                                         <td>Herbert Le Marine</td>
                                         <td>2 Novembre 2013</td>
-                                        <td>42â‚¬</td>
-                                        <td>ValidÃ©e</td>
+                                        <td>42€</td>
+                                        <td>Validée</td>
                                         <td>
                                             <select>
-                                                <option>ValidÃ©e</option>
-                                                <option>En prÃ©paration</option>
-                                                <option>AnnulÃ©e</option>
-                                                <option>EnvoyÃ©e</option>
+                                                <option>Validée</option>
+                                                <option>En préparation</option>
+                                                <option>Annulée</option>
+                                                <option>Envoyée</option>
                                             </select>
                                         </td>
                                         <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
@@ -268,14 +270,14 @@
                                     <tr>
                                         <td>Anoss</td>
                                         <td>1 Novembre 2013</td>
-                                        <td>22â‚¬</td>
-                                        <td>En prÃ©paration</td>
+                                        <td>22€</td>
+                                        <td>En préparation</td>
                                         <td>
                                             <select>
-                                                <option>ValidÃ©e</option>
-                                                <option>En prÃ©paration</option>
-                                                <option>AnnulÃ©e</option>
-                                                <option>EnvoyÃ©e</option>
+                                                <option>Validée</option>
+                                                <option>En préparation</option>
+                                                <option>Annulée</option>
+                                                <option>Envoyée</option>
                                             </select>
                                         </td>
                                         <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
@@ -285,14 +287,14 @@
                                     <tr>
                                         <td>Pomf</td>
                                         <td>29 Octobre 2013</td>
-                                        <td>28â‚¬</td>
-                                        <td>AnnulÃ©e</td>
+                                        <td>28€</td>
+                                        <td>Annulée</td>
                                         <td>
                                             <select>
-                                                <option>ValidÃ©e</option>
-                                                <option>En prÃ©paration</option>
-                                                <option>AnnulÃ©e</option>
-                                                <option>EnvoyÃ©e</option>
+                                                <option>Validée</option>
+                                                <option>En préparation</option>
+                                                <option>Annulée</option>
+                                                <option>Envoyée</option>
                                             </select>
                                         </td>
                                         <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
@@ -313,11 +315,11 @@
                                     <tr>
                                         <th>Couverture</th>
                                         <th>Livre</th>
-                                        <th>CatÃ©gorie</th>
+                                        <th>Catégorie</th>
                                         <th>Stock restant</th>
-                                        <th>Seuil rÃ©approvisionnement actuel</th>
-                                        <th>Seuil par dÃ©faut (5)</th>
-                                        <th>DÃ©finir un seuil</th>
+                                        <th>Seuil réapprovisionnement actuel</th>
+                                        <th>Seuil par défaut (5)</th>
+                                        <th>Définir un seuil</th>
                                         <th>Appliquer</th>
                                     </tr>
                                 </thead>
@@ -367,11 +369,11 @@
                                     <tr>
                                         <th>Couverture</th>
                                         <th>Livre</th>
-                                        <th>CatÃ©gorie</th>
+                                        <th>Catégorie</th>
                                         <th>Stock restant</th>
-                                        <th>Seuil rÃ©approvisionnement actuel</th>
-                                        <th>DÃ©finir le seuil</th>
-                                        <th>Appliquer seuil par dÃ©faut (5)</th>
+                                        <th>Seuil réapprovisionnement actuel</th>
+                                        <th>Définir le seuil</th>
+                                        <th>Appliquer seuil par défaut (5)</th>
                                     </tr>
                                 </thead>
 
