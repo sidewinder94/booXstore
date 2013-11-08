@@ -3,7 +3,8 @@
     xmlns:f="http://java.sun.com/jsf/core"
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:p="http://primefaces.org/ui">
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -19,9 +20,11 @@
 			<div class="collapse navbar-collapse">
 				<h:form class="navbar-form navbar-right">
 					<div class="form-group">
-						<p:inputText type="search" styleClass="form-control" placeholder="Recherche"/>
+                                            <p:inputText type="search" styleClass="form-control" placeholder="Recherche" value="#{quickSearch}"/>
 					</div>
-					<h:commandButton class="btn btn-success" value="Recherche"/>
+                                    <h:commandButton class="btn btn-success" value="Recherche" actionListener="#{searchProviderBean.launchSearch}">
+                                        <f:param name="search" value="#{quickSearch}"/>
+                                    </h:commandButton>
 				</h:form>
 
 				<ul class="nav navbar-nav navbar-right">
