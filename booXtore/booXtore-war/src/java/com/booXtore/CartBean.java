@@ -47,14 +47,22 @@ public class CartBean implements Serializable {
         this.cSB.addBook(this.bFL.find(bookId));
     }
     
-    public Float getTotalPrice()
+    public String getTotalPrice()
     {
-        return cSB.getTotalPrice();
+        return String.valueOf(cSB.getTotalPrice()) + "€";
     }
     
-    public Integer getTotalArticles()
+    public String getTotalArticles()
     {
-        return cSB.getContent().size();
+        if(cSB.getContent().isEmpty())
+        {
+            return "Vide";
+
+        }
+        else
+        {
+            return String.valueOf(cSB.getContent().size());
+        }
     }
 }
     
