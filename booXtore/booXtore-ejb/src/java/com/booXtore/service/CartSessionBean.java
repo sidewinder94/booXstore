@@ -5,7 +5,6 @@
 package com.booXtore.service;
 
 import com.booXtore.domain.Books;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import javax.ejb.Stateful;
 
