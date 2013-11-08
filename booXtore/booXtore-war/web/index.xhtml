@@ -26,7 +26,11 @@
                     <p class="lead">
                         Le magasin en ligne BooXtore a été créé dans une optique précise. Conçu de manière intuitive, il renouvelle la librairie de nos jours. Vous pourrez y naviguer parmis les catégories de livres et visionner les 10 meilleurs ventes de ce mois. En toute simplicité.
                     </p>
-                    <p><a href="#" class="btn btln-lg btn-success" role="button">Catalogue</a></p>
+                    <p>
+                        <h:link href="#" class="btn btln-lg btn-success" role="button">
+                            Catalogue
+                        </h:link>
+                    </p>
                 </div>
 
                 <div class="page-header">
@@ -46,7 +50,7 @@
                     <div class="row">
                         <c:forEach var="counter2" begin="0" end="${maxItems}">
                             <div class="col-md-4">
-                                <a href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></a>
+                                <h:link href="#"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></h:link>
                                 <h3>Item name</h3>
                                 <p class="muted">13€</p>
                             </div>

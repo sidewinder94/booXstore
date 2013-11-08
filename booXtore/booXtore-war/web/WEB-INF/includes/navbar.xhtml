@@ -4,6 +4,7 @@
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:p="http://primefaces.org/ui">
+
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -12,23 +13,29 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-                            <h:link class="navbar-brand" outcome="index" value="booXtore"/>
+				<h:link class="navbar-brand" outcome="index" value="booXtore"/>
 			</div>
-			<div class="collapse navbar-collapse">
 
+			<div class="collapse navbar-collapse">
 				<h:form class="navbar-form navbar-right">
 					<div class="form-group">
-                                            <p:inputText type="search" styleClass="form-control" placeholder="Recherche"/>
+						<p:inputText type="search" styleClass="form-control" placeholder="Recherche"/>
 					</div>
-                                    <h:commandButton class="btn btn-success" value="Recherche"/>
+					<h:commandButton class="btn btn-success" value="Recherche"/>
 				</h:form>
 
 				<ul class="nav navbar-nav navbar-right">
-                                    <li><h:link outcome="account"><i class="fa fa-user"></i> Mon Compte</h:link></li>
-                                    <li><h:link outcome="cart"><i class="fa fa-shopping-cart"></i> Panier</h:link></li>
+					<li><h:link outcome="account"><i class="fa fa-user"></i> Mon Compte</h:link></li>
+					<li><h:link outcome="cart">
+						<i class="fa fa-shopping-cart"></i> Panier
+						<span> - </span>
+						<span><!-- Nombre d'articles - Affiche "Vide" si vide --></span>
+						<span><!-- Prix total --></span>
+					</h:link></li>
 				</ul>
 
 			</div><!--/.nav-collapse -->
 		</div>
 	</div>
+
 </ui:composition>
