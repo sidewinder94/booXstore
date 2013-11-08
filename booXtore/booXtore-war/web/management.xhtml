@@ -39,44 +39,36 @@
                         <div class="col-md-2" style="margin-top: 42px;">
                             
                             <ul class="list-group" >
-                                <li class="list-group-item">
-                                <a href="#" class="list-group-item active">
-                                <span class="badge">42</span>
-                                Catégories Client
-                                </a>
-                                </li>
-
-                                <a href="#" class="list-group-item">
-                                <span class="badge">20</span>
-                                Action
-                                </a>
-
-                                <a href="#" class="list-group-item">
-                                <span class="badge">22</span>
-                                Humour
-                                </a>
-
-                                <a href="#" class="list-group-item">
-                                <span class="badge">...</span>
-                                ...
-                                </a>
-
-                                <li class="list-group-item">
-                                <a href="#" class="list-group-item">
-                                <span class="badge">12</span>
-                                Catégories Libraire
-                                </a>
-                                </li>
-
-                                <a href="#" class="list-group-item">
-                                <span class="badge">2</span>
-                                Réapprovisionnement
-                                </a>
-
-                                <a href="#" class="list-group-item">
-                                <span class="badge">12</span>
-                                Non classé
-                                </a>
+                                
+                                <h:form>
+                                    
+                                        <h:commandLink value="Catégories Client" action="filterClientAll" class="list-group-item active">
+                                            <span class="badge">40</span>
+                                        </h:commandLink>
+                                    
+                                    <li class="list-group-item">
+                                        <h:commandLink value="..." action="filterReplenishment" class="list-group-item">
+                                            <span class="badge">X</span>
+                                        </h:commandLink>
+                                    </li>
+                                    
+                                    <h:commandLink value="Catégories Libraire" action="filterAdminAll" class="list-group-item">
+                                        <span class="badge">10</span>
+                                    </h:commandLink>
+                                
+                                    <li class="list-group-item">
+                                    <h:commandLink value="Réapprovisionnement" action="filterReplenishment" class="list-group-item">
+                                        <span class="badge">3</span>
+                                    </h:commandLink>
+                                    </li>
+                                
+                                    <li class="list-group-item">
+                                    <h:commandLink value="Non classé" action="filterUnrated" class="list-group-item">
+                                        <span class="badge">7</span>
+                                    </h:commandLink>
+                                    </li>
+                                        
+                                </h:form>
                             </ul>
 
                         </div>
@@ -256,7 +248,7 @@
                                     <tr>
                                         <td>Herbert Le Marine</td>
                                         <td>2 Novembre 2013</td>
-                                        <td>42â€</td>
+                                        <td>42 €</td>
                                         <td>Validée</td>
                                         <td>
                                             <select>
@@ -273,7 +265,7 @@
                                     <tr>
                                         <td>Anoss</td>
                                         <td>1 Novembre 2013</td>
-                                        <td>22â€</td>
+                                        <td>22 €</td>
                                         <td>En préparation</td>
                                         <td>
                                             <select>
@@ -290,7 +282,7 @@
                                     <tr>
                                         <td>Pomf</td>
                                         <td>29 Octobre 2013</td>
-                                        <td>28â€</td>
+                                        <td>28 €</td>
                                         <td>Annulée</td>
                                         <td>
                                             <select>
