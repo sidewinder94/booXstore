@@ -22,5 +22,7 @@ public interface CartSessionBeanLocal {
     void resetCart();
 
     void removeBook(Books book);
+
+    Float getTotalPrice();
     
 }

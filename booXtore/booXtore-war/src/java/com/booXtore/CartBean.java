@@ -7,7 +7,7 @@ package com.booXtore;
 
 import com.booXtore.domain.Books;
 import com.booXtore.service.BooksFacadeLocal;
-import com.booXtore.service.CartSessionBean;
+import com.booXtore.service.CartSessionBeanLocal;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -23,7 +23,7 @@ import javax.ejb.EJB;
 public class CartBean implements Serializable {
 
     @EJB
-    private CartSessionBean cSB;
+    private CartSessionBeanLocal cSB;
     
     @EJB
     private BooksFacadeLocal bFL;
@@ -45,6 +45,16 @@ public class CartBean implements Serializable {
     public void addBook(int bookId)
     {
         this.cSB.addBook(this.bFL.find(bookId));
+    }
+    
+    public Float getTotalPrice()
+    {
+        return cSB.getTotalPrice();
+    }
+    
+    public Integer getTotalArticles()
+    {
+        return cSB.getContent().size();
     }
 }
     

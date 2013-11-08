@@ -78,4 +78,20 @@ public class CartSessionBean implements CartSessionBeanLocal {
             this.content.put(book, (this.content.get(book) - 1));
         }
     }
+
+    /**
+     * Returns the total price of theitmes in the cart
+     * @return The total price of the items in the cart
+     */
+    @Override
+    public Float getTotalPrice() {
+        Float result = 0f;
+        
+        for(Books book : this.content.keySet())
+        {
+            result += book.getPrice();
+        }
+        
+        return result;
+    }
 }
