@@ -1,89 +1,94 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<h:head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
 
-		<f:facet name="first">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		</f:facet>
-		<meta charset="utf-8">
-		<title>booXtore - Fiche produit</title>
-		<h:outputStylesheet library="css" name="main.css"/>
-		<h:outputStylesheet library="css" name="font-awesome.css"/>
+        <f:facet name="first">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </f:facet>
+        <meta charset="utf-8"/>
+            <title>booXtore - Fiche produit</title>
+            <h:outputStylesheet library="css" name="main.css"/>
+            <h:outputStylesheet library="css" name="font-awesome.css"/>
 
-	</h:head>
-	<h:body>
+    </h:head>
+    <h:body>
 
-		<!-- Include - Navbar -->
-		<ui:include src="/WEB-INF/includes/navbar.xhtml"/>
+        <!-- Include - Navbar -->
+        <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
 
-		<!-- Main content -->
-		<div id="wrap">
-			<div id="main" class="container clear-top">
+        <!-- Main content -->
+        <div id="wrap">
+            <div id="main" class="container clear-top">
 
-				<!-- Breadcrumbs -->
-				<ol class="breadcrumb">
-					<li><a href="#">Catalogue</a></li>
-					<li><a href="#"><!-- Catégorie --></a></li>
-					<li class="active"><!-- Nom du livre --></li>
-				</ol>
+                <!-- Breadcrumbs -->
+                <ol class="breadcrumb">
+                    <li><a href="#">Catalogue</a></li>
+                    <li><a href="#"><!-- Catégorie --></a></li>
+                    <li class="active"><!-- Nom du livre --></li>
+                </ol>
 
-				<!-- Product details -->
-				<div class="row">
+                <!-- Product details -->
+                <div class="row">
 
-					<!-- Image / Book cover -->
-					<div class="col-md-4">
-						<img style="margin-top:40px" class="thumbnail" src="" alt=""/>
-					</div>
+                    <!-- Image / Book cover -->
+                    <div class="col-md-4">
+                        <img style="margin-top:40px" class="thumbnail" src="" alt=""/>
+                    </div>
 
-					<!-- Book details -->
-					<div class="col-md-8">
+                    <!-- Book details -->
+                    <div class="col-md-8">
 
-						<div class="page-header">
-							<h2><!-- Nom du livre --></h2>
-						</div>
+                        <div class="page-header">
+                            <h2><!-- Nom du livre --></h2>
+                        </div>
 
-						<p><!-- Synopsis / Description du livre --></p>
+                        <p><!-- Synopsis / Description du livre --></p>
 
-						<hr/>
+                        <hr/>
 
-						<table class="table">
-							<!-- Si le livre est une nouveauté -->
-							<tr class="success">
-								<td></td>
-								<td> Ce livre est une nouveauté ! </td>
-							</tr>
-							<tr>
-								<td><strong> Auteur(s) </strong></td>
-								<td><!-- Auteur(s) --></td>
-							</tr>
-							<tr>
-								<td><strong> Éditeurs </strong></td>
-								<td><!-- Éditeurs --></td>
-							</tr>
-							<tr>
-								<td><strong> Date de publication </strong></td>
-								<td><!-- Date --></td>
-							</tr>
-							<tr>
-								<td><strong> Prix </strong></td>
-								<td><!-- Prix --></td>
-							</tr>
-							<!-- Quantité - <tr class="danger"> si indisponible -->
-							<tr>
-								<td><strong> En stock </strong></td>
-								<td><!-- Quantité --></td>
-							</tr>
-						</table>
+                        <table class="table">
+                            <!-- Si le livre est une nouveauté -->
+                            <tr class="success">
+                                <td></td>
+                                <td> Ce livre est une nouveauté ! </td>
+                            </tr>
+                            <tr>
+                                <td><strong> Auteur(s) </strong></td>
+                                <td><!-- Auteur(s) --></td>
+                            </tr>
+                            <tr>
+                                <td><strong> Éditeurs </strong></td>
+                                <td><!-- Éditeurs --></td>
+                            </tr>
+                            <tr>
+                                <td><strong> Date de publication </strong></td>
+                                <td><!-- Date --></td>
+                            </tr>
+                            <tr>
+                                <td><strong> Prix </strong></td>
+                                <td><!-- Prix --></td>
+                            </tr>
+                            <!-- Quantité - <tr class="danger"> si indisponible -->
+                            <tr>
+                                <td><strong> En stock </strong></td>
+                                <td><!-- Quantité --></td>
+                            </tr>
+                        </table>
 
-						<button type="button" class="btn btn-success">
-							<i class="fa fa-shopping-cart"></i> Ajouter au panier
-						</button>
+                        <button type="button" class="btn btn-success">
+                            <i class="fa fa-shopping-cart"></i> Ajouter au panier
+                        </button>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</h:body>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:body>
 
-	<h:outputScript library="js" name="main.js"/>
+    <h:outputScript library="js" name="main.js"/>
 </html>
