@@ -41,3 +41,7 @@ Thumbs.db
 /booXstore/booXstore-ear/target/
 booXstore-war/src/main/webapp/VAADIN/gwt-unitCache/
 /booXtore/booXtore-ware/nbproject/private/
+
+build.xml
+MANIFEST.MF
+build-impl.xml~
