@@ -21,7 +21,7 @@
 					<div class="form-group">
 						<p:inputText type="search" styleClass="form-control" placeholder="Recherche"/>
 					</div>
-					<h:commandButton styleClass="btn btn-success" value="Recherche"/>
+					<h:commandButton class="btn btn-success" value="Recherche"/>
 				</h:form>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -29,9 +29,8 @@
 					<li><h:link outcome="cart">
 						<i class="fa fa-shopping-cart"></i> Panier
 						<span> - </span>
-						<span><!-- Nombre d'articles - Affiche "Vide" si vide --></span>
-						<span> - </span>
-						<span><!-- Prix total --></span>
+                                                <span>#{cartBean.totalArticles}</span>
+                                                <span>#{cartBean.totalPrice}</span>
 					</h:link></li>
 				</ul>
 
