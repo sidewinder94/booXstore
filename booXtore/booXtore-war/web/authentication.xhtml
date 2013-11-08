@@ -32,8 +32,8 @@ and open the template in the editor.
                     <div class="col-md-6">
                         <h:form class="form-signin">
                             <h2 class="form-signin-heading">Connectez-vous</h2>
-                            <h:inputText class="form-control" pass:placeholder="Nom d'utilisateur" required="required" />
-                            <h:inputSecret class="form-control" pass:placeholder="Mot de passe" required="required" />
+                            <h:inputText label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" required="true"/>
+                            <h:inputSecret label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" required="true"/>
                             <h:commandButton class="btn btn-lg btn-primary btn-block" type="submit" value="Se connecter"/>
                         </h:form>
                     </div>
@@ -41,12 +41,12 @@ and open the template in the editor.
                     <div class="col-md-6">
                         <h:form class="form-signin">
                             <h2 class="form-signin-heading">Inscrivez-vous</h2>
-                            <h:inputText class="form-control" pass:placeholder="Nom" required="required" />
-                            <h:inputText class="form-control" pass:placeholder="Prénom" required="required" />
-                            <h:inputText class="form-control" pass:placeholder="Mail" required="required" />
-                            <h:inputText class="form-control" pass:placeholder="Adresse postale" required="required" />
-                            <h:inputText class="form-control" pass:placeholder="Nom d'utilisateur" required="required" />
-                            <h:inputSecret class="form-control" pass:placeholder="Mot de passe" required="required" />
+                            <h:inputText label="Nom" class="form-control" pass:placeholder="Nom" required="true" />
+                            <h:inputText label="Prénom" class="form-control" pass:placeholder="Prénom" required="true" />
+                            <h:inputText label="Mail" class="form-control" pass:placeholder="Mail" required="true"/>
+                            <h:inputText label="Adresse" class="form-control" pass:placeholder="Adresse" required="true"/>
+                            <h:inputText label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" required="true"/>
+                            <h:inputSecret label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" required="true"/>
                             <h:commandButton  class="btn btn-lg btn-primary btn-block" type="submit" value="S'inscrire"/>
                         </h:form>
                     </div>

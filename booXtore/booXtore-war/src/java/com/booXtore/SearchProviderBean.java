@@ -50,7 +50,10 @@ public class SearchProviderBean {
     
     public List<Categories> getCategories()
     {
-        return cFL.findAll();
+        List<Categories> result = cFL.findAll();
+        
+        System.out.println(result);
+        return result;
     }
     
     public Categories getSearchCategory() {
