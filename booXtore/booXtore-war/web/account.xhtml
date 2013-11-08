@@ -45,10 +45,21 @@
 						<p><strong>Adresse actuelle</strong></p>
 						<p><!-- Adresse mail --></p>
 
-						<h:form role="form">
+						<h:form>
 							<div class="form-group">
 								<label for="email">Nouvelle adresse mail</label>
-								<h:inputText type="email" class="form-control" id="email"/>
+								<h:inputText
+								   required="true"
+								   requiredMessage="Veuillez entrer votre adresse email"
+								   validatorMessage="Votre email est invalide"
+								   class="form-control"
+								   id="email">
+
+									<f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/>
+
+								</h:inputText>
+
+
 							</div>
 							<h:commandButton type="submit" class="btn btn-success" value="Changer d'adresse mail"/>
 						</h:form>
@@ -57,18 +68,18 @@
 							<h2>Changer de mot de passe</h2>
 						</div>
 
-						<h:form role="form">
+						<h:form>
 							<div class="form-group">
 								<label for="oldPass">Ancien mot de passe</label>
-								<h:inputSecret type="password" class="form-control" id="oldPass"/>
+								<h:inputSecret class="form-control" id="oldPass"/>
 							</div>
 							<div class="form-group">
 								<label for="newPass">Nouveau mot de passe</label>
-								<h:inputSecret type="password" class="form-control" id="newPass"/>
+								<h:inputSecret class="form-control" id="newPass"/>
 							</div>
 							<div class="form-group">
 								<label for="newPassConfirm">Confirmation du mot de passe</label>
-								<h:inputSecret type="password" class="form-control" id="newPassConfirm"/>
+								<h:inputSecret class="form-control" id="newPassConfirm"/>
 							</div>
 							<h:commandButton type="submit" class="btn btn-success" value="Changer de mot de passe"/>
 						</h:form>
@@ -81,23 +92,23 @@
 							<h2>Informations personnelles</h2>
 						</div>
 
-						<h:form role="form">
+						<h:form>
 							<div class="col-md-12">
 								<div class="form-group">
 									<label for="adress">Adresse</label>
-									<h:inputText type="text" class="form-control" id="adress"/>
+									<h:inputText class="form-control" id="adress"/>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="postalCode">Code postal</label>
-									<h:inputText type="text" class="form-control" id="postalCode"/>
+									<h:inputText class="form-control" id="postalCode"/>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="city">Ville</label>
-									<h:inputText type="text" class="form-control" id="city"/>
+									<h:inputText class="form-control" id="city"/>
 								</div>
 							</div>
 							<h:commandButton type="submit" class="btn btn-success" value="Sauvegarder"/>
