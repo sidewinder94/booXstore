@@ -19,7 +19,6 @@
     </h:head>
     <h:body>
         <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
-
         <div id="wrap">
 
             <div id="main" class="container clear-top">
@@ -30,11 +29,13 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="search" class="form-control" placeholder="Recherche"/>
+                        <input type="search" class="form-control" placeholder="Recherche" value="#{searchProviderBean.search}"/>
                     </div>
 
                     <div class="col-md-4">
                         <h:selectOneMenu styleClass="form-control" value="#{searchProviderBean.searchCategory}">
+                            <f:selectItem itemValue="#{searchProviderBean.defaultCategorySearch}" 
+                                          itemLabel="#{searchProviderBean.defaultCategorySearch.name}"/>
                             <c:forEach items="#{searchProviderBean.categories}" var="category">
                                 <f:selectItem itemValue="#{category}"
                                               itemLabel="#{category.name}"/>
@@ -42,7 +43,7 @@
                         </h:selectOneMenu>
                     </div>
 
-                    <div class="col-md-2"><button class="btn btn-info">Recherche</button>
+                    <div class="col-md-2"><h:commandButton class="btn btn-info" value="Rechercher" action="#{searchProviderBean.launchSearch()}"/>
                     </div>
 
                 </div>

@@ -20,11 +20,9 @@
 			<div class="collapse navbar-collapse">
 				<h:form class="navbar-form navbar-right">
 					<div class="form-group">
-                                            <p:inputText type="search" styleClass="form-control" placeholder="Recherche" value="#{quickSearch}"/>
+                                            <p:inputText type="search" styleClass="form-control" placeholder="Recherche" value="#{searchProviderBean.search}"/>
 					</div>
-                                    <h:commandButton class="btn btn-success" value="Recherche" actionListener="#{searchProviderBean.launchSearch}">
-                                        <f:param name="search" value="#{quickSearch}"/>
-                                    </h:commandButton>
+                                    <h:commandLink class="btn btn-success" value="Recherche" action="#{searchProviderBean.launchSearch()}"/>
 				</h:form>
 
 				<ul class="nav navbar-nav navbar-right">
