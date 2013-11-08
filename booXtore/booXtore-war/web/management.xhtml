@@ -47,14 +47,13 @@
                                     </h:commandLink>
                                     
                                     
-                                    <c:forEach items="#{searchProviderBean.categories}" var="Category" >
-                                    <li class="list-group-item">
-                                        <h:outputText value="#{Category.name}" class="list-group-item">
-                                            <span class="badge">X</span>
-                                        </h:outputText>
-                                    </li>
+                                    <c:forEach items="#{searchProviderBean.categories}" var="category" >
+                                        <li class="list-group-item">
+                                            <h:commandLink value="#{category.name}" action="filterReplenishment" class="list-group-item">
+                                                <span class="badge">X</span>
+                                            </h:commandLink>
+                                        </li>
                                     </c:forEach>
-                                    
                                     
                                     <h:commandLink value="Catégories Libraire" action="filterAdminAll" class="list-group-item">
                                         <span class="badge">10</span>
@@ -89,10 +88,10 @@
                                             <th>Couverture</th>
                                             <th>Titre</th>
                                             <th>Auteur(s)</th>
-                                            <th>Editeur</th>
+                                            <th>Éditeur</th>
                                             <th>Stock</th>
                                             <th>Prix</th>
-                                            <th>Etat</th>
+                                            <th>État</th>
                                             <th>Catégorie</th>
                                             <th>Actions</th>
                                         </tr>
@@ -111,7 +110,7 @@
                                                 <select>
                                                     <option>Nouveauté</option>
                                                     <option>En stock</option>
-                                                    <option>A venir</option>
+                                                    <option>À venir</option>
                                                     <option>En réapprovisionnement</option>
                                                 </select>
                                             </td>
@@ -183,11 +182,16 @@
                                             <td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
                                         </tr>
 
+                                        
+                                        <c:forEach items="#{searchProviderBean.categories}" var="category" >
                                         <tr>
-                                            <td><input type="text" class="form-control" value=""/></td>
+                                            <td><input type="text" class="form-control" value="#{category.name}"/></td>
                                             <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
                                             <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
                                         </tr>
+                                        </c:forEach>
+                                        
+                                        
                                     </tbody>
                                 </table>
                             </div>
