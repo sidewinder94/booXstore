@@ -186,7 +186,7 @@ INSERT IGNORE INTO `book`(`Id`, `Title`, `Id_Category`, `Supply`, `Threshold`, `
 -----------------------------------Coloriage
 INSERT IGNORE INTO `book`(`Id`, `Title`, `Id_Category`, `Supply`, `Threshold`, `Summary`, `Release_Date`, `Price`, `Id_Publisher`) VALUES (35, "Mon livre de coloriages hello kitty", 11, 10, 2, "Amuse-toi à colorier Hello Kitty avec tes plus belles couleurs. Puis découpe tes dessins selon les pointillés pour décorer ta chambre.", '2012-05-02', 2.80, 12);
 
-INSERT IGNORE INTO `book`(`Id`, `Title`, `Id_Category`, `Supply`, `Threshold`, `Summary`, `Release_Date`, `Price`, `Id_Publisher`) VALUES (36, "Mon livre de coloriage my little Pony", 11, 10, 2, "Des jeux simples et des stickers pour les petits.", '2012-05-02', 2.80, 12);
+INSERT IGNORE INTO `book`(`Id`, `Title`, `Id_Category`, `Supply`, `Threshold`, `Summary`, `Release_Date`, `Price`, `Id_Publisher`) VALUES (36, "Mon livre de coloriage my little Pony", 11, 10, 2, "Des jeux simples et des stickers pour les petits.", '2012-07-02', 2.80, 12);
 
 -----------------------------------Ananas
 INSERT IGNORE INTO `book`(`Id`, `Title`, `Id_Category`, `Supply`, `Threshold`, `Summary`, `Release_Date`, `Price`, `Id_Publisher`) VALUES (36, "Comme un ananas", 12, 10, 2, "Ouvrage publié à l'occasion de l'exposition «Comme un ananas», Carte Blanche à Philippe Katerine, présentée à la Galerie des Galeries, Galeries Lafayette Haussmann, du 4 avril au 2 juin 2012.", '2012-04-05', 17.50, 13);
