@@ -48,11 +48,11 @@
                                     
                                     
                                     <c:forEach items="#{searchProviderBean.categories}" var="Category" >
-                                    <li class="list-group-item">
-                                        <h:outputText value="#{Category.name}" class="list-group-item">
-                                            <span class="badge">X</span>
-                                        </h:outputText>
-                                    </li>
+                                        <li class="list-group-item">
+                                            <h:commandLink value="#{Category.name}" action="filterOneCat" class="list-group-item">
+                                                <span class="badge">X</span>
+                                            </h:commandLink>
+                                        </li>
                                     </c:forEach>
                                     
                                     
