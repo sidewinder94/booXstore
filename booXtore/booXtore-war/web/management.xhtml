@@ -1,441 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
 <!DOCTYPE html>
-<html lang="fr">
-	<h:head>
-		<f:facet name="first">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <f:facet name="first">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         </f:facet>
-		<meta charset="utf-8">
-		<title>booXtore - Gestion</title>
-		<h:outputStylesheet library="css" name="main.css"/>
+        <title>booXtore - Gestion</title>
+        <h:outputStylesheet library="css" name="main.css"/>
+        <h:outputStylesheet library="css" name="font-awesome.css"/>
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </h:head>
+    <h:body>
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-		<![endif]-->
+        <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
 
-	</h:head>
-	<h:body>
 
-		<div class="navbar navbar-inverse navbar-fixed-top">
-                    <div class="container">
-                            <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                    </button>
-                                    <a class="navbar-brand" href="#">booXtore</a>
+
+        <div id="wrap">
+
+
+            <div class="">
+                <div style="margin-top:50px">&nbsp;</div>
+                
+                <ul class="nav nav-tabs">
+                    <li class="active"><h:link value="Gestion Livres" outcome="book" data-toggle="tab"/></li>
+                    <li><h:link value="Gestion CatÈgories" outcome="catalog"  data-toggle="tab"/></li>
+                    <li><h:link value="Gestion Suivi Commande" outcome="tracking_order"  data-toggle="tab"/></li>
+                    <li><h:link value="Gestion Stock" outcome="stock"  data-toggle="tab"/></li>
+                    <li><h:link value="Gestion Stock Critique" outcome="critic"  data-toggle="tab"/></li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade in active" id="book">
+
+                        <div class="col-md-2" style="margin-top: 42px;">
+
+                            
+                            
+                            <ul class="list-group" >
+                                <li class="list-group-item">
+                                    <h:link value="CatÈgories Client" outcome="" class="list-group-item">
+                                        <span class="badge">42</span>
+                                    </h:link>
+                                </li>
+                                
+                                <h:link value="Action" outcome="" class="list-group-item">
+                                        <span class="badge">20</span>
+                                </h:link>
+
+                                <h:link value="Humour" outcome="" class="list-group-item">
+                                        <span class="badge">22</span>
+                                </h:link>
+
+                                <h:link value="..." outcome="" class="list-group-item">
+                                        <span class="badge">...</span>
+                                </h:link>
+
+                                <li class="list-group-item">
+                                    <h:link value="CatÈgories Libraire" outcome="" class="list-group-item">
+                                        <span class="badge">14</span>
+                                    </h:link>
+                                </li>
+
+                                <h:link value="RÈapprovisionnement" outcome=""  class="list-group-item">
+                                    <span class="badge">2</span>
+                                </h:link>
+
+                                <h:link value="Non classÈ" outcome=""  class="list-group-item">
+                                    <span class="badge">2</span>
+                                </h:link>
+                            </ul>
+
+                        </div>
+
+                        <div class="col-md-10">
+
+                            <div class="page-header"><h2>Modification livre(s)</h2></div>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Couverture</th>
+                                            <th>Titre</th>
+                                            <th>Auteur(s)</th>
+                                            <th>Editeur</th>
+                                            <th>Stock</th>
+                                            <th>Prix</th>
+                                            <th>Etat</th>
+                                            <th>CatÈgorie</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="success">
+                                            <td>0</td>
+                                            <td>Nouvelle image</td>
+                                            <td><input type="text"  value="Nouveau Titre" /></td>
+                                            <td><input type="text"  value="Nouvel Auteur" /></td>
+                                            <td><input type="text"  value="Nouvel Editeur" /></td>
+                                            <td><input type="text"  value="Nouveau Stock " /></td>
+                                            <td><input type="text"  value="Nouveau Prix" /></td>
+                                            <td>
+                                                <select>
+                                                    <option>NouveautÈ</option>
+                                                    <option>En stock</option>
+                                                    <option>A venir</option>
+                                                    <option>En rÈapprovisionnement</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option>Action</option>
+                                                    <option>Humour</option>
+                                                    <option>...</option>
+                                                    <option>Non classÈ</option>
+                                                </select>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
+                                            <td><input type="text"  value="Ananas" /></td>
+                                            <td><input type="text"  value="DieudonnÈ" /></td>
+                                            <td><input type="text"  value="La Plume" /></td>
+                                            <td><input type="text"  value="20" /></td>
+                                            <td><input type="text"  value="10" /></td>
+                                            <td>
+                                                <select>
+                                                    <option>NouveautÈ</option>
+                                                    <option>En stock</option>
+                                                    <option>A venir</option>
+                                                    <option>En rÈapprovisionnement</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option>Action</option>
+                                                    <option>Humour</option>
+                                                    <option>...</option>
+                                                    <option>Non classÈ</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
+                                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="collapse navbar-collapse">
 
-                                    <form class="navbar-form navbar-right">
-                                            <div class="form-group">
-                                                    <input type="search" class="form-control" placeholder="Recherche">
-                                            </div>
-                                            <button class="btn btn-success">Recherche</button>
-                                    </form>
+                        </div>
 
-                                    <ul class="nav navbar-nav navbar-right">
-                                            <li><a href="#"><i class="fa fa-user"></i> Mon compte</a></li>
-                                            <li><a href="#"><i class="fa fa-shopping-cart"></i> Panier</a></li>
-                                    </ul>
-
-                            </div><!--/.nav-collapse -->
                     </div>
-		</div>
+
+                    <div class="tab-pane fade" id="catalog">
+
+                        <div class="col-md-12">
+                            <div class="page-header"><h2>Modification catÈgorie</h2></div>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:60%;">Titre</th>
+                                            <th style="width:20%;">Valider</th>
+                                            <th style="width:20%;">Supprimer</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control" value="Nouvelle catÈgorie ..."/></td>
+                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                            <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="text" class="form-control" value="Action"/></td>
+                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                            <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="text" class="form-control" value="Humour"/></td>
+                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                            <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="text" class="form-control" value="..."/></td>
+                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                            <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="tracking_order">
+
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Client</th>
+                                        <th>Date</th>
+                                        <th>Prix</th>
+                                        <th>Status actuel</th>
+                                        <th>Changement de status</th>
+                                        <th>Valider</th>
+                                        <th>Supprimer</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Herbert Le Marine</td>
+                                        <td>2 Novembre 2013</td>
+                                        <td>42Ä</td>
+                                        <td>ValidÈe</td>
+                                        <td>
+                                            <select>
+                                                <option>ValidÈe</option>
+                                                <option>En prÈparation</option>
+                                                <option>AnnulÈe</option>
+                                                <option>EnvoyÈe</option>
+                                            </select>
+                                        </td>
+                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                        <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Anoss</td>
+                                        <td>1 Novembre 2013</td>
+                                        <td>22Ä</td>
+                                        <td>En prÈparation</td>
+                                        <td>
+                                            <select>
+                                                <option>ValidÈe</option>
+                                                <option>En prÈparation</option>
+                                                <option>AnnulÈe</option>
+                                                <option>EnvoyÈe</option>
+                                            </select>
+                                        </td>
+                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                        <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Pomf</td>
+                                        <td>29 Octobre 2013</td>
+                                        <td>28Ä</td>
+                                        <td>AnnulÈe</td>
+                                        <td>
+                                            <select>
+                                                <option>ValidÈe</option>
+                                                <option>En prÈparation</option>
+                                                <option>AnnulÈe</option>
+                                                <option>EnvoyÈe</option>
+                                            </select>
+                                        </td>
+                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                        <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
 
 
+                    <div class="tab-pane fade" id="stock">
 
-		<div id="wrap">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Couverture</th>
+                                        <th>Livre</th>
+                                        <th>CatÈgorie</th>
+                                        <th>Stock restant</th>
+                                        <th>Seuil rÈapprovisionnement actuel</th>
+                                        <th>Seuil par dÈfaut (5)</th>
+                                        <th>DÈfinir un seuil</th>
+                                        <th>Appliquer</th>
+                                    </tr>
+                                </thead>
 
+                                <tbody>
+                                    <tr>
+                                        <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
+                                        <td>Ananas</td>
+                                        <td>Histoire</td>
+                                        <td>20</td>
+                                        <td>5</td>
+                                        <td><button type="button" class="btn btn-default">Appliquer</button></td>
+                                        <td><input type="text" class="form-control"/></td>
+                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                    </tr>
 
-			<div class="">
-				<div style="margin-top:50px">&nbsp;</div>
+                                    <tr>
+                                        <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
+                                        <td>Plop</td>
+                                        <td>Humour</td>
+                                        <td>10</td>
+                                        <td>5</td>
+                                        <td><button type="button" class="btn btn-default">Appliquer</button></td>
+                                        <td><input type="text" class="form-control"/></td>
+                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                    </tr>
 
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#book" data-toggle="tab">Gestion Livres</a></li>
-					<li><a href="#catalog" data-toggle="tab">Gestion Cat√©gories</a></li>
-					<li><a href="#tracking_order" data-toggle="tab">Gestion Suivi Commande</a></li>
-					<li><a href="#stock" data-toggle="tab">Gestion Stock</a></li>
-					<li><a href="#critic" data-toggle="tab">Gestion Stock Critique</a></li>
-				</ul>
+                                    <tr class="danger">
+                                        <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
+                                        <td>Obiwan</td>
+                                        <td>Science Fiction</td>
+                                        <td>3</td>
+                                        <td>5</td>
+                                        <td><button type="button" class="btn btn-default">Appliquer</button></td>
+                                        <td><input type="text" class="form-control"/></td>
+                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-				<div class="tab-content">
+                    <div class="tab-pane fade" id="critic">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Couverture</th>
+                                        <th>Livre</th>
+                                        <th>CatÈgorie</th>
+                                        <th>Stock restant</th>
+                                        <th>Seuil rÈapprovisionnement actuel</th>
+                                        <th>DÈfinir le seuil</th>
+                                        <th>Appliquer seuil par dÈfaut (5)</th>
+                                    </tr>
+                                </thead>
 
-					<div class="tab-pane fade in active" id="book">
-
-						<div class="col-md-2" style="margin-top: 42px;">
-
-							<ul class="list-group" >
-									<li class="list-group-item">
-									<a href="#" class="list-group-item active">
-									<span class="badge">42</span>
-									Cat√©gories Client
-									</a>
-									</li>
-
-									<a href="#" class="list-group-item">
-									<span class="badge">20</span>
-									Action
-									</a>
-
-									<a href="#" class="list-group-item">
-									<span class="badge">22</span>
-									Humour
-									</a>
-
-									<a href="#" class="list-group-item">
-									<span class="badge">...</span>
-									...
-									</a>
-
-									<li class="list-group-item">
-									<a href="#" class="list-group-item">
-									<span class="badge">12</span>
-									Cat√©gories Libraire
-									</a>
-									</li>
-
-									<a href="#" class="list-group-item">
-									<span class="badge">2</span>
-									R√©approvisionnement
-									</a>
-
-									<a href="#" class="list-group-item">
-									<span class="badge">12</span>
-									Non class√©
-									</a>
-							</ul>
-
-						</div>
-
-						<div class="col-md-10">
-
-								<div class="page-header"><h2>Modification livre(s)</h2></div>
-
-								<div class="table-responsive">
-									<table class="table">
-										<thead>
-											<tr>
-												<th>ID</th>
-												<th>Couverture</th>
-												<th>Titre</th>
-												<th>Auteur(s)</th>
-												<th>Editeur</th>
-												<th>Stock</th>
-												<th>Prix</th>
-												<th>Etat</th>
-												<th>Cat√©gorie</th>
-												<th>Actions</th>
-											</tr>
-										</thead>
-
-										<tbody>
-											<tr class="success">
-												<td>0</td>
-												<td>Nouvelle image</td>
-												<td><input type="text"  value="Nouveau Titre" /></td>
-												<td><input type="text"  value="Nouvel Auteur" /></td>
-												<td><input type="text"  value="Nouvel Editeur" /></td>
-												<td><input type="text"  value="Nouveau Stock " /></td>
-												<td><input type="text"  value="Nouveau Prix" /></td>
-												<td>
-													<select>
-														<option>Nouveaut√©</option>
-														<option>En stock</option>
-														<option>A venir</option>
-														<option>En r√©approvisionnement</option>
-													</select>
-												</td>
-												<td>
-													<select>
-														<option>Action</option>
-														<option>Humour</option>
-														<option>...</option>
-														<option>Non class√©</option>
-													</select>
-												</td>
-												<td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
-											</tr>
-											<tr>
-												<td>1</td>
-												<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-												<td><input type="text"  value="Ananas" /></td>
-												<td><input type="text"  value="Dieudonn√©" /></td>
-												<td><input type="text"  value="La Plume" /></td>
-												<td><input type="text"  value="20" /></td>
-												<td><input type="text"  value="10" /></td>
-												<td>
-													<select>
-														<option>Nouveaut√©</option>
-														<option>En stock</option>
-														<option>A venir</option>
-														<option>En r√©approvisionnement</option>
-													</select>
-												</td>
-												<td>
-													<select>
-														<option>Action</option>
-														<option>Humour</option>
-														<option>...</option>
-														<option>Non class√©</option>
-													</select>
-												</td>
-												<td>
-													<button type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
-													<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
-												</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-											</tr>
-											<tr>
-											<td>3</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-												<td>Table cell</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-						</div>
-
-					</div>
-
-					<div class="tab-pane fade" id="catalog">
-
-						<div class="col-md-12">
-							<div class="page-header"><h2>Modification cat√©gorie</h2></div>
-
-							<div class="table-responsive">
-									<table class="table">
-										<thead>
-											<tr>
-												<th style="width:60%;">Titre</th>
-												<th style="width:20%;">Valider</th>
-												<th style="width:20%;">Supprimer</th>
-											</tr>
-										</thead>
-
-										<tbody>
-											<tr>
-												<td><input type="text" class="form-control" value="Nouvelle cat√©gorie ..."/></td>
-												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-												<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-											</tr>
-
-											<tr>
-												<td><input type="text" class="form-control" value="Action"/></td>
-												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-												<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-											</tr>
-
-											<tr>
-												<td><input type="text" class="form-control" value="Humour"/></td>
-												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-												<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-											</tr>
-
-											<tr>
-												<td><input type="text" class="form-control" value="..."/></td>
-												<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-												<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-											</tr>
-										</tbody>
-									</table>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="tab-pane fade" id="tracking_order">
-
-						<div class="table-responsive">
-							<table class="table table-striped">
-								<thead>
-									<tr>
-										<th>Client</th>
-										<th>Date</th>
-										<th>Prix</th>
-										<th>Status actuel</th>
-										<th>Changement de status</th>
-										<th>Valider</th>
-										<th>Supprimer</th>
-									</tr>
-								</thead>
-
-								<tbody>
-									<tr>
-										<td>Herbert Le Marine</td>
-										<td>2 Novembre 2013</td>
-										<td>42‚Ç¨</td>
-										<td>Valid√©e</td>
-										<td>
-											<select>
-												<option>Valid√©e</option>
-												<option>En pr√©paration</option>
-												<option>Annul√©e</option>
-												<option>Envoy√©e</option>
-											</select>
-										</td>
-										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-										<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-									</tr>
-
-									<tr>
-										<td>Anoss</td>
-										<td>1 Novembre 2013</td>
-										<td>22‚Ç¨</td>
-										<td>En pr√©paration</td>
-										<td>
-											<select>
-												<option>Valid√©e</option>
-												<option>En pr√©paration</option>
-												<option>Annul√©e</option>
-												<option>Envoy√©e</option>
-											</select>
-										</td>
-										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-										<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-									</tr>
-
-									<tr>
-										<td>Pomf</td>
-										<td>29 Octobre 2013</td>
-										<td>28‚Ç¨</td>
-										<td>Annul√©e</td>
-										<td>
-											<select>
-												<option>Valid√©e</option>
-												<option>En pr√©paration</option>
-												<option>Annul√©e</option>
-												<option>Envoy√©e</option>
-											</select>
-										</td>
-										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-										<td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-					</div>
+                                <tbody>
+                                    <tr>
+                                        <td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
+                                        <td>Obiwan</td>
+                                        <td>Science Fiction</td>
+                                        <td>5</td>
+                                        <td>3</td>
+                                        <td><input type="text" class="form-control"/></td>
+                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
 
-					<div class="tab-pane fade" id="stock">
+                </div>
 
-						<div class="table-responsive">
-							<table class="table table-striped">
-								<thead>
-									<tr>
-										<th>Couverture</th>
-										<th>Livre</th>
-										<th>Cat√©gorie</th>
-										<th>Stock restant</th>
-										<th>Seuil r√©approvisionnement actuel</th>
-										<th>Seuil par d√©faut (5)</th>
-										<th>D√©finir un seuil</th>
-										<th>Appliquer</th>
-									</tr>
-								</thead>
+            </div>
 
-								<tbody>
-									<tr>
-										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-										<td>Ananas</td>
-										<td>Histoire</td>
-										<td>20</td>
-										<td>5</td>
-										<td><button type="button" class="btn btn-default">Appliquer</button></td>
-										<td><input type="text" class="form-control"/></td>
-										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-									</tr>
+        </div>
 
-									<tr>
-										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-										<td>Plop</td>
-										<td>Humour</td>
-										<td>10</td>
-										<td>5</td>
-										<td><button type="button" class="btn btn-default">Appliquer</button></td>
-										<td><input type="text" class="form-control"/></td>
-										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-									</tr>
+        </div>
 
-									<tr class="danger">
-										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-										<td>Obiwan</td>
-										<td>Science Fiction</td>
-										<td>3</td>
-										<td>5</td>
-										<td><button type="button" class="btn btn-default">Appliquer</button></td>
-										<td><input type="text" class="form-control"/></td>
-										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
+        <script src="includes/main.js"></script>
 
-					<div class="tab-pane fade" id="critic">
-						<div class="table-responsive">
-							<table class="table table-striped">
-								<thead>
-									<tr>
-										<th>Couverture</th>
-										<th>Livre</th>
-										<th>Cat√©gorie</th>
-										<th>Stock restant</th>
-										<th>Seuil r√©approvisionnement actuel</th>
-										<th>D√©finir le seuil</th>
-										<th>Appliquer seuil par d√©faut (5)</th>
-									</tr>
-								</thead>
-
-								<tbody>
-									<tr>
-										<td><img class="thumbnail" src="img/ananas.jpg" alt="imma an ananas, biatch"/></td>
-										<td>Obiwan</td>
-										<td>Science Fiction</td>
-										<td>5</td>
-										<td>3</td>
-										<td><input type="text" class="form-control"/></td>
-										<td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-		<script src="includes/main.js"></script>
-
-	</h:body>
+    </h:body>
 </html>
