@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
+	<h:head>
+		<f:facet name="first">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </f:facet>
 		<meta charset="utf-8">
 		<title>booXtore - Gestion</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" media="screen" href="includes/main.css">
+		<h:outputStylesheet library="css" name="main.css"/>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -13,35 +15,35 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 
-	</head>
-	<body>
+	</h:head>
+	<h:body>
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">booXtore</a>
-			</div>
-			<div class="collapse navbar-collapse">
+                    <div class="container">
+                            <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">booXtore</a>
+                            </div>
+                            <div class="collapse navbar-collapse">
 
-				<form class="navbar-form navbar-right">
-					<div class="form-group">
-						<input type="search" class="form-control" placeholder="Recherche">
-					</div>
-					<button class="btn btn-success">Recherche</button>
-				</form>
+                                    <form class="navbar-form navbar-right">
+                                            <div class="form-group">
+                                                    <input type="search" class="form-control" placeholder="Recherche">
+                                            </div>
+                                            <button class="btn btn-success">Recherche</button>
+                                    </form>
 
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><i class="fa fa-user"></i> Mon compte</a></li>
-					<li><a href="#"><i class="fa fa-shopping-cart"></i> Panier</a></li>
-				</ul>
+                                    <ul class="nav navbar-nav navbar-right">
+                                            <li><a href="#"><i class="fa fa-user"></i> Mon compte</a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i> Panier</a></li>
+                                    </ul>
 
-			</div><!--/.nav-collapse -->
-		</div>
+                            </div><!--/.nav-collapse -->
+                    </div>
 		</div>
 
 
@@ -435,5 +437,5 @@
 
 		<script src="includes/main.js"></script>
 
-	</body>
+	</h:body>
 </html>
