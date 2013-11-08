@@ -47,14 +47,13 @@
                                     </h:commandLink>
                                     
                                     
-                                    <c:forEach items="#{searchProviderBean.categories}" var="Category" >
+                                    <c:forEach items="#{searchProviderBean.categories}" var="category" >
                                         <li class="list-group-item">
-                                            <h:commandLink value="#{Category.name}" action="filterOneCat" class="list-group-item">
+                                            <h:commandLink value="#{category.name}" action="filterReplenishment" class="list-group-item">
                                                 <span class="badge">X</span>
                                             </h:commandLink>
                                         </li>
                                     </c:forEach>
-                                    
                                     
                                     <h:commandLink value="Catégories Libraire" action="filterAdminAll" class="list-group-item">
                                         <span class="badge">10</span>
