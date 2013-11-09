@@ -90,14 +90,15 @@ public class AuthenticationBean implements Serializable {
         }*/
         
         user = uFL.checkValidUser1(login, password);
-        firstName = user.getFirstName();
-        lastName = user.getLastName();
-        address = user.getAddress();
-        ZIP = user.getZIP();
-        city = user.getCity();
-        mail = user.getMail();
+        
         
         if (user != null) {
+            firstName = user.getFirstName();
+            lastName = user.getLastName();
+            address = user.getAddress();
+            ZIP = user.getZIP();
+            city = user.getCity();
+            mail = user.getMail();
             isConnected = true;
             return "index.xhtml?faces-redirect=true";
             
