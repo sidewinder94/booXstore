@@ -60,13 +60,23 @@ public class SearchProviderBean implements Serializable {
     }
 
     public String launchSearch() {
-        return "catalog.xhtml?faces-redirect=true";
+        String cat = "";
+        if(!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))
+        {
+            cat = "category=" + this.searchCategory.getName();
+        }
+        return "catalog.xhtml?faces-redirect=true&search=" + search + cat;
 
     }
 
     public String getSearch() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        this.search = getParam(fc , "search");
+        String searchParam = getParam(fc , "search");
+        if(searchParam != null)
+        {
+            this.search = searchParam;
+        }
+        
         return search;
     }
 

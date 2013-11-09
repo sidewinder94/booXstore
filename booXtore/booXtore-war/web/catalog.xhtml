@@ -12,10 +12,12 @@
         <title>booXtore - Catalog</title>
         <h:outputStylesheet library="css" name="main.css"/>
         <h:outputStylesheet library="css" name="font-awesome.css"/>
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
+        <h:outputText escape="false">
+            <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+            <![endif]-->  
+        </h:outputText>
     </h:head>
     <h:body>
         <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
@@ -27,32 +29,34 @@
                     <li class="active">Catalogue</li>
                 </ol>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="search" class="form-control" placeholder="Recherche" value="#{searchProviderBean.search}"/>
+                <h:form >
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p:inputText id="searchBar" type="search" styleClass="form-control" placeholder="Recherche" value="#{searchProviderBean.search}"/>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h:selectOneMenu styleClass="form-control" value="#{searchProviderBean.searchCategory}">
+                                <f:selectItem itemValue="#{searchProviderBean.defaultCategorySearch}" 
+                                              itemLabel="#{searchProviderBean.defaultCategorySearch.name}"/>
+                                <c:forEach items="#{searchProviderBean.categories}" var="category">
+                                    <f:selectItem itemValue="#{category}"
+                                                  itemLabel="#{category.name}"/>
+                                </c:forEach>
+                            </h:selectOneMenu>
+                        </div>
+
+                        <div class="col-md-2">
+                            <h:commandLink class="btn btn-info" value="Rechercher" action="#{searchProviderBean.launchSearch}"/>
+                        </div>
                     </div>
-
-                    <div class="col-md-4">
-                        <h:selectOneMenu styleClass="form-control" value="#{searchProviderBean.searchCategory}">
-                            <f:selectItem itemValue="#{searchProviderBean.defaultCategorySearch}" 
-                                          itemLabel="#{searchProviderBean.defaultCategorySearch.name}"/>
-                            <c:forEach items="#{searchProviderBean.categories}" var="category">
-                                <f:selectItem itemValue="#{category}"
-                                              itemLabel="#{category.name}"/>
-                            </c:forEach>
-                        </h:selectOneMenu>
-                    </div>
-
-                    <div class="col-md-2"><h:commandButton class="btn btn-info" value="Rechercher" action="#{searchProviderBean.launchSearch()}"/>
-                    </div>
-
-                </div>
-
+                </h:form>
+                
                 <hr/>
                 <div class="row">
                     <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
                     <div class="col-md-10">
-                        <a href="#"><h3>Item Name</h3></a>
+                        <a href="#"><h3>#{searchProviderBean.search}</h3></a>
                         <p>par <strong>Auteur</strong>, éditions <strong>Éditeur</strong></p>
                         <p>13€</p>
                     </div>
