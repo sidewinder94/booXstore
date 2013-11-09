@@ -32,22 +32,24 @@ and open the template in the editor.
                     <div class="col-md-6">
                         <h:form class="form-signin">
                             <h2 class="form-signin-heading">Connectez-vous</h2>
-                            <h:inputText label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" required="true"/>
-                            <h:inputSecret label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" required="true"/>
-                            <h:commandButton class="btn btn-lg btn-primary btn-block" type="submit" value="Se connecter"/>
+                            <h:inputText label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" value="#{AuthenticationBean.login}" required="true"/>
+                            <h:inputSecret label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" value="#{AuthenticationBean.password}" required="true"/>
+                            <h:commandButton class="btn btn-lg btn-primary btn-block" type="submit" action="#{AuthenticationBean.userAuthentication()}" value="Se connecter"/>
                         </h:form>
                     </div>
 
                     <div class="col-md-6">
                         <h:form class="form-signin">
                             <h2 class="form-signin-heading">Inscrivez-vous</h2>
-                            <h:inputText label="Nom" class="form-control" pass:placeholder="Nom" required="true" />
-                            <h:inputText label="Prénom" class="form-control" pass:placeholder="Prénom" required="true" />
-                            <h:inputText label="Mail" class="form-control" pass:placeholder="Mail" required="true"/>
-                            <h:inputText label="Adresse" class="form-control" pass:placeholder="Adresse" required="true"/>
-                            <h:inputText label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" required="true"/>
-                            <h:inputSecret label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" required="true"/>
-                            <h:commandButton  class="btn btn-lg btn-primary btn-block" type="submit" value="S'inscrire"/>
+                            <h:inputText label="Nom" class="form-control" pass:placeholder="Nom" value="#{AuthenticationBean.lastName}" required="true" />
+                            <h:inputText label="Prénom" class="form-control" pass:placeholder="Prénom" value="#{AuthenticationBean.firstName}" required="true" />
+                            <h:inputText label="Adresse" class="form-control" pass:placeholder="Adresse" value="#{AuthenticationBean.address}" required="true"/>
+                            <h:inputText label="Code Postal" class="form-control" pass:placeholder="Code Postal" value="#{AuthenticationBean.ZIP}" required="true" />
+                            <h:inputText label="Ville" class="form-control" pass:placeholder="Ville" value="#{AuthenticationBean.city}" required="true" />
+                            <h:inputText label="Mail" class="form-control" pass:placeholder="Mail" value="#{AuthenticationBean.mail}" required="true"/>
+                            <h:inputText label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" value="#{AuthenticationBean.login}" required="true"/>
+                            <h:inputSecret label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" value="#{AuthenticationBean.password}" required="true"/>
+                            <h:commandButton  class="btn btn-lg btn-primary btn-block" type="submit" value="S'inscrire" action="#{AuthenticationBean.userSignIn()}" />
                         </h:form>
                     </div>
                 </div>

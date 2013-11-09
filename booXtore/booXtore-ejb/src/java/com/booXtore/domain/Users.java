@@ -23,16 +23,26 @@ public class Users implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
-    private String firstName;    
+         
+    private String firstName;
+    private String lastName;  
+    private String mail;    
+    private String address;    
+    private String ZIP;    
+    private String city;    
+    private String login;    
+    private String password;   
 
     @OneToMany(mappedBy = "users")
     private List<Orders> orders;
 
-    public List<Orders> getOrders() {
-        return orders;
+    public Users() {
     }
 
+    public List<Orders> getOrders() {
+        return orders;
+    }    
+    
     public void setOrders(List<Orders> orders) {
         this.orders = orders;
     }
@@ -62,11 +72,11 @@ public class Users implements Serializable {
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
-    public void setAddress(String Address) {
-        this.Address = Address;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getZIP() {
@@ -78,35 +88,28 @@ public class Users implements Serializable {
     }
 
     public String getCity() {
-        return City;
+        return city;
     }
 
-    public void setCity(String City) {
-        this.City = City;
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getLogin() {
-        return Login;
+        return login;
     }
 
-    public void setLogin(String Login) {
-        this.Login = Login;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
-    public void setPassword(String Password) {
-        this.Password = Password;
+    public void setPassword(String password) {
+        this.password = password;
     }
-    private String lastName;    
-    private String mail;    
-    private String Address;    
-    private String ZIP;    
-    private String City;    
-    private String Login;    
-    private String Password;
 
     public Integer getId() {
         return id;

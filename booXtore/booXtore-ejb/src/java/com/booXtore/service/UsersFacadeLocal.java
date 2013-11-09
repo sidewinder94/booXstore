@@ -28,5 +28,15 @@ public interface UsersFacadeLocal {
     List<Users> findRange(int[] range);
 
     int count();
+
+    Boolean checkValidUser(String login, String password);
+
+    void register(Users user);
+
+    public Users findUserById(Integer id);
+
+    public Users findUserByLogin(String login);
+
+    public Users checkValidUser1(String login, String password);
     
 }

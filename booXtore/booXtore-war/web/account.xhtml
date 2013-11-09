@@ -43,7 +43,7 @@
 						</div>
 
 						<p><strong>Adresse actuelle</strong></p>
-						<p><!-- Adresse mail --></p>
+						<p value="#{AuthenticationBean.mail}"><!-- Adresse mail --></p>
 
 						<h:form>
 							<div class="form-group">
@@ -71,7 +71,8 @@
 						<h:form>
 							<div class="form-group">
 								<label for="oldPass">Ancien mot de passe</label>
-								<h:inputSecret class="form-control" id="oldPass"/>
+								<h:inputSecret class="form-control" id="oldPass" 
+                                                                   value="#{AuthenticationBean.password}"/>
 							</div>
 							<div class="form-group">
 								<label for="newPass">Nouveau mot de passe</label>
@@ -95,20 +96,20 @@
 						<h:form>
 							<div class="col-md-12">
 								<div class="form-group">
-									<label for="adress">Adresse</label>
-									<h:inputText class="form-control" id="adress"/>
+									<label for="address">Adresse</label>
+									<h:inputText class="form-control" id="address" value="#{AuthenticationBean.address}"/>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="postalCode">Code postal</label>
-									<h:inputText class="form-control" id="postalCode"/>
+									<h:inputText class="form-control" id="postalCode"  value="#{AuthenticationBean.ZIP}"/>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="city">Ville</label>
-									<h:inputText class="form-control" id="city"/>
+									<h:inputText class="form-control" id="city" value="#{AuthenticationBean.city}"/>
 								</div>
 							</div>
 							<h:commandButton type="submit" class="btn btn-success" value="Sauvegarder"/>
