@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
@@ -22,6 +23,7 @@ import javax.persistence.Temporal;
  */
 @Entity
 public class Books implements Serializable {
+   
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -45,6 +47,9 @@ public class Books implements Serializable {
     
     private String imageName;
     
+    @ManyToOne
+    private States states;
+    
     
     @OneToOne
     private Publishers publisher;
@@ -54,6 +59,16 @@ public class Books implements Serializable {
     
     @ManyToMany(mappedBy = "books")
     private List<Authors> authors;
+
+    public States getStates() {
+        return states;
+    }
+
+    public void setStates(States states) {
+        this.states = states;
+    }
+    
+    
 
     public List<BookOrders> getBookOrders() {
         return bookOrders;
