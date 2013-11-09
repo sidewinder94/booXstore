@@ -18,21 +18,18 @@
             </div>
 
             <div class="collapse navbar-collapse">
+                
                 <h:form class="navbar-form navbar-right">
                     <div class="form-group">
                         <p:inputText id="quickSearch" type="search" styleClass="form-control" placeholder="Recherche" value="#{quickSearchBean.search}"/>
                     </div>
                     <h:commandLink class="btn btn-success" value="Recherche" action="#{quickSearchBean.launchSearch}"/>
                 </h:form>
-
+                
+                
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <h:form class="navbar-form navbar-right" rendered="#{AuthenticationBean.isConnected}">
-                            <h:link outcome="account" ><i class="fa fa-user"></i> Mon Compte</h:link>
-                            <h:commandButton class="btn btn-danger" value="Déconnexion" action="#{AuthenticationBean.logout()}"/>
-                        </h:form>
-                        <h:link outcome="authentication" rendered="#{!AuthenticationBean.isConnected}"><i class="fa fa-user"></i> Se connecter</h:link>
-                    </li>
+                    <li><h:link rendered="#{AuthenticationBean.isConnected}" outcome="account" ><i class="fa fa-user"></i> Mon Compte</h:link></li>
+                    <li><h:link rendered="#{!AuthenticationBean.isConnected}" outcome="authentication" ><i class="fa fa-user"></i> Se connecter</h:link></li>
                     <li><h:link outcome="cart">
                             <i class="fa fa-shopping-cart"></i> Panier
                             <span> - </span>
@@ -41,7 +38,11 @@
                             <span>#{cartBean.totalPrice}</span>
                         </h:link></li>
                 </ul>
-
+                
+                <h:form rendered="#{AuthenticationBean.isConnected}" class="navbar-form navbar-right">
+                    <h:commandButton class="btn btn-danger" value="Déconnexion" action="#{AuthenticationBean.logout()}"/>
+                </h:form>
+                
             </div><!--/.nav-collapse -->
         </div>
     </div>
