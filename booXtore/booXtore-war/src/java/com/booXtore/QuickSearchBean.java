@@ -17,8 +17,7 @@ import javax.faces.bean.ViewScoped;
 @ViewScoped
 public class QuickSearchBean implements Serializable{
     
-    private String search;
-    private Categories searchCategory;
+    private String search;;
     
     /**
      * Creates a new instance of QuickSearchBean
@@ -40,13 +39,5 @@ public class QuickSearchBean implements Serializable{
         this.search = search;
     }
 
-    public Categories getSearchCategory() {
-        return searchCategory;
-    }
-
-    public void setSearchCategory(Categories searchCategory) {
-        this.searchCategory = searchCategory;
-    }
-    
     
 }

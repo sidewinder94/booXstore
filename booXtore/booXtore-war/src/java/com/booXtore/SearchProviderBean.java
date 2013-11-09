@@ -8,19 +8,19 @@ import com.booXtore.domain.Books;
 import com.booXtore.domain.Categories;
 import com.booXtore.service.BooksFacadeLocal;
 import com.booXtore.service.CategoriesFacadeLocal;
-import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Map;
 import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 
 /**
  *
  * @author Antoine-Ali
  */
-@Named(value = "searchProviderBean")
-@SessionScoped
+@ManagedBean
+@ViewScoped
 public class SearchProviderBean implements Serializable {
 
     @EJB
@@ -28,7 +28,6 @@ public class SearchProviderBean implements Serializable {
     @EJB
     private CategoriesFacadeLocal cFL;
     
-    private Map<String, String> searchParams;
     private String search;
     private Categories searchCategory;
 
@@ -45,6 +44,14 @@ public class SearchProviderBean implements Serializable {
     }
 
     public Categories getSearchCategory() {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        for(Categories cat : this.cFL.findAll())
+        {
+            if(cat.getName().equalsIgnoreCase(getParam(fc, "category")))
+            {
+                this.searchCategory = cat;
+            }
+        }
         return this.searchCategory;
     }
 
@@ -58,6 +65,8 @@ public class SearchProviderBean implements Serializable {
     }
 
     public String getSearch() {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        this.search = getParam(fc , "search");
         return search;
     }
 
@@ -80,4 +89,10 @@ public class SearchProviderBean implements Serializable {
     {
         return this.bFL.findAll();
     }
+    
+    private String getParam(FacesContext fc, String paramName)
+    {
+        return fc.getExternalContext().getRequestParameterMap().get(paramName);
+    }
+    
 }
