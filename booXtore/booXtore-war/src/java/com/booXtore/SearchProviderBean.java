@@ -63,8 +63,9 @@ public class SearchProviderBean implements Serializable {
         String cat = "";
         if(!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))
         {
-            cat = "category=" + this.searchCategory.getName();
+            cat = "&category=" + this.searchCategory.getName();
         }
+        System.out.println("catalog.xhtml?faces-redirect=true&search=" + search + cat);
         return "catalog.xhtml?faces-redirect=true&search=" + search + cat;
 
     }
@@ -88,6 +89,7 @@ public class SearchProviderBean implements Serializable {
     {
         Categories def = new Categories();
         def.setName("Toutes Catégories");
+        def.setId(-1);
         return def;
     }
     

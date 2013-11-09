@@ -37,6 +37,7 @@
 
                         <div class="col-md-4">
                             <h:selectOneMenu styleClass="form-control" value="#{searchProviderBean.searchCategory}">
+                                <f:converter converterId="com.booXtore.converters.CategoriesConverter"/>
                                 <f:selectItem itemValue="#{searchProviderBean.defaultCategorySearch}" 
                                               itemLabel="#{searchProviderBean.defaultCategorySearch.name}"/>
                                 <c:forEach items="#{searchProviderBean.categories}" var="category">
@@ -51,7 +52,7 @@
                         </div>
                     </div>
                 </h:form>
-                
+
                 <hr/>
                 <div class="row">
                     <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
