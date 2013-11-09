@@ -26,7 +26,13 @@
                 </h:form>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><h:link outcome="account"><i class="fa fa-user"></i> Mon Compte</h:link></li>
+                    <li>
+                        <h:form class="navbar-form navbar-right" rendered="#{AuthenticationBean.isConnected}">
+                            <h:link outcome="account" ><i class="fa fa-user"></i> Mon Compte</h:link>
+                            <h:commandButton class="btn btn-danger" value="Déconnexion" action="#{AuthenticationBean.logout()}"/>
+                        </h:form>
+                        <h:link outcome="authentication" rendered="#{!AuthenticationBean.isConnected}"><i class="fa fa-user"></i> Se connecter</h:link>
+                    </li>
                     <li><h:link outcome="cart">
                             <i class="fa fa-shopping-cart"></i> Panier
                             <span> - </span>
