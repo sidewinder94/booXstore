@@ -16,6 +16,21 @@ li{
 	list-style-type: none;
 }
 
+.error{
+    color:red;
+}
+
+.info{
+    color:blue;
+    display:block;
+}
+
+.errorForPassword{
+    /* existing because of the margin-bottom: 10px on .form-signin input[type="password"] */
+    margin-top: -10px;
+    display:block;
+}
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
