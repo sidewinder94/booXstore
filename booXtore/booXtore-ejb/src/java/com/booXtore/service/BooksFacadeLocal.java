@@ -32,7 +32,7 @@ public interface BooksFacadeLocal {
 
     List<Books> getBooksByName(String pattern);
 
-    List<Books> getBooksByNameAndCatogory(String pattern, Categories category);
+    List<Books> getBooksByNameAndCategory(String pattern, Categories category);
 
     List<Books> getBooksByCategory(Categories cateogry);
     

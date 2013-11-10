@@ -27,7 +27,6 @@ public class SearchProviderBean implements Serializable {
     private BooksFacadeLocal bFL;
     @EJB
     private CategoriesFacadeLocal cFL;
-    
     private String search;
     private Categories searchCategory;
 
@@ -45,10 +44,8 @@ public class SearchProviderBean implements Serializable {
 
     public Categories getSearchCategory() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        for(Categories cat : this.cFL.findAll())
-        {
-            if(cat.getName().equalsIgnoreCase(getParam(fc, "category")))
-            {
+        for (Categories cat : this.cFL.findAll()) {
+            if (cat.getName().equalsIgnoreCase(getParam(fc, "category"))) {
                 this.searchCategory = cat;
             }
         }
@@ -61,8 +58,7 @@ public class SearchProviderBean implements Serializable {
 
     public String launchSearch() {
         String cat = "";
-        if(!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))
-        {
+        if (!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories")) {
             cat = "&category=" + this.searchCategory.getName();
         }
         return "catalog.xhtml?faces-redirect=true&search=" + search + cat;
@@ -71,12 +67,11 @@ public class SearchProviderBean implements Serializable {
 
     public String getSearch() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        String searchParam = getParam(fc , "search");
-        if(searchParam != null)
-        {
+        String searchParam = getParam(fc, "search");
+        if (searchParam != null) {
             this.search = searchParam;
         }
-        
+
         return search;
     }
 
@@ -84,37 +79,42 @@ public class SearchProviderBean implements Serializable {
         this.search = search;
     }
 
-    public Categories getDefaultCategorySearch()
-    {
+    public Categories getDefaultCategorySearch() {
         Categories def = new Categories();
         def.setName("Toutes Catégories");
         def.setId(-1);
         return def;
     }
-    
+
     public List<Books> getSearchResults() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        if (getParam(fc, "category") != null)
-        {
-            return bFL.getBooksByNameAndCatogory(getSearch(), 
-                                                 getSearchCategory());
+        if (getParam(fc, "category") != null) {
+            if(getSearch() != null)
+            {
+                return bFL.getBooksByNameAndCategory(getSearch(),
+                        getSearchCategory());
+            }
+            else
+            {
+                return bFL.getBooksByCategory(getSearchCategory());
+            }
         }
         return bFL.getBooksByName(getSearch());
     }
-    
-    public List<Books> getAllBooks()
-    {
+
+    public List<Books> getAllBooks() {
         return this.bFL.findAll();
     }
-    
-    private String getParam(FacesContext fc, String paramName)
-    {
+
+    private String getParam(FacesContext fc, String paramName) {
         return fc.getExternalContext().getRequestParameterMap().get(paramName);
     }
-    
-    public String getBookFirstAuthor(Books book)
-    {
+
+    public String getBookFirstAuthor(Books book) {
         return book.getAuthors().get(0).getName();
     }
     
+    public String generateBookLink(Books book){
+        return "product.xhtml?id=" + book.getId();
+    }
 }
