@@ -36,11 +36,10 @@ public class UsersFacade extends AbstractFacade<Users> implements UsersFacadeLoc
      * @return true if user exists, else false
      */
     @Override
-    public Boolean checkValidUser(String login, String password) {
-        String stringQuery = "SELECT u FROM Users u WHERE u.login = :login AND u.password = :password";
+    public Boolean checkValidLogin(String login) {
+        String stringQuery = "SELECT u FROM Users u WHERE u.login = :login";
         TypedQuery<Users> query = em.createQuery(stringQuery, Users.class);
         query.setParameter("login", login);
-        query.setParameter("password", password);
         Boolean exists = false;
         
         try {
@@ -60,7 +59,7 @@ public class UsersFacade extends AbstractFacade<Users> implements UsersFacadeLoc
      * @return user if exist or null
      */
     @Override
-    public Users checkValidUser1(String login, String password) {
+    public Users checkValidUser(String login, String password) {
         String stringQuery = "SELECT u FROM Users u WHERE u.login = :login AND u.password = :password";
         TypedQuery<Users> query = em.createQuery(stringQuery, Users.class);
         query.setParameter("login", login);
@@ -76,9 +75,24 @@ public class UsersFacade extends AbstractFacade<Users> implements UsersFacadeLoc
         return null;
     }
     
+    /**
+     *
+     * @param user
+     * INSERT the new User
+     */
     @Override
-    public void register(Users user){
+    public void create(Users user){
         em.persist(user);
+    }
+    
+    /**
+     *
+     * @param user
+     * UPDATE the current User
+     */
+    @Override
+    public void edit(Users user){
+        em.merge(user);
     }
     
     @Override
