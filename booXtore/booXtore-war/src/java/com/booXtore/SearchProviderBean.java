@@ -113,4 +113,8 @@ public class SearchProviderBean implements Serializable {
     public String getBookFirstAuthor(Books book) {
         return book.getAuthors().get(0).getName();
     }
+    
+    public String generateBookLink(Books book){
+        return "product.xhtml?id=" + book.getId();
+    }
 }
