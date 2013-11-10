@@ -24,7 +24,7 @@ public class CategoriesConverter implements Converter{
     
     @Override
     public Object getAsObject(FacesContext context, UIComponent component, String value) {
-        if((value != null) || (Integer.parseInt(value) == -1))
+        if((value != null) && (Integer.parseInt(value) != -1))
         {
             Integer id = Integer.parseInt(value);
             return cFL.find(id);

@@ -61,7 +61,7 @@ public class SearchProviderBean implements Serializable {
 
     public String launchSearch() {
         String cat = "";
-        if(this.searchCategory != null)
+        if(!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))
         {
             cat = "&category=" + this.searchCategory.getName();
         }
