@@ -29,4 +29,6 @@ public interface SellersFacadeLocal {
 
     int count();
     
+    public Sellers checkValidSeller(String login, String password);
+    
 }

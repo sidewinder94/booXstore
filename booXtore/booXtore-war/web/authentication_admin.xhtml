@@ -28,11 +28,14 @@ and open the template in the editor.
 
             <div class="container">
 
-                <h:form class="form-signin">
-                    <h2 class="form-signin-heading">Connectez-vous en tant que libraire</h2>
-                    <h:inputText label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" required="true" pass:autofocus="true"/>
-                    <h:inputSecret label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" required="true"/>
-                    <h:commandButton class="btn btn-lg btn-primary btn-block" type="submit" value="Se connecter"/>
+                <h:form id="loginForm" class="form-signin">
+                    <h2 class="form-signin-heading">Connectez-vous</h2>
+                    <h:inputText requiredMessage="Veuillez entrer votre nom d'utilisateur" id="login" label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" value="#{AuthenticationBean.login}" required="true"/>
+                    <h:message class="error" for="login" id="loginError" /><br/>
+                    <h:inputSecret requiredMessage="Veuillez entrer votre mot de passe" id="password" label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" value="#{AuthenticationBean.password}" required="true"/>
+                    <h:message class="error errorForPassword" for="password" id="passwordError" />
+                    <h:commandButton id="loginButton" class="btn btn-lg btn-primary btn-block" type="submit" action="#{AuthenticationBean.sellerAuthentication()}" value="Se connecter"/>
+                    <h:message class="error" for="loginButton" id="loginButtonError" />
                 </h:form>
             </div>
 
