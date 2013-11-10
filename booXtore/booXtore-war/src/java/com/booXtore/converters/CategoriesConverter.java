@@ -31,6 +31,7 @@ public class CategoriesConverter implements Converter{
         }
         Categories cat = new Categories();
         cat.setName("Toutes Catégories");
+        cat.setId(-1);
         return cat;
     }
 

@@ -93,7 +93,13 @@ public class SearchProviderBean implements Serializable {
     }
     
     public List<Books> getSearchResults() {
-        return null;
+        FacesContext fc = FacesContext.getCurrentInstance();
+        if (getParam(fc, "category") != null)
+        {
+            return bFL.getBooksByNameAndCatogory(getSearch(), 
+                                                 getSearchCategory());
+        }
+        return bFL.getBooksByName(getSearch());
     }
     
     public List<Books> getAllBooks()
