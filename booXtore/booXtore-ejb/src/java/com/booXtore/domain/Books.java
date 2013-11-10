@@ -13,6 +13,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
@@ -22,6 +24,15 @@ import javax.persistence.Temporal;
  * @author Antoine-Ali
  */
 @Entity
+@NamedQueries({
+    @NamedQuery(name = "findBooksByName",
+                query = "SELECT b FROM Books b WHERE b.title LIKE '%:title%'"),
+    @NamedQuery(name = "findBooksByNameAndCategory",
+                query = "SELECT b FROM Books b WHERE b.category = :category AND b.title LIKE '%:title%'"),
+    @NamedQuery(name = "findBooksByCategory",
+                query = "SELECT b FROM Books b WHERE b.category = :category")
+}
+        )
 public class Books implements Serializable {
    
     private static final long serialVersionUID = 1L;

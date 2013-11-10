@@ -5,9 +5,12 @@
 package com.booXtore.service;
 
 import com.booXtore.domain.Books;
+import com.booXtore.domain.Categories;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -15,6 +18,7 @@ import javax.persistence.PersistenceContext;
  */
 @Stateless
 public class BooksFacade extends AbstractFacade<Books> implements BooksFacadeLocal {
+
     @PersistenceContext(unitName = "store-ejbPU")
     private EntityManager em;
 
@@ -26,5 +30,26 @@ public class BooksFacade extends AbstractFacade<Books> implements BooksFacadeLoc
     public BooksFacade() {
         super(Books.class);
     }
-    
+
+    @Override
+    public List<Books> getBooksByName(String pattern) {
+        TypedQuery<Books> query = em.createNamedQuery("findBooksByName", Books.class);
+        query.setParameter("title", pattern);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<Books> getBooksByNameAndCatogory(String pattern, Categories category) {
+        TypedQuery<Books> query = em.createQuery("findBooksByNameAndCategory", Books.class);
+        query.setParameter("title", pattern);
+        query.setParameter("category", category);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<Books> getBooksByCategory(Categories cateogry) {
+        TypedQuery<Books> query = em.createNamedQuery("findBooksByName", Books.class);
+        query.setParameter("category", cateogry);
+        return query.getResultList();
+    }
 }

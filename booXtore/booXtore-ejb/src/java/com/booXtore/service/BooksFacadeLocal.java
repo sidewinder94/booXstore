@@ -5,6 +5,7 @@
 package com.booXtore.service;
 
 import com.booXtore.domain.Books;
+import com.booXtore.domain.Categories;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -28,5 +29,11 @@ public interface BooksFacadeLocal {
     List<Books> findRange(int[] range);
 
     int count();
+
+    List<Books> getBooksByName(String pattern);
+
+    List<Books> getBooksByNameAndCatogory(String pattern, Categories category);
+
+    List<Books> getBooksByCategory(Categories cateogry);
     
 }
