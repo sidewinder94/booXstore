@@ -33,46 +33,36 @@ and open the template in the editor.
                 <!-- Résumé de commande -->
                 <div class="page-header"><h2>Résumé de la commande</h2></div>
                 <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Produit</th>
-                            <th>Quantité</th>
-                            <th>Prix unitaire</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><h:link>A Game of Thrones</h:link></td>
-                                <td>2</td>
-                                <td>12€</td>
-                            </tr>
-                            <tr>
-                                <td><h:link>Necronomicon</h:link></td>
-                                <td>1</td>
-                                <td>15€</td>
-                            </tr>
-                            <tr>
-                                <td><h:link>Coloring book</h:link></td>
-                                <td>20</td>
-                                <td>2€</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h:dataTable value="#{orderbeans.bookordersList}" var="BoL" >
+     			<h:column>
+    				<f:facet name="header">Nom du produit</f:facet>
+                                #{BoL.bookId.title}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Quantité(s)</f:facet>
+    				#{BoL.quantity}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Prix Unitaire</f:facet>
+    				#{BoL.bookId.price}
+    			</h:column>
+                    </h:dataTable>
                 </div>
 
                 <div class="row">
                     <div class="col-md-4 col-xs-12 pull-right well well-lg">
-                        <div><h:outputText style="font-weight:bold" value="Prix total : "/>79€</div>
+                        <div><h:outputText style="font-weight:bold" value="Prix total : "/>#{orderbeans.getfTotal}</div>
                     </div>
                 </div>
 
                 <!-- Adresse de livraison -->
                 <div class="page-header"><h2>Adresse de livraison</h2></div>
                 <address>
-                    <h:outputText style="font-weight:bold" value="Achille Talon"/><br/>
-                    4, rue des patates <br/>
-                    44160 Frites, France <br/>
+                    <h:outputText style="font-weight:bold" value="#{orderbeans.getsUserFirstName} #{orderbeans.getsUserLastName}"/><br/>
+                    <h:outputText value="#{orderbeans.getsAddress}"/><br/>
+                    <h:outputText value="#{orderbeans.getsZIP} #{orderbeans.getsCity}"/><br/>
                 </address>
                 
                 <!-- Insertion de la carte de crédit -->
@@ -80,7 +70,7 @@ and open the template in the editor.
                 <h:form>
                     <div class="form-group">
                         <label for="cardNumber">Numéro de carte de crédit</label>
-                        <h:inputText id="cardNumber" class="form-control" required="required"/>
+                        <h:inputText id="cardNumber" class="form-control" pass:placeholder="XXXX XXXX XXXX XXXX" required="required"/>
                     </div>
                     <h:commandButton class="btn btn-success" type="submit" value="Valider"/>
                 </h:form>
