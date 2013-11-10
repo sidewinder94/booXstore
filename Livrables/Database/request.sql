@@ -326,10 +326,22 @@ INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (49, 38);
 -- Create Orders
 -- INSERT INTO `orders`(`ID`, `ORDERDATE`, `TOTALPRICE`, `USERS_ID`) VALUES ([value-1],[value-2],[value-3],[value-4])
 -- ------------------------------------------------------------------------------------------------------------------ --
--- INSERT IGNORE INTO `orders`(`ID`, `ORDERDATE`, `TOTALPRICE`, `USERS_ID`) VALUES (0, 2013-01-01, 0, 0);
+INSERT IGNORE INTO `orders`(`ID`, `ORDERDATE`, `TOTALPRICE`, `USERS_ID`) VALUES (0, '2013-11-10', 28.99, 1);
+INSERT IGNORE INTO `orders`(`ID`, `ORDERDATE`, `TOTALPRICE`, `USERS_ID`) VALUES (1, '2013-11-10', 5.60, 2);
+INSERT IGNORE INTO `orders`(`ID`, `ORDERDATE`, `TOTALPRICE`, `USERS_ID`) VALUES (2, '2013-11-10', 111.92, 0);
 
 -- ------------------------------------------------------------------------------------------------------------------------ --
 -- Create Book_Orders
 -- INSERT INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES ([value-1],[value-2],[value-3],[value-4])
 -- ------------------------------------------------------------------------------------------------------------------------ --
--- INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (0, 0, 0, 0);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (0, 1, 0, 0);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (1, 1, 35, 1);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (2, 1, 36, 1);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (3, 1, 24, 2);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (4, 1, 25, 2);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (5, 1, 26, 2);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (6, 1, 27, 2);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (7, 1, 28, 2);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (8, 1, 29, 2);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (9, 1, 30, 2);
+INSERT IGNORE INTO `books_orders`(`ID`, `QUANTITY`, `BOOKID_ID`, `ORDERID_ID`) VALUES (10, 1, 31, 2);
