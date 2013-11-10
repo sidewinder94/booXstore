@@ -39,8 +39,8 @@ public class BooksFacade extends AbstractFacade<Books> implements BooksFacadeLoc
     }
 
     @Override
-    public List<Books> getBooksByNameAndCatogory(String pattern, Categories category) {
-        TypedQuery<Books> query = em.createQuery("findBooksByNameAndCategory", Books.class);
+    public List<Books> getBooksByNameAndCategory(String pattern, Categories category) {
+        TypedQuery<Books> query = em.createNamedQuery("findBooksByNameAndCategory", Books.class);
         query.setParameter("title", "%" + pattern + "%");
         query.setParameter("category", category);
         return query.getResultList();
@@ -48,8 +48,8 @@ public class BooksFacade extends AbstractFacade<Books> implements BooksFacadeLoc
 
     @Override
     public List<Books> getBooksByCategory(Categories category) {
-        TypedQuery<Books> query = em.createNamedQuery("findBooksByName", Books.class);
-        query.setParameter("category", "%" + category + "%");
+        TypedQuery<Books> query = em.createNamedQuery("findBooksByCategory", Books.class);
+        query.setParameter("category", category);
         return query.getResultList();
     }
 }
