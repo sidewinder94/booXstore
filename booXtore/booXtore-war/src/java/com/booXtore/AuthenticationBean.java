@@ -5,6 +5,7 @@
 package com.booXtore;
 
 
+import com.booXtore.domain.Sellers;
 import com.booXtore.domain.Users;
 import com.booXtore.service.SellersFacadeLocal;
 import com.booXtore.service.UsersFacadeLocal;
@@ -47,6 +48,9 @@ public class AuthenticationBean implements Serializable {
     private String newMail;
     private String newPassword;
     private String confirmPassword;
+    
+    private Sellers seller;
+    
     
     /**
      * Creates a new instance of AuthenticationBean
@@ -150,6 +154,25 @@ public class AuthenticationBean implements Serializable {
         
     }
     
+    public String sellerAuthentication() {
+        
+        seller = sFL.checkValidSeller(login, password);
+        
+        
+        if (seller != null) {
+            
+            //redirection vers la page d'accueil d'administration
+            return "index.xhtml?faces-redirect=true";
+            
+        } else {
+            //Sinon afficher une erreur
+            FacesContext.getCurrentInstance().addMessage("loginForm:loginButton", new FacesMessage("Mauvais login et/ou mot de passe"));
+            return null;
+        }
+        
+        
+    }
+    
     
 
     public String getConfirmPassword() {
@@ -195,6 +218,16 @@ public class AuthenticationBean implements Serializable {
     public void setUser(Users user) {
         this.user = user;
     }
+
+    public Sellers getSeller() {
+        return seller;
+    }
+
+    public void setSeller(Sellers seller) {
+        this.seller = seller;
+    }
+    
+    
 
     public String getLogin() {
         return login;
