@@ -26,15 +26,17 @@ import javax.persistence.Temporal;
 @Entity
 @NamedQueries({
     @NamedQuery(name = "findBooksByName",
-                query = "SELECT b FROM Books b WHERE b.title LIKE :title"),
+            query = "SELECT b FROM Books b WHERE b.title LIKE :title"),
     @NamedQuery(name = "findBooksByNameAndCategory",
-                query = "SELECT b FROM Books b WHERE b.category = :category AND b.title LIKE :title"),
+            query = "SELECT b FROM Books b WHERE b.category = :category AND b.title LIKE :title"),
     @NamedQuery(name = "findBooksByCategory",
-                query = "SELECT b FROM Books b WHERE b.category = :category")
-}
-        )
+            query = "SELECT b FROM Books b WHERE b.category = :category"),
+    @NamedQuery(name = "findTopTenBooks",
+            query = "SELECT b FROM Books b JOIN b.bookOrders bo ON bo.bookId = b.id ORDER BY bo.quantity DESC")
+})
+
 public class Books implements Serializable {
-   
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
