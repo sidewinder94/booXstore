@@ -61,11 +61,10 @@ public class SearchProviderBean implements Serializable {
 
     public String launchSearch() {
         String cat = "";
-        if(!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))
+        if(this.searchCategory != null)
         {
             cat = "&category=" + this.searchCategory.getName();
         }
-        System.out.println("catalog.xhtml?faces-redirect=true&search=" + search + cat);
         return "catalog.xhtml?faces-redirect=true&search=" + search + cat;
 
     }
