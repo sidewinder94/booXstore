@@ -14,9 +14,10 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import javax.ejb.EJB;
+import javax.faces.application.ConfigurableNavigationHandler;
 import javax.faces.application.FacesMessage;
-import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ComponentSystemEvent;
 
 /**
  *
@@ -128,6 +129,30 @@ public class AuthenticationBean implements Serializable {
         
         }
            
+    }
+    
+    public void isUserConnected(ComponentSystemEvent event) {
+
+        FacesContext fc = FacesContext.getCurrentInstance();
+
+        if (user == null) {
+
+            ConfigurableNavigationHandler nav = (ConfigurableNavigationHandler) fc.getApplication().getNavigationHandler();
+
+            nav.performNavigation("authentication.xhtml?faces-redirect=true");
+        }
+    }
+    
+    public void isSellerConnected(ComponentSystemEvent event) {
+
+        FacesContext fc = FacesContext.getCurrentInstance();
+
+        if (seller == null) {
+
+            ConfigurableNavigationHandler nav = (ConfigurableNavigationHandler) fc.getApplication().getNavigationHandler();
+
+            nav.performNavigation("index.xhtml?faces-redirect=true");
+        }
     }
     
     public String userAuthentication() {

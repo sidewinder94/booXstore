@@ -17,6 +17,9 @@
 		<h:outputStylesheet library="css" name="font-awesome.css"/>
 
 	</h:head>
+    
+    <f:event listener="#{AuthenticationBean.isUserConnected(event)}" type="preRenderView" />
+        
 	<h:body>
 
 		<!-- Include - Navbar -->
