@@ -8,11 +8,13 @@ package com.booXtore;
 import com.booXtore.domain.Users;
 import com.booXtore.service.SellersFacadeLocal;
 import com.booXtore.service.UsersFacadeLocal;
+import java.io.IOException;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
 /**
@@ -42,12 +44,55 @@ public class AuthenticationBean implements Serializable {
     private Users user;
     private Boolean isConnected;
     
+    private String newMail;
+    private String newPassword;
+    private String confirmPassword;
+    
     /**
      * Creates a new instance of AuthenticationBean
      */
     public AuthenticationBean() {
     }
+   
     
+    public void changeInfo() throws IOException{
+        
+        user.setAddress(address);
+        user.setCity(city);
+        user.setZIP(ZIP);      
+        
+        uFL.edit(user);
+        FacesContext.getCurrentInstance().addMessage("infoForm:infoButton", new FacesMessage("Vos informations personnelles ont été mises à jour"));
+        //return "account.xhtml#credentials";
+        /*
+        ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+        ec.redirect("account.xhtml#credentials");*/
+        
+    }
+    
+    public String changePassword(){
+        if(!newPassword.equals(confirmPassword)){
+            FacesContext.getCurrentInstance().addMessage("passwordForm:newPassConfirm", new FacesMessage("Le mot de passe ne correspond pas"));
+            return null;
+        }
+        else{
+            //mise a jour du mot de passe
+            user.setPassword(newPassword);
+            uFL.edit(user);
+            FacesContext.getCurrentInstance().addMessage("passwordForm:passwordButton", new FacesMessage("Votre mot de passe a été mis à jour"));
+            return null;
+        }
+    }
+    
+    public String changeMail(){
+        
+        mail = newMail;
+        newMail = null;
+        user.setMail(mail);
+        uFL.edit(user);
+        FacesContext.getCurrentInstance().addMessage("mailForm:mailButton", new FacesMessage("Votre adresse mail a été mise à jour"));
+        return null;
+    }
     public String logout()
     {
         //Déconnexion de la session
@@ -56,40 +101,34 @@ public class AuthenticationBean implements Serializable {
     }
     
     public String userSignIn(){
-        user.setAddress(address);
-        user.setZIP(ZIP);
-        user.setCity(city);
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-        user.setLogin(login);
-        user.setMail(mail);
-        user.setPassword(password);
         
-        uFL.register(user);
-   /*     if(registered){
+        if(uFL.checkValidLogin(login)){
+            FacesContext.getCurrentInstance().addMessage("signinForm:newlogin", new FacesMessage("Ce nom d'utilisateur existe déjà"));
+            return null;
+        
+        }else{
+            user = new Users();
+            user.setAddress(address);
+            user.setZIP(ZIP);
+            user.setCity(city);
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
+            user.setLogin(login);
+            user.setMail(mail);
+            user.setPassword(password);
             
+            uFL.create(user);
+            isConnected = true;
+            return "index.xhtml?faces-redirect=true";     
+        
+        
         }
-        else{
-            
-        }*/
-        return "index.xhtml?faces-redirect=true";        
+           
     }
     
     public String userAuthentication() {
-   //     Boolean exists = uFL.checkValidUser(login, password);
         
-   /*     if (exists) {
-            user = uFL.findUserByLogin(login);
-            if(user != null)
-            return "index.xhtml?faces-redirect=true";
-            
-        } else {
-            //Sinon afficher une erreur
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Mauvais Login et/ou Mot de passe"));
-            return null;
-        }*/
-        
-        user = uFL.checkValidUser1(login, password);
+        user = uFL.checkValidUser(login, password);
         
         
         if (user != null) {
@@ -104,19 +143,47 @@ public class AuthenticationBean implements Serializable {
             
         } else {
             //Sinon afficher une erreur
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Mauvais Login et/ou Mot de passe"));
+            FacesContext.getCurrentInstance().addMessage("loginForm:loginButton", new FacesMessage("Mauvais login et/ou mot de passe"));
             return null;
         }
         
         
     }
+    
+    
 
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
+    public String getNewPassword() {
+        return newPassword;
+    }
+
+    public void setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+    }
+
+    
+    
     public Boolean getIsConnected() {
         return isConnected;
     }
 
     public void setIsConnected(Boolean isConnected) {
         this.isConnected = isConnected;
+    }
+
+    public String getNewMail() {
+        return newMail;
+    }
+
+    public void setNewMail(String newMail) {
+        this.newMail = newMail;
     }
     
     

@@ -15,11 +15,11 @@ import javax.ejb.Local;
 @Local
 public interface UsersFacadeLocal {
 
-    void create(Users users);
+    void create(Users user);
 
-    void edit(Users users);
+    void edit(Users user);
 
-    void remove(Users users);
+    void remove(Users user);
 
     Users find(Object id);
 
@@ -29,14 +29,12 @@ public interface UsersFacadeLocal {
 
     int count();
 
-    Boolean checkValidUser(String login, String password);
-
-    void register(Users user);
+    Boolean checkValidLogin(String login);
 
     public Users findUserById(Integer id);
 
     public Users findUserByLogin(String login);
 
-    public Users checkValidUser1(String login, String password);
+    public Users checkValidUser(String login, String password);
     
 }

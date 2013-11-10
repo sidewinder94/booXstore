@@ -29,9 +29,9 @@
 
 				<!-- Tabs -->
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#settings" data-toggle="tab">Paramètres du compte</a></li>
-					<li><a href="#credentials" data-toggle="tab">Informations personnelles</a></li>
-					<li><a href="#history" data-toggle="tab">Historique des commandes</a></li>
+					<li class="active"><h:outputLink value="#settings" pass:data-toggle="tab">Paramètres du compte</h:outputLink></li>
+					<li><h:outputLink value="#credentials" pass:data-toggle="tab">Informations personnelles</h:outputLink></li>
+					<li><h:outputLink value="#history" pass:data-toggle="tab">Historique des commandes</h:outputLink></li>
 				</ul>
 
 				<!-- Contenu des tabs -->
@@ -45,7 +45,7 @@
 						<p><strong>Adresse actuelle</strong></p>
 						<p>#{AuthenticationBean.mail}</p>
 
-						<h:form>
+						<h:form id="mailForm">
 							<div class="form-group">
 								<label for="email">Nouvelle adresse mail</label>
 								<h:inputText
@@ -53,37 +53,46 @@
 								   requiredMessage="Veuillez entrer votre adresse email"
 								   validatorMessage="Votre email est invalide"
 								   class="form-control"
-								   id="email">
+								   id="email"
+                                                                   value="#{AuthenticationBean.newMail}">
 
 									<f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/>
 
 								</h:inputText>
+                                                                <h:message class="error" for="email" id="emailError" />
 
 
 							</div>
-							<h:commandButton type="submit" class="btn btn-success" value="Changer d'adresse mail"/>
-						</h:form>
+                                                    <h:commandButton id="mailButton" type="submit" class="btn btn-success" value="Changer d'adresse mail" action="#{AuthenticationBean.changeMail()}"/>
+                                                    <h:message class="info" for="mailButton" id="mailButtonInfo" />
+                                                </h:form>
 
 						<div class="page-header">
 							<h2>Changer de mot de passe</h2>
 						</div>
 
-						<h:form>
+						<h:form id="passwordForm">
 							<div class="form-group">
 								<label for="oldPass">Ancien mot de passe</label>
-								<h:inputSecret class="form-control" id="oldPass" 
+								<h:inputSecret required="true" class="form-control" id="oldPass" requiredMessage="Veuillez entrer votre mot de passe"
                                                                    value="#{AuthenticationBean.password}"/>
+                                                                <h:message class="error" for="oldPass" id="oldPassError" />
 							</div>
 							<div class="form-group">
 								<label for="newPass">Nouveau mot de passe</label>
-								<h:inputSecret class="form-control" id="newPass"/>
+								<h:inputSecret required="true" class="form-control" id="newPass" requiredMessage="Veuillez entrer votre nouveau mot de passe"
+                                                                   value="#{AuthenticationBean.newPassword}"/>
+                                                                <h:message class="error" for="newPass" id="newPassError" />
 							</div>
 							<div class="form-group">
 								<label for="newPassConfirm">Confirmation du mot de passe</label>
-								<h:inputSecret class="form-control" id="newPassConfirm"/>
+								<h:inputSecret required="true" class="form-control" id="newPassConfirm" requiredMessage="Veuillez confirmer votre nouveau mot de passe"
+                                                                               value="#{AuthenticationBean.confirmPassword}"/>
+                                                                <h:message class="error" for="newPassConfirm" id="newPassConfirmError" />
 							</div>
-							<h:commandButton type="submit" class="btn btn-success" value="Changer de mot de passe"/>
-						</h:form>
+                                                    <h:commandButton id="passwordButton" type="submit" class="btn btn-success" value="Changer de mot de passe" action="#{AuthenticationBean.changePassword()}"/>
+                                                    <h:message class="info" for="passwordButton" id="passwordButtonInfo" />
+                                                </h:form>
 
 					</div>
 
@@ -93,26 +102,30 @@
 							<h2>Informations personnelles</h2>
 						</div>
 
-						<h:form>
+						<h:form id="infoForm">
 							<div class="col-md-12">
 								<div class="form-group">
 									<label for="address">Adresse</label>
-									<h:inputText class="form-control" id="address" value="#{AuthenticationBean.address}"/>
+									<h:inputText requiredMessage="Veuillez entrer votre adresse" required="true" class="form-control" id="address" value="#{AuthenticationBean.address}"/>
+                                                                        <h:message class="error" for="address" id="addressError" />
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="postalCode">Code postal</label>
-									<h:inputText class="form-control" id="postalCode"  value="#{AuthenticationBean.ZIP}"/>
+									<h:inputText requiredMessage="Veuillez entrer votre code postal" required="true" class="form-control" id="postalCode"  value="#{AuthenticationBean.ZIP}"/>
+                                                                        <h:message class="error" for="postalCode" id="postalCodeError" />
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="city">Ville</label>
-									<h:inputText class="form-control" id="city" value="#{AuthenticationBean.city}"/>
+									<h:inputText requiredMessage="Veuillez entrer votre ville" required="true" class="form-control" id="city" value="#{AuthenticationBean.city}"/>
+                                                                        <h:message class="error" for="city" id="cityError" />
 								</div>
 							</div>
-							<h:commandButton type="submit" class="btn btn-success" value="Sauvegarder"/>
+                                                    <h:commandButton id="infoButton" type="submit" class="btn btn-success" value="Sauvegarder" action="#{AuthenticationBean.changeInfo()}"/>
+                                                        <h:message class="info" for="infoButton" id="infoButtonInfo" />
 						</h:form>
 
 					</div>
