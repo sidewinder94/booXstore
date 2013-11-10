@@ -53,68 +53,19 @@
                     </div>
                 </h:form>
 
-                <hr/>
-                <div class="row">
-                    <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
-                    <div class="col-md-10">
-                        <a href="#"><h3>#{searchProviderBean.search}</h3></a>
-                        <p>par <strong>Auteur</strong>, éditions <strong>Éditeur</strong></p>
-                        <p>13€</p>
-                    </div>
-                </div>
 
-                <hr/>
-                <div class="row">
-                    <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
-                    <div class="col-md-10">
-                        <a href="#"><h3>Item Name</h3></a>
-                        <p>par <strong>Auteur</strong>, éditions <strong>Éditeur</strong></p>
-                        <p>13€</p>
+                <c:forEach items="#{searchProviderBean.searchResults}" var="book">
+                    <hr/>
+                    <div class="row">
+                        <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
+                        <div class="col-md-10">
+                            <a href="#"><h3>#{book.title}</h3></a>
+                            <p>par <strong>#{searchProviderBean.getBookFirstAuthor(book)}</strong>, éditions <strong>#{book.publisher.name}</strong></p>
+                            <p>#{book.price}€</p>
+                        </div>
                     </div>
-                </div>
-                <hr/>
-                <div class="row">
-                    <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
-                    <div class="col-md-10">
-                        <a href="#"><h3>Item Name</h3></a>
-                        <div class="alert alert-success">Ce produit est une nouveauté !</div>
-                        <p>par <strong>Auteur</strong>, éditions <strong>Éditeur</strong></p>
-                        <p>13€</p>
-                    </div>
-                </div>
-                <hr/>
-                <div class="row">
-                    <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
-                    <div class="col-md-10">
-                        <a href="#"><h3>Item Name</h3></a>
-                        <p>par <strong>Auteur</strong>, éditions <strong>Éditeur</strong></p>
-                        <p>13€</p>
-                    </div>
-                </div>
-                <hr/>
-
-                <div class="row">
-                    <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
-                    <div class="col-md-10">
-                        <a href="#"><h3>Item Name</h3></a>
-                        <p>par <strong>Auteur</strong>, éditions <strong>Éditeur</strong></p>
-                        <p>13€</p>
-                    </div>
-                </div>
-
-                <hr/>
-
-                <div class="row">
-                    <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
-                    <div class="col-md-10">
-                        <a href="#"><h3>Item Name</h3></a>
-                        <p>par <strong>Auteur</strong>, éditions <strong>Éditeur</strong></p>
-                        <p>13€</p>
-                    </div>
-                </div>
-
+                </c:forEach>
             </div>
-
         </div>
         <h:outputScript library="js" name="main.js"/>
     </h:body>

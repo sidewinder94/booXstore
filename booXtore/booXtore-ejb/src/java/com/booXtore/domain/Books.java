@@ -26,9 +26,9 @@ import javax.persistence.Temporal;
 @Entity
 @NamedQueries({
     @NamedQuery(name = "findBooksByName",
-                query = "SELECT b FROM Books b WHERE b.title LIKE '%:title%'"),
+                query = "SELECT b FROM Books b WHERE b.title LIKE :title"),
     @NamedQuery(name = "findBooksByNameAndCategory",
-                query = "SELECT b FROM Books b WHERE b.category = :category AND b.title LIKE '%:title%'"),
+                query = "SELECT b FROM Books b WHERE b.category = :category AND b.title LIKE :title"),
     @NamedQuery(name = "findBooksByCategory",
                 query = "SELECT b FROM Books b WHERE b.category = :category")
 }

@@ -112,4 +112,9 @@ public class SearchProviderBean implements Serializable {
         return fc.getExternalContext().getRequestParameterMap().get(paramName);
     }
     
+    public String getBookFirstAuthor(Books book)
+    {
+        return book.getAuthors().get(0).getName();
+    }
+    
 }
