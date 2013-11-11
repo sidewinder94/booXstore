@@ -119,7 +119,7 @@ public class AuthenticationBean implements Serializable {
     public String logout()
     {
         //Déconnexion de la session
-        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+        isConnected = false;
         return "index.xhtml?faces-redirect=true";
     }
     
@@ -153,7 +153,7 @@ public class AuthenticationBean implements Serializable {
 
         FacesContext fc = FacesContext.getCurrentInstance();
 
-        if (user == null) {
+        if (user == null || isConnected == false) {
 
             ConfigurableNavigationHandler nav = (ConfigurableNavigationHandler) fc.getApplication().getNavigationHandler();
 

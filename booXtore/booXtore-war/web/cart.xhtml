@@ -8,86 +8,90 @@
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
       xmlns:pass="http://xmlns.jcp.org/jsf/passthrough">
 
-	<h:head>
+    <h:head>
 
-		<f:facet name="first">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		</f:facet>
-		<title>booXtore - Panier</title>
-		<h:outputStylesheet library="css" name="main.css"/>
-		<h:outputStylesheet library="css" name="font-awesome.css"/>
+        <f:facet name="first">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </f:facet>
+        <title>booXtore - Panier</title>
+        <h:outputStylesheet library="css" name="main.css"/>
+        <h:outputStylesheet library="css" name="font-awesome.css"/>
 
-	</h:head>
-	<h:body>
+    </h:head>
+    <h:body>
 
-		<!-- Include - Navbar -->
-		<ui:include src="/WEB-INF/includes/navbar.xhtml"/>
+        <!-- Include - Navbar -->
+        <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
 
-		<!-- Main content -->
-		<div id="wrap">
-			<div class="container">
+        <!-- Main content -->
+        <div id="wrap">
+            <div class="container">
 
-			<div class="page-header">
-				<h2>Panier</h2>
-			</div>
+                <div class="page-header">
+                    <h2>Panier</h2>
+                </div>
 
-			<div class="table-responsive">
-			<table class="table">
-				<thead>
-					<tr>
-						<th>Supprimer</th>
-						<th>Produit</th>
-						<th>Quantité</th>
-						<th>Prix unitaire</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<h:form>
-								<h:commandButton class="btn btn-danger fa" value="&#xf014;"/>
-							</h:form>
-						</td>
-						<td>
-							<a href="#"><!-- Book title --></a>
-						</td>
-						<td>
-							<div class="col-md-3">
-								<p class="form-control-static"><!-- Book quantity --></p>
-							</div>
-							<div class="col-md-9">
-								<h:form>
-									<div class="btn-group">
-										<h:commandButton class="btn btn-default" value="-"/>
-										<h:commandButton class="btn btn-default" value="+"/>
-									</div>
-								</h:form>
-							</div>
-						</td>
-						<td><!-- Book price --></td>
-					</tr>
-				</tbody>
-				</table>
-			</div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Supprimer</th>
+                                <th>Produit</th>
+                                <th>Quantité</th>
+                                <th>Prix unitaire</th>
+                            </tr>
+                        </thead>
+                        <c:forEach items="#{cartBean.books}" var="item">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h:form>
+                                            <h:commandButton class="btn btn-danger fa" value="&#xf014;"/>
+                                        </h:form>
+                                    </td>
+                                    <td>
+                                        <a href="#">#{item.title}</a>
+                                    </td>
+                                    <td>
+                                        <div class="col-md-3">
+                                            <p class="form-control-static">#{cartBean.getQuantity(item)}</p>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h:form>
+                                                <div class="btn-group">
+                                                    <h:commandButton class="btn btn-default" value="-" action="#{cartBean.increment(item)}"/>
+                                                    <h:commandButton class="btn btn-default" value="+" action="#{cartBean.decrement(item)}"/>
+                                                </div>
+                                            </h:form>
+                                        </div>
+                                    </td>
+                                    <td>#{item.price}</td>
+                                </tr>
+                            </tbody>
+                        </c:forEach>
+                    </table>
+                </div>
 
-			<div class="row">
-				<div class="col-md-3 col-xs-12 pull-right well well-lg">
-					<div>
-						<strong>Prix total : </strong><!-- Total price -->
-					</div>
-					<hr/>
-					<h:form>
-						<h:commandButton class="btn btn-block btn-danger" value="Vider"/>
-						<h:commandButton class="btn btn-block btn-success" value="Commander"/>
-					</h:form>
-				</div>
-			</div>
+                <div class="row">
+                    <div class="col-md-3 col-xs-12 pull-right well well-lg">
+                        <div>
+                            <strong>Prix total : </strong>#{cartBean.totalPrice}
+                        </div>
+                        <hr/>
+                        <h:form id="controlCart">
+                            <h:commandButton id="vider" class="btn btn-block btn-danger" value="Vider" action="#{cartBean.clearCart()}"/>
+                            <h:message class="info" for="vider" id="viderInfo" />
+                            <h:commandButton id="commander" class="btn btn-block btn-success" value="Commander" action="#{cartBean.verifyOrder()}"/>
+                            <h:message class="error" for="commander" id="commanderError" />
+                        </h:form>
+                    </div>
+                </div>
 
-			</div>
-		</div>
+            </div>
+        </div>
 
-	</h:body>
+    </h:body>
 
-	<h:outputScript library="js" name="main.js"/>
+    <h:outputScript library="js" name="main.js"/>
 
 </html>
