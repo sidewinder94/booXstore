@@ -12,7 +12,11 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import javax.ejb.EJB;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -27,7 +31,6 @@ public class CartBean implements Serializable {
     
     @EJB
     private BooksFacadeLocal bFL;
-
     
     private HashMap<Books, Integer> cart;
 
@@ -39,8 +42,54 @@ public class CartBean implements Serializable {
     }
 
     public HashMap<Books, Integer> getCart() {
+        this.cart = cSB.getContent();
         return cart;
     }
+    
+    public List<Books> getBooks(){
+        List<Books> listBooks = new LinkedList<Books>();
+        listBooks.addAll(getCart().keySet());
+        
+        return listBooks;
+        
+    }
+    
+    
+    public String clearCart(){
+        this.cSB.resetCart();
+        return "cart.xhtml?faces-redirect=true";
+    }
+    
+    public String verifyOrder(){
+        if(this.cSB.getContent().size() > 0){
+            
+            return "checkout.xhtml?faces-redirect=true";
+        }
+        else{
+            
+            FacesContext.getCurrentInstance().addMessage("controlCart:commander", new FacesMessage("Votre panier est vide"));
+            return null;
+        }
+        
+        
+        
+    }
+    
+    public String increment(Books book){
+        
+        return null;
+    }
+    
+    public String decrement(Books book){
+        
+        return null;
+    }
+    
+    public Integer getQuantity(Books book){
+        return this.cSB.getContent().get(book);
+        
+    }
+    
     
     public void addBook(int bookId)
     {
