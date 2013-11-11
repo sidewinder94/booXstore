@@ -7,6 +7,7 @@ package com.booXtore.utilities;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
+import javax.faces.context.FacesContext;
 
 /**
  * Classe utilitai contenant des méthodes statiques pour la gestion du texte
@@ -26,6 +27,16 @@ public class StringUtilities {
         CharBuffer charBuffer =  input.decode(inputBuffer);
         
         return charBuffer.toString();
+    }
+    
+    /**
+     * Fonction permettant de récupérer un paramètre dans l'url
+     * @param fc Le context actuel de l'application
+     * @param paramName Le paramètre à rechercher dans l'url
+     * @return La valeur du paramètre ou null si non présent
+     */
+    public static String getParam(FacesContext fc, String paramName) {
+        return fc.getExternalContext().getRequestParameterMap().get(paramName);
     }
     
 }
