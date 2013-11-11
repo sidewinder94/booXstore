@@ -46,11 +46,11 @@
                                 <tr>
                                     <td>
                                         <h:form>
-                                            <h:commandButton class="btn btn-danger fa" value="&#xf014;"/>
+                                            <h:commandButton type="submit" class="btn btn-danger fa" value="&#xf014;" action="#{cartBean.deleteBook(item)}"/>
                                         </h:form>
                                     </td>
                                     <td>
-                                        <a href="#">#{item.title}</a>
+                                        <h:outputLink value="product.xhtml?id=#{item.id}">#{item.title}</h:outputLink>
                                     </td>
                                     <td>
                                         <div class="col-md-3">
@@ -59,8 +59,8 @@
                                         <div class="col-md-9">
                                             <h:form>
                                                 <div class="btn-group">
-                                                    <h:commandButton class="btn btn-default" value="-" action="#{cartBean.increment(item)}"/>
-                                                    <h:commandButton class="btn btn-default" value="+" action="#{cartBean.decrement(item)}"/>
+                                                    <h:commandButton type="submit" class="btn btn-default" value="-" action="#{cartBean.decrement(item)}"/>
+                                                    <h:commandButton type="submit" class="btn btn-default" value="+" action="#{cartBean.increment(item)}"/>
                                                 </div>
                                             </h:form>
                                         </div>

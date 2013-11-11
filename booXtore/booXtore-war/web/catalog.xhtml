@@ -61,11 +61,22 @@
                         <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
                         <div class="col-md-10">
                             <h:link outcome="#{searchProviderBean.generateBookLink(book)}"><h3>#{book.title}</h3></h:link>
+                            
                             <c:if test="#{book.states.id  == 2}">
                                 <div class="alert alert-success">Ce produit est une nouveauté !</div>
                             </c:if>
                             <p>par <strong>#{searchProviderBean.getBookFirstAuthor(book)}</strong>, éditions <strong>#{book.publisher.name}</strong></p>
                             <p>#{book.price}€</p>
+                            <c:if test="#{book.supply > 0}">
+                                <h:form>
+                                    <h:commandLink class="btn btn-success" value="Ajouter au panier" action="#{cartBean.addBook(book)}"/>
+                                </h:form>
+                            </c:if>
+                            <c:if test="#{book.supply == 0}">
+                                <p class="btn btn-danger disabled">
+                                    Le stock est épuisé.
+                                </p>
+                            </c:if>   
                         </div>
                     </div>
                 </c:forEach>
