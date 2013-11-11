@@ -12,6 +12,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 
@@ -19,7 +21,13 @@ import javax.persistence.Temporal;
  *
  * @author Antoine-Ali
  */
+
 @Entity
+@NamedQueries({
+    @NamedQuery(name = "findOrdersButState",
+            query = "SELECT o FROM Orders o WHERE o.states != :state")
+})
+
 public class Orders implements Serializable {
     @OneToMany(mappedBy = "orderId")
     private List<BookOrders> bookOrders;
