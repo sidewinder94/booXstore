@@ -103,12 +103,14 @@
                             </c:when>
                             
                             <c:otherwise>
-                                <h:form>
-                                    <h:commandButton type="button" 
-                                                     class="fa btn btn-success" 
-                                                     value="&#xf07a; Ajouter au panier"
-                                                     onclick=""/>
-                                </h:form>
+                                <c:set var="bookId" value="#{bookBean.book.id}">
+                                    <h:form>
+                                        <h:commandButton type="button" 
+                                                         class="fa btn btn-success" 
+                                                         value="&#xf07a; Ajouter au panier"
+                                                         onclick="#{cartBean.addBook(bookId)}"/>
+                                    </h:form>
+                                </c:set>
                             </c:otherwise>
                         </c:choose>
                         
