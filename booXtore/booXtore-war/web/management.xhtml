@@ -18,12 +18,12 @@
     </h:head>
     <h:body>
         <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
-
+        <c:set value="#{searchProviderBean.categories}" var="categories"/>
         <div id="wrap">
 
             <div class="">
                 <div style="margin-top:50px"> </div>
-                
+
                 <ul class="nav nav-tabs">
                     <li class="active"><h:outputLink value="#book" pass:data-toggle="tab">Gestion Livres</h:outputLink></li>
                     <li><h:outputLink value="#catalog" pass:data-toggle="tab">Gestion Catégories</h:outputLink></li>
@@ -36,47 +36,57 @@
 
                     <div class="tab-pane fade in active" id="book">
 
-                        <div class="col-md-2" style="margin-top: 42px;">
-                            
+                        <div class="col-md-3" style="margin-top: 42px;">
+
                             <ul class="list-group" >
-                                
+
                                 <h:form>
-                                    
+
                                     <h:commandLink value="Catégories Client" action="filterClientAll" class="list-group-item active">
-                                        <span class="badge">40</span>
+                                        <span class="badge">#{managementBean.countBooks()}</span>
                                     </h:commandLink>
-                                    
-                                    
-                                    <c:forEach items="#{searchProviderBean.categories}" var="category" >
+
+
+                                    <c:forEach items="#{categories}" var="category" >
                                         <li class="list-group-item">
-                                            <h:commandLink value="#{category.name}" action="filterReplenishment" class="list-group-item">
-                                                <span class="badge">X</span>
-                                            </h:commandLink>
+                                            <c:choose>
+                                                <c:when test="#{managementBean.categorytoManage == category.id}">
+                                                    <h:commandLink value="#{category.name}" action="#{managementBean.filterByCategory(category)}" class="list-group-item active">
+                                                        <span class="badge"></span>
+                                                    </h:commandLink>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <h:commandLink value="#{category.name}" action="#{managementBean.filterByCategory(category)}" class="list-group-item">
+                                                        <span class="badge"></span>
+                                                    </h:commandLink>
+                                                </c:otherwise>
+                                            </c:choose>
+
                                         </li>
                                     </c:forEach>
-                                    
+
                                     <h:commandLink value="Catégories Libraire" action="filterAdminAll" class="list-group-item">
-                                        <span class="badge">10</span>
+                                        <span class="badge">nAll</span>
                                     </h:commandLink>
-                                
+
                                     <li class="list-group-item">
-                                    <h:commandLink value="Réapprovisionnement" action="filterReplenishment" class="list-group-item">
-                                        <span class="badge">3</span>
-                                    </h:commandLink>
+                                        <h:commandLink value="Réapprovisionnement" action="filterReplenishment" class="list-group-item">
+                                            <span class="badge">nRep</span>
+                                        </h:commandLink>
                                     </li>
-                                
+
                                     <li class="list-group-item">
-                                    <h:commandLink value="Non classé" action="filterUnrated" class="list-group-item">
-                                        <span class="badge">7</span>
-                                    </h:commandLink>
+                                        <h:commandLink value="Non classé" action="filterUnrated" class="list-group-item">
+                                            <span class="badge">nUnrated</span>
+                                        </h:commandLink>
                                     </li>
-                                        
+
                                 </h:form>
                             </ul>
 
                         </div>
 
-                        <div class="col-md-10">
+                        <div class="col-md-9">
 
                             <div class="page-header"><h2>Modification livre(s)</h2></div>
 
@@ -84,7 +94,6 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Couverture</th>
                                             <th>Titre</th>
                                             <th>Auteur(s)</th>
@@ -99,7 +108,6 @@
 
                                     <tbody>
                                         <tr class="success">
-                                            <td>0</td>
                                             <td>Nouvelle image</td>
                                             <td><input type="text"  value="Nouveau Titre" /></td>
                                             <td><input type="text"  value="Nouvel Auteur" /></td>
@@ -116,43 +124,47 @@
                                             </td>
                                             <td>
                                                 <select>
-                                                    <option>Action</option>
-                                                    <option>Humour</option>
-                                                    <option>...</option>
+                                                    <c:forEach items="#{searchProviderBean.categories}" var="category">
+                                                        <option>#{category.name}</option>
+                                                    </c:forEach>
                                                     <option>Non classé</option>
                                                 </select>
                                             </td>
                                             <td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
                                         </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td><img class="thumbnail" src="" alt=""/></td>
-                                            <td><input type="text"  value="" /></td>
-                                            <td><input type="text"  value="" /></td>
-                                            <td><input type="text"  value="" /></td>
-                                            <td><input type="text"  value="" /></td>
-                                            <td><input type="text"  value="" /></td>
-                                            <td>
-                                                <select>
-                                                    <option>Nouveauté</option>
-                                                    <option>En stock</option>
-                                                    <option>A venir</option>
-                                                    <option>En réapprovisionnement</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option>Non classé</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
-                                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
+
+                                        <c:forEach items="#{managementBean.booksByCategory}" var="book">
+                                            <tr>
+                                                <td><img class="thumbnail" src="#{book.imageName}" alt=""/></td>
+                                                <td><input type="text"  value="#{book.title}" /></td>
+                                                <td><input type="text"  value="#{book.authors}" /></td>
+                                                <td><input type="text"  value="#{book.publisher.name}" /></td>
+                                                <td><input type="text"  value="#{book.supply}" /></td>
+                                                <td><input type="text"  value="#{book.price}" /></td>
+                                                <td>
+                                                    <h:selectOneMenu value="#{book.states}">
+                                                        <c:forEach items="#{managementBean.states}" var="state">
+                                                            <f:selectItem itemValue="#{state}"
+                                                                          itemLabel="#{state.name}"/>
+                                                        </c:forEach>
+                                                    </h:selectOneMenu>
+                                                </td>
+                                                <td>
+                                                    <h:selectOneMenu value="#{book.category}">
+                                                        <c:forEach items="#{searchProviderBean.categories}" var="category">
+                                                            <f:selectItem itemValue="#{category}"
+                                                                          itemLabel="#{category.name}"/>
+                                                        </c:forEach>
+                                                        <option>Non classé</option>
+                                                    </h:selectOneMenu>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
+                                                    <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -181,23 +193,17 @@
                                             <td><input type="text" class="form-control" value="Nouvelle catégorie ..."/></td>
                                             <td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
                                         </tr>
-
-                                        
-                                        <c:forEach items="#{searchProviderBean.categories}" var="category" >
-                                        <tr>
-                                            <td><input type="text" class="form-control" value="#{category.name}"/></td>
-                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                            <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-                                        </tr>
+                                        <c:forEach items="#{categories}" var="category" >
+                                            <tr>
+                                                <td><input type="text" class="form-control" value="#{category.name}"/></td>
+                                                <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                                <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                            </tr>
                                         </c:forEach>
-                                        
-                                        
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
-
                     </div>
 
                     <div class="tab-pane fade" id="tracking_order">
@@ -217,22 +223,24 @@
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <select>
-                                                <option>Validée</option>
-                                                <option>En préparation</option>
-                                                <option>Annulée</option>
-                                                <option>Envoyée</option>
-                                            </select>
-                                        </td>
-                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                        <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
-                                    </tr>
+                                    <c:forEach items="" var="category" >
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <select>
+                                                    <option>Validée</option>
+                                                    <option>En préparation</option>
+                                                    <option>Annulée</option>
+                                                    <option>Envoyée</option>
+                                                </select>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                            <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                        </tr>
+                                    </c:forEach>
                                 </tbody>
                             </table>
                         </div>
@@ -258,16 +266,18 @@
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <td><img class="thumbnail" src="" alt=""/></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><button type="button" class="btn btn-default">Appliquer</button></td>
-                                        <td><input type="text" class="form-control"/></td>
-                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                    </tr>
+                                    <c:forEach items="#{managementBean.books}" var="book">
+                                        <tr>
+                                            <td><img class="thumbnail" src="#{book.imageName}" alt=""/></td>
+                                            <td>#{book.title}</td>
+                                            <td>#{book.category.name}</td>
+                                            <td>#{book.supply}</td>
+                                            <td>#{book.threshold}</td>
+                                            <td><button type="button" class="btn btn-default">Appliquer</button></td>
+                                            <td><input type="text" class="form-control"/></td>
+                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                        </tr>
+                                    </c:forEach>
                                 </tbody>
                             </table>
                         </div>
@@ -283,21 +293,25 @@
                                         <th>Catégorie</th>
                                         <th>Stock restant</th>
                                         <th>Seuil réapprovisionnement actuel</th>
-                                        <th>Définir le seuil</th>
-                                        <th>Appliquer seuil par défaut (5)</th>
+                                        <th>Seuil par défaut (5)</th>
+                                        <th>Définir un seuil</th>
+                                        <th>Appliquer</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <td><img class="thumbnail" src="" alt=""/></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><input type="text" class="form-control"/></td>
-                                        <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                    </tr>
+                                    <c:forEach items="#{managementBean.books}" var="book">
+                                        <tr>
+                                            <td><img class="thumbnail" src="#{book.imageName}" alt=""/></td>
+                                            <td>#{book.title}</td>
+                                            <td>#{book.category.name}</td>
+                                            <td>#{book.supply}</td>
+                                            <td>#{book.threshold}</td>
+                                            <td><button type="button" class="btn btn-default">Appliquer</button></td>
+                                            <td><input type="text" class="form-control"/></td>
+                                            <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
+                                        </tr>
+                                    </c:forEach>
                                 </tbody>
                             </table>
                         </div>

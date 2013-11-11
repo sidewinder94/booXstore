@@ -33,36 +33,38 @@ and open the template in the editor.
                 <!-- Résumé de commande -->
                 <div class="page-header"><h2>Résumé de la commande</h2></div>
                 <div class="table-responsive">
-                    <h:dataTable value="#{orderbeans.bookordersList}" var="BoL">
-     			<h:column>
-    				<f:facet name="header">Nom du produit</f:facet>
-                                #{BoL.bookId.title}
-    			</h:column>
- 
-    			<h:column>
-    				<f:facet name="header">Quantité(s)</f:facet>
-    				#{BoL.quantity}
-    			</h:column>
- 
-    			<h:column>
-    				<f:facet name="header">Prix Unitaire</f:facet>
-    				#{BoL.bookId.price}
-    			</h:column>
-                    </h:dataTable>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nom du produit</th>
+                                <th>Quantité(s)</th>
+                                <th>Prix Unitaire</th>
+                            </tr>
+                        </thead>
+                        <c:forEach items="#{orderbean.bookordersList}" var="book">
+                            <tbody>
+                                <tr>
+                                    <td>#{orderbean.bookorder.bookId.title}</td>
+                                    <td>#{orderbean.bookorder.quantity}</td>
+                                    <td>#{orderbean.bookorder.bookId.price}</td>
+                                </tr>
+                            </tbody>
+                        </c:forEach>
+                    </table>
                 </div>
 
                 <div class="row">
                     <div class="col-md-4 col-xs-12 pull-right well well-lg">
-                        <div><h:outputText style="font-weight:bold" value="Prix total : "/>#{orderbeans.getfTotal}</div>
+                        <div><h:outputText style="font-weight:bold" value="Prix total : "/>#{orderbean.order.totalPrice}</div>
                     </div>
                 </div>
 
                 <!-- Adresse de livraison -->
                 <div class="page-header"><h2>Adresse de livraison</h2></div>
                 <address>
-                    <h:outputText style="font-weight:bold" value="#{orderbeans.getsUserFirstName} #{orderbeans.getsUserLastName}"/><br/>
-                    <h:outputText value="#{orderbeans.getsAddress}"/><br/>
-                    <h:outputText value="#{orderbeans.getsZIP} #{orderbeans.getsCity}"/><br/>
+                    <h:outputText style="font-weight:bold" value="#{AuthenticationBean.firstName} #{AuthenticationBean.lastName}"/><br/>
+                    <h:outputText value="#{AuthenticationBean.address}"/><br/>
+                    <h:outputText value="#{AuthenticationBean.ZIP} #{AuthenticationBean.city}"/><br/>
                 </address>
                 
                 <!-- Insertion de la carte de crédit -->
