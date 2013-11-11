@@ -44,10 +44,10 @@ public class SearchProviderBean implements Serializable {
 
     public Categories getSearchCategory() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        for (Categories cat : this.cFL.findAll()) {
-            if (cat.getName().equalsIgnoreCase(getParam(fc, "category"))) {
-                this.searchCategory = cat;
-            }
+        if (getParam(fc, "category") != null) 
+        {
+            this.searchCategory = cFL.find(Integer.parseInt(getParam(fc, 
+                                                                      "category")));
         }
         return this.searchCategory;
     }
@@ -59,7 +59,7 @@ public class SearchProviderBean implements Serializable {
     public String launchSearch() {
         String cat = "";
         if (!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories")) {
-            cat = "&category=" + this.searchCategory.getName();
+            cat = "&category=" + this.searchCategory.getId();
         }
         return "catalog.xhtml?faces-redirect=true&search=" + search + cat;
 
@@ -89,13 +89,10 @@ public class SearchProviderBean implements Serializable {
     public List<Books> getSearchResults() {
         FacesContext fc = FacesContext.getCurrentInstance();
         if (getParam(fc, "category") != null) {
-            if(getSearch() != null)
-            {
+            if (getSearch() != null) {
                 return bFL.getBooksByNameAndCategory(getSearch(),
                         getSearchCategory());
-            }
-            else
-            {
+            } else {
                 return bFL.getBooksByCategory(getSearchCategory());
             }
         }
@@ -113,8 +110,8 @@ public class SearchProviderBean implements Serializable {
     public String getBookFirstAuthor(Books book) {
         return book.getAuthors().get(0).getName();
     }
-    
-    public String generateBookLink(Books book){
+
+    public String generateBookLink(Books book) {
         return "product.xhtml?id=" + book.getId();
     }
 }
