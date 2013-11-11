@@ -13,6 +13,7 @@ import java.io.IOException;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import static com.booXtore.utilities.StringUtilities.*;
 import javax.ejb.EJB;
 import javax.faces.application.ConfigurableNavigationHandler;
 import javax.faces.application.FacesMessage;
@@ -209,7 +210,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
+        this.confirmPassword = decode(confirmPassword);
     }
 
     public String getNewPassword() {
@@ -217,7 +218,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setNewPassword(String newPassword) {
-        this.newPassword = newPassword;
+        this.newPassword = decode(newPassword);
     }
 
     
@@ -235,7 +236,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setNewMail(String newMail) {
-        this.newMail = newMail;
+        this.newMail = decode(newMail);
     }
     
     
@@ -263,7 +264,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setLogin(String login) {
-        this.login = login;
+        this.login = decode(login);
     }
 
     public String getPassword() {
@@ -271,7 +272,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = decode(password);
     }
 
     public String getFirstName() {
@@ -279,7 +280,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.firstName = decode(firstName);
     }
 
     public String getLastName() {
@@ -287,7 +288,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastName = decode(lastName);
     }
 
     public String getAddress() {
@@ -295,7 +296,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.address = decode(address);
     }
 
     public String getMail() {
@@ -303,7 +304,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setMail(String mail) {
-        this.mail = mail;
+        this.mail = decode(mail);
     }
 
     public String getZIP() {
@@ -311,7 +312,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setZIP(String ZIP) {
-        this.ZIP = ZIP;
+        this.ZIP = decode(ZIP);
     }
 
     public String getCity() {
@@ -319,7 +320,7 @@ public class AuthenticationBean implements Serializable {
     }
 
     public void setCity(String city) {
-        this.city = city;
+        this.city = decode(city);
     }
     
     
