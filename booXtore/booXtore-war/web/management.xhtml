@@ -223,12 +223,12 @@
                                 </thead>
 
                                 <tbody>
-                                    <c:forEach items="" var="category" >
+                                    <c:forEach items="#{orderbean.filteredOrders}" var="orderList" >
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>#{orderList.users.firstName} #{orderList.users.lastName}</td>
+                                            <td>#{orderList.orderDate}</td>
+                                            <td>#{orderList.totalPrice}</td>
+                                            <td>#{orderList.states.name}</td>
                                             <td>
                                                 <select>
                                                     <option>Validée</option>

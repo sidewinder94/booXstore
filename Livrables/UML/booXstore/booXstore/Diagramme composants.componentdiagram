@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="b34367c0-51c0-4ba2-9e6a-d209a133eaa8" name="Diagramme composants" linkedPackageId="9d1ba744-702e-4eb3-85b5-f6d187604a2f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="cdf879da-53e1-47f3-9a46-6c295dc60e8b">
+      <profileInstance Id="cfcfe04b-fe8c-4221-aecf-9555076c4ebe" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f442aa26-2186-4c20-841f-9c289870fbfc">
+      <profileInstance Id="69cbf9e7-bfd1-4d22-af1f-680e5d4a7c22" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="e6fe8543-062c-42ea-9bd0-057a5980fa73" name="Entité" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="201866b5-ce13-4a5c-a0f1-c0568d3086ab" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="a63048a9-0a28-4a6a-a1bd-1bb3b533e049" name="EntitéFacade" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="54f290f2-7334-40c4-bb17-0ffc8a8caf51" />
+        <suppliersInternal>
+          <dependency Id="ed1d5d8c-3b49-4e8e-a305-a8b0e956535b">
+            <componentMoniker Id="e6fe8543-062c-42ea-9bd0-057a5980fa73" LastKnownName="Entité" />
+            <elementDefinition Id="8d4ef1f7-1e03-4246-b8fc-484206360c99" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="1d2e5064-9666-49c2-9e41-23e8c7034215" isSubstitutable="false">
+            <componentMoniker Id="3663efd9-b043-49e3-ab9b-a265b949d8e6" LastKnownName="AbstractFacade" />
+            <elementDefinition Id="00f8624c-581e-4d86-ad1f-a6abef49dd13" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <providedInterface Id="418a307b-0c76-4ce6-8af4-e82350c08802" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="9fde5aa9-c83b-4dfc-b050-7b2bbadea02a" />
+            <type_NamedElement>
+              <interfaceMoniker Id="9f39edd1-8c85-4a46-8091-03c17bda5f17" LastKnownName="EntiteFacadeLocal" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="2a3137ed-b2f9-42d8-8890-95f576b8ba8b" name="ManagedBean" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="35e5f162-460d-4453-8ab5-ca8a592ca431" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="22158081-266a-4e25-9734-a75839967a02" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="c7d79090-670a-4d15-9c02-9741ced273a7" />
+            <type_NamedElement>
+              <interfaceMoniker Id="e261733d-ef21-40be-aad0-9fce841fdd5b" LastKnownName="EntiteFacadeLocal" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="6a4f474c-757d-473e-9886-8a2e7c7b51df" name="Page JSF" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="90c16af1-5037-42bd-bd29-eaed5661e6f5" />
+        <suppliersInternal>
+          <dependency Id="2049309e-2c96-473e-8030-8c4ffacb6210">
+            <componentMoniker Id="2a3137ed-b2f9-42d8-8890-95f576b8ba8b" LastKnownName="ManagedBean" />
+            <elementDefinition Id="59033172-d07d-4729-b824-12028d798190" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="9f39edd1-8c85-4a46-8091-03c17bda5f17" name="EntiteFacadeLocal" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="11fc5efc-6800-4e69-a9d0-4d21e90a75b0" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="e261733d-ef21-40be-aad0-9fce841fdd5b" name="EntiteFacadeLocal" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="217cd71f-803b-4250-a951-bb6dac9a7a74" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="3663efd9-b043-49e3-ab9b-a265b949d8e6" name="AbstractFacade" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7310f465-1615-4632-a51f-d9873481f785" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="9d1ba744-702e-4eb3-85b5-f6d187604a2f" name="booXstore">
+    <elementDefinition Id="7bde64ea-2196-4d2c-b6ee-3666584ca189" />
+  </package>
+</componentModel>

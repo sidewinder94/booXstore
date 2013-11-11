@@ -5,6 +5,8 @@
 package com.booXtore.service;
 
 import com.booXtore.domain.Orders;
+import com.booXtore.domain.StateOrders;
+import com.booXtore.domain.States;
 import com.booXtore.domain.Users;
 import java.util.List;
 import javax.ejb.Local;
@@ -62,5 +64,7 @@ public interface OrdersFacadeLocal {
     int count();
 
     public List<Orders> getOrdersByUser(Users user);
+
+    List<Orders> findAllOrdersButState(StateOrders state);
     
 }
