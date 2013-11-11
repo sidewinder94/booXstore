@@ -17,7 +17,6 @@ import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import static com.booXtore.utilities.StringUtilities.*;
 import java.text.DateFormat;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import javax.ejb.EJB;
@@ -27,7 +26,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ComponentSystemEvent;
 
 /**
- *
+ * Classe responsable de l'inscription et de l'authentification des utilisateurs
  * @author Antoine-Ali
  */
 @Named(value = "AuthenticationBean")
@@ -74,6 +73,10 @@ public class AuthenticationBean implements Serializable {
         return orders;
     }
     
+    /**
+     * Change les informations de l'utilisateur
+     * @throws IOException 
+     */
     public void changeInfo() throws IOException{
         
         user.setAddress(address);
@@ -89,6 +92,10 @@ public class AuthenticationBean implements Serializable {
         
     }
     
+    /**
+     * Change le mot de passe de l'utilisateur
+     * @return 
+     */
     public String changePassword(){
         if(!newPassword.equals(confirmPassword)){
             FacesContext.getCurrentInstance().addMessage("passwordForm:newPassConfirm", new FacesMessage("Le mot de passe ne correspond pas"));
@@ -107,6 +114,10 @@ public class AuthenticationBean implements Serializable {
         }
     }
     
+    /**
+     * Change l'adresse mail de l'utilisateur
+     * @return 
+     */
     public String changeMail(){
         
         mail = newMail;
@@ -116,6 +127,11 @@ public class AuthenticationBean implements Serializable {
         FacesContext.getCurrentInstance().addMessage("mailForm:mailButton", new FacesMessage("Votre adresse mail a été mise à jour"));
         return null;
     }
+    
+    /**
+     * Termine la session de l'utilisateur, le déconnectant
+     * @return l'adresse de la page de redirection
+     */
     public String logout()
     {
         //Déconnexion de la session
@@ -123,6 +139,10 @@ public class AuthenticationBean implements Serializable {
         return "index.xhtml?faces-redirect=true";
     }
     
+    /**
+     * Inscrit un nouvel utilisateur
+     * @return l'adresse de la page de redirection
+     */
     public String userSignIn(){
         
         if(uFL.checkValidLogin(login)){
@@ -149,6 +169,10 @@ public class AuthenticationBean implements Serializable {
            
     }
     
+    /**
+     * Permet de s'avoir si le visiteur courant est authentifié en tant qu'utilisateur
+     * @param event 
+     */
     public void isUserConnected(ComponentSystemEvent event) {
 
         FacesContext fc = FacesContext.getCurrentInstance();
@@ -161,6 +185,10 @@ public class AuthenticationBean implements Serializable {
         }
     }
     
+    /**
+     * Permet de s'avoir si le visiteur courant est authentifié en tant que libraire
+     * @param event 
+     */
     public void isSellerConnected(ComponentSystemEvent event) {
 
         FacesContext fc = FacesContext.getCurrentInstance();
@@ -173,6 +201,10 @@ public class AuthenticationBean implements Serializable {
         }
     }
     
+    /**
+     * Authentifie le visiteur en tant qu'utilisateur
+     * @return 
+     */
     public String userAuthentication() {
         
         user = uFL.checkValidUser(login, password);
@@ -197,6 +229,10 @@ public class AuthenticationBean implements Serializable {
         
     }
     
+    /**
+     * Authentifie le visiteur en tant que libraire
+     * @return 
+     */
     public String sellerAuthentication() {
         
         seller = sFL.checkValidSeller(login, password);
@@ -216,6 +252,10 @@ public class AuthenticationBean implements Serializable {
         
     }
     
+    
+    
+    
+    
     public String dateFormat(Orders toFormat)
     {
         DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRENCH);
@@ -224,6 +264,8 @@ public class AuthenticationBean implements Serializable {
     
     
 
+    
+    
     public String getConfirmPassword() {
         return confirmPassword;
     }
