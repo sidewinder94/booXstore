@@ -9,7 +9,7 @@ import com.booXtore.domain.Categories;
 import com.booXtore.service.BooksFacadeLocal;
 import com.booXtore.service.CategoriesFacadeLocal;
 import com.booXtore.service.SettingsFacadeLocal;
-import com.booXtore.utilities.StringUtilities;
+import static com.booXtore.utilities.StringUtilities.*;
 import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
@@ -52,8 +52,8 @@ public class SearchProviderBean implements Serializable {
 
     public Categories getSearchCategory() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        if (StringUtilities.getParam(fc, "category") != null) {
-            this.searchCategory = cFL.find(Integer.parseInt(StringUtilities.getParam(fc,
+        if (getParam(fc, "category") != null) {
+            this.searchCategory = cFL.find(Integer.parseInt(getParam(fc,
                     "category")));
         }
         return this.searchCategory;
@@ -75,16 +75,16 @@ public class SearchProviderBean implements Serializable {
 
     public String getSearch() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        String searchParam = StringUtilities.getParam(fc, "search");
+        String searchParam = getParam(fc, "search");
         if (searchParam != null) {
-            this.search = StringUtilities.decode(searchParam);
+            this.search = decode(searchParam);
         }
 
         return search;
     }
 
     public void setSearch(String search) {
-        this.search = StringUtilities.decode(search);
+        this.search = decode(search);
     }
 
     public Categories getDefaultCategorySearch() {
@@ -96,7 +96,7 @@ public class SearchProviderBean implements Serializable {
 
     public List<Books> getSearchResults() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        if (StringUtilities.getParam(fc, "category") != null) {
+        if (getParam(fc, "category") != null) {
             if (getSearch() != null) {
                 this.searchResults = bFL.getBooksByNameAndCategory(getSearch(),
                         getSearchCategory());
@@ -140,10 +140,10 @@ public class SearchProviderBean implements Serializable {
 
     public Integer getCurrentPage() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        if (StringUtilities.getParam(fc, "page") == null) {
+        if (getParam(fc, "page") == null) {
             this.currentPage = 1;
         } else {
-            this.currentPage = Integer.parseInt(StringUtilities.getParam(fc, "page"));
+            this.currentPage = Integer.parseInt(getParam(fc, "page"));
         }
         return currentPage;
     }
