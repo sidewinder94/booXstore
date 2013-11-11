@@ -76,24 +76,42 @@
                                 <td>#{bookBean.book.price}€</td>
                             </tr>
                             <!-- Quantité - <tr class="danger"> si indisponible -->
-                            <c:if test="#{bookBean.book.states.id == 4}">
-                                <tr class="success">
-                                    <td><strong> En stock </strong></td>
-                                    <td> #{bookBean.book.supply} (En réapprovisionnement)</td>
-                                </tr>
-                            </c:if>
-                            <tr>
-                                <td><strong> En stock </strong></td>
-                                <td>#{bookBean.book.supply}</td>
-                            </tr>
+                            <c:choose>
+                                <c:when test="#{bookBean.book.states.id == 4}">
+                                    <tr class="danger">
+                                        <td><strong> En stock </strong></td>
+                                        <td> #{bookBean.book.supply} (En réapprovisionnement)</td>
+                                    </tr>
+                                </c:when>
+                                <c:otherwise>
+                                    <tr>
+                                        <td><strong> En stock </strong></td>
+                                        <td>#{bookBean.book.supply}</td>
+                                    </tr>
+                                </c:otherwise>
+                            </c:choose>
                         </table>
 
-                        <h:form>
-                            <h:commandButton type="button" 
-                                             class="fa btn btn-success" 
-                                             value="&#xf07a; Ajouter au panier"
-                                             onclick=""/>
-                        </h:form>
+                        
+                        <c:choose>
+                            <c:when test="#{bookBean.book.supply == 0}">
+                            
+                                <p class="btn btn-danger disabled fa">
+                                    Le stock est épuisé.
+                                </p>
+                                
+                            </c:when>
+                            
+                            <c:otherwise>
+                                <h:form>
+                                    <h:commandButton type="button" 
+                                                     class="fa btn btn-success" 
+                                                     value="&#xf07a; Ajouter au panier"
+                                                     onclick=""/>
+                                </h:form>
+                            </c:otherwise>
+                        </c:choose>
+                        
 
                     </div>
                 </div>
