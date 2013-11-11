@@ -16,7 +16,10 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import static com.booXtore.utilities.StringUtilities.*;
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import javax.ejb.EJB;
 import javax.faces.application.ConfigurableNavigationHandler;
 import javax.faces.application.FacesMessage;
@@ -211,6 +214,12 @@ public class AuthenticationBean implements Serializable {
         }
         
         
+    }
+    
+    public String dateFormat(Orders toFormat)
+    {
+        DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRENCH);
+        return df.format(toFormat.getOrderDate());
     }
     
     
