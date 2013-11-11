@@ -232,98 +232,98 @@ INSERT IGNORE INTO `books`(`TITLE`, `SUMMARY`, `CATEGORY_ID`, `PUBLISHER_ID`, `S
 -- INSERT INTO `authors_books`(`books_ID`, `authors_ID`) VALUES ([value-2])
 -- ------------------------------------------------------------------------ --
 -- Harry Potter
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (0, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (1, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (2, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (3, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (4, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (5, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (6, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (9, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (10, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (11, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (12, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (13, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (14, 0);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (15, 0);
--- Asterix
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (1, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (2, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (3, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (4, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (5, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (6, 1);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (7, 1);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (7, 2);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (7, 3);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (7, 4);
--- Demain j'arrete
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (10, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (11, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (12, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (13, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (14, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (15, 1);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (16, 1);
+-- Asterix
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (8, 2);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (8, 3);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (8, 4);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (8, 5);
+-- Demain j'arrete
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (9, 6);
 -- Les Seigneurs des Anneaux
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (16, 6);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (17, 6);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (18, 6);
--- Docteur
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (17, 7);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (18, 7);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (19, 7);
--- Naruto 
+-- Docteur
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (20, 8);
--- Cuisine 
+-- Naruto 
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (21, 9);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (22, 9);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (23, 9);
--- Lanfeust
+-- Cuisine 
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (22, 10);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (23, 10);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (24, 10);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (24, 11);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (25, 10);
+-- Lanfeust
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (25, 11);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (26, 10);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (25, 12);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (26, 11);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (27, 10);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (26, 12);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (27, 11);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (28, 10);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (27, 12);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (28, 11);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (29, 10);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (28, 12);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (29, 11);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (30, 10);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (29, 12);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (30, 11);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (31, 10);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (30, 12);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (31, 11);
--- Walking Dead
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (31, 12);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (32, 11);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (32, 12);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (32, 13);
--- Deadpool
+-- Walking Dead
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (33, 13);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (33, 14);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (33, 15);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (33, 16);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (33, 17);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (33, 18);
--- Batman
+-- Deadpool
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (34, 15);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (34, 16);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (34, 17);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (34, 18);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (34, 19);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (34, 20);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (34, 21);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (34, 22);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (34, 23);
--- Coloriage
+-- Batman
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (35, 20);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (35, 21);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (35, 22);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (35, 23);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (35, 24);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (36, 24);
--- Ananas
+-- Coloriage
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (36, 25);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (37, 25);
--- Cours
+-- Ananas
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (38, 26);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (38, 27);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (38, 28);
+-- Cours
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (39, 27);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (39, 28);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (39, 29);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (40, 30);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (41, 31);
--- The Mortal Instruments
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (42, 32);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (43, 32);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (44, 32);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (45, 32);
--- Berlin
+-- The Mortal Instruments
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (43, 33);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (44, 33);
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (45, 33);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (46, 33);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (46, 34);
--- Adieu
+-- Berlin
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (47, 34);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (47, 35);
--- Trinity Blood
+-- Adieu
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (48, 36);
-INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (48, 37);
--- Fire after dark
+-- Trinity Blood
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (49, 37);
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (49, 38);
+-- Fire after dark
+INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (50, 39);
 
 -- -------------------------------------------------------------------------------------------------- --
 -- Create Orders
