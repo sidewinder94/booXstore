@@ -5,8 +5,10 @@
 package com.booXtore;
 
 
+import com.booXtore.domain.Orders;
 import com.booXtore.domain.Sellers;
 import com.booXtore.domain.Users;
+import com.booXtore.service.OrdersFacadeLocal;
 import com.booXtore.service.SellersFacadeLocal;
 import com.booXtore.service.UsersFacadeLocal;
 import java.io.IOException;
@@ -14,6 +16,7 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import static com.booXtore.utilities.StringUtilities.*;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.application.ConfigurableNavigationHandler;
 import javax.faces.application.FacesMessage;
@@ -33,6 +36,9 @@ public class AuthenticationBean implements Serializable {
     
     @EJB
     private SellersFacadeLocal sFL;
+    
+    @EJB
+    private OrdersFacadeLocal oFL;
     
     private String login;
     private String password;
@@ -60,6 +66,10 @@ public class AuthenticationBean implements Serializable {
     public AuthenticationBean() {
     }
    
+    public List<Orders> getOrdersByUser(){
+        List<Orders> orders = oFL.getOrdersByUser(user);
+        return orders;
+    }
     
     public void changeInfo() throws IOException{
         

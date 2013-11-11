@@ -147,13 +147,16 @@
 										<th>Status</th>
 									</tr>
 								</thead>
-								<tbody>
+                                                            <c:forEach items="#{AuthenticationBean.ordersByUser}" var="order">
+                                                                
+                                                            <tbody>
 									<tr>
-										<td><!-- Date --></td>
-										<td><!-- Prix --></td>
-										<td><!-- État --></td>
+                                                                            <td>#{order.orderDate}</td>
+                                                                            <td>#{order.totalPrice}</td>
+                                                                            <td>#{order.}</td>
 									</tr>
 								</tbody>
+                                                               </c:forEach>
 							</table>
 						</div>
 					</div>
