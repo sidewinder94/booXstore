@@ -52,8 +52,8 @@ public class SearchProviderBean implements Serializable {
 
     public Categories getSearchCategory() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        if (getParam(fc, "category") != null) {
-            this.searchCategory = cFL.find(Integer.parseInt(getParam(fc,
+        if (StringUtilities.getParam(fc, "category") != null) {
+            this.searchCategory = cFL.find(Integer.parseInt(StringUtilities.getParam(fc,
                     "category")));
         }
         return this.searchCategory;
@@ -75,7 +75,7 @@ public class SearchProviderBean implements Serializable {
 
     public String getSearch() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        String searchParam = getParam(fc, "search");
+        String searchParam = StringUtilities.getParam(fc, "search");
         if (searchParam != null) {
             this.search = StringUtilities.decode(searchParam);
         }
@@ -96,7 +96,7 @@ public class SearchProviderBean implements Serializable {
 
     public List<Books> getSearchResults() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        if (getParam(fc, "category") != null) {
+        if (StringUtilities.getParam(fc, "category") != null) {
             if (getSearch() != null) {
                 this.searchResults = bFL.getBooksByNameAndCategory(getSearch(),
                         getSearchCategory());
@@ -130,10 +130,6 @@ public class SearchProviderBean implements Serializable {
         return this.bFL.findAll();
     }
 
-    private String getParam(FacesContext fc, String paramName) {
-        return fc.getExternalContext().getRequestParameterMap().get(paramName);
-    }
-
     public String getBookFirstAuthor(Books book) {
         return book.getAuthors().get(0).getName();
     }
@@ -144,10 +140,10 @@ public class SearchProviderBean implements Serializable {
 
     public Integer getCurrentPage() {
         FacesContext fc = FacesContext.getCurrentInstance();
-        if (getParam(fc, "page") == null) {
+        if (StringUtilities.getParam(fc, "page") == null) {
             this.currentPage = 1;
         } else {
-            this.currentPage = Integer.parseInt(getParam(fc, "page"));
+            this.currentPage = Integer.parseInt(StringUtilities.getParam(fc, "page"));
         }
         return currentPage;
     }
