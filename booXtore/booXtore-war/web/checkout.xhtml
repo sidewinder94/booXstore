@@ -33,7 +33,7 @@ and open the template in the editor.
                 <!-- Résumé de commande -->
                 <div class="page-header"><h2>Résumé de la commande</h2></div>
                 <div class="table-responsive">
-                    <h:dataTable value="#{orderbeans.bookordersList}" var="BoL" >
+                    <h:dataTable value="#{orderbeans.bookordersList}" var="BoL">
      			<h:column>
     				<f:facet name="header">Nom du produit</f:facet>
                                 #{BoL.bookId.title}
@@ -70,7 +70,7 @@ and open the template in the editor.
                 <h:form>
                     <div class="form-group">
                         <label for="cardNumber">Numéro de carte de crédit</label>
-                        <h:inputText id="cardNumber" class="form-control" pass:placeholder="XXXX XXXX XXXX XXXX" required="required"/>
+                        <h:inputText id="cardNumber" class="form-control" required="required"/>
                     </div>
                     <h:commandButton class="btn btn-success" type="submit" value="Valider"/>
                 </h:form>
