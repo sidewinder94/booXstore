@@ -9,7 +9,7 @@ import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 
 /**
- *
+ * Classe utilitai contenant des méthodes statiques pour la gestion du texte
  * @author Antoine-Ali
  */
 public class StringUtilities {
