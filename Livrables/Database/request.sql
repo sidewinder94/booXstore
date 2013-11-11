@@ -325,13 +325,22 @@ INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (49, 38);
 -- Fire after dark
 INSERT IGNORE INTO `authors_books`(`books_ID`, `authors_ID`) VALUES (50, 39);
 
+-- -------------------------------------------
+-- Create State_Orders
+-- INSERT INTO `state_orders`(`NAME`) VALUES ([value-2])
+-- ------------------------------------------- 
+INSERT IGNORE INTO `state_orders`(`NAME`) VALUES ("Validée");
+INSERT IGNORE INTO `state_orders`(`NAME`) VALUES ("En préparation");
+INSERT IGNORE INTO `state_orders`(`NAME`) VALUES ("Annulée");
+INSERT IGNORE INTO `state_orders`(`NAME`) VALUES ("Envoyée");
+
 -- -------------------------------------------------------------------------------------------------- --
 -- Create Orders
--- INSERT INTO `orders`(`ORDERDATE`, `TOTALPRICE`, `USERS_ID`) VALUES ([value-2],[value-3],[value-4])
+-- INSERT INTO `orders`(`ORDERDATE`, `TOTALPRICE`, `USERS_ID`, `STATES_ID`) VALUES ([value-2],[value-3],[value-4],[value-5])
 -- -------------------------------------------------------------------------------------------------- --
-INSERT IGNORE INTO `orders`(`ORDERDATE`, `TOTALPRICE`, `USERS_ID`) VALUES ('2013-11-10', 28.99, 2);
-INSERT IGNORE INTO `orders`(`ORDERDATE`, `TOTALPRICE`, `USERS_ID`) VALUES ('2013-11-10', 5.60, 3);
-INSERT IGNORE INTO `orders`(`ORDERDATE`, `TOTALPRICE`, `USERS_ID`) VALUES ('2013-11-10', 111.92, 1);
+INSERT IGNORE INTO `orders`(`ORDERDATE`, `TOTALPRICE`, `USERS_ID`, `STATES_ID`) VALUES ('2013-11-10', 28.99, 2, 1);
+INSERT IGNORE INTO `orders`(`ORDERDATE`, `TOTALPRICE`, `USERS_ID`, `STATES_ID`) VALUES ('2013-11-10', 5.60, 3, 1);
+INSERT IGNORE INTO `orders`(`ORDERDATE`, `TOTALPRICE`, `USERS_ID`, `STATES_ID`) VALUES ('2013-11-10', 111.92, 1, 1);
 
 -- -------------------------------------------------------------------------------------------------------- --
 -- Create Book_Orders
