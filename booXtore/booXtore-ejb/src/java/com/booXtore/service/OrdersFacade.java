@@ -5,6 +5,8 @@
 package com.booXtore.service;
 
 import com.booXtore.domain.Orders;
+import com.booXtore.domain.StateOrders;
+import com.booXtore.domain.States;
 import com.booXtore.domain.Users;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -38,5 +40,13 @@ public class OrdersFacade extends AbstractFacade<Orders> implements OrdersFacade
         
         return query.getResultList();
     }
+
+    @Override
+    public List<Orders> findAllOrdersButState(StateOrders state) {
+        TypedQuery<Orders> query = em.createNamedQuery("findOrdersButState", Orders.class);
+        query.setParameter("state", state);
+        return query.getResultList();
+    }
+    
     
 }
