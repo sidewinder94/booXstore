@@ -7,6 +7,9 @@ package com.booXtore.utilities;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
 import javax.faces.context.FacesContext;
 
 /**
@@ -37,6 +40,12 @@ public class StringUtilities {
      */
     public static String getParam(FacesContext fc, String paramName) {
         return fc.getExternalContext().getRequestParameterMap().get(paramName);
+    }
+    
+    public static String formatDate(Date format)
+    {
+        DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRENCH);
+        return df.format(format);
     }
     
 }
