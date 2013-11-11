@@ -16,8 +16,8 @@ import javax.inject.Named;
  *
  * @author Julien
  */
-@Named(value = "orderbeans")
-public class OrderBeans 
+@Named(value = "orderbean")
+public class OrderBean 
 {
     private Users user;
     private Orders order;
@@ -33,7 +33,7 @@ public class OrderBeans
         this.bookordersList = bookordersList;
     }
     
-    public OrderBeans() {     
+    public OrderBean() {     
     }
 
     public Users getUser() {

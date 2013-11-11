@@ -41,12 +41,12 @@ and open the template in the editor.
                                 <th>Prix Unitaire</th>
                             </tr>
                         </thead>
-                        <c:forEach items="#{orderbeans.bookordersList}" var="book">
+                        <c:forEach items="#{orderbean.bookordersList}" var="book">
                             <tbody>
                                 <tr>
-                                    <td>#{orderbeans.bookorder.bookId.title}</td>
-                                    <td>#{orderbeans.bookorder.quantity}</td>
-                                    <td>#{orderbeans.bookorder.bookId.price}</td>
+                                    <td>#{orderbean.bookorder.bookId.title}</td>
+                                    <td>#{orderbean.bookorder.quantity}</td>
+                                    <td>#{orderbean.bookorder.bookId.price}</td>
                                 </tr>
                             </tbody>
                         </c:forEach>
@@ -55,7 +55,7 @@ and open the template in the editor.
 
                 <div class="row">
                     <div class="col-md-4 col-xs-12 pull-right well well-lg">
-                        <div><h:outputText style="font-weight:bold" value="Prix total : "/>#{orderbeans.order.totalPrice}</div>
+                        <div><h:outputText style="font-weight:bold" value="Prix total : "/>#{orderbean.order.totalPrice}</div>
                     </div>
                 </div>
 
