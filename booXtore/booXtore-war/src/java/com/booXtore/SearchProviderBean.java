@@ -8,7 +8,11 @@ import com.booXtore.domain.Books;
 import com.booXtore.domain.Categories;
 import com.booXtore.service.BooksFacadeLocal;
 import com.booXtore.service.CategoriesFacadeLocal;
+import com.booXtore.utilities.StringUtilities;
 import java.io.Serializable;
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
+import java.nio.charset.Charset;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
@@ -69,14 +73,14 @@ public class SearchProviderBean implements Serializable {
         FacesContext fc = FacesContext.getCurrentInstance();
         String searchParam = getParam(fc, "search");
         if (searchParam != null) {
-            this.search = searchParam;
+            this.search = StringUtilities.decode(searchParam);
         }
 
         return search;
     }
 
     public void setSearch(String search) {
-        this.search = search;
+        this.search = StringUtilities.decode(search);
     }
 
     public Categories getDefaultCategorySearch() {

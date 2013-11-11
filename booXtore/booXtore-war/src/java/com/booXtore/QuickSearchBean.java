@@ -4,7 +4,7 @@
  */
 package com.booXtore;
 
-import com.booXtore.domain.Categories;
+import com.booXtore.utilities.StringUtilities;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -36,7 +36,7 @@ public class QuickSearchBean implements Serializable{
     }
 
     public void setSearch(String search) {
-        this.search = search;
+        this.search = StringUtilities.decode(search);
     }
 
     
