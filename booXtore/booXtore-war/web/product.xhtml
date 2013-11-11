@@ -27,8 +27,8 @@
 
                 <!-- Breadcrumbs -->
                 <ol class="breadcrumb">
-                    <li><h:link outcome="#">Catalogue</h:link></li>
-                    <li><h:link outcome="#"><!-- Catégorie --></h:link></li>
+                    <li><h:link outcome="catalog">Catalogue</h:link></li>
+                    <li><h:link outcome=""><!-- Catégorie --></h:link></li>
                     <li class="active"><!-- Nom du livre --></li>
                 </ol>
 
@@ -80,9 +80,9 @@
                             </tr>
                         </table>
 
-                        <h:commandButton type="button" class="btn btn-success">
-                            <i class="fa fa-shopping-cart"></i> Ajouter au panier
-                        </h:commandButton>
+                        <h:form>
+                            <h:commandButton type="button" class="fa btn btn-success" value="&#xf07a; Ajouter au panier"/>
+                        </h:form>
 
                     </div>
                 </div>
