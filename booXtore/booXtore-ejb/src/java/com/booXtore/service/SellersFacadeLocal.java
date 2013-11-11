@@ -9,7 +9,8 @@ import java.util.List;
 import javax.ejb.Local;
 
 /**
- *
+ * Interface présentant les méthodes accessibles pour l'accès Classe regroupant 
+ * les méthodes spécifique pour l'accès à l'entité <strong>Sellers</strong>
  * @author Antoine-Ali
  */
 @Local

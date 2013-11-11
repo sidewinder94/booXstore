@@ -13,7 +13,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 /**
- *
+ * Classe regroupant les méthodes spécifique pour l'accès à l'entité <strong>Books</strong>
  * @author Antoine-Ali
  */
 @Stateless
@@ -31,6 +31,11 @@ public class BooksFacade extends AbstractFacade<Books> implements BooksFacadeLoc
         super(Books.class);
     }
 
+    /**
+     * Retourne une liste de livre triés par nom
+     * @param pattern Le pattern à rechercher dans le titrre des livres
+     * @return Une liste de livre contenant le pattern à rechercher
+     */
     @Override
     public List<Books> getBooksByName(String pattern) {
         TypedQuery<Books> query = em.createNamedQuery("findBooksByName", Books.class);
@@ -38,6 +43,12 @@ public class BooksFacade extends AbstractFacade<Books> implements BooksFacadeLoc
         return query.getResultList();
     }
 
+     /**
+     * Retourne un liste de livre font le titre contient un pattern donné filtré par catégorie
+     * @param pattern Le pattern permettant de sélectionner les livres
+     * @param category La catégorie à laquelle les livres doivent appartenir
+     * @return La liste des livres correspondants
+     */
     @Override
     public List<Books> getBooksByNameAndCategory(String pattern, Categories category) {
         TypedQuery<Books> query = em.createNamedQuery("findBooksByNameAndCategory", Books.class);
@@ -46,6 +57,11 @@ public class BooksFacade extends AbstractFacade<Books> implements BooksFacadeLoc
         return query.getResultList();
     }
 
+    /**
+     * Retourne une liste de livres appartenant à une catégorie
+     * @param category la catégorie à laquelle les livres doivent appartenir
+     * @return Retourne un liste de tous les livres appartenant à la catégorie
+     */
     @Override
     public List<Books> getBooksByCategory(Categories category) {
         TypedQuery<Books> query = em.createNamedQuery("findBooksByCategory", Books.class);
