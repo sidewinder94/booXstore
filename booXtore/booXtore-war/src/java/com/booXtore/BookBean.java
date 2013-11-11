@@ -54,12 +54,23 @@ public class BookBean implements Serializable {
      * Book getter
      * @return a Book
      */
-    public Books getBook() {
+    public Books getBook() throws IOException {
+        
         FacesContext fc = FacesContext.getCurrentInstance();
         String idParamRaw = getParam(fc, "id");
-        int idParam = Integer.parseInt(idParamRaw);
-        this.book = bFL.find(idParam);
-        return book;
+            
+        if ( idParamRaw == null ){
+            // redirect back to catalog
+        //    fc.getExternalContext().redirect("catalog.xhtml");
+        }
+        else{
+            
+            int idParam = Integer.parseInt(idParamRaw);
+            this.book = bFL.find(idParam);
+            return book;
+        }
+        return null;
+        
     }
 
     /**
@@ -68,6 +79,15 @@ public class BookBean implements Serializable {
      */
     public void setBook(Books book) {
         this.book = book;
+    }
+    
+    public Boolean inStock(Books book){
+        Boolean instock = false;
+        if(this.book.getSupply() > 0){
+            instock = true;
+        }
+        
+        return instock;
     }
     
     public String dateFormat()

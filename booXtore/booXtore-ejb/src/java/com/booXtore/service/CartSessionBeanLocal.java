@@ -24,5 +24,7 @@ public interface CartSessionBeanLocal {
     void removeBook(Books book);
 
     Float getTotalPrice();
+
+    public void decrementBook(Books book);
     
 }

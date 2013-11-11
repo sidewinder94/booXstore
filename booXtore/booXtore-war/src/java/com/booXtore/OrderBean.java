@@ -41,6 +41,10 @@ public class OrderBean
     
     private List<BookOrders> bookordersList;
 
+    /**
+     *
+     * @return
+     */
     public List<Orders> getFilteredOrders() {
         StateOrders interesting = new StateOrders();
         for(StateOrders state : sFL.findAll())
@@ -53,42 +57,80 @@ public class OrderBean
         return this.oFL.findAllOrdersButState(interesting);
     }
 
+    /**
+     *
+     * @param filteredOrders
+     */
     public void setFilteredOrders(List<Orders> filteredOrders) {
         this.filteredOrders = filteredOrders;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<BookOrders> getBookordersList() {
         return bookordersList;
     }
-    
 
+    /**
+     *
+     * @param bookordersList
+     */
     public void setBookordersList(List<BookOrders> bookordersList) {
         this.bookordersList = bookordersList;
     }
     
+    /**
+     *
+     */
     public OrderBean() {     
     }
 
+    /**
+     *
+     * @return
+     */
     public Users getUser() {
         return user;
     }
 
+    /**
+     *
+     * @param user
+     */
     public void setUser(Users user) {
         this.user = user;
     }
 
+    /**
+     *
+     * @return
+     */
     public Orders getOrder() {
         return order;
     }
 
+    /**
+     *
+     * @param order
+     */
     public void setOrder(Orders order) {
         this.order = order;
     }
 
+    /**
+     *
+     * @return
+     */
     public BookOrders getBookorder() {
         return bookorder;
     }
 
+    /**
+     *
+     * @param bookorder
+     */
     public void setBookorder(BookOrders bookorder) {
         this.bookorder = bookorder;
     }

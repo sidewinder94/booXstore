@@ -71,11 +71,15 @@ public class CartSessionBean implements CartSessionBeanLocal {
         this.content.remove(book);
     }
     
+    @Override
     public void decrementBook(Books book)
     {
         if(this.content.get(book) != null)
         {
             this.content.put(book, (this.content.get(book) - 1));
+            if(this.content.get(book)==0){
+                this.content.remove(book);
+            }
         }
     }
 
@@ -87,11 +91,13 @@ public class CartSessionBean implements CartSessionBeanLocal {
     public Float getTotalPrice() {
         Float result = 0f;
         
-        for(Books book : this.content.keySet())
-        {
-            result += book.getPrice();
+        for (Books book : this.content.keySet()) {
+            if (book != null) {
+                result += book.getPrice() * content.get(book);
+            }
+
         }
-        
+
         return result;
     }
 }

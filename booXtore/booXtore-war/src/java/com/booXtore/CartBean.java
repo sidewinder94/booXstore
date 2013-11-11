@@ -46,6 +46,11 @@ public class CartBean implements Serializable {
         return cart;
     }
     
+    public String deleteBook(Books book){
+        this.cSB.removeBook(book);
+        return null;
+    }
+    
     public List<Books> getBooks(){
         List<Books> listBooks = new LinkedList<Books>();
         listBooks.addAll(getCart().keySet());
@@ -76,12 +81,12 @@ public class CartBean implements Serializable {
     }
     
     public String increment(Books book){
-        
+        this.cSB.addBook(book);
         return null;
     }
     
     public String decrement(Books book){
-        
+        this.cSB.decrementBook(book);
         return null;
     }
     
@@ -91,14 +96,16 @@ public class CartBean implements Serializable {
     }
     
     
-    public void addBook(int bookId)
+    public String addBook(Books book)
     {
-        this.cSB.addBook(this.bFL.find(bookId));
+       // this.cSB.addBook(this.bFL.find(bookId));
+        this.cSB.addBook(book);
+        return null;
     }
     
     public String getTotalPrice()
     {
-        return String.valueOf(cSB.getTotalPrice()) + "€";
+        return String.valueOf(cSB.getTotalPrice()) + " €";
     }
     
     public String getTotalArticles()
@@ -115,7 +122,7 @@ public class CartBean implements Serializable {
             {
                 plural = "s";
             }
-            return String.valueOf(cSB.getContent().size()) + "Article" + plural;
+            return String.valueOf(cSB.getContent().size()) + " Article" + plural;
         }
     }
 }

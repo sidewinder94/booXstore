@@ -1,0 +1,36 @@
+╔══════════════════════╗
+║ Évolutions possibles ║
+╚══════════════════════╝
+
+
+# Dynamiser la recherche
+
+La recherche est actuellement tout ce qu'il y a de plus statique. Simple, classique, efficace. Mais il est possible d'améliorer et de fluidifier l'expérience utilisateur.
+
+* Utiliser des suggestions de recherches. Comme son nom l'indique, cela consiste à suggérer des résultats à l'utilisateur, lorsqu'il tape sa recherche. Un tel système, bien implémenté, permet à l'utilisateur de trouver avant même d'avoir fini de taper.
+
+* Recharger dynamiquement la page. Actuellement, la page est rechargée dans son intégralité lorsqu'une recherche est effectuée. Il est possible de ne recharger qu'une partie de la page (ici, la partie affichant les résultats de recherche), pour au final une expérience plus fluide.
+
+
+
+# Tenir l'utilisateur informé
+
+Il pourrait être possible de tenir l'utilisateur informé des événements importants de notre librairie. On peut imaginer un système d'abonnement via newsletter ou flux RSS. Un abonnement aux dernières sorties d'un genre ou d'un auteur particulier permettrait de tenir le lecteur informé des sujets qui l'intéressent.
+
+
+
+# Clarifier l'administration
+
+L'interface d'administration du libraire doit présenter beaucoup d'informations. Implémenter un système similaire à un tableur, où le libraire est en mesure de choisir quelles informations afficher, et les trier plus librement serait une amélioration pour la lisibilité.
+
+
+
+╔═════════════════╗
+║ Bilan personnel ║
+╚═════════════════╝
+
+Dans les grandes lignes :
+
+* Je trouve Java EE encore plus désagréable à utiliser que Java SE.
+* Bootstrap est vraiment un beau framework. Le prototypage y est très rapide, et il est simple de récupérer les sources pour les recompiler et avoir des CSS qui possèdent une vraie personnalité - tout en se basant sur une architecture très solide.
+* C'est le première fois que j'utilise un logiciel de gestion de versions en conditions réelles. Ça aide énormément, d'autant plus lors du travail en groupe.

@@ -13,7 +13,7 @@ import java.util.Locale;
 import javax.faces.context.FacesContext;
 
 /**
- * Classe utilitai contenant des méthodes statiques pour la gestion du texte
+ * Classe utilitaire contenant des méthodes statiques pour la gestion du texte
  * @author Antoine-Ali
  */
 public class StringUtilities {
@@ -42,6 +42,12 @@ public class StringUtilities {
         return fc.getExternalContext().getRequestParameterMap().get(paramName);
     }
     
+    
+    /**
+     * Fonction formattant une date suivant les normes françaises.
+     * @param format La date à formatter.
+     * @return La date formattée.
+     */
     public static String formatDate(Date format)
     {
         DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRENCH);
