@@ -80,11 +80,15 @@ public class AuthenticationBean implements Serializable {
             FacesContext.getCurrentInstance().addMessage("passwordForm:newPassConfirm", new FacesMessage("Le mot de passe ne correspond pas"));
             return null;
         }
-        else{
+        else if(uFL.checkValidUser(login, password) != null){
             //mise a jour du mot de passe
             user.setPassword(newPassword);
             uFL.edit(user);
             FacesContext.getCurrentInstance().addMessage("passwordForm:passwordButton", new FacesMessage("Votre mot de passe a été mis à jour"));
+            return null;
+        }
+        else{
+            FacesContext.getCurrentInstance().addMessage("passwordForm:password", new FacesMessage("Mot de passe incorrect"));
             return null;
         }
     }

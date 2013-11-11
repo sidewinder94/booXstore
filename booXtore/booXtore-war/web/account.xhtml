@@ -76,10 +76,10 @@
 
 						<h:form id="passwordForm">
 							<div class="form-group">
-								<label for="oldPass">Ancien mot de passe</label>
-								<h:inputSecret required="true" class="form-control" id="oldPass" requiredMessage="Veuillez entrer votre mot de passe"
+								<label for="password">Ancien mot de passe</label>
+								<h:inputSecret required="true" class="form-control" id="password" requiredMessage="Veuillez entrer votre mot de passe"
                                                                    value="#{AuthenticationBean.password}"/>
-                                                                <h:message class="error" for="oldPass" id="oldPassError" />
+                                                                <h:message class="error" for="password" id="passwordError" />
 							</div>
 							<div class="form-group">
 								<label for="newPass">Nouveau mot de passe</label>
