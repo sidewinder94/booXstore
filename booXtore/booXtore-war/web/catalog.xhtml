@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
@@ -60,6 +61,9 @@
                         <div class="col-md-2 hidden-xs"><a href="#"><img class="thumbnail" src="http://lorempixel.com/100/100/" alt="Lorem pixel"/></a></div>
                         <div class="col-md-10">
                             <h:link outcome="#{searchProviderBean.generateBookLink(book)}"><h3>#{book.title}</h3></h:link>
+                            <c:if test="#{book.states.id  == 1}">
+                                <div class="alert alert-success">Ce produit est une nouveauté !</div>
+                            </c:if>
                             <p>par <strong>#{searchProviderBean.getBookFirstAuthor(book)}</strong>, éditions <strong>#{book.publisher.name}</strong></p>
                             <p>#{book.price}€</p>
                         </div>

@@ -12,7 +12,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 /**
- *
+ * Classe regroupant les méthodes spécifique pour l'accès à l'entité <strong>Users</strong>
  * @author Antoine-Ali
  */
 @Stateless

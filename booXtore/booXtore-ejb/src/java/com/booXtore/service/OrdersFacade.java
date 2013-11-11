@@ -10,7 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- *
+ * Classe regroupant les méthodes spécifique pour l'accès à l'entité <strong>Orders</strong>
  * @author Antoine-Ali
  */
 @Stateless
