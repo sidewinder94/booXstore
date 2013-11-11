@@ -25,7 +25,7 @@ public class Orders implements Serializable {
     private List<BookOrders> bookOrders;
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
