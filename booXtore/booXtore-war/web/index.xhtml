@@ -38,25 +38,16 @@
                 </div>
 
                 <!-- Génération des meilleures ventes -->
-                <c:forEach var="counter" begin="0" end="2">
-                    <c:choose>
-                        <c:when test="${counter != 2}">
-                            <c:set var="maxItems" scope="view" value="2"/>
-                        </c:when>
-                        <c:otherwise>
-                            <c:set var="maxItems" scope="view" value="0"/>
-                        </c:otherwise>
-                    </c:choose>
-                    <div class="row">
-                        <c:forEach var="counter2" begin="0" end="${maxItems}">
-                            <div class="col-md-6 text-center">
-                                <h:link outcome="product"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></h:link>
-                                <h3>Item name</h3>
-                                <p class="text-muted">13€</p>
-                            </div>
-                        </c:forEach>
-                    </div>
-                </c:forEach>
+                <c:set var="maxItems" scope="view" value="9"/>
+                <div class="row">
+                    <c:forEach var="counter2" begin="0" end="${maxItems}">
+                        <div class="col-md-6 text-center">
+                            <h:link outcome="product"><img src="http://lorempixel.com/230/230/" alt="lorem pixel" class="img-thumbnail"/></h:link>
+                            <h3>Item name</h3>
+                            <p class="text-muted">13€</p>
+                        </div>
+                    </c:forEach>
+                </div>
                 <!-- Fin du bloc de génération -->
 
             </div>
