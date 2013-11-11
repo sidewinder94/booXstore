@@ -5,6 +5,7 @@
 package com.booXtore.service;
 
 import com.booXtore.domain.Orders;
+import com.booXtore.domain.Users;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -59,5 +60,7 @@ public interface OrdersFacadeLocal {
      * @return En entier contenant le nombre d'entités
      */
     int count();
+
+    public List<Orders> getOrdersByUser(Users user);
     
 }

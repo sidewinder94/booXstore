@@ -34,7 +34,28 @@ public class Orders implements Serializable {
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date orderDate;
     
+    @ManyToOne
+    private StateOrders states;
+    
     private Float totalPrice;
+
+    public List<BookOrders> getBookOrders() {
+        return bookOrders;
+    }
+
+    public void setBookOrders(List<BookOrders> bookOrders) {
+        this.bookOrders = bookOrders;
+    }
+
+    public StateOrders getStates() {
+        return states;
+    }
+
+    public void setStates(StateOrders states) {
+        this.states = states;
+    }
+    
+    
 
     public Users getUsers() {
         return users;
