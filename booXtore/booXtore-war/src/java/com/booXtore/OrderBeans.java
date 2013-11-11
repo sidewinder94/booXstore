@@ -23,14 +23,6 @@ public class OrderBeans
     private Orders order;
     private BookOrders bookorder;
     
-    private float fTotal;
-    
-    private String sUserFirstName;
-    private String sUserLastName;
-    private String sAddress;
-    private String sZIP;
-    private String sCity;
-    
     private List<BookOrders> bookordersList;
 
     public List<BookOrders> getBookordersList() {
@@ -42,54 +34,6 @@ public class OrderBeans
     }
     
     public OrderBeans() {     
-    }
-
-    public float getfTotal() {
-        return fTotal;
-    }
-
-    public void setfTotal(float fTotal) {
-        this.fTotal = fTotal;
-    }
-    
-    public String getsUserFirstName() {
-        return sUserFirstName;
-    }
-
-    public void setsUserFirstName(String sUserFirstName) {
-        this.sUserFirstName = sUserFirstName;
-    }
-
-    public String getsUserLastName() {
-        return sUserLastName;
-    }
-
-    public void setsUserLastName(String sUserLastName) {
-        this.sUserLastName = sUserLastName;
-    }
-    
-    public String getsAddress() {
-        return sAddress;
-    }
-
-    public void setsAddress(String sAddress) {
-        this.sAddress = sAddress;
-    }
-
-    public String getsZIP() {
-        return sZIP;
-    }
-
-    public void setsZIP(String sZIP) {
-        this.sZIP = sZIP;
-    }
-
-    public String getsCity() {
-        return sCity;
-    }
-
-    public void setsCity(String sCity) {
-        this.sCity = sCity;
     }
 
     public Users getUser() {
