@@ -151,9 +151,9 @@
                                                                 
                                                             <tbody>
 									<tr>
-                                                                            <td>#{order.orderDate}</td>
-                                                                            <td>#{order.totalPrice}</td>
-                                                                            <td>#{order.}</td>
+                                                                            <td>#{AuthenticationBean.dateFormat(order)}</td>
+                                                                            <td>#{order.totalPrice} €</td>
+                                                                            <td>#{order.states.name}</td>
 									</tr>
 								</tbody>
                                                                </c:forEach>
