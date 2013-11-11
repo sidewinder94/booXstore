@@ -69,22 +69,19 @@
                         </div>
                     </div>
                 </c:forEach>
-                <div class="pagination pagination-right">
-                    <ul>
-                        <c:forEach begin="1" end="#{searchProviderBean.pages}" var="page">
-                            <c:choose>
-                                <c:when test="#{searchProviderBean.currentPage == page}">
-                                    <li class="disabled"><span>#{page}</span></li>
-                                </c:when>
-                                <c:otherwise>
-                                    <li class="active"><h:link outcome="#{searchProviderBean.goToPage(page)}">#{page}</h:link></li>
-                                </c:otherwise>
-                            </c:choose>
-                        </c:forEach>
-                    </ul>
-                </div>
+<ul class="pagination">
+                    <c:forEach begin="1" end="#{searchProviderBean.pages}" var="page">
+                        <c:choose>
+                            <c:when test="#{searchProviderBean.currentPage == page}">
+                                <li class="active"><span>#{page}</span></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li><h:link outcome="#{searchProviderBean.goToPage(page)}">#{page}</h:link></li>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:forEach>
+                </ul>
             </div>
-
         </div>
         <h:outputScript library="js" name="main.js"/>
     </h:body>
