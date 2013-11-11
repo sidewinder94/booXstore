@@ -34,4 +34,6 @@ public class CategoriesBean {
     {
         return cFL.findAll();
     }
+    
+    
 }
