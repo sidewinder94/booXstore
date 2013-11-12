@@ -26,7 +26,7 @@ Nous voyons ici que l'utilisateur lambda à accès à la consultation du catalog
 L'utilisateur peut également décider de se connecter/s'inscrire pour devenir client, ce qui lui donnera accès aux fonctions de création de commande, de modification des informations personnelles ainsi qu'a celles d'affchage de l'historique des commandes
 \clearpage
 \subsection{Diagramme d'activité}
-\includegraphics[scale=0.5]{Res/activityCOmmande.png}\\
+\includegraphics[scale=0.5]{Res/activityCommande.png}\\
 Le diagramme d'activité récapitule l'intégralités des actions à effectuer par l'utilisateur afin de créer une nouvelle commande.
 
 Une fois le panier rempli, l'utilisateur va demander à le valider, cette validation va lancer la création de la commande. Si l'utilisateur n'est pas connecté, l'application va demander à l'utilisateur de se connecter.
@@ -48,9 +48,19 @@ Une fois que l'utilisateur à inscrit ses donnéees dans le formulaire d'inscrip
 Si il existe, le composant métier renverra un message à la vue qui affichera un message d'erreur à l'utilisateur qui devra choisir un login différend.
 Si une autre erreur est détectée, l'interface l'affichera de la même manière.
 Si les informations sont correctes, le composant métier crééra l'utilisateur en base et en inofrmera la vue qui à son tour en informera l'utilisateur.
-
-
-
+\clearpage
+\subsection{Diagramme de composants}
+\includegraphics[scale=0.5]{Res/diagrammeComposants.png}\\
+Le diagramme de composants à été écrit pour pouvoir généraliser le diagramme de classe qui, Java EE oblige, est très imposant.
+Ce diagramme décrit donc que les SessionBeans sont nommés selon le nom de l'entité qu'ils sont censés gérer. Qu'ils implémentent une interface locale et héritent de la classe abstraite AbstractFacade qui gère les opérations CRUD communes.
+Les ManagedBeans intancient les SessionBeans correspondants aux interfaces locales et permettent aux pages JSF d'accéder aux informations stockées en base de données.
+\subsection{Diagramme de classe}
+\clearpage
+\begin{figure}[h!]
+\includepdf[landscape=true]{Res/classDiagram.pdf}
+\end{figure}
+\clearpage
+Au vu de la taille du diagramme, il se peut que celui-ci ne soit pas lisible sur une feuille A4, voici un lien pour le télécharger à part : \href{http://goo.gl/D9HGij}{http://goo.gl/D9HGij}
 \section{Points forts et points faibles de notre implémentation}
 
 	\subsection{Points forts}
