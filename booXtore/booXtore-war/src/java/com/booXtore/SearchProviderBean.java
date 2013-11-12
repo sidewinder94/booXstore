@@ -45,8 +45,8 @@ public class SearchProviderBean implements Serializable {
     }
 
     /**
-     *
-     * @return la liste de toutes les categories
+     * Retourne la liste de toutes les categories
+     * @return une liste de Categories
      */
     public List<Categories> getCategories() {
         List<Categories> result = cFL.findAll();
@@ -55,8 +55,8 @@ public class SearchProviderBean implements Serializable {
     }
 
     /**
-     *
-     * @return retourne la categorie indiquée dans l'url
+     * Retourne la categorie indiquée dans l'url
+     * @return  la categorie indiquée dans l'url
      */
     public Categories getSearchCategory() {
         FacesContext fc = FacesContext.getCurrentInstance();
@@ -72,7 +72,8 @@ public class SearchProviderBean implements Serializable {
     }
 
     /**
-     *
+     * Redirige l'utilisateur vers la page de catalogue avec l'url
+     * de recherche appropriée
      * @return l'url permettant d'effectuer une recherche avec
      * la catégorie et le pattern de recherche
      */
@@ -87,7 +88,7 @@ public class SearchProviderBean implements Serializable {
     }
 
     /**
-     *
+     * Retourne un string contenant le pattern de recherche
      * @return un string contenant le pattern de recherche
      * gère l'encodage des données
      */
@@ -106,7 +107,7 @@ public class SearchProviderBean implements Serializable {
     }
 
     /**
-     *
+     * Retourne la catégorie par défaut appelée "Toutes Catégories"
      * @return une catégorie par défaut appelée "Toutes Catégories"
      * permettant de rechercher sur toutes les catégories
      */
@@ -118,7 +119,7 @@ public class SearchProviderBean implements Serializable {
     }
 
     /**
-     * effectue la recherche
+     * Retourne la liste de lives concernés par la recherche
      * @return la liste de livres en gérant les pages et le nombre de livres
      * par page
      */
@@ -155,7 +156,7 @@ public class SearchProviderBean implements Serializable {
     }
 
     /**
-     *
+     * Retourne l'intégralité des livres de la base
      * @return l'intégralité des livres de la base
      */
     public List<Books> getAllBooks() {
@@ -163,7 +164,7 @@ public class SearchProviderBean implements Serializable {
     }
 
     /**
-     *
+     * Retourne le nom de l'auteur principal du livre
      * @param book
      * @return un string contenant le nom du premier autheur d'un livre
      * pour un meilleur affichage dans le cas ou il y a plusieurs autheurs
@@ -183,7 +184,7 @@ public class SearchProviderBean implements Serializable {
     }
 
     /**
-     *
+     * Retourne le numéro de la pge actuelle
      * @return un Integer contenant le numéro de page actuel
      */
     public Integer getCurrentPage() {
@@ -200,16 +201,24 @@ public class SearchProviderBean implements Serializable {
         this.currentPage = currentPage;
     }
 
+    /**
+     * Retourne le nombre de pages
+     * @return un Integer
+     */
     public Integer getPages() {
         return pages;
     }
 
+    /**
+     * Modifie le nombre de pages
+     * @param pages
+     */
     public void setPages(Integer pages) {
         this.pages = pages;
     }
 
     /**
-     *
+     * Redirige vers une autre page du catalogue
      * @param page
      * @return l'url permettant de changer de page
      */

@@ -42,8 +42,8 @@ public class OrderBean
     private List<BookOrders> bookordersList;
 
     /**
-     *
-     * @return
+     * Retourne la liste des commandes non envoyées
+     * @return un liste de Orders
      */
     public List<Orders> getFilteredOrders() {
         StateOrders interesting = new StateOrders();
@@ -58,7 +58,7 @@ public class OrderBean
     }
 
     /**
-     *
+     * Modifie le filtre de commandes
      * @param filteredOrders
      */
     public void setFilteredOrders(List<Orders> filteredOrders) {
@@ -66,15 +66,15 @@ public class OrderBean
     }
 
     /**
-     *
-     * @return
+     * Retourne une liste de BookOrders
+     * @return une liste de BookOrders
      */
     public List<BookOrders> getBookordersList() {
         return bookordersList;
     }
 
     /**
-     *
+     * Modifie la liste de BookOrders
      * @param bookordersList
      */
     public void setBookordersList(List<BookOrders> bookordersList) {
@@ -82,21 +82,21 @@ public class OrderBean
     }
     
     /**
-     *
+     * Constructeur par défaut d'OrderBean
      */
     public OrderBean() {     
     }
 
     /**
-     *
-     * @return
+     * Retourne le client de la commande
+     * @return un Users
      */
     public Users getUser() {
         return user;
     }
 
     /**
-     *
+     * Modifie le client de la commande
      * @param user
      */
     public void setUser(Users user) {
@@ -104,15 +104,15 @@ public class OrderBean
     }
 
     /**
-     *
-     * @return
+     * Retourne la commande
+     * @return un Orders
      */
     public Orders getOrder() {
         return order;
     }
 
     /**
-     *
+     * Modifie la commande
      * @param order
      */
     public void setOrder(Orders order) {
@@ -120,15 +120,15 @@ public class OrderBean
     }
 
     /**
-     *
-     * @return
+     * Retourne un BookOrder
+     * @return un BookOrder
      */
     public BookOrders getBookorder() {
         return bookorder;
     }
 
     /**
-     *
+     * Modifie un BookOrder
      * @param bookorder
      */
     public void setBookorder(BookOrders bookorder) {
