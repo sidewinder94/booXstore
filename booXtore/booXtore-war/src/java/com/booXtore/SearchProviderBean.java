@@ -38,6 +38,7 @@ public class SearchProviderBean implements Serializable {
     private Integer booksPerPage;
     private Integer currentPage;
     private Integer pages;
+    private CartBean cartBean;
 
     /**
      * Creates a new instance of SearchProviderBean
@@ -45,6 +46,32 @@ public class SearchProviderBean implements Serializable {
     public SearchProviderBean() {
     }
 
+    public String addToCart(Books book)
+    {
+        String cat = "";
+        String page = "";
+        if ((this.searchCategory != null)
+                && (!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))) {
+            cat = "&category=" + this.searchCategory.getId();
+        }
+        if(getCurrentPage() != 1)
+        {
+            page = "&page=" + getCurrentPage();
+        }
+        if((search != null)&&(!search.equals("")))
+        {
+            search = "&search=" + search;
+        }
+        else
+        {
+            search = "";
+        }
+        
+        cartBean.addBook(book);
+        return "catalog.xhtml?faces-redirect=true" + search + cat + page; 
+    }
+    
+    
     /**
      * Retourne la liste de toutes les categories
      * @return une liste de Categories
@@ -80,11 +107,20 @@ public class SearchProviderBean implements Serializable {
      */
     public String launchSearch() {
         String cat = "";
+        //String search = "";
         if ((this.searchCategory != null)
                 && (!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))) {
             cat = "&category=" + this.searchCategory.getId();
         }
-        return "catalog.xhtml?faces-redirect=true&search=" + search + cat;
+        if((search != null)&&(!search.equals("")))
+        {
+            search = "&search=" + search;
+        }
+        else
+        {
+            search = "";
+        }
+        return "catalog.xhtml?faces-redirect=true" + search + cat;
 
     }
 
@@ -222,4 +258,14 @@ public class SearchProviderBean implements Serializable {
     public String goToPage(Integer page) {
         return launchSearch() + "&page=" + page;
     }
+
+    public CartBean getCartBean() {
+        return cartBean;
+    }
+
+    public void setCartBean(CartBean cartBean) {
+        this.cartBean = cartBean;
+    }
+    
+    
 }

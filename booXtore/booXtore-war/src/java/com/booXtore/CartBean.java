@@ -133,11 +133,10 @@ public class CartBean implements Serializable {
      * @param book
      * @return recharge la page
      */
-    public String addBook(Books book)
+    public void addBook(Books book)
     {
        // this.cSB.addBook(this.bFL.find(bookId));
         this.cSB.addBook(book);
-        return null;
     }
     
     /**
