@@ -12,7 +12,6 @@ import com.booXtore.service.OrdersFacadeLocal;
 import com.booXtore.service.SellersFacadeLocal;
 import com.booXtore.service.UsersFacadeLocal;
 import java.io.IOException;
-import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import static com.booXtore.utilities.StringUtilities.*;
@@ -22,6 +21,7 @@ import java.util.Locale;
 import javax.ejb.EJB;
 import javax.faces.application.ConfigurableNavigationHandler;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ComponentSystemEvent;
 
@@ -29,7 +29,7 @@ import javax.faces.event.ComponentSystemEvent;
  * Classe responsable de l'inscription et de l'authentification des utilisateurs
  * @author Antoine-Ali
  */
-@Named(value = "AuthenticationBean")
+@ManagedBean(name = "AuthenticationBean")
 @SessionScoped
 public class AuthenticationBean implements Serializable {
 

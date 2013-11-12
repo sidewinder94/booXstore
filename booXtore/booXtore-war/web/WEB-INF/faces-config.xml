@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <managed-bean>
+        <managed-bean-name>cartBean</managed-bean-name>
+        <managed-bean-class>com.booXtore.CartBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>AuthenticationBean</managed-bean-name>
+        <managed-bean-class>com.booXtore.AuthenticationBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>orderbean</managed-bean-name>
+        <managed-bean-class>com.booXtore.OrderBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+        <managed-property>
+            <property-name>cartBean</property-name>
+            <value>#{cartBean}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>user</property-name>
+            <value>#{AuthenticationBean}</value>
+        </managed-property>
+    </managed-bean>
+</faces-config>

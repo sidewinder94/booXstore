@@ -25,6 +25,8 @@ import javax.persistence.Temporal;
 
 @Entity
 @NamedQueries({
+    @NamedQuery(name = "findOrdersByUserId",
+                query = "SELECT o FROM Orders o WHERE o.users = :user"),
     @NamedQuery(name = "findOrdersButState",
             query = "SELECT o FROM Orders o WHERE o.states NOT LIKE :state")
 })
