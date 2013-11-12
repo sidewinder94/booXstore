@@ -7,6 +7,7 @@ package com.booXtore;
 import com.booXtore.domain.Books;
 import com.booXtore.domain.Categories;
 import com.booXtore.domain.States;
+import com.booXtore.service.BooksFacade;
 import com.booXtore.service.BooksFacadeLocal;
 import com.booXtore.service.CategoriesFacadeLocal;
 import com.booXtore.service.StatesFacadeLocal;
@@ -35,8 +36,45 @@ public class ManagementBean implements Serializable {
     @EJB
     private CategoriesFacadeLocal cFL;
     
+    private Categories category;
+    
+    private Books book;
+    
+    private String newCategoryName;
+    
+    private String categoryName;
+    
     public ManagementBean() {
         
+    }
+    
+    
+    
+    public String addCategory(){
+        Categories cat = new Categories();
+        cat.setName(newCategoryName);
+        cFL.create(cat);
+        newCategoryName = null;
+        return null;
+    }
+    
+    
+    public String modifyCategory(Categories category){
+        category.setName(this.categoryName);
+        this.cFL.edit(category);
+        this.categoryName = null;
+        return null;
+    }
+    
+    public String deleteCategory(Categories category){
+        cFL.remove(category);
+        return null;
+    }
+    
+    
+    public String modifyBook(Books book){
+        bFL.edit(book);
+        return null;
     }
     
     /**
@@ -64,7 +102,9 @@ public class ManagementBean implements Serializable {
      */
     public String filterByCategory(Categories category)
     {
-        return "management.xhtml?faces-redirect=true&category=" + category.getId() ;
+        this.category = category;
+        return null;
+  //      return "management.xhtml?faces-redirect=true&category=" + category.getId() ;
     }
     
     /**
@@ -90,7 +130,7 @@ public class ManagementBean implements Serializable {
      * @return une liste de Books
      */
     public List<Books> getBooksByCategory()
-    {
+    {/*
         Categories cat = new Categories();
         cat.setName("toto");
         cat.setId(-1);
@@ -98,19 +138,56 @@ public class ManagementBean implements Serializable {
         {
             cat = cFL.find(getCategoryParam());
         }
-        return this.bFL.getBooksByCategory(cat);
+        return this.bFL.getBooksByCategory(cat);*/
+        
+        return this.bFL.getBooksByCategory(this.category);
     }
     
     
     private Integer getCategoryParam()
-    {
+    {/*
         FacesContext fc = FacesContext.getCurrentInstance();
         String raw = getParam(fc, "category");
         if (raw!= null)
         {
             return Integer.parseInt(raw);
-        }
+        }*/
         return null;
     }
+
+    public Categories getCategory() {
+        return category;
+    }
+
+    public void setCategory(Categories category) {
+        this.category = category;
+    }
+
+    public Books getBook() {
+        return book;
+    }
+
+    public void setBook(Books book) {
+        this.book = book;
+    }
+
+    public String getNewCategoryName() {
+        return newCategoryName;
+    }
+
+    public void setNewCategoryName(String newCategoryName) {
+        this.newCategoryName = newCategoryName;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+    
+    
+    
     
 }

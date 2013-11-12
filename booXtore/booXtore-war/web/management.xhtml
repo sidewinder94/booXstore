@@ -17,7 +17,7 @@
 
     </h:head>
     <h:body>
-        <ui:include src="/WEB-INF/includes/navbar.xhtml"/>
+        
         <c:set value="#{searchProviderBean.categories}" var="categories"/>
         <div id="wrap">
 
@@ -50,7 +50,7 @@
                                     <c:forEach items="#{categories}" var="category" >
                                         <li class="list-group-item">
                                             <c:choose>
-                                                <c:when test="#{managementBean.categorytoManage == category.id}">
+                                                <c:when test="#{managementBean.category == category}">
                                                     <h:commandLink value="#{category.name}" action="#{managementBean.filterByCategory(category)}" class="list-group-item active">
                                                         <span class="badge"></span>
                                                     </h:commandLink>
@@ -130,7 +130,7 @@
                                                     <option>Non classé</option>
                                                 </select>
                                             </td>
-                                            <td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
+                                            <td><h:form><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></h:form></td>
                                         </tr>
 
                                         <c:forEach items="#{managementBean.booksByCategory}" var="book">
@@ -159,8 +159,10 @@
                                                     </h:selectOneMenu>
                                                 </td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
-                                                    <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+                                                    <h:form>
+                                                    <h:commandButton action="#{managementBean.modifyBook(book)}" type="submit" class="btn btn-success"><i class="fa fa-check"></i></h:commandButton>
+                                                    <h:commandButton type="submit" class="btn btn-danger"><i class="fa fa-trash-o"></i></h:commandButton>
+                                                    </h:form>
                                                 </td>
                                             </tr>
                                         </c:forEach>
@@ -189,17 +191,21 @@
                                     </thead>
 
                                     <tbody>
+                                        <h:form> 
+                                            
                                         <tr>
-                                            <td><input type="text" class="form-control" value="Nouvelle catégorie ..."/></td>
-                                            <td><button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
-                                        </tr>
+                                            <td><h:inputText  required="true" pass:placeholder="Nouvelle catégorie..." class="form-control" value="#{managementBean.newCategoryName}"/></td>
+                                            <td><h:commandButton action="#{managementBean.addCategory()}" type="submit" class="btn btn-success" value="+"/></td>
+                                        </tr> </h:form> 
                                         <c:forEach items="#{categories}" var="category" >
-                                            <tr>
-                                                <td><input type="text" class="form-control" value="#{category.name}"/></td>
-                                                <td><button type="button" class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                                <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                                           <h:form> <tr>
+                                                   <td><h:inputText immediate="true" required="true" class="form-control" pass:placeholder="#{category.name}" value="#{managementBean.categoryName}"/></td>
+                                                <td><h:commandButton action="#{managementBean.modifyCategory(category)}" type="submit" class="btn btn-success" value="OK"/></td>
+                                                <td><h:commandButton action="#{managementBean.deleteCategory(category)}" type="submit" class="btn btn-danger" value="Delete"/></td>
                                             </tr>
+                                           </h:form> 
                                         </c:forEach>
+                                           
                                     </tbody>
                                 </table>
                             </div>
