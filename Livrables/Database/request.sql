@@ -8,9 +8,9 @@
 -- Create user
 -- INSERT INTO `users`(`FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES ([value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9])
 -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --
-INSERT IGNORE INTO `userS`(`FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES ("Toto", "Coppée", "toto.coppee@yahoo.fr", "La Basse Lande", 44522, "Pouillé-les-Côteaux", "TCoppee", "azerty");
-INSERT IGNORE INTO `userS`(`FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES ("Tintin", "Dupont", "titin.dupont@gmail.com", "8 Chemin des Chabris", 03450, "Vicq", "Dupont", "123456789");
-INSERT IGNORE INTO `userS`(`FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES ("Fabien", "Ollivier", "fabien.olliver@outlook.com", "3 Rue Pablo Picasso", 30100, "Alès", "Skill", "azerty1");
+INSERT IGNORE INTO `users`(`FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES ("Toto", "Coppée", "toto.coppee@yahoo.fr", "La Basse Lande", 44522, "Pouillé-les-Côteaux", "TCoppee", "azerty");
+INSERT IGNORE INTO `users`(`FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES ("Tintin", "Dupont", "titin.dupont@gmail.com", "8 Chemin des Chabris", 03450, "Vicq", "Dupont", "123456789");
+INSERT IGNORE INTO `users`(`FIRSTNAME`, `LASTNAME`, `MAIL`, `ADDRESS`, `ZIP`, `CITY`, `LOGIN`, `PASSWORD`) VALUES ("Fabien", "Ollivier", "fabien.olliver@outlook.com", "3 Rue Pablo Picasso", 30100, "Alès", "Skill", "azerty1");
 
 -- ----------------------------------------------------------------------- --
 -- Create Seller
