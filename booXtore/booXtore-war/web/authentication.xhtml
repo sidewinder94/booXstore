@@ -48,7 +48,7 @@ and open the template in the editor.
                             <h:message class="error" for="lastName" id="lastNameError" /><br/>
                             <h:inputText requiredMessage="Veuillez entrer votre prénom" id="firstName" label="Prénom" class="form-control" pass:placeholder="Prénom" value="#{AuthenticationBean.firstName}" required="true" />
                             <h:message class="error" for="firstName" id="firstNameError" /><br/>
-                            <h:inputText requiredMessage="Veuillez entrer votre adresse" id="address" label="Adresse" class="form-control" pass:placeholder="Adresse" value="#{AuthenticationBean.address}" required="true"/>
+                            <h:inputText validatorMessage="Votre email est invalide" requiredMessage="Veuillez entrer votre adresse" id="address" label="Adresse" class="form-control" pass:placeholder="Adresse" value="#{AuthenticationBean.address}" required="true"><f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/></h:inputText>
                             <h:message class="error" for="address" id="addressError" /><br/>
                             <h:inputText requiredMessage="Veuillez entrer votre code postal" id="ZIP" label="Code Postal" class="form-control" pass:placeholder="Code Postal" value="#{AuthenticationBean.ZIP}" required="true" />
                             <h:message class="error" for="ZIP" id="ZIPError" /><br/>
@@ -60,6 +60,8 @@ and open the template in the editor.
                             <h:message class="error" for="newlogin" id="newloginError" /><br/>
                             <h:inputSecret requiredMessage="Veuillez entrer votre mot de passe" id="newpassword" label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" value="#{AuthenticationBean.password}" required="true"/>
                             <h:message class="error errorForPassword" for="newpassword" id="newpasswordError" /><br/>
+                            <h:inputSecret requiredMessage="Veuillez confirmer votre mot de passe" id="newpasswordConfirm" label="Confirmation du mot de passe" class="form-control errorForPassword" pass:placeholder="Confirmer mot de passe" value="#{AuthenticationBean.confirmPassword}" required="true"/>
+                            <h:message class="error errorForPassword" for="newpasswordConfirm" id="newpasswordConfirmError" /><br/>
                             <h:commandButton  class="btn btn-lg btn-primary btn-block" type="submit" value="S'inscrire" action="#{AuthenticationBean.userSignIn()}" />
                         </h:form>
                     </div>
