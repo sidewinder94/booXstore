@@ -101,13 +101,11 @@
                                 </p>
                                 
                             </c:when>
-                            <!-- NE FONCTIONNE PAS (cf action to product.xhtml)
                             <c:otherwise>
-                                <c:set var="bookId" value="#{bookBean.book.id}"/>
                                 <h:form >
-                                    <h:commandLink class="btn btn-success" value="Ajouter au panier" action="#{cartBean.addBook(bookId)}"/>
+                                    <h:commandLink class="btn btn-success" value="Ajouter au panier" action="#{bookBean.addBookToCart()}"/>
                                 </h:form>
-                            </c:otherwise>-->
+                            </c:otherwise>
                         </c:choose>
                         
 

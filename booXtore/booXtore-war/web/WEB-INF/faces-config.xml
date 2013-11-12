@@ -17,6 +17,16 @@
     </managed-bean>
     
     <managed-bean>
+        <managed-bean-name>bookBean</managed-bean-name>
+        <managed-bean-class>com.booXtore.BookBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+        <managed-property>
+            <property-name>cartBean</property-name>
+            <value>#{cartBean}</value>
+        </managed-property>
+    </managed-bean>
+    
+    <managed-bean>
         <managed-bean-name>searchProviderBean</managed-bean-name>
         <managed-bean-class>com.booXtore.SearchProviderBean</managed-bean-class>
         <managed-bean-scope>view</managed-bean-scope>
