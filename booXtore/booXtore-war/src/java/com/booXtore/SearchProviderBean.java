@@ -44,12 +44,20 @@ public class SearchProviderBean implements Serializable {
     public SearchProviderBean() {
     }
 
+    /**
+     *
+     * @return la liste de toutes les categories
+     */
     public List<Categories> getCategories() {
         List<Categories> result = cFL.findAll();
 
         return result;
     }
 
+    /**
+     *
+     * @return retourne la categorie indiquée dans l'url
+     */
     public Categories getSearchCategory() {
         FacesContext fc = FacesContext.getCurrentInstance();
         if (getParam(fc, "category") != null) {
@@ -63,6 +71,11 @@ public class SearchProviderBean implements Serializable {
         this.searchCategory = searchCategory;
     }
 
+    /**
+     *
+     * @return l'url permettant d'effectuer une recherche avec
+     * la catégorie et le pattern de recherche
+     */
     public String launchSearch() {
         String cat = "";
         if ((this.searchCategory != null)
@@ -73,6 +86,11 @@ public class SearchProviderBean implements Serializable {
 
     }
 
+    /**
+     *
+     * @return un string contenant le pattern de recherche
+     * gère l'encodage des données
+     */
     public String getSearch() {
         FacesContext fc = FacesContext.getCurrentInstance();
         String searchParam = getParam(fc, "search");
@@ -87,6 +105,11 @@ public class SearchProviderBean implements Serializable {
         this.search = decode(search);
     }
 
+    /**
+     *
+     * @return une catégorie par défaut appelée "Toutes Catégories"
+     * permettant de rechercher sur toutes les catégories
+     */
     public Categories getDefaultCategorySearch() {
         Categories def = new Categories();
         def.setName("Toutes Catégories");
@@ -94,6 +117,11 @@ public class SearchProviderBean implements Serializable {
         return def;
     }
 
+    /**
+     * effectue la recherche
+     * @return la liste de livres en gérant les pages et le nombre de livres
+     * par page
+     */
     public List<Books> getSearchResults() {
         FacesContext fc = FacesContext.getCurrentInstance();
         if (getParam(fc, "category") != null) {
@@ -126,18 +154,38 @@ public class SearchProviderBean implements Serializable {
         }
     }
 
+    /**
+     *
+     * @return l'intégralité des livres de la base
+     */
     public List<Books> getAllBooks() {
         return this.bFL.findAll();
     }
 
+    /**
+     *
+     * @param book
+     * @return un string contenant le nom du premier autheur d'un livre
+     * pour un meilleur affichage dans le cas ou il y a plusieurs autheurs
+     * 
+     */
     public String getBookFirstAuthor(Books book) {
         return book.getAuthors().get(0).getName();
     }
 
+    /**
+     * génère l'url pour atterir sur la page produit d'un livre
+     * @param book
+     * @return l'url de la page produit du livre
+     */
     public String generateBookLink(Books book) {
         return "product.xhtml?id=" + book.getId();
     }
 
+    /**
+     *
+     * @return un Integer contenant le numéro de page actuel
+     */
     public Integer getCurrentPage() {
         FacesContext fc = FacesContext.getCurrentInstance();
         if (getParam(fc, "page") == null) {
@@ -160,6 +208,11 @@ public class SearchProviderBean implements Serializable {
         this.pages = pages;
     }
 
+    /**
+     *
+     * @param page
+     * @return l'url permettant de changer de page
+     */
     public String goToPage(Integer page) {
         return launchSearch() + "&page=" + page;
     }
