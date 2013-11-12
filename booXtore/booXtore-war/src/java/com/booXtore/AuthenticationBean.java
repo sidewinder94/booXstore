@@ -15,6 +15,7 @@ import java.io.IOException;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import static com.booXtore.utilities.StringUtilities.*;
+import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.util.List;
 import java.util.Locale;
@@ -96,14 +97,14 @@ public class AuthenticationBean implements Serializable {
      * Change le mot de passe de l'utilisateur
      * @return 
      */
-    public String changePassword(){
+    public String changePassword() throws NoSuchAlgorithmException{
         if(!newPassword.equals(confirmPassword)){
             FacesContext.getCurrentInstance().addMessage("passwordForm:newPassConfirm", new FacesMessage("Le mot de passe ne correspond pas"));
             return null;
         }
-        else if(uFL.checkValidUser(login, password) != null){
+        else if(uFL.checkValidUser(login, generateSHA256(password)) != null){
             //mise a jour du mot de passe
-            user.setPassword(newPassword);
+            user.setPassword(generateSHA256(newPassword));
             uFL.edit(user);
             FacesContext.getCurrentInstance().addMessage("passwordForm:passwordButton", new FacesMessage("Votre mot de passe a été mis à jour"));
             return null;
@@ -143,8 +144,11 @@ public class AuthenticationBean implements Serializable {
      * Inscrit un nouvel utilisateur
      * @return l'addresse de l'accueil pour rediriger l'utilisateur
      */
-    public String userSignIn(){
-        
+    public String userSignIn() throws NoSuchAlgorithmException{
+        if(!password.equals(confirmPassword)){
+            FacesContext.getCurrentInstance().addMessage("signinForm:newpasswordConfirm", new FacesMessage("Le mot de passe ne correspond pas"));
+            return null;
+        }
         if(uFL.checkValidLogin(login)){
             FacesContext.getCurrentInstance().addMessage("signinForm:newlogin", new FacesMessage("Ce nom d'utilisateur existe déjà"));
             return null;
@@ -158,7 +162,7 @@ public class AuthenticationBean implements Serializable {
             user.setLastName(lastName);
             user.setLogin(login);
             user.setMail(mail);
-            user.setPassword(password);
+            user.setPassword(generateSHA256(password));
             
             uFL.create(user);
             isConnected = true;
@@ -206,9 +210,9 @@ public class AuthenticationBean implements Serializable {
      * @return une redirection vers la page d'index si la
      * connexion a réussi, sinon affiche un message d'erreur
      */
-    public String userAuthentication() {
+    public String userAuthentication() throws NoSuchAlgorithmException {
         
-        user = uFL.checkValidUser(login, password);
+        user = uFL.checkValidUser(login, generateSHA256(password));
         
         
         if (user != null) {
@@ -235,9 +239,9 @@ public class AuthenticationBean implements Serializable {
      * @return renvoie le libraire vers la page d'administration si
      * la connexion a réussie, sinon affiche un message d'erreur
      */
-    public String sellerAuthentication() {
+    public String sellerAuthentication() throws NoSuchAlgorithmException {
         
-        seller = sFL.checkValidSeller(login, password);
+        seller = sFL.checkValidSeller(login, generateSHA256(password));
         
         
         if (seller != null) {

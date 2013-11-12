@@ -8,6 +8,8 @@ import com.booXtore.domain.Books;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -62,5 +64,27 @@ public class StringUtilities {
      */
     public static String generateBookLink(Books book) {
         return "product.xhtml?id=" + book.getId();
+    }
+    
+    /**
+     * Retourne le String passé en paramètre hashé par la méthode SHA-256
+     * @param string
+     * @return a String
+     * @throws NoSuchAlgorithmException
+     */
+    public static String generateSHA256(String string) throws NoSuchAlgorithmException {
+
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        md.update(string.getBytes());
+
+        byte byteData[] = md.digest();
+
+        //convert the byte to hex format
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < byteData.length; i++) {
+            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+        }
+
+        return sb.toString();
     }
 }
