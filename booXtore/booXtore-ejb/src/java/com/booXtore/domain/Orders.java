@@ -6,6 +6,7 @@ package com.booXtore.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,8 +30,7 @@ import javax.persistence.Temporal;
 })
 
 public class Orders implements Serializable {
-    @OneToMany(mappedBy = "orderId")
-    private List<BookOrders> bookOrders;
+    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,6 +44,9 @@ public class Orders implements Serializable {
     
     @ManyToOne
     private StateOrders states;
+    
+    @OneToMany(mappedBy = "orderId")
+    private List<BookOrders> bookOrders;
     
     private Float totalPrice;
 
@@ -169,5 +172,7 @@ public class Orders implements Serializable {
     public String toString() {
         return "com.booXtore.domain.Orders[ id=" + id + " ]";
     }
+
+
     
 }

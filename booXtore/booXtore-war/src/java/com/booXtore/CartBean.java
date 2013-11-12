@@ -33,8 +33,6 @@ public class CartBean implements Serializable {
     private BooksFacadeLocal bFL;
     
     private HashMap<Books, Integer> cart;
-    
-    private AuthenticationBean authBean;
 
     /**
      * Creates a new instance of CartBean
@@ -85,12 +83,9 @@ public class CartBean implements Serializable {
     }
     
     public String verifyOrder(){
-        if(this.cSB.getContent().size() > 0 && authBean.getIsConnected()){
+        if(this.cSB.getContent().size() > 0){
             
             return "checkout.xhtml?faces-redirect=true";
-        }
-        else if(this.cSB.getContent().size() > 0 && !authBean.getIsConnected()){
-            return "authentication.xhtml?faces-redirect=true";
         }
         else{
             

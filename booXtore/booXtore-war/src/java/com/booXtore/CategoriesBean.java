@@ -30,6 +30,10 @@ public class CategoriesBean {
     @EJB
     private CategoriesFacadeLocal cFL;
     
+    /**
+     * Retourne la liste de toutes les catégories
+     * @return une liste de Categories
+     */
     public List<Categories> getCategories()
     {
         return cFL.findAll();
