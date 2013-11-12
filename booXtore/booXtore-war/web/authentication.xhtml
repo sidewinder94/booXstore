@@ -48,13 +48,13 @@ and open the template in the editor.
                             <h:message class="error" for="lastName" id="lastNameError" /><br/>
                             <h:inputText requiredMessage="Veuillez entrer votre prénom" id="firstName" label="Prénom" class="form-control" pass:placeholder="Prénom" value="#{AuthenticationBean.firstName}" required="true" />
                             <h:message class="error" for="firstName" id="firstNameError" /><br/>
-                            <h:inputText validatorMessage="Votre email est invalide" requiredMessage="Veuillez entrer votre adresse" id="address" label="Adresse" class="form-control" pass:placeholder="Adresse" value="#{AuthenticationBean.address}" required="true"><f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/></h:inputText>
+                            <h:inputText requiredMessage="Veuillez entrer votre adresse" id="address" label="Adresse" class="form-control" pass:placeholder="Adresse" value="#{AuthenticationBean.address}" required="true"/>
                             <h:message class="error" for="address" id="addressError" /><br/>
                             <h:inputText requiredMessage="Veuillez entrer votre code postal" id="ZIP" label="Code Postal" class="form-control" pass:placeholder="Code Postal" value="#{AuthenticationBean.ZIP}" required="true" />
                             <h:message class="error" for="ZIP" id="ZIPError" /><br/>
                             <h:inputText requiredMessage="Veuillez entrer votre ville" id="city" label="Ville" class="form-control" pass:placeholder="Ville" value="#{AuthenticationBean.city}" required="true" />
                             <h:message class="error" for="city" id="cityError" /><br/>
-                            <h:inputText requiredMessage="Veuillez entrer votre adresse mail" id="mail" label="Mail" class="form-control" pass:placeholder="Mail" value="#{AuthenticationBean.mail}" required="true"/>
+                            <h:inputText validatorMessage="Votre email est invalide" requiredMessage="Veuillez entrer votre adresse mail" id="mail" label="Mail" class="form-control" pass:placeholder="Mail" value="#{AuthenticationBean.mail}" required="true"><f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/></h:inputText>
                             <h:message class="error" for="mail" id="mailError" /><br/>
                             <h:inputText requiredMessage="Veuillez entrer votre nom d'utilisateur" id="newlogin" label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" value="#{AuthenticationBean.login}" required="true"/>
                             <h:message class="error" for="newlogin" id="newloginError" /><br/>

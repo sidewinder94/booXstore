@@ -28,7 +28,7 @@ import javax.persistence.Temporal;
     @NamedQuery(name = "findOrdersByUserId",
                 query = "SELECT o FROM Orders o WHERE o.users = :user"),
     @NamedQuery(name = "findOrdersButState",
-            query = "SELECT o FROM Orders o WHERE o.states NOT LIKE :state")
+            query = "SELECT o FROM Orders o WHERE o.states <> :state")
 })
 
 public class Orders implements Serializable {
