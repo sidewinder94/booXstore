@@ -9,6 +9,7 @@ import com.booXtore.domain.Categories;
 import com.booXtore.service.BooksFacadeLocal;
 import com.booXtore.service.CategoriesFacadeLocal;
 import com.booXtore.service.SettingsFacadeLocal;
+import com.booXtore.utilities.StringUtilities;
 import static com.booXtore.utilities.StringUtilities.*;
 import java.io.Serializable;
 import java.util.List;
@@ -162,6 +163,11 @@ public class SearchProviderBean implements Serializable {
     public List<Books> getAllBooks() {
         return this.bFL.findAll();
     }
+    
+    public String generateBookLink(Books book)
+    {
+        return StringUtilities.generateBookLink(book);
+    }
 
     /**
      * Retourne le nom de l'auteur principal du livre
@@ -172,15 +178,6 @@ public class SearchProviderBean implements Serializable {
      */
     public String getBookFirstAuthor(Books book) {
         return book.getAuthors().get(0).getName();
-    }
-
-    /**
-     * génère l'url pour atterir sur la page produit d'un livre
-     * @param book
-     * @return l'url de la page produit du livre
-     */
-    public String generateBookLink(Books book) {
-        return "product.xhtml?id=" + book.getId();
     }
 
     /**

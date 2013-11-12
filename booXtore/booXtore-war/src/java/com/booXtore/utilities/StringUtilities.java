@@ -4,6 +4,7 @@
  */
 package com.booXtore.utilities;
 
+import com.booXtore.domain.Books;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
@@ -53,5 +54,13 @@ public class StringUtilities {
         DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRENCH);
         return df.format(format);
     }
-    
+ 
+     /**
+     * génère l'url pour atterir sur la page produit d'un livre
+     * @param book
+     * @return l'url de la page produit du livre
+     */
+    public static String generateBookLink(Books book) {
+        return "product.xhtml?id=" + book.getId();
+    }
 }
