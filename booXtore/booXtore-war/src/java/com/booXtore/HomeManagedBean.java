@@ -12,6 +12,7 @@ import java.util.Map.Entry;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import static com.booXtore.utilities.StringUtilities.*;
+import java.io.Serializable;
 import javax.faces.bean.ViewScoped;
 
 /**
@@ -20,8 +21,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean
 @ViewScoped
-public class HomeManagedBean {
-
+public class HomeManagedBean implements Serializable{
     @EJB
     private BooksFacadeLocal bFL;
     private List<Books> bestSellers;
