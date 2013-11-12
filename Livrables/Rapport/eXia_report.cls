@@ -1,7 +1,7 @@
 % exia_report - document class -------------------------------------------------
 
 \ProvidesClass{exia_report}
-\LoadClass[a4paper]{article}
+\LoadClass[a4paper, twoside]{article}
 
 \usepackage[frenchb]{babel}
 \usepackage[utf8]{inputenc}
