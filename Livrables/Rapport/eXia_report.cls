@@ -6,7 +6,7 @@
 \usepackage[frenchb]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx, hyperref, verbatim, pdflscape, float, standalone}
+\usepackage{graphicx, hyperref, verbatim, pdflscape, float, standalone, pdfpages}
 
 \graphicspath{ {img/} }
 \renewcommand{\familydefault}{\sfdefault}
