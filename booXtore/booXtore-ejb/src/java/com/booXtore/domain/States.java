@@ -28,30 +28,54 @@ public class States implements Serializable {
     @OneToMany(mappedBy = "states")
     private List<Books> books;
 
+    /**
+     * Retourne la liste des livres de l'état en question
+     * @return
+     */
     public List<Books> getBooks() {
         return books;
     }
 
+    /**
+     * Modifie la liste des livres de l'état
+     * @param books
+     */
     public void setBooks(List<Books> books) {
         this.books = books;
     }
     
     
 
+    /**
+     * Retourne le nom de l'état
+     * @return un String
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Modifie le nom de l'état
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
     
     
 
+    /**
+     * Retourne l'ID de l'état
+     * @return un Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'ID de l'état
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }

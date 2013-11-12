@@ -20,7 +20,7 @@ import javax.ejb.Local;
 public interface OrdersFacadeLocal {
 
     /**
-     * Peremt de créer une entité
+     * Permet de créer une entité
      * @param entity l'entité à créer
      */
     void create(Orders orders);
@@ -63,8 +63,19 @@ public interface OrdersFacadeLocal {
      */
     int count();
 
+    /**
+     * Renvoie l'historique des commandes d'un client
+     * @param user
+     * @return Une liste d'Orders
+     */
     public List<Orders> getOrdersByUser(Users user);
 
+    /**
+     * Renvoie une liste de commande en ommettant celles de l'état
+     * passé en paramètre
+     * @param state
+     * @return Une liste d'Orders
+     */
     List<Orders> findAllOrdersButState(StateOrders state);
     
 }

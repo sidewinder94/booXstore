@@ -36,85 +36,168 @@ public class Users implements Serializable {
     @OneToMany(mappedBy = "users")
     private List<Orders> orders;
 
+    /**
+     * Constructeur par défaut de Users
+     */
     public Users() {
     }
 
+    /**
+     * Retourne le liste des commandes d'un client
+     * @return une liste de Orders
+     */
     public List<Orders> getOrders() {
         return orders;
     }    
     
+    /**
+     * Modifie la liste de commandes du client
+     * @param orders
+     */
     public void setOrders(List<Orders> orders) {
         this.orders = orders;
     }
     
+    /**
+     * Retourne le prénom du client
+     * @return un String
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     * Modifie le prénom du client
+     * @param firtName
+     */
     public void setFirstName(String firtName) {
         this.firstName = firtName;
     }
 
+    /**
+     * Retourne le nom de famille du client
+     * @return un String
+     */
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     * Modifie le nom de famille du client
+     * @param lastName
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     * Retourne le mail du client
+     * @return un String
+     */
     public String getMail() {
         return mail;
     }
 
+    /**
+     * Modifie le mail du client
+     * @param mail
+     */
     public void setMail(String mail) {
         this.mail = mail;
     }
 
+    /**
+     * Retourne l'adresse du client
+     * @return un String
+     */
     public String getAddress() {
         return address;
     }
 
+    /**
+     * Modifie l'adresse du client
+     * @param address
+     */
     public void setAddress(String address) {
         this.address = address;
     }
 
+    /**
+     * Retourne le code postal du client
+     * @return un String
+     */
     public String getZIP() {
         return ZIP;
     }
 
+    /**
+     * Modifie le code postal du client
+     * @param ZIP
+     */
     public void setZIP(String ZIP) {
         this.ZIP = ZIP;
     }
 
+    /**
+     * Retourne la ville du client
+     * @return un String
+     */
     public String getCity() {
         return city;
     }
 
+    /**
+     * Modifie la ville du client
+     * @param city
+     */
     public void setCity(String city) {
         this.city = city;
     }
 
+    /**
+     * Retourne le login du client
+     * @return un String
+     */
     public String getLogin() {
         return login;
     }
 
+    /**
+     * Modifie le login du client
+     * @param login
+     */
     public void setLogin(String login) {
         this.login = login;
     }
 
+    /**
+     * Retourne le password du client
+     * @return un String
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * Modifie le password du client
+     * @param password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * Retourne l'ID du client
+     * @return un Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'ID du client
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }

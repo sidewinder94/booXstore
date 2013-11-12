@@ -17,14 +17,35 @@ public interface CartSessionBeanLocal {
 
     HashMap<Books, Integer> getContent();
 
+    /**
+     * Ajoute un livre au panier, si le livre est déjà dans
+     * le panier, ajoute une unité de quantité dans le panier
+     * @param book
+     */
     void addBook(Books book);
 
+    /**
+     * Vide le panier
+     */
     void resetCart();
 
+    /**
+     * Retire un livre du panier
+     * @param book
+     */
     void removeBook(Books book);
 
+    /**
+     * Return the total price of the items in the cart
+     * @return The total price of the items in the cart
+     */
     Float getTotalPrice();
 
+    /**
+     * Enlève une unité d'un livre du panier, enlève le livre
+     * si la quantité devient zéro
+     * @param book le livre en question
+     */
     public void decrementBook(Books book);
     
 }

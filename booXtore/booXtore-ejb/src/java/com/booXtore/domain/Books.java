@@ -77,104 +77,200 @@ public class Books implements Serializable {
     @ManyToMany(mappedBy = "books")
     private List<Authors> authors;
 
+    /**
+     * Retourne l'état d'un livre
+     * @return un States
+     */
     public States getStates() {
         return states;
     }
 
+    /**
+     * Modifie l'état d'un livre
+     * @param states
+     */
     public void setStates(States states) {
         this.states = states;
     }
     
     
 
+    /**
+     * Retourne une liste de BookOrders d'un livre
+     * @return une liste de BookOrders
+     */
     public List<BookOrders> getBookOrders() {
         return bookOrders;
     }
 
+    /**
+     * Retourne le nom de l'image d'un livre
+     * @return un String
+     */
     public String getImageName() {
         return imageName;
     }
 
+    /**
+     * Modifie le nom de l'image d'un livre
+     * @param imageName
+     */
     public void setImageName(String imageName) {
         this.imageName = imageName;
     }
 
     
     
+    /**
+     * Modifie la liste de BookOrders d'un livre
+     * @param bookOrders
+     */
     public void setBookOrders(List<BookOrders> bookOrders) {
         this.bookOrders = bookOrders;
     }
 
+    /**
+     * Retourne la liste des auteurs d'un livre
+     * @return une liste d'Authors
+     */
     public List<Authors> getAuthors() {
         return authors;
     }
 
+    /**
+     * Modifie la liste des auteurs d'un livre
+     * @param authors
+     */
     public void setAuthors(List<Authors> authors) {
         this.authors = authors;
     }
     
     
 
+    /**
+     * Retourne le titre d'un livre
+     * @return un String
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     * Modifie le titre d'un livre
+     * @param title
+     */
     public void setTitle(String title) {
         this.title = title;
     }
 
+    /**
+     * Retourne la catégorie d'un livre
+     * @return un Categories
+     */
     public Categories getCategory() {
         return category;
     }
 
+    /**
+     * Modifie la catégorie d'un livre
+     * @param category
+     */
     public void setCategory(Categories category) {
         this.category = category;
     }
 
+    /**
+     * Retourne le stock d'un livre
+     * @return un Integer
+     */
     public Integer getSupply() {
         return supply;
     }
 
+    /**
+     * Modifie le stock d'un livre
+     * @param supply
+     */
     public void setSupply(Integer supply) {
         this.supply = supply;
     }
 
+    /**
+     * Retourne le seuil d'approvisionnement d'un livre
+     * @return un Integer
+     */
     public Integer getThreshold() {
         return threshold;
     }
 
+    /**
+     * Modifie le seuil d'approvisionnement d'un livre
+     * @param threshold
+     */
     public void setThreshold(Integer threshold) {
         this.threshold = threshold;
     }
 
+    /**
+     * Retourne le résumé d'un livre
+     * @return un String
+     */
     public String getSummary() {
         return summary;
     }
 
+    /**
+     * Modifie le résumé d'un livre
+     * @param summary
+     */
     public void setSummary(String summary) {
         this.summary = summary;
     }
 
+    /**
+     * Retourne la date de sortie d'un livre
+     * @return une Date
+     */
     public Date getReleaseDate() {
         return releaseDate;
     }
 
+    /**
+     * Modifie la date de sortie d'un livre
+     * @param releaseDate
+     */
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
     }
 
+    /**
+     * Retourne le prix d'un livre
+     * @return un Float
+     */
     public Float getPrice() {
         return price;
     }
 
+    /**
+     * Modifie le prix d'un livre
+     * @param price
+     */
     public void setPrice(Float price) {
         this.price = price;
     }
 
+    /**
+     * Retourne l'éditeur d'un livre
+     * @return un Publishers
+     */
     public Publishers getPublisher() {
         return publisher;
     }
 
+    /**
+     * Modifie l'éditeur d'un livre
+     * @param publisher
+     */
     public void setPublisher(Publishers publisher) {
         this.publisher = publisher;
     }
@@ -182,10 +278,18 @@ public class Books implements Serializable {
     
     
     
+    /**
+     * Retourne l'ID d'un livre
+     * @return un Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'ID d'un livre
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }

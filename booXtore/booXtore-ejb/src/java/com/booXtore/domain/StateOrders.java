@@ -31,30 +31,54 @@ public class StateOrders implements Serializable {
     @OneToMany(mappedBy = "states")
     private List<Orders> orders;
 
+    /**
+     * Retourne la liste des commandes liées à un état
+     * @return une liste d'Orders
+     */
     public List<Orders> getOrders() {
         return orders;
     }
 
+    /**
+     * Modifie une liste de commandes liées à un état
+     * @param orders
+     */
     public void setOrders(List<Orders> orders) {
         this.orders = orders;
     }
     
     
 
+    /**
+     * Retourne le nom d'un état de commande
+     * @return un String
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Modifie le nom d'un état
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
     
     
 
+    /**
+     * Retourne l'id d'un état de commande
+     * @return un Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'ID d'un état de commande
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }

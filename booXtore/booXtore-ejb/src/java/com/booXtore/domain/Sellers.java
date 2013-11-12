@@ -25,26 +25,50 @@ public class Sellers implements Serializable {
     
     private String password;
 
+    /**
+     * Retourne le password du Seller
+     * @return un String
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * Modifie le password du Seller
+     * @param password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * Retourne le login du Seller
+     * @return un String
+     */
     public String getLogin() {
         return login;
     }
 
+    /**
+     * Modifie le login du Seller
+     * @param login
+     */
     public void setLogin(String login) {
         this.login = login;
     }
     
+    /**
+     * Retourne l'ID du seller
+     * @return un Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'ID du seller
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }
