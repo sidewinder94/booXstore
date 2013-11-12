@@ -7,13 +7,22 @@
 package com.booXtore;
 
 import com.booXtore.domain.BookOrders;
+import com.booXtore.domain.Books;
 import com.booXtore.domain.Orders;
 import com.booXtore.domain.StateOrders;
 import com.booXtore.domain.States;
 import com.booXtore.domain.Users;
+import com.booXtore.service.BookOrdersFacadeLocal;
+import com.booXtore.service.CartSessionBean;
+import com.booXtore.service.CartSessionBeanLocal;
 import com.booXtore.service.OrdersFacadeLocal;
 import com.booXtore.service.StateOrdersFacadeLocal;
 import com.booXtore.service.StatesFacadeLocal;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
@@ -32,14 +41,38 @@ public class OrderBean
     private Orders order;
     private BookOrders bookorder;
     private List<Orders> filteredOrders;
+    private Float totalPrice;
     
     @EJB
     private OrdersFacadeLocal oFL;
     
     @EJB
+    private BookOrdersFacadeLocal boFL;
+    
+    private HashMap<Books, Integer> cart;
+    
+    @EJB
     private StateOrdersFacadeLocal sFL;
     
     private List<BookOrders> bookordersList;
+    
+    private String cardNumber;
+    
+    public String validateOrder(){
+        order = new Orders();
+   //     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        //get current date time with Date()
+    //    Date date = new Date();
+           
+//        order.setOrderDate(dateFormat.format(date));
+        order.setTotalPrice(totalPrice);
+        order.setUsers(user);
+  //      order.setBookOrders(this.cSB.getContent());
+        
+        this.oFL.create(order);
+        
+        return null;
+    }
 
     /**
      * Retourne la liste des commandes non envoyées
@@ -134,4 +167,41 @@ public class OrderBean
     public void setBookorder(BookOrders bookorder) {
         this.bookorder = bookorder;
     }
+
+    /**
+     * Retourne le numéro de carte
+     * @return un String
+     */
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    /**
+     * Modifie le numéro de carte
+     * @param numberCard
+     */
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public HashMap<Books, Integer> getCart() {
+        return cart;
+    }
+
+    public void setCart(HashMap<Books, Integer> cart) {
+        this.cart = cart;
+    }
+
+    public Float getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Float totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+    
+    
+    
+    
+    
 }
