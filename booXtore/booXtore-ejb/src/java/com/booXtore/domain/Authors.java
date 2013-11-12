@@ -28,27 +28,51 @@ public class Authors implements Serializable {
     @ManyToMany
     private List<Books> books;
 
+    /**
+     * Retourne la liste de Books liés à l'auteur
+     * @return une liste de Book
+     */
     public List<Books> getBooks() {
         return books;
     }
 
+    /**
+     * Lie la liste de Books a l'auteur
+     * @param books
+     */
     public void setBooks(List<Books> books) {
         this.books = books;
     }
     
 
+    /**
+     *
+     * @return le nom de l'auteur
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * modifie le nom de l'auteur
+     * @param name 
+     */
     public void setName(String name) {
         this.name = name;
     }
     
+    /**
+     * Retourne l'ID de l'auteur
+     * @return un Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'ID de l'auteur
+     * @param id 
+     */
     public void setId(Integer id) {
         this.id = id;
     }

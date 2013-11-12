@@ -23,19 +23,35 @@ public class Settings implements Serializable {
 
     private Integer articlesPerPage;
 
+    /**
+     * Retourne le nombre d'articles par page
+     * @return un Integer
+     */
     public Integer getArticlesPerPage() {
         return articlesPerPage;
     }
 
+    /**
+     * Modifie le nombre d'articles par page
+     * @param articlesPerPage
+     */
     public void setArticlesPerPage(Integer articlesPerPage) {
         this.articlesPerPage = articlesPerPage;
     }
     
     
+    /**
+     * Retourne L'ID de l'enregistrement de setting
+     * @return un Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'ID de l'enregistrement de setting
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }

@@ -25,7 +25,7 @@ import javax.persistence.Temporal;
 @Entity
 @NamedQueries({
     @NamedQuery(name = "findOrdersButState",
-            query = "SELECT o FROM Orders o WHERE o.states != :state")
+            query = "SELECT o FROM Orders o WHERE o.states NOT LIKE :state")
 })
 
 public class Orders implements Serializable {
@@ -47,52 +47,100 @@ public class Orders implements Serializable {
     
     private Float totalPrice;
 
+    /**
+     * 
+     * @return une Liste de BookOrders
+     */
     public List<BookOrders> getBookOrders() {
         return bookOrders;
     }
 
+    /**
+     * Modifie une liste de BookOrders
+     * @param bookOrders
+     */
     public void setBookOrders(List<BookOrders> bookOrders) {
         this.bookOrders = bookOrders;
     }
 
+    /**
+     *  Retourne l'état de la commande
+     * @return un StateOrders
+     */
     public StateOrders getStates() {
         return states;
     }
 
+    /**
+     * Modifie l'état de la commande
+     * @param states un état
+     */
     public void setStates(StateOrders states) {
         this.states = states;
     }
     
     
 
+    /**
+     * Retourne le client de la commande
+     * @return un Users
+     */
     public Users getUsers() {
         return users;
     }
 
+    /**
+     * Modifie le client de la commande
+     * @param users
+     */
     public void setUsers(Users users) {
         this.users = users;
     }
 
+    /**
+     * Retourne la date de la commande
+     * @return une Date
+     */
     public Date getOrderDate() {
         return orderDate;
     }
 
+    /**
+     * Modifie la date de la commande
+     * @param orderDate
+     */
     public void setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
     }
 
+    /**
+     * Retoune le prix total de la commande
+     * @return un Float
+     */
     public Float getTotalPrice() {
         return totalPrice;
     }
 
+    /**
+     * Modifie le prix total de la commande
+     * @param totalPrice
+     */
     public void setTotalPrice(Float totalPrice) {
         this.totalPrice = totalPrice;
     }
         
+    /**
+     * Retourne l'ID de la commande
+     * @return un Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'ID de la commande
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }

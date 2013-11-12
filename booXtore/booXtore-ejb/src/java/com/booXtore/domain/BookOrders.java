@@ -30,34 +30,66 @@ public class BookOrders implements Serializable {
     private Orders orderId;
     private Integer quantity;
 
+    /**
+     * Retourne le livre concerné par la liaison BookOrder
+     * @return un Books
+     */
     public Books getBookId() {
         return bookId;
     }
 
+    /**
+     * Modifie le livre concerné par la liaison BookOrder
+     * @param bookId
+     */
     public void setBookId(Books bookId) {
         this.bookId = bookId;
     }
 
+    /**
+     * Retourne la commande concernée
+     * @return
+     */
     public Orders getOrderId() {
         return orderId;
     }
 
+    /**
+     * Modifie la commande concernée
+     * @param orderId
+     */
     public void setOrderId(Orders orderId) {
         this.orderId = orderId;
     }
 
+    /**
+     *
+     * @return la quantité de livres concerné
+     */
     public Integer getQuantity() {
         return quantity;
     }
 
+    /**
+     * Modifie la quantité de livres concerné
+     * @param quantity
+     */
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
+    /**
+     * 
+     * @return L'id de la liaison
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'id de la liaison
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }

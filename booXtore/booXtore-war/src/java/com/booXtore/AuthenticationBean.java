@@ -130,7 +130,7 @@ public class AuthenticationBean implements Serializable {
     
     /**
      * Termine la session de l'utilisateur, le déconnectant
-     * @return l'adresse de la page de redirection
+     * @return l'addresse de l'accueil pour rediriger l'utilisateur
      */
     public String logout()
     {
@@ -141,7 +141,7 @@ public class AuthenticationBean implements Serializable {
     
     /**
      * Inscrit un nouvel utilisateur
-     * @return l'adresse de la page de redirection
+     * @return l'addresse de l'accueil pour rediriger l'utilisateur
      */
     public String userSignIn(){
         
@@ -203,7 +203,8 @@ public class AuthenticationBean implements Serializable {
     
     /**
      * Authentifie le visiteur en tant qu'utilisateur
-     * @return 
+     * @return une redirection vers la page d'index si la
+     * connexion a réussi, sinon affiche un message d'erreur
      */
     public String userAuthentication() {
         
@@ -231,7 +232,8 @@ public class AuthenticationBean implements Serializable {
     
     /**
      * Authentifie le visiteur en tant que libraire
-     * @return 
+     * @return renvoie le libraire vers la page d'administration si
+     * la connexion a réussie, sinon affiche un message d'erreur
      */
     public String sellerAuthentication() {
         
@@ -241,7 +243,7 @@ public class AuthenticationBean implements Serializable {
         if (seller != null) {
             
             //redirection vers la page d'accueil d'administration
-            return "index.xhtml?faces-redirect=true";
+            return "management.xhtml?faces-redirect=true";
             
         } else {
             //Sinon afficher une erreur
@@ -256,6 +258,12 @@ public class AuthenticationBean implements Serializable {
     
     
     
+    /**
+     *
+     * @param toFormat date a formater
+     * @return renvoie une date sous le format
+     * français commun (30 avril 2013)
+     */
     public String dateFormat(Orders toFormat)
     {
         DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRENCH);

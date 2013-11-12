@@ -23,21 +23,37 @@ public class Categories implements Serializable {
 
     private String name;
 
+    /**
+     *
+     * @return un String contenant le nom de la catégorie
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Modifie le nom de la catégorie
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
     
     
+    /**
+     *
+     * @return un Integer contenant l'ID de la catégorie
+     */
     public Integer getId() {
         return id;
     }
 
     
     
+    /**
+     * Modifie l'ID de la catégorie
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }

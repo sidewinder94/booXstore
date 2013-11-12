@@ -81,6 +81,14 @@ public class BookBean implements Serializable {
         this.book = book;
     }
     
+    
+    /**
+     *
+     * @param book
+     * @return un booleen permettant de déterminer
+     * si le livre est en stock ou non 
+     * méthode non utilisée
+     */
     public Boolean inStock(Books book){
         Boolean instock = false;
         if(this.book.getSupply() > 0){
@@ -90,6 +98,12 @@ public class BookBean implements Serializable {
         return instock;
     }
     
+    
+    /**
+     *
+     * @return renvoie la date de sortie d'un ouvrage
+     * en tant que String
+     */
     public String dateFormat()
     {
         return formatDate(book.getReleaseDate());

@@ -23,18 +23,34 @@ public class Publishers implements Serializable {
     
     private String name;
 
+    /**
+     * Retourne le nom de l'éditeur
+     * @return un String
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Modifie le nom de l'éditeur
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Retourne l'id de l'éditeur
+     * @return un Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Modifie l'ID de l'éditeur
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }
