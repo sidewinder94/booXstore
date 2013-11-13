@@ -49,6 +49,11 @@ public class ManagementBean implements Serializable {
     }
     
     
+    public List<Books> booksUnderThreshold()
+    {
+        return bFL.findUnderThresholdBooks();
+    }
+    
     
     public String addCategory(){
         Categories cat = new Categories();
