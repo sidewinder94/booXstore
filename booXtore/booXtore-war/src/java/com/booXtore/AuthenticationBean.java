@@ -136,6 +136,18 @@ public class AuthenticationBean implements Serializable {
     public String logout()
     {
         //Déconnexion de la session
+        this.login = null;
+        this.ZIP = null;
+        this.address = null;
+        this.city = null;
+        this.confirmPassword = null;
+        this.firstName = null;
+        this.lastName = null;
+        this.mail = null;
+        this.newMail = null;
+        this.newPassword = null;
+        this.password = null;
+        this.user = null;
         isConnected = false;
         return "index.xhtml?faces-redirect=true";
     }
