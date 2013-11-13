@@ -306,7 +306,7 @@
                                 </thead>
 
                                 <tbody>
-                                    <c:forEach items="#{managementBean.books}" var="book">
+                                    <c:forEach items="#{managementBean.booksUnderThreshold}" var="book">
                                         <tr>
                                             <td><img class="thumbnail" src="#{book.imageName}" alt=""/></td>
                                             <td>#{book.title}</td>

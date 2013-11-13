@@ -57,10 +57,11 @@
                                             <p class="form-control-static">#{cartBean.getQuantity(item)}</p>
                                         </div>
                                         <div class="col-md-9">
-                                            <h:form>
+                                            <h:form id="managementCart">
                                                 <div class="btn-group">
                                                     <h:commandButton type="submit" class="btn btn-default" value="-" action="#{cartBean.decrement(item)}"/>
-                                                    <h:commandButton type="submit" class="btn btn-default" value="+" action="#{cartBean.increment(item)}"/>
+                                                    <h:commandButton id="incrementButton" type="submit" class="btn btn-default" value="+" action="#{cartBean.increment(item)}"/>
+                                                    <h:message class="error" for="incrementButton" id="incrementButtonError" />
                                                 </div>
                                             </h:form>
                                         </div>

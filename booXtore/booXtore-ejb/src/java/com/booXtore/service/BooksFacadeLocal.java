@@ -82,5 +82,7 @@ public interface BooksFacadeLocal {
      * @return Retourne un liste de tous les livres appartenant à la catégorie
      */
     List<Books> getBooksByCategory(Categories category);
+
+    List<Books> findUnderThresholdBooks();
     
 }

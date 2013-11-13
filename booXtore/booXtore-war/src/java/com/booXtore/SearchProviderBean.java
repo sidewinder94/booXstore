@@ -119,6 +119,7 @@ public class SearchProviderBean implements Serializable {
         }
         else
         {
+            search = "";
             searchUrl = "";
         }
         return "catalog.xhtml?faces-redirect=true" + searchUrl + cat;

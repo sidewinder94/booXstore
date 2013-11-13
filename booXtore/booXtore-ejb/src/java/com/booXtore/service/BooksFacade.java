@@ -31,6 +31,9 @@ public class BooksFacade extends AbstractFacade<Books> implements BooksFacadeLoc
         super(Books.class);
     }
 
+    
+    
+    
     /**
      * Retourne une liste de livre triés par nom
      * @param pattern Le pattern à rechercher dans le titrre des livres
@@ -66,6 +69,12 @@ public class BooksFacade extends AbstractFacade<Books> implements BooksFacadeLoc
     public List<Books> getBooksByCategory(Categories category) {
         TypedQuery<Books> query = em.createNamedQuery("findBooksByCategory", Books.class);
         query.setParameter("category", category);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<Books> findUnderThresholdBooks() {
+        TypedQuery<Books> query = em.createNamedQuery("findUnderThresholdBooks", Books.class);
         return query.getResultList();
     }
 }

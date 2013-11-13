@@ -34,7 +34,9 @@ import javax.persistence.Temporal;
     @NamedQuery(name = "findBooksByCategory",
             query = "SELECT b FROM Books b WHERE b.category = :category"),
     @NamedQuery(name = "findTopTenBooks",
-            query = "SELECT b FROM Books b JOIN b.bookOrders bo ON bo.bookId = b.id ORDER BY bo.quantity DESC")
+            query = "SELECT b FROM Books b JOIN b.bookOrders bo ON bo.bookId = b.id ORDER BY bo.quantity DESC"),
+    @NamedQuery(name = "findUnderThresholdBooks",
+            query = "SELECT b FROM Books b WHERE b.supply <= b.threshold")
 })
 
 public class Books implements Serializable {
