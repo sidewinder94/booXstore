@@ -50,6 +50,7 @@ public class SearchProviderBean implements Serializable {
     {
         String cat = "";
         String page = "";
+        String searchUrl = "";
         if ((this.searchCategory != null)
                 && (!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))) {
             cat = "&category=" + this.searchCategory.getId();
@@ -60,15 +61,15 @@ public class SearchProviderBean implements Serializable {
         }
         if((search != null)&&(!search.equals("")))
         {
-            search = "&search=" + search;
+            searchUrl = "&search=" + search;
         }
         else
         {
-            search = "";
+            searchUrl = "";
         }
         
         cartBean.addBook(book);
-        return "catalog.xhtml?faces-redirect=true" + search + cat + page; 
+        return "catalog.xhtml?faces-redirect=true" + searchUrl + cat + page; 
     }
     
     
@@ -107,20 +108,20 @@ public class SearchProviderBean implements Serializable {
      */
     public String launchSearch() {
         String cat = "";
-        //String search = "";
+        String searchUrl = "";
         if ((this.searchCategory != null)
                 && (!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))) {
             cat = "&category=" + this.searchCategory.getId();
         }
         if((search != null)&&(!search.equals("")))
         {
-            search = "&search=" + search;
+            searchUrl = "&search=" + search;
         }
         else
         {
-            search = "";
+            searchUrl = "";
         }
-        return "catalog.xhtml?faces-redirect=true" + search + cat;
+        return "catalog.xhtml?faces-redirect=true" + searchUrl + cat;
 
     }
 
