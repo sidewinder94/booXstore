@@ -4,6 +4,7 @@
  */
 package com.booXtore;
 
+import com.booXtore.domain.Authors;
 import com.booXtore.domain.Books;
 import com.booXtore.domain.Categories;
 import com.booXtore.domain.States;
@@ -44,16 +45,23 @@ public class ManagementBean implements Serializable {
     
     private String categoryName;
     
+    private List<Books> booksUnderThreshold;
+    
+    private String authorsList;
+    
+    
     public ManagementBean() {
         
     }
     
     
-    public List<Books> booksUnderThreshold()
+    public List<Books> getBooksUnderThreshold()
     {
         return bFL.findUnderThresholdBooks();
     }
     
+     public void setBooksUnderThreshold()
+    {}
     
     public String addCategory(){
         Categories cat = new Categories();
@@ -191,6 +199,19 @@ public class ManagementBean implements Serializable {
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
+
+    public String getAuthorsList(Books book) {
+        authorsList = "";
+        for(Authors author : book.getAuthors())
+        {
+            authorsList = authorsList + ";" + author.getName();
+        }
+        
+        
+        return authorsList;
+    }
+
+    public void setAuthorsList(String authorsList) {}
     
     
     

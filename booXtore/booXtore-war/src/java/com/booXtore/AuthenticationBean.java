@@ -213,7 +213,7 @@ public class AuthenticationBean implements Serializable {
 
             ConfigurableNavigationHandler nav = (ConfigurableNavigationHandler) fc.getApplication().getNavigationHandler();
 
-            nav.performNavigation("index.xhtml?faces-redirect=true");
+            nav.performNavigation("authentication_admin.xhtml?faces-redirect=true");
         }
     }
     
