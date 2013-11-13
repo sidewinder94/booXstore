@@ -12,8 +12,10 @@ import com.booXtore.domain.Orders;
 import com.booXtore.domain.StateOrders;
 import com.booXtore.domain.Users;
 import com.booXtore.service.BookOrdersFacadeLocal;
+import com.booXtore.service.BooksFacadeLocal;
 import com.booXtore.service.OrdersFacadeLocal;
 import com.booXtore.service.StateOrdersFacadeLocal;
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -29,7 +31,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean(name = "orderbean")
 @ViewScoped
-public class OrderBean 
+public class OrderBean implements Serializable
 {
     private AuthenticationBean user;
     private Orders order;
@@ -50,6 +52,9 @@ public class OrderBean
     @EJB
     private StateOrdersFacadeLocal sFL;
     
+    @EJB
+    private BooksFacadeLocal bFL;
+    
     private List<BookOrders> bookordersList;
     
     private String cardNumber;
@@ -69,9 +74,9 @@ public class OrderBean
             temp.setOrderId(order);
             temp.setQuantity(this.cartBean.getCart().get(book));
             this.boFL.create(temp);
+            book.setSupply(book.getSupply() - this.cartBean.getCart().get(book));
+            this.bFL.edit(book);
         }
-        
-        
         return null;
     }
 
