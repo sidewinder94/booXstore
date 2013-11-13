@@ -1,0 +1,40 @@
+Authentification Inscription	OK
+Page d'accueil					OK
+navigation catalogue			OK
+informations détaillées			OK
+gestion panier					OK
+livre non disponnible			OK
+processus de commande			OK
+
+	verifier mdp saisi			OK (rajouter dans inscription)
+	rechercher livre par mot cle	OK ?
+	affichage livre par catégorie	OK
+	disponibilité livre affichée si sous seuil NOT OK	
+	
+authentification libraire		OK
+gestion des stocks				NOT OK
+gestion du catalogue			OK
+gestion des commandes			NOT OK
+	affichage des articles par catégorie	OK
+	page recensant les livres dont le stock = 0 ou ceux dont stock sous le seuil NOT OK
+	
+	0. Sommaire
+	1. Présentation de l'équipe
+	2. Présentation du projet
+		2.1 Besoins
+		2.2 Contraintes
+		
+	3. Planning Prévisionnel
+	4. Planning du travail réalisé
+	5. Architecture de la solution
+	5.5 Architecture technique ? (qui est composé de quoi)
+	6. Choix techniques
+		6.1 Bootstrap
+		6.2 PrimeFaces
+		6.3 Git
+		6.4 Netbeans + GlassFish
+	7. Démonstration
+	8. Perspective d'évolution
+	9. Bilan
+	
+	+mdp hashé
