@@ -77,15 +77,15 @@
                             </tr>
                             <!-- Quantité - <tr class="danger"> si indisponible -->
                             <c:choose>
-                                <c:when test="#{bookBean.book.states.id == 4}">
+                                <c:when test="#{(bookBean.book.states.id == 4) || (bookBean.book.threshold >= bookBean.book.supply)}">
                                     <tr class="danger">
-                                        <td><strong> En stock </strong></td>
+                                        <td><strong> Stock </strong></td>
                                         <td> #{bookBean.book.supply} (En réapprovisionnement)</td>
                                     </tr>
                                 </c:when>
                                 <c:otherwise>
                                     <tr>
-                                        <td><strong> En stock </strong></td>
+                                        <td><strong> Stock </strong></td>
                                         <td>#{bookBean.book.supply}</td>
                                     </tr>
                                 </c:otherwise>

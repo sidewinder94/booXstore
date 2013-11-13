@@ -6,8 +6,8 @@ gestion panier					OK
 livre non disponnible			OK
 processus de commande			OK
 
-	verifier mdp saisi			OK (rajouter dans inscription)
-	rechercher livre par mot cle	OK ?
+	verifier mdp saisi			OK
+	rechercher livre par mot cle	OK
 	affichage livre par catégorie	OK
 	disponibilité livre affichée si sous seuil NOT OK	
 	

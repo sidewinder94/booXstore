@@ -103,7 +103,14 @@ public class CartBean implements Serializable {
      * @return recharge la page
      */
     public String increment(Books book){
-        this.cSB.addBook(book);
+        if(this.getCart().get(book) >= book.getSupply())
+        {
+            FacesContext.getCurrentInstance().addMessage("managementCart:incrementButton", new FacesMessage("Indisponible"));
+        }
+        else
+        {
+            this.cSB.addBook(book);
+        }
         return null;
     }
     
