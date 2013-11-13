@@ -69,7 +69,7 @@
                             <p>#{book.price}€</p>
                             <c:if test="#{book.supply > 0}">
                                 <h:form>
-                                    <h:commandLink class="btn btn-success" value="Ajouter au panier" action="#{cartBean.addBook(book)}"/>
+                                    <h:commandLink class="btn btn-success" value="Ajouter au panier" action="#{searchProviderBean.addToCart(book)}"/>
                                 </h:form>
                             </c:if>
                             <c:if test="#{book.supply == 0}">

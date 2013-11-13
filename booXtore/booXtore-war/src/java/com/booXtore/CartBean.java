@@ -8,7 +8,6 @@ package com.booXtore;
 import com.booXtore.domain.Books;
 import com.booXtore.service.BooksFacadeLocal;
 import com.booXtore.service.CartSessionBeanLocal;
-import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.HashMap;
@@ -16,13 +15,14 @@ import java.util.LinkedList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
 /**
  *
  * @author Antoine-Ali
  */
-@Named(value = "cartBean")
+@ManagedBean
 @SessionScoped
 public class CartBean implements Serializable {
 
@@ -133,11 +133,10 @@ public class CartBean implements Serializable {
      * @param book
      * @return recharge la page
      */
-    public String addBook(Books book)
+    public void addBook(Books book)
     {
        // this.cSB.addBook(this.bFL.find(bookId));
         this.cSB.addBook(book);
-        return null;
     }
     
     /**
@@ -147,6 +146,15 @@ public class CartBean implements Serializable {
     public String getTotalPrice()
     {
         return String.valueOf(cSB.getTotalPrice()) + " €";
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public Float getTotalPriceFloat()
+    {
+        return cSB.getTotalPrice();
     }
     
     /**

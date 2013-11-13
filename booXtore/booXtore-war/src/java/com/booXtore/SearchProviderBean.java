@@ -9,6 +9,7 @@ import com.booXtore.domain.Categories;
 import com.booXtore.service.BooksFacadeLocal;
 import com.booXtore.service.CategoriesFacadeLocal;
 import com.booXtore.service.SettingsFacadeLocal;
+import com.booXtore.utilities.StringUtilities;
 import static com.booXtore.utilities.StringUtilities.*;
 import java.io.Serializable;
 import java.util.List;
@@ -37,6 +38,7 @@ public class SearchProviderBean implements Serializable {
     private Integer booksPerPage;
     private Integer currentPage;
     private Integer pages;
+    private CartBean cartBean;
 
     /**
      * Creates a new instance of SearchProviderBean
@@ -44,6 +46,33 @@ public class SearchProviderBean implements Serializable {
     public SearchProviderBean() {
     }
 
+    public String addToCart(Books book)
+    {
+        String cat = "";
+        String page = "";
+        String searchUrl = "";
+        if ((this.searchCategory != null)
+                && (!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))) {
+            cat = "&category=" + this.searchCategory.getId();
+        }
+        if(getCurrentPage() != 1)
+        {
+            page = "&page=" + getCurrentPage();
+        }
+        if((search != null)&&(!search.equals("")))
+        {
+            searchUrl = "&search=" + search;
+        }
+        else
+        {
+            searchUrl = "";
+        }
+        
+        cartBean.addBook(book);
+        return "catalog.xhtml?faces-redirect=true" + searchUrl + cat + page; 
+    }
+    
+    
     /**
      * Retourne la liste de toutes les categories
      * @return une liste de Categories
@@ -79,11 +108,20 @@ public class SearchProviderBean implements Serializable {
      */
     public String launchSearch() {
         String cat = "";
+        String searchUrl = "";
         if ((this.searchCategory != null)
                 && (!this.searchCategory.getName().equalsIgnoreCase("Toutes Catégories"))) {
             cat = "&category=" + this.searchCategory.getId();
         }
-        return "catalog.xhtml?faces-redirect=true&search=" + search + cat;
+        if((search != null)&&(!search.equals("")))
+        {
+            searchUrl = "&search=" + search;
+        }
+        else
+        {
+            searchUrl = "";
+        }
+        return "catalog.xhtml?faces-redirect=true" + searchUrl + cat;
 
     }
 
@@ -162,6 +200,11 @@ public class SearchProviderBean implements Serializable {
     public List<Books> getAllBooks() {
         return this.bFL.findAll();
     }
+    
+    public String generateBookLink(Books book)
+    {
+        return StringUtilities.generateBookLink(book);
+    }
 
     /**
      * Retourne le nom de l'auteur principal du livre
@@ -172,15 +215,6 @@ public class SearchProviderBean implements Serializable {
      */
     public String getBookFirstAuthor(Books book) {
         return book.getAuthors().get(0).getName();
-    }
-
-    /**
-     * génère l'url pour atterir sur la page produit d'un livre
-     * @param book
-     * @return l'url de la page produit du livre
-     */
-    public String generateBookLink(Books book) {
-        return "product.xhtml?id=" + book.getId();
     }
 
     /**
@@ -225,4 +259,14 @@ public class SearchProviderBean implements Serializable {
     public String goToPage(Integer page) {
         return launchSearch() + "&page=" + page;
     }
+
+    public CartBean getCartBean() {
+        return cartBean;
+    }
+
+    public void setCartBean(CartBean cartBean) {
+        this.cartBean = cartBean;
+    }
+    
+    
 }

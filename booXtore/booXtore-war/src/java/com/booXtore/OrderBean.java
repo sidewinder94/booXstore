@@ -10,24 +10,18 @@ import com.booXtore.domain.BookOrders;
 import com.booXtore.domain.Books;
 import com.booXtore.domain.Orders;
 import com.booXtore.domain.StateOrders;
-import com.booXtore.domain.States;
 import com.booXtore.domain.Users;
 import com.booXtore.service.BookOrdersFacadeLocal;
-import com.booXtore.service.CartSessionBean;
-import com.booXtore.service.CartSessionBeanLocal;
 import com.booXtore.service.OrdersFacadeLocal;
 import com.booXtore.service.StateOrdersFacadeLocal;
-import com.booXtore.service.StatesFacadeLocal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import javax.inject.Named;
 
 /**
  *
@@ -37,11 +31,13 @@ import javax.inject.Named;
 @ViewScoped
 public class OrderBean 
 {
-    private Users user;
+    private AuthenticationBean user;
     private Orders order;
     private BookOrders bookorder;
     private List<Orders> filteredOrders;
     private Float totalPrice;
+    private CartBean cartBean;
+    
     
     @EJB
     private OrdersFacadeLocal oFL;
@@ -60,16 +56,21 @@ public class OrderBean
     
     public String validateOrder(){
         order = new Orders();
-   //     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        //get current date time with Date()
-    //    Date date = new Date();
-           
-//        order.setOrderDate(dateFormat.format(date));
-        order.setTotalPrice(totalPrice);
-        order.setUsers(user);
-  //      order.setBookOrders(this.cSB.getContent());
-        
+        Date date = new Date();
+        order.setOrderDate(date);
+        order.setTotalPrice(this.cartBean.getTotalPriceFloat());
+        order.setUsers(user.getUser());
+        order.setStates(this.sFL.find(2));
         this.oFL.create(order);
+        for(Books book : this.cartBean.getCart().keySet())
+        {
+            BookOrders temp = new BookOrders();
+            temp.setBookId(book);
+            temp.setOrderId(order);
+            temp.setQuantity(this.cartBean.getCart().get(book));
+            this.boFL.create(temp);
+        }
+        
         
         return null;
     }
@@ -120,21 +121,6 @@ public class OrderBean
     public OrderBean() {     
     }
 
-    /**
-     * Retourne le client de la commande
-     * @return un Users
-     */
-    public Users getUser() {
-        return user;
-    }
-
-    /**
-     * Modifie le client de la commande
-     * @param user
-     */
-    public void setUser(Users user) {
-        this.user = user;
-    }
 
     /**
      * Retourne la commande
@@ -198,6 +184,22 @@ public class OrderBean
 
     public void setTotalPrice(Float totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public CartBean getCartBean() {
+        return cartBean;
+    }
+
+    public void setCartBean(CartBean cartBean) {
+        this.cartBean = cartBean;
+    }
+
+    public AuthenticationBean getUser() {
+        return user;
+    }
+
+    public void setUser(AuthenticationBean user) {
+        this.user = user;
     }
     
     

@@ -54,12 +54,14 @@ and open the template in the editor.
                             <h:message class="error" for="ZIP" id="ZIPError" /><br/>
                             <h:inputText requiredMessage="Veuillez entrer votre ville" id="city" label="Ville" class="form-control" pass:placeholder="Ville" value="#{AuthenticationBean.city}" required="true" />
                             <h:message class="error" for="city" id="cityError" /><br/>
-                            <h:inputText requiredMessage="Veuillez entrer votre adresse mail" id="mail" label="Mail" class="form-control" pass:placeholder="Mail" value="#{AuthenticationBean.mail}" required="true"/>
+                            <h:inputText validatorMessage="Votre email est invalide" requiredMessage="Veuillez entrer votre adresse mail" id="mail" label="Mail" class="form-control" pass:placeholder="Mail" value="#{AuthenticationBean.mail}" required="true"><f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/></h:inputText>
                             <h:message class="error" for="mail" id="mailError" /><br/>
                             <h:inputText requiredMessage="Veuillez entrer votre nom d'utilisateur" id="newlogin" label="Nom d'utilisateur" class="form-control" pass:placeholder="Nom d'utilisateur" value="#{AuthenticationBean.login}" required="true"/>
                             <h:message class="error" for="newlogin" id="newloginError" /><br/>
                             <h:inputSecret requiredMessage="Veuillez entrer votre mot de passe" id="newpassword" label="Mot de passe" class="form-control" pass:placeholder="Mot de passe" value="#{AuthenticationBean.password}" required="true"/>
                             <h:message class="error errorForPassword" for="newpassword" id="newpasswordError" /><br/>
+                            <h:inputSecret requiredMessage="Veuillez confirmer votre mot de passe" id="newpasswordConfirm" label="Confirmation du mot de passe" class="form-control errorForPassword" pass:placeholder="Confirmer mot de passe" value="#{AuthenticationBean.confirmPassword}" required="true"/>
+                            <h:message class="error errorForPassword" for="newpasswordConfirm" id="newpasswordConfirmError" /><br/>
                             <h:commandButton  class="btn btn-lg btn-primary btn-block" type="submit" value="S'inscrire" action="#{AuthenticationBean.userSignIn()}" />
                         </h:form>
                     </div>

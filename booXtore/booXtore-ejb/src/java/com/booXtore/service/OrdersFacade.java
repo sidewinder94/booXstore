@@ -34,9 +34,8 @@ public class OrdersFacade extends AbstractFacade<Orders> implements OrdersFacade
     
     @Override
     public List<Orders> getOrdersByUser(Users user){
-        String stringQuery = "SELECT o FROM Orders o WHERE o.id = :id";
-        TypedQuery<Orders> query = em.createQuery(stringQuery, Orders.class);
-        query.setParameter("id", user.getId());
+        TypedQuery<Orders> query = em.createNamedQuery("findOrdersByUserId", Orders.class);
+        query.setParameter("user", user);
         
         return query.getResultList();
     }
